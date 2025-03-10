@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services</title>
+
+  <!-- External css link:- -->
+  <link rel="stylesheet" href="design02.css" />
+
+  <!-- bootstrap css CDN link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <!-- font-awesome cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- lightbox css link -->
+  <link rel="stylesheet" href="./lightbox.css" />
+  <!-- <link rel="stylesheet" href="./lightbox2-dev/dist/css/lightbox.min.css"> -->
+
+  <!-- AOS cdn link -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- google fonts link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Grey+Qo&family=Italiana&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid align-items-center">
+        <div class="LOGO d-flex flex-column ms-5 me-auto">
+          <img class="AGD-img" class="Logo-img ms-5" src="/images/AGDlogo.png" alt="" height="60px" width="100px" />
+          <p class="AGDname mb-0">Aditi Gupta Designs</p>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="Nlist navbar-nav pe-5 ps-5">
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5 active" aria-current="page"
+                href="http://127.0.0.1:5500/home/design01.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/servicesDH/design02.html">SERVICES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/about/design03.html">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/portfolio/design04.html">PORTFOLIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/blog/blog01.final.html">BLOG</a>
+            </li>
+            <li class="nav-item mt-3 me-0">
+              <a class="nav-link" href="http://127.0.0.1:5500/contactUS/contactUs.refined.html">CONTACT US</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+  <!-- Make sure to include Font Awesome for the hamburger icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Google Translate Hamburger Icon positioned outside the header and navbar -->
+  <button id="translateToggleBtn" class="translate-icon">
+    <i class="fas fa-language"></i> <!-- Font Awesome language icon -->
+  </button>
+
+  <!-- Hidden Google Translate Element -->
+  <div id="googleTranslateContainer" class="translate-dropdown" style="display: none;">
+    <div id="google_translate_element"></div>
+  </div>
+
+  <!-- Page content continues -->
+
+  <!-- section1 -->
+  <div class="heroVid">
+    <iframe
+      src="https://player.vimeo.com/video/718331125?byline=0&amp;muted=1&amp;loop=1&amp;background=1&amp;autoplay=1"
+      frameborder="0" height="920px" width="1440px"></iframe>
+    <div class="video-text">
+      <!-- <p class="vid-head"></p> -->
+      <p class="vid-head02">OUR SERVICES</p>
+    </div>
+  </div>
+
+
+  <!-- written content  -->
+  <section id="writtenContent">
+    <div class="WC-items">
+      <p class="WC-para">
+        At Aditi Gupta Designs, we craft spaces that blend style, functionality, and individuality. With expertise in
+        interior, exterior, and landscape design, we bring each client's vision to life.
+      </p>
+      <p class="WC-para02">
+        Aditi Gupta Designs offers tailored design services that transform interiors, exteriors, and landscapes into
+        inspiring spaces. We focus on quality, detail, and sustainability, shaping environments that are both timeless
+        and uniquely yours.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- section2 -->
+  <div class="Services">
+    <div class="servicesTypes">
+      <div class="col-7 servicesImg">
+        <img
+          src="https://katharinepooley.b-cdn.net/wp-content/uploads/2021/07/Screenshot-2020-11-22-at-19.42.20-copy-aspect-ratio-2560-1686.jpg"
+          height="550px" width="900px" alt="" />
+      </div>
+      <div class="servicesContent">
+        <p class="servicesHead">ICONIC ARCHITECTURE</p>
+        <p class="servicesPara">
+          Design is a manifetation of a story. Tailor a space to the versatile
+          tastes of discerning clients, Principal Architect, Aditi Gupta
+          begins by assimilating a narrative that spans both functional and
+          aspiratonal preferences in mordern as well as classic style
+          signatures. Beginning with intricate sketches and swatches that
+          cpture the client's desired outcome, the team creates conceptual
+          study models and highl sophisticated renders to visualize the
+          process and results. From preliminary conception through design
+          evoluton, the team works inventively to deliver unique spaces with a
+          signature style.
+        </p>
+      </div>
+    </div>
+
+    <div class="servicesTypes">
+      <div class="servicesContent">
+        <p class="servicesHead mt-3">INTERIOR DESIGN</p>
+        <p class="servicesPara">
+          Discerning spaces deserves bespoke interiors Aditi Gupta combines
+          visual dexteruty with an unparalleled access to internationally
+          renowned materials, craftmenship and processes that result in
+          striking and exceptional homes. Her heightened sense of proportion
+          creates elegant and timeless interiors of both contemporary and
+          classically inspired homes. Throughout the process, the team
+          includes sketches and elaborates mood board presentaions, including
+          the clients in the creation process.
+        </p>
+      </div>
+      <div class="col-7 servicesImg">
+        <img
+          src="https://katharinepooley.b-cdn.net/wp-content/uploads/2021/07/Contemporary-Doha-Home-aspect-ratio-2560-1686-2560x1686.jpg"
+          height="550px" width="900px" alt="" />
+      </div>
+    </div>
+
+    <div class="servicesTypes">
+      <div class="col-7 servicesImg">
+        <img
+          src="https://katharinepooley.b-cdn.net/wp-content/uploads/2021/05/KP259_Egerton-Crescent_website-optimised_6.webp"
+          height="550px" width="900px" alt="" />
+      </div>
+      <div class="servicesContent">
+        <p class="servicesHead">FURNITURE</p>
+        <p class="servicesPara">
+          Commissioning everything from concept, design and build, the Houses
+          of Aditi Gupta creates luxuriously unique furniture that echoes the
+          overall architechture and aesthetic palette of high-caliber process.
+          Her keen eye lends itself to the selection or design of each
+          indvidual piece of furniturein every space of the home including
+          entrance foyers, lounges, bedrooms, formal rooms and pool areas.
+          Both customized and sourced pieces of furniture meet the studio's
+          sophisticated standards of quality and follow a cohesive aesthetic
+          that proportionally focused as welll as visually striking.
+        </p>
+      </div>
+    </div>
+
+    <div class="servicesTypes">
+      <div class="servicesContent">
+        <p class="servicesHead mt-2">SMART HOME</p>
+        <p class="servicesPara">
+          Whether enhancing an existing space or designing anew, the House of
+          Aditi Gupta takes a forward-thinking approach to tech-integrated
+          living. Our team balances functionality, cost-effectiveness, and
+          user-friendliness, crafting smart spaces that cater to a diverse
+          range of preferences and needs. Each detail is thoughtfully
+          integrated, ensuring a seamless and intuitive experience that adapts
+          to modern lifestyles, creating homes that are not only efficient but
+          effortlessly connected and tailored to individual desires.
+        </p>
+      </div>
+      <div class="col-7 servicesImg">
+        <img src="https://katharinepooley.b-cdn.net/wp-content/uploads/2021/05/kuwait-villa-10-scaled.jpg"
+          height="550px" width="900px" alt="" />
+      </div>
+    </div>
+
+    <div class="servicesTypes">
+      <div class="col-7 servicesImg">
+        <img
+          src="https://katharinepooley.b-cdn.net/wp-content/uploads/2021/05/1_28_Georgian_Coach_House_5-aspect-ratio-2560-1686-2560x1686.jpg"
+          height="550px" width="900px" alt="" />
+      </div>
+      <div class="servicesContent">
+        <p class="servicesHead mt-3">DECOR</p>
+        <p class="servicesPara">
+          From accents to accessories, the finishing touches highlight the
+          soul of a space. We have an exclusive team of consultants who assist
+          in commissioning or sourcing bespoke pieces, including crystal
+          chandeliers, precious display items, antiques, and limited-edition
+          pieces. Each selection enhances the elegance of the interiors,
+          imbuing each room with character and timeless appeal, ensuring every
+          element aligns with the client's vision and personality, and brings
+          a distinct charm to their home.
+        </p>
+      </div>
+    </div>
+
+    <div class="servicesTypes">
+      <div class="servicesContent">
+        <p class="servicesHead">ARTISTRY</p>
+        <p class="servicesPara">
+          The House of Aditi Gupta sources art work that reflects the
+          narrative of a space as well as curate its placementin accordance
+          with the architechture, interiors and lightings. Leveragin a formal
+          association with reputed art galleries, we engage in creating an art
+          collection that extends the narrative of the home and its residents.
+          The curatorials process includes vetting the right medium or style
+          and commisioning original artwork from both emerging and established
+          artists. The studio offers consultation and coveted access to
+          international art channels to our most discerning clients.
+        </p>
+      </div>
+      <div class="col-7 servicesImg">
+        <img
+          src="https://katharinepooley.b-cdn.net/wp-content/uploads/2021/05/1_30_Lakes_Cottage_010-aspect-ratio-2560-1686-2560x1686.jpg"
+          height="550px" width="900px" alt="" />
+      </div>
+    </div>
+
+    <div class="servicesTypes">
+      <div class="col-7 servicesImg">
+        <img
+          src="https://katharinepooley.b-cdn.net/wp-content/uploads/2021/05/KP_Portfolio_cannes_chateau_view_from_pavilion.webp"
+          height="550px" width="900px" alt="" />
+      </div>
+      <div class="servicesContent">
+        <p class="servicesHead">LANDSCAPE DESIGNS</p>
+        <p class="servicesPara">
+          With a focus on harmonizing indoor and outdoor spaces, the House of
+          Aditi Gupta creates landscape designs that are both geologically and
+          architecturally synchronized. Our projects feature unique
+          greenscapes, including lush tropical rainforests with serene water
+          bodies and manicured gardens adorned with classical fountains. We
+          also curate outdoor artworks and design elements, ensuring each
+          landscape reflects the beauty of nature while enhancing the overall
+          aesthetic of the property. Each design is a testament to the
+          seamless integration of environment and architecture, creating
+          inviting and inspiring outdoor spaces.
+        </p>
+      </div>
+    </div>
+
+    <div class="servicesTypes">
+      <div class="servicesContent">
+        <p class="servicesHead mt-1">LIGHTINGS</p>
+        <p class="servicesPara">
+          Lighting in many ways, is the nervous system of the home. Conjoing
+          lighting design with architectural features and interior concepts is
+          crucial to creating a synergetic space. Aditi Gupta applies her
+          fusion of classically symmetric, yet experimentally bold, style to
+          design exceptional customized chandeliers, which are manufactured in
+          high-caliber materials by world-renowned studios. We align
+          conception and execution with liighting design and placement to
+          seamlessly amplify design elements.
+        </p>
+      </div>
+      <div class="col-7 servicesImg">
+        <img
+          src="https://katharinepooley.b-cdn.net/wp-content/uploads/2021/04/KPCGI_Princes-Gate_website-optimised-historic-london-home_6.webp"
+          height="550px" width="900px" alt="" />
+      </div>
+    </div>
+
+    <div class="servicesTypes">
+      <div class="col-7 servicesImg">
+        <img
+          src="https://katharinepooley.b-cdn.net/wp-content/uploads/2021/06/katharinepooley-doha-pearl-villa-64119820.jpg"
+          height="550px" width="900px" alt="" style="opacity: 0.9" />
+      </div>
+      <div class="servicesContent">
+        <p class="servicesHead">TRUNKEY EXECUTION</p>
+        <p class="servicesPara">
+          Uniquely positioned to meet comprehensive demands from ideation and
+          concepts to construction and decor, the House of Aditi Gupta is a
+          one-stop studio. Our turnkey business model ensures that our clients
+          receive articulate and cohesive results, better value for time, and
+          exceptional attention to detail. Our turnkey services seamlessly
+          bridge the gap between conception, design, and final build,
+          providing a smooth and efficient process that prioritizes client
+          satisfaction. With a dedicated team overseeing every aspect, we
+          guarantee a finished product that exceeds expectations and embodies
+          the vision of each client.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- section3  -->
+  <section class="s3">
+    <div class="s3content">
+      <p id="s3head">Discuss Your Project</p>
+      <p id="s3para">We invite you to make contact with our <br> design studio to collaborate or enquire about a <br>
+        project.</p>
+      <p id="s3contact1">aditi@aditiguptadesigns.com</p>
+      <p id="s3contact2">+91 70489 24351</p>
+      <!-- <a href=""><input id="s3button" type="button" value="Request a Consultation"></a> -->
+      <div class="functionality-button-container">
+        <a href="http://127.0.0.1:5500/contactUS/contactUs.refined.html" class="functionality-button" target="_blank">Request a Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- fAQ section  -->
+  <section class="FAQ">
+    <div class="faq-container">
+      <p class="FAQ-head">Frequently Asked Questions</p>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What services does Aditi Gupta Designs provide for residential and commercial spaces?</span>
+          <span class="plus-symbol">+</span>
+        </div>
+        <div class="faq-answer">
+          At Aditi Gupta Designs, we offer a range of services, including interior design, exterior enhancements, and
+          landscape planning for both residential and commercial spaces. Our team works closely with clients to bring
+          their vision to life, ensuring a cohesive and personalized design that enhances functionality and aesthetics.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>How do you determine the budget and timeline for a design project?</span>
+          <span class="plus-symbol">+</span>
+        </div>
+        <div class="faq-answer">
+          We start by discussing the project scope, size, and style preferences with you. Our Budget Calculator provides
+          an initial cost estimate, and the Project Timeline Estimator gives you an idea of how long the project might
+          take based on your requirements. These tools offer a solid foundation, which we further refine during
+          in-person consultations.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Can you help with choosing color schemes and materials?</span>
+          <span class="plus-symbol">+</span>
+        </div>
+        <div class="faq-answer">
+          Absolutely! We understand that selecting the right colors and materials is essential for any project. Our
+          Color Palette tool helps narrow down options based on your preferences, while our designers guide you in
+          choosing high-quality materials that align with your style, budget, and overall vision for the space.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>How involved can I be in the design process?</span>
+          <span class="plus-symbol">+</span>
+        </div>
+        <div class="faq-answer">
+          We encourage client involvement at every stage of the design process! Whether it's taking our Design Style
+          Quiz to clarify your style, reviewing design drafts, or selecting materials, we value your input. Our
+          collaborative approach ensures the final design truly reflects your tastes and lifestyle.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Can I make changes during the project?</span>
+          <span class="plus-symbol">+</span>
+        </div>
+        <div class="faq-answer">
+          Yes, we allow for changes during the project. However, changes may affect the timeline and budget.
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- newsletter  -->
+  <section class="newsletter">
+    <div class="signup-box">
+      <p class="news-head">SIGN UP TO OUR NEWSLETTER</p>
+      <p class="news-head02">Stay updated with our latest design trends and updates</p>
+
+      <!-- Form Content -->
+      <form id="signupForm">
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label>
+          <input type="checkbox" required> I agree to the privacy policy *
+        </label>
+        <div class="news-btn"><button onclick="subscribe()">Subscribe</button></div>
+      </form>
+
+      <!-- Thank you message -->
+      <p class="thank-you" id="thankYouMessage">Thank you for signing up!</p>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- footer  -->
+  <footer style="background-color: rgb(97, 82, 72)">
+    <div class="fc container-fluid d-flex">
+      <div class="fc2 d-flex">
+        <ul>
+          <a href="http://127.0.0.1:5500/servicesDH/design02.html" target="_blank">
+            <li class="text-white">SERVICES</li>
+          </a>
+          <a href="http://127.0.0.1:5500/about/design03.html" target="_blank">
+            <li class="text-white">ABOUT</li>
+          </a>
+          <a href="http://127.0.0.1:5500/portfolio/design04.html" target="_blank">
+            <li class="text-white">PORTFOLIO</li>
+          </a>
+          <a href="http://127.0.0.1:5500/contactUS/contactUs.refined.html" target="_blank">
+            <li class="text-white">CONTACT US</li>
+          </a>
+        </ul>
+        <ul>
+          <a href="">
+            <li class="text-white">TERMS</li>
+          </a>
+          <a href="">
+            <li class="text-white">PRIVACY</li>
+          </a>
+          <li class="text-white">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://x.com/" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+          </li>
+        </ul>
+        <ul class="f3list">
+          <li>
+            <h4>CONTACT:</h4>
+          </li>
+          <li>
+            <p>+91 70489 24351</p>
+            <p>aditi@aditiguptadesigns.com</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="copyright">
+    <p>&copy 2024 Aditi Gupta Designs. All rights reserved.</p>
+  </div>
+
+  <!-- lightbox js link  -->
+  <script src="./lightbox-plus-jquery.js"></script>
+  <script src="./lightbox.js"></script>
+
+  <!-- bootstrap javascript cdn link -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <!-- AOS javascript link -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- <script>
+        const audio = document.querySelector('audio');
+        audio.volume = 0.5; // Set volume to 50%
+    </script> -->
+
+  <script>
+    // JavaScript to toggle FAQ answers
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('open');
+      });
+    });
+  </script>
+
+  <script>
+    // Form submission event listener
+    document.getElementById("signupForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      // Hide form and show thank you message
+      document.getElementById("signupForm").style.display = "none";
+      document.getElementById("thankYouMessage").style.display = "block";
+    });
+  </script>
+
+
+  <!-- Google Translate Script -->
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- Google Translate Script -->
+  <script type="text/javascript">
+    // Initialize Google Translate only when button is clicked and ensure script is loaded
+    function loadGoogleTranslate() {
+      // Load Google Translate script if it hasn't been loaded yet
+      if (!window.google || !window.google.translate) {
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+        document.head.appendChild(script);
+      } else {
+        googleTranslateElementInit();
+      }
+    }
+
+    // Initialize Google Translate Element
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,pa',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+
+    // Toggle the visibility of the Google Translate container when the icon is clicked
+    document.getElementById("translateToggleBtn").addEventListener("click", function () {
+      const translateContainer = document.getElementById("googleTranslateContainer");
+
+      // Toggle visibility
+      if (translateContainer.style.display === "none" || translateContainer.style.display === "") {
+        loadGoogleTranslate(); // Ensure Translate is loaded
+        translateContainer.style.display = "block";
+      } else {
+        translateContainer.style.display = "none";
+      }
+    });
+  </script>
+</body>
+
+</html>

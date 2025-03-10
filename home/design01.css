@@ -1,0 +1,3099 @@
+/* header */
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+*::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
+
+btn::selection {
+    background-color: white;
+    color: rgb(97, 82, 72);
+}
+
+header {
+    background-color: rgb(235, 230, 215);
+    opacity: 0.9;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 5px -3px;
+}
+
+.nav-item:hover {
+    transform: scale(1.02);
+}
+
+.nav-item a::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
+
+.AGD-logo {
+    font-size: 40px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: italic;
+    color: rgb(170, 146, 146);
+    margin-left: 52px;
+}
+
+.AGD-img {
+    margin-left: 48px;
+}
+
+.AGDname {
+    font-size: 17px;
+    margin-left: 30px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.AGDname::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
+
+.Nlist {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+html,
+body {
+    background-color: rgba(237, 235, 223, 0.51) !important;
+}
+
+/* Style for the Google Translate hamburger icon */
+.translate-icon {
+    position: fixed;
+    bottom: 20px;
+    /* Adjust position as needed */
+    right: 20px;
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Style the icon itself */
+.translate-icon i {
+    color: #333;
+    font-size: 24px;
+}
+
+/* Style for the Google Translate dropdown */
+.translate-dropdown {
+    position: fixed;
+    bottom: 80px;
+    /* Adjust position based on icon location */
+    right: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#googleTranslateContainer {
+    display: none;
+    position: fixed;
+    /* top: 60px; */
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    /* padding: 30px 100px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.hero-section {
+    /* position: relative;
+    width: 100%;
+    height: auto; */
+    position: relative;
+    width: 100vw;
+    /* Full viewport width */
+    height: 762px;
+    /* Set desired height */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    background-color: rgba(237, 235, 223, 0.51);
+}
+
+#heroVideo {
+    width: 100%;
+    height: 100%;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Center the video */
+    min-width: 100%;
+    /* Ensure it fills the width */
+    min-height: 100%;
+    /* Ensure it fills the height */
+    object-fit: cover;
+    /* Crop video to cover the container */
+}
+
+#toggleSoundButton {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    z-index: 3;
+    text-transform: uppercase;
+    /* font-family: Arial, sans-serif; */
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    background: none;
+    /* Remove background */
+    border: none;
+    /* Remove border */
+    padding: 0;
+    /* Remove padding */
+    outline: none;
+    /* Remove outline */
+    margin-bottom: 20px;
+    margin-right: 26px;
+}
+
+.sound-icon {
+    font-size: 16px;
+}
+
+/* section2 */
+
+#blogPosts {
+    margin-top: 80px;
+    background-color: rgba(237, 235, 223, 1);
+}
+
+.Blog-items {
+    display: flex;
+    padding: 30px;
+}
+
+.blog-content {
+    margin: 12px;
+}
+
+.blog-content img {
+    height: 410px;
+    width: 300px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.blog-content img:hover {
+    transform: scale(1.02);
+}
+
+.blog-content a {
+    text-decoration: none;
+}
+
+.blog-head {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 100;
+    font-size: 22px;
+    text-align: center;
+    color: rgb(97, 82, 72);
+    margin-top: 10px;
+    /* text-decoration: none; */
+}
+
+.blog-head:hover {
+    color: black;
+}
+
+.blog-text {
+    margin-top: 100px;
+    padding: 10px 30px;
+    color: #987459;
+}
+
+.blogH1 {
+    font-size: 30px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    color: rgb(97, 82, 72);
+}
+
+.blogH2 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+/* BUTTON*/
+.contact-button-container {
+    display: flex;
+    /* justify-content: center; */
+    margin: 30px 0 10px 0px;
+}
+
+.contact-button {
+    /* display: inline-block; */
+    padding: 15px 30px;
+    border: 1px solid #b0b0b0;
+    /* light grey color */
+    text-decoration: none;
+    color: #b0b0b0;
+    /* light grey color */
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    color: #ffffff;
+    background-color: rgb(97, 82, 72);
+}
+
+/* section3 */
+
+#About {
+    margin-top: 100px;
+}
+
+.about-items {
+    display: flex;
+}
+
+.aboutImg {
+    /* margin: 12px; */
+    margin-left: 20px;
+    height: 400px;
+    width: 310px;
+}
+
+#img-1 {
+    padding-bottom: 40px;
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+#img-2 {
+    padding-top: 170px;
+    margin-right: 30px;
+}
+
+.about-text {
+    /* padding: 50px 80px; */
+    /* background-color: rgb(242, 239, 233); */
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    /* margin: 40px; */
+    margin-right: 0px;
+}
+
+.about-content {
+    background-color: rgba(220, 209, 182, 0.3);
+    /* opacity: 0.6; */
+    padding: 80px 110px;
+    height: 650px;
+    width: 700px;
+}
+
+.aboutH1 {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.aboutH2 {
+    font-size: 52px;
+    font-weight: lighter;
+    padding-right: 90px;
+    line-height: 60px;
+    color: rgb(97, 82, 72);
+}
+
+.about-para {
+    font-size: 18px;
+    color: #987459;
+}
+
+.about-para2 {
+    font-size: 18px;
+    color: #987459;
+}
+
+/* section4 */
+
+#page-cards {
+    margin-top: 130px;
+}
+
+.pageCard-items {
+    display: flex;
+}
+
+.card-content {
+    /* margin: 0px 20px; */
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+
+.overlay-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid white;
+    /* padding: 250px 80px; */
+    /* margin: 20px; */
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 800;
+    margin: 20px 15px 60px 12px;
+    padding: 230px 102px;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 5px 29px 0px; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.cardImg {
+    height: 540px;
+    width: 440px;
+    display: block;
+    /* width: 100%; */
+    transition: transform 0.5s ease;
+    margin: 0px 20px;
+}
+
+.card-content:hover img {
+    transform: scale(1.03);
+}
+
+.overlay-text:hover {
+    border-color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.card-content:hover .overlay-text {
+    opacity: 1;
+}
+
+.space {
+    color: rgba(237, 235, 223, 0.51);
+    font-size: x-small;
+}
+
+.card-head {
+    font-size: 30px;
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    margin: 20px 0px 0px 140px;
+    /* padding-top: 30px; */
+    /* margin-top: 80px; */
+    text-decoration: none;
+    color: rgb(97, 82, 72);
+    letter-spacing: 2px;
+}
+
+.card-head:hover {
+    opacity: 0.6;
+}
+
+/* section5 */
+
+#functionality {
+    margin-top: 120px;
+    padding: 70px 30px 20px 10px;
+    background-color: rgba(237, 235, 223, 1);
+}
+
+.functionality-items {
+    height: 450px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    /* Adjust gap as needed */
+}
+
+.function-head {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 10px;
+    color: rgb(97, 82, 72);
+}
+
+.function-head02 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    text-align: center;
+    font-size: xx-large;
+    margin-top: 0;
+    color: #987459;
+}
+
+.function-para {
+    font-size: 18px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 100;
+    text-align: center;
+    padding: 10px 30px;
+    color: #987459;
+}
+
+/* .function-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 5px 10px;
+    border: 2px solid rgb(97, 82, 72);
+    background-color: rgb(97, 82, 72);
+    color: white;
+    margin-top: 25px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 200;
+    height: 50px;
+    width: 200px;
+    font-size: larger;
+}
+
+.function-btn:hover{
+    opacity: 0.6;
+}
+
+.function-btn a{
+    text-decoration: none;
+    color: white;
+} */
+/* BUTTON*/
+.functionality-button-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 10px 0px;
+}
+
+.functionality-button {
+    display: inline-block;
+    /* justify-content: center;
+    text-align: center; */
+    padding: 15px 30px;
+    border: 1px solid #b0b0b0;
+    /* light grey color */
+    text-decoration: none;
+    color: #b0b0b0;
+    /* light grey color */
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.functionality-button:hover {
+    color: #ffffff;
+    background-color: rgb(97, 82, 72);
+}
+
+.vertical-line {
+    width: 1px;
+    background-color: black;
+    /* Line color */
+    height: 870px;
+    /* Adjust height as needed */
+    margin: 10px 10px 10px 10px;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+/* Basic horizontal line styling */
+.horizontal-line {
+    border: none;
+    border-top: 1px solid #333;
+    /* Line color and thickness */
+    width: 99%;
+    /* Line width */
+    margin: 0px 10px 30px 10px;
+    /* Center alignment and spacing */
+    opacity: 0.7;
+    /* Line transparency */
+}
+
+/* section06 */
+
+#instagram {
+    margin-top: 140px;
+}
+
+.insta-items {
+    display: flex;
+}
+
+.ig-content {
+    padding: 170px 300px 10px 30px;
+    background-color: rgba(220, 209, 182, 0.3);
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgb(97, 82, 72);
+    height: 448px;
+    width: 490px;
+    margin-top: 5px;
+}
+
+.ig-head {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.ig-head02 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 5px;
+}
+
+.ig-head03 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 200;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(97, 82, 72);
+    /* Same color as your text */
+    line-height: 50px;
+    padding: 0px;
+    margin: 0px 2px;
+}
+
+.ig-head03 .line {
+    flex: 1;
+    height: 1px;
+    background-color: rgb(97, 82, 72);
+    /* Same color as your text */
+    margin: 0 2px;
+    /* Space between the line and the text */
+}
+
+.ig-head03 a {
+    text-decoration: none;
+    color: rgb(97, 82, 72);
+}
+
+.ig-head03:hover {
+    transform: scale(0.9);
+}
+
+.insta-img {
+    height: 220px;
+    width: 220px;
+    /* transition: transform 0.4s ease-in-out; */
+}
+
+.insta-img:hover {
+    opacity: 0.7;
+    /* transform: scale(0.9); */
+}
+
+#ig-img01 {
+    margin: 5px;
+}
+
+#ig-img02 {
+    margin: 5px;
+}
+
+#ig-img03 {
+    margin: 5px;
+}
+
+#ig-img04 {
+    margin: 5px;
+}
+
+/* section07 */
+
+#writtenContent {
+    margin-top: 130px;
+}
+
+.WC-items {
+    text-align: center;
+}
+
+.WC-para {
+    padding: 0px 440px;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
+    color: rgb(169, 169, 169);
+    font-size: 30px;
+}
+
+.WC-para02 {
+    margin-top: 30px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 200;
+    font-size: 20px;
+    padding: 0px 180px;
+    color: rgb(97, 82, 72);
+}
+
+.WC-btn {
+    /* margin-top: 20px;
+    padding: 7px 18px;
+    background-color: rgb(97, 82, 72);
+    border: 2px solid rgb(97, 82, 72);
+    color: white; */
+    padding: 5px 10px;
+    border: 2px solid rgb(97, 82, 72);
+    background-color: rgb(97, 82, 72);
+    color: white;
+    margin-top: 25px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 200;
+    height: 50px;
+    width: 200px;
+    font-size: larger;
+}
+
+.WC-btn:hover {
+    opacity: 0.6;
+}
+
+.WC-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+/* section08 */
+
+.test-container {
+    height: 300px;
+    width: 400px;
+    margin-left: 30px;
+}
+
+.testimonials {
+    margin-top: 130px;
+    background-color: rgba(237, 235, 223, 1);
+    padding-top: 30px;
+}
+
+.testimonials-head {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* text-shadow: 0px 0px 15px rgb(137, 121, 110); */
+}
+
+.TH {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: rgb(97, 82, 72);
+    letter-spacing: 1px;
+}
+
+.test-head,
+.test-para {
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: lighter;
+    color: #987459;
+}
+
+.test-head {
+    margin-top: 36px;
+}
+
+.vertical-line02 {
+    width: 1px;
+    background-color: #987459;
+    height: 240px;
+    margin: 0 0 0 70px;
+    /* padding-top: 20px; */
+}
+
+.testimonial-form-section {
+    margin-top: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.testimonial-form-section h3 {
+    font-family: "Cormorant Garamond", serif;
+    color: rgb(97, 82, 72);
+}
+
+#testimonialForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#testimonialForm input,
+#testimonialForm textarea {
+    width: 50%;
+    margin: 10px 0;
+    padding: 10px;
+    font-family: "Cormorant Garamond", serif;
+    border: 1px solid #987459;
+    border-radius: 50px;
+}
+
+.submit-btn {
+    margin-top: 10px;
+    font-family: "Cormorant Garamond", serif;
+    padding: 10px 10px;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+}
+
+.submit-btn:hover {
+    color: #ffffff;
+    background-color: rgb(97, 82, 72);
+}
+
+.form-message {
+    margin-top: 10px;
+    color: rgb(97, 82, 72);
+    font-size: 0.9em;
+}
+
+.form-message.error {
+    color: red;
+}
+
+
+/* section webinar sign up  */
+
+#web-signup {
+    margin-top: 100px;
+    border: 1px solid #ddd;
+    padding: 30px 10px;
+}
+
+.web-para {
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    color: rgb(97, 82, 72);
+}
+
+/* section09 */
+
+#featuredIn {
+    margin-top: 100px;
+    overflow: hidden;
+    /* Hide overflow for the scrolling effect */
+    position: relative;
+}
+
+.featured-head {
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: lighter;
+    font-size: 22px;
+    color: rgb(97, 82, 72);
+    letter-spacing: 3px;
+}
+
+.featured-img {
+    display: flex;
+    /* height: 200px;
+    width: 200px; */
+    animation: scroll 20s linear infinite;
+    /* Adjust duration for speed */
+    white-space: nowrap;
+    /* Prevent wrapping of logos */
+}
+
+.FImg {
+    height: 90px;
+    width: 250px;
+    margin: 40px;
+    border: 2px solid white;
+    padding: 5px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+        /* Start from right */
+    }
+
+    100% {
+        transform: translateX(-100%);
+        /* Move to left */
+    }
+}
+
+/* newsletter  */
+
+/* Signup box styling */
+.newsletter {
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.signup-box {
+    width: 1050px;
+    height: 300px;
+    padding: 30px 100px;
+    border-radius: 0px;
+    background-color: rgba(237, 235, 223, 1);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 1px solid #ddd;
+}
+
+.news-head {
+    font-size: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.news-head02 {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Input styling */
+.signup-box input[type="email"] {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    background-color: rgba(237, 235, 223, 0.51);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+}
+
+/* Checkbox and label styling */
+.signup-box label {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 0.9em;
+    color: #555;
+    display: inline-block;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: rgba(237, 235, 223, 1);
+}
+
+.signup-box input[type="checkbox"] {
+    margin-right: 5px;
+    background-color: rgba(237, 235, 223, 1);
+}
+
+/* newsletter button  */
+.news-btn {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px 0px;
+}
+
+.signup-box button {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    padding: 10px 50px;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+}
+
+.signup-box button:hover {
+    color: #ffffff;
+    background-color: rgb(97, 82, 72);
+}
+
+/* Thank you message styling */
+.thank-you {
+    margin-top: 70px;
+    display: none;
+    font-size: 2em;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: 400px;
+}
+
+/* footer */
+footer {
+    margin-top: 100px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    height: 300px;
+    color: white;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 5px -3px; */
+}
+
+fc {
+    align-items: center;
+}
+
+.fc2 {
+    padding-left: 242px;
+    padding-top: 80px;
+    list-style-type: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fc2 ul li::selection {
+    background-color: white;
+    color: rgb(97, 82, 72);
+}
+
+.fc2 ul {
+    margin-right: 200px;
+}
+
+.fc2 ul a {
+    text-decoration: none;
+}
+
+.fc2 ul li {
+    margin-bottom: 20px;
+}
+
+.fi {
+    padding-top: 80px;
+}
+
+.fc2 ul li a {
+    margin-right: 18px;
+    color: white;
+    font-size: 24px;
+}
+
+.f3list li h4::selection {
+    background-color: white;
+    color: rgb(97, 82, 72);
+}
+
+.f3list li p::selection {
+    background-color: white;
+    color: rgb(97, 82, 72);
+}
+
+.copyright {
+    margin-top: 4px;
+    margin-left: 500px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: larger;
+    background-color: rgba(237, 235, 223, 0.51);
+}
+
+.copyright p::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
+
+/* media queries */
+/* phone size  */
+
+@media (min-width: 0px) and (max-width: 400px) {
+
+    /* header */
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    *::selection {
+        background-color: rgb(97, 82, 72);
+        color: white;
+    }
+
+    btn::selection {
+        background-color: white;
+        color: rgb(97, 82, 72);
+    }
+
+    header {
+        background-color: rgb(235, 230, 215);
+        opacity: 0.9;
+        height: 80px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+            rgba(0, 0, 0, 0.3) 0px 3px 5px -3px;
+    }
+
+    .nav-item:hover {
+        transform: scale(1.02);
+    }
+
+    .nav-item a::selection {
+        background-color: rgb(97, 82, 72);
+        color: white;
+    }
+
+    .AGD-logo {
+        font-size: 30px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        font-style: italic;
+        color: rgb(170, 146, 146);
+        margin-left: 32px;
+    }
+
+    .AGD-img {
+        margin-left: 0px;
+        height: 50px;
+        width: 90px;
+    }
+
+    .AGDname {
+        font-size: 14px;
+        margin-left: 0px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    .AGDname::selection {
+        background-color: rgb(97, 82, 72);
+        color: white;
+    }
+
+    .Nlist {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+        background-color: rgb(235, 230, 215);
+        opacity: 0.9;
+        margin-top: 5px;
+    }
+
+    html,
+    body {
+        background-color: rgba(237, 235, 223, 0.51) !important;
+    }
+
+    .hero-section {
+        /* position: relative;
+        width: 100%;
+        height: auto; */
+        position: relative;
+        width: 100vw;
+        /* Full viewport width */
+        height: 762px;
+        /* Set desired height */
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0px;
+        background-color: rgba(237, 235, 223, 0.51);
+        height: 400px;
+    }
+
+    #heroVideo {
+        width: 20%;
+        height: 0px;
+        margin-top: 150px;
+        margin-bottom: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* Center the video */
+        min-width: 100%;
+        /* Ensure it fills the width */
+        min-height: 100%;
+        /* Ensure it fills the height */
+        object-fit: cover;
+        /* Crop video to cover the container */
+    }
+
+    #toggleSoundButton {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        z-index: 3;
+        text-transform: uppercase;
+        /* font-family: Arial, sans-serif; */
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        background: none;
+        /* Remove background */
+        border: none;
+        /* Remove border */
+        padding: 0;
+        /* Remove padding */
+        outline: none;
+        /* Remove outline */
+        margin-bottom: 10px;
+        margin-right: 14px;
+    }
+
+    .sound-icon {
+        font-size: 16px;
+    }
+
+    /* section2 */
+
+    #blogPosts {
+        margin-top: 50px;
+        background-color: rgba(237, 235, 223, 1);
+    }
+
+    .Blog-items {
+        display: block;
+        padding: 15px;
+    }
+
+    .blog-content {
+        margin: 6px;
+    }
+
+    .blog-content img {
+        height: 310px;
+        width: 200px;
+        transition: transform 0.4s ease-in-out;
+        margin-left: 80px;
+    }
+
+    .blog-content img:hover {
+        transform: scale(1.02);
+    }
+
+    .blog-content a {
+        text-decoration: none;
+    }
+
+    .blog-head {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 100;
+        font-size: 16px;
+        text-align: center;
+        color: rgb(97, 82, 72);
+        margin-top: 10px;
+        /* text-decoration: none; */
+        margin-bottom: 40px;
+    }
+
+    .blog-head:hover {
+        color: black;
+    }
+
+    .blog-text {
+        margin-top: 50px;
+        padding: 10px 30px;
+        color: #987459;
+        text-align: center;
+    }
+
+    .blogH1 {
+        font-size: 26px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 400;
+        color: rgb(97, 82, 72);
+    }
+
+    .blogH2 {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-size: 15px;
+    }
+
+    /* BUTTON*/
+    .contact-button-container {
+        display: flex;
+        justify-content: center;
+        /* margin: 30px 0 10px 0px; */
+    }
+
+    .contact-button {
+        /* display: inline-block; */
+        padding: 10px 15px;
+        border: 1px solid #b0b0b0;
+        /* light grey color */
+        text-decoration: none;
+        color: #b0b0b0;
+        /* light grey color */
+        font-size: 14px;
+        font-weight: normal;
+        letter-spacing: 2px;
+        transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .contact-button:hover {
+        color: #ffffff;
+        background-color: rgb(97, 82, 72);
+    }
+
+    /* section3 */
+
+    #About {
+        margin-top: 50px;
+    }
+
+    .about-items {
+        /* display: flex; */
+        display: block;
+    }
+
+    .aboutImg {
+        /* margin: 12px; */
+        margin-left: 65px;
+        height: 350px;
+        width: 270px;
+    }
+
+    #img-1 {
+        padding-bottom: 10px;
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+
+    #img-2 {
+        padding-top: 20px;
+        margin-right: 30px;
+    }
+
+    .about-text {
+        /* padding: 50px 80px; */
+        /* background-color: rgb(242, 239, 233); */
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 400;
+        /* margin: 40px; */
+        margin-right: 0px;
+        margin-top: 20px;
+    }
+
+    .about-content {
+        background-color: rgba(220, 209, 182, 0.3);
+        /* opacity: 0.6; */
+        padding: 30px 40px;
+        height: 400px;
+        width: 350px;
+        margin-left: 25px;
+    }
+
+    .aboutH1 {
+        font-size: 10px;
+        font-weight: 300;
+    }
+
+    .aboutH2 {
+        font-size: 25px;
+        font-weight: lighter;
+        padding-right: 90px;
+        line-height: 25px;
+        color: rgb(97, 82, 72);
+    }
+
+    .about-para {
+        font-size: 13px;
+        color: #987459;
+    }
+
+    .about-para2 {
+        font-size: 13px;
+        color: #987459;
+    }
+
+    /* section4 */
+
+    #page-cards {
+        margin-top: 60px;
+    }
+
+    .pageCard-items {
+        display: flex;
+    }
+
+    .card-content {
+        /* margin: 0px 20px; */
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+    }
+
+    /* .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease;
+        pointer-events: none;
+    } */
+
+    .overlay-text {
+        font-size: 0.8rem;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        border: 1px solid white;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 800;
+        margin: 20px 15px 60px 29px;
+        padding: 230px 102px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    .cardImg {
+        height: 160px;
+        width: 230px;
+        display: block;
+        /* width: 100%; */
+        transition: transform 0.5s ease;
+        margin: 0px auto;
+        padding: 0px 5px;
+        margin-right: 5px;
+    }
+
+    .card-content:hover img {
+        transform: scale(1.02);
+    }
+
+    .overlay-text:hover {
+        border-color: white;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .card-content:hover .overlay-text {
+        opacity: 1;
+    }
+
+    .space {
+        color: rgba(237, 235, 223, 0.51);
+        font-size: x-small;
+    }
+
+    .card-head {
+        font-size: 10px;
+        text-align: center;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        margin: 10px 0px 0px 33px;
+        /* padding-top: 30px; */
+        /* margin-top: 80px; */
+        text-decoration: none;
+        color: rgb(97, 82, 72);
+        letter-spacing: 2px;
+    }
+
+    .card-head:hover {
+        opacity: 0.6;
+    }
+
+    /* section5 */
+
+    #functionality {
+        margin-top: 60px;
+        padding: 10px 30px 20px 10px;
+        background-color: rgba(237, 235, 223, 1);
+    }
+
+    .functionality-items {
+        height: 250px;
+        /* display: block; */
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 10px;
+        /* Adjust gap as needed */
+        margin-bottom: 50px;
+    }
+
+    .function-head {
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-weight: lighter;
+        font-style: normal;
+        font-size: 20px;
+        text-align: center;
+        padding-top: 5px;
+        color: rgb(97, 82, 72);
+    }
+
+    .function-head02 {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        text-align: center;
+        font-size: small;
+        margin-top: 0;
+        color: #987459;
+    }
+
+    .function-para {
+        font-size: 7px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 100;
+        text-align: center;
+        padding: 0px 30px;
+        color: #987459;
+    }
+
+    .functionality-button-container {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0 10px 0px;
+    }
+
+    .functionality-button {
+        display: inline-block;
+        /* justify-content: center;
+        text-align: center; */
+        padding: 5px 15px;
+        border: 1px solid #b0b0b0;
+        /* light grey color */
+        text-decoration: none;
+        color: #b0b0b0;
+        /* light grey color */
+        font-size: 12px;
+        font-weight: normal;
+        letter-spacing: 2px;
+        transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .functionality-button:hover {
+        color: #ffffff;
+        background-color: rgb(97, 82, 72);
+    }
+
+    .vertical-line {
+        width: 1px;
+        background-color: black;
+        /* Line color */
+        height: 600px;
+        /* Adjust height as needed */
+        margin: 10px 10px 10px 10px;
+        /* justify-content: center;
+        align-items: center; */
+    }
+
+    /* Basic horizontal line styling */
+    .horizontal-line {
+        border: none;
+        border-top: 1px solid #333;
+        /* Line color and thickness */
+        width: 100%;
+        /* Line width */
+        margin: 0px 10px 30px 10px;
+        /* Center alignment and spacing */
+        opacity: 0.7;
+        /* Line transparency */
+    }
+
+    /* section06 */
+
+    #instagram {
+        margin-top: 40px;
+    }
+
+    .insta-items {
+        display: block;
+    }
+
+    .ig-content {
+        text-align: center;
+        padding: 30px 100px 0px 90px;
+        background-color: rgba(220, 209, 182, 0.3);
+        /* margin-left: 10px;
+        margin-right: 10px; */
+        color: rgb(97, 82, 72);
+        height: 148px;
+        width: 380px;
+        /* margin-top: 5px; */
+    }
+
+    .ig-head {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: lighter;
+        font-size: 15px;
+    }
+
+    .ig-head02 {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 5px;
+    }
+
+    .ig-head03 {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 200;
+        font-size: medium;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(97, 82, 72);
+        /* Same color as your text */
+        line-height: 50px;
+        padding: 0px;
+        margin: 0px 2px;
+    }
+
+    .ig-head03 .line {
+        flex: 1;
+        height: 1px;
+        background-color: rgb(97, 82, 72);
+        /* Same color as your text */
+        margin: 0 2px;
+        /* Space between the line and the text */
+    }
+
+    .ig-head03 a {
+        text-decoration: none;
+        color: rgb(97, 82, 72);
+    }
+
+    .ig-head03:hover {
+        transform: scale(0.9);
+    }
+
+    .insta-img {
+        height: 180px;
+        width: 180px;
+        margin-right: 5px;
+        /* transition: transform 0.4s ease-in-out; */
+    }
+
+    .insta-img:hover {
+        opacity: 0.7;
+        /* transform: scale(0.9); */
+    }
+
+    #ig-img01 {
+        margin: 20px;
+        display: flex;
+    }
+
+    #ig-img02 {
+        margin: 20px;
+        display: flex;
+    }
+
+    #ig-img03 {
+        margin: 20px;
+        display: flex;
+    }
+
+    #ig-img04 {
+        margin: 20px;
+        display: flex;
+    }
+
+    /* section07 */
+
+    #writtenContent {
+        margin-top: 70px;
+    }
+
+    .WC-items {
+        text-align: center;
+    }
+
+    .WC-para {
+        padding: 0px 20px;
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-weight: lighter;
+        font-style: normal;
+        color: rgb(169, 169, 169);
+        font-size: 20px;
+    }
+
+    .WC-para02 {
+        margin-top: 10px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 200;
+        font-size: 15px;
+        padding: 0px 20px;
+        color: rgb(97, 82, 72);
+    }
+
+    .WC-btn {
+        /* margin-top: 20px;
+    padding: 7px 18px;
+    background-color: rgb(97, 82, 72);
+    border: 2px solid rgb(97, 82, 72);
+    color: white; */
+        padding: 5px 10px;
+        border: 2px solid rgb(97, 82, 72);
+        background-color: rgb(97, 82, 72);
+        color: white;
+        margin-top: 25px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 200;
+        height: 50px;
+        width: 200px;
+        font-size: larger;
+    }
+
+    .WC-btn:hover {
+        opacity: 0.6;
+    }
+
+    .WC-btn a {
+        text-decoration: none;
+        color: white;
+    }
+
+
+
+
+    /* section08 */
+
+    .test-container {
+        height: 200px;
+        width: 150px;
+        margin-left: 30px;
+    }
+
+    .testimonials {
+        margin-top: 50px;
+        background-color: rgba(237, 235, 223, 1);
+        padding-top: 10px;
+    }
+
+    .testimonials-head {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        /* text-shadow: 0px 0px 15px rgb(137, 121, 110); */
+    }
+
+    .TH {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 400;
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: rgb(97, 82, 72);
+        letter-spacing: 1px;
+    }
+
+    .test-head,
+    .test-para {
+        text-align: center;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: lighter;
+        color: #987459;
+        font-size: small;
+        padding: 0px 70px 0px 20px;
+    }
+
+    .test-head {
+        margin-top: 26px;
+    }
+
+    .vertical-line02 {
+        width: 0px;
+        background-color: #987459;
+        height: 0px;
+        margin: 0 0 0 0px;
+        /* padding-top: 20px; */
+    }
+
+    .testimonial-form-section {
+        margin-top: 10px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .testimonial-form-section h3 {
+        font-family: "Cormorant Garamond", serif;
+        color: rgb(97, 82, 72);
+        font-size: medium;
+    }
+
+    #testimonialForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #testimonialForm input,
+    #testimonialForm textarea {
+        width: 80%;
+        margin: 10px 0;
+        padding: 10px;
+        font-family: "Cormorant Garamond", serif;
+        border: 1px solid #987459;
+        border-radius: 50px;
+    }
+
+    .submit-btn {
+        margin-top: 10px;
+        font-family: "Cormorant Garamond", serif;
+        padding: 8px 8px;
+        color: #b0b0b0;
+        border: 1px solid #b0b0b0;
+        cursor: pointer;
+        font-weight: normal;
+        letter-spacing: 2px;
+        background-color: rgba(237, 235, 223, 1);
+    }
+
+    .submit-btn:hover {
+        color: #ffffff;
+        background-color: rgb(97, 82, 72);
+    }
+
+    .form-message {
+        margin-top: 10px;
+        color: rgb(97, 82, 72);
+        font-size: 0.9em;
+    }
+
+    .form-message.error {
+        color: red;
+    }
+
+
+    /* section webinar sign up  */
+
+    #web-signup {
+        margin-top: 50px;
+        border: 1px solid #ddd;
+        padding: 15px 10px;
+    }
+
+    .web-para {
+        text-align: center;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 15px;
+        color: rgb(97, 82, 72);
+    }
+
+    /* section09 */
+
+    #featuredIn {
+        margin-top: 50px;
+        overflow: hidden;
+        /* Hide overflow for the scrolling effect */
+        position: relative;
+    }
+
+    .featured-head {
+        text-align: center;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: lighter;
+        font-size: 18px;
+        color: rgb(97, 82, 72);
+        letter-spacing: 3px;
+    }
+
+    .featured-img {
+        display: flex;
+        /* height: 200px;
+    width: 200px; */
+        animation: scroll 20s linear infinite;
+        /* Adjust duration for speed */
+        white-space: nowrap;
+        /* Prevent wrapping of logos */
+    }
+
+    .FImg {
+        height: 50px;
+        width: 150px;
+        margin: 10px;
+        border: 2px solid white;
+        padding: 5px;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+            /* Start from right */
+        }
+
+        100% {
+            transform: translateX(-100%);
+            /* Move to left */
+        }
+    }
+
+
+
+    /* newsletter  */
+
+    /* Signup box styling */
+    .newsletter {
+        margin-top: 80px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .signup-box {
+        width: 300px;
+        height: 180px;
+        padding: 5px 10px;
+        border-radius: 0px;
+        background-color: rgba(237, 235, 223, 1);
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+        text-align: center;
+        transition: transform 0.3s ease;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border: 1px solid #ddd;
+    }
+
+    .news-head {
+        font-size: 14px;
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        font-weight: 300;
+        margin-bottom: 4px;
+        color: #333;
+    }
+
+    .news-head02 {
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        font-size: 0.6em;
+        color: #666;
+        margin-bottom: 4px;
+    }
+
+    /* Input styling */
+    .signup-box input[type="email"] {
+        margin-top: 15px;
+        width: 100%;
+        padding: 5px;
+        font-size: 0.7em;
+        margin-bottom: 5px;
+        background-color: rgba(237, 235, 223, 0.51);
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+    }
+
+    /* Checkbox and label styling */
+    .signup-box label {
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        font-size: 0.7em;
+        color: #555;
+        display: inline-block;
+        margin-bottom: 15px;
+        cursor: pointer;
+        background-color: rgba(237, 235, 223, 1);
+    }
+
+    .signup-box input[type="checkbox"] {
+        height: 10px;
+        margin-right: 5px;
+        background-color: rgba(237, 235, 223, 1);
+    }
+
+    /* newsletter button  */
+    .news-btn {
+        display: flex;
+        justify-content: center;
+        margin: 5px 0 10px 0px;
+    }
+
+    .signup-box button {
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        padding: 5px 15px;
+        color: #b0b0b0;
+        border: 1px solid #b0b0b0;
+        cursor: pointer;
+        font-weight: normal;
+        letter-spacing: 1px;
+        background-color: rgba(237, 235, 223, 1);
+        font-size: small;
+    }
+
+    .signup-box button:hover {
+        color: #ffffff;
+        background-color: rgb(97, 82, 72);
+    }
+
+    /* Thank you message styling */
+    .thank-you {
+        margin-top: 40px;
+        display: none;
+        font-size: 1em;
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        font-weight: 400px;
+    }
+
+    /* footer */
+    footer {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+        height: 150px;
+        color: white;
+        margin-top: 70px;
+        font-size: x-small;
+    }
+
+    .fc {
+        align-items: center;
+    }
+
+    .fc2 {
+        padding-left: 5px;
+        padding-top: 15px;
+        list-style-type: none;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .fc2 ul {
+        margin-right: 10px;
+    }
+
+    .fc2 ul a {
+        text-decoration: none;
+    }
+
+    .fc2 ul li {
+        margin-bottom: 10px;
+    }
+
+    .fi {
+        padding-top: 10px;
+    }
+
+    .fc2 ul li a {
+        margin-right: 18px;
+        color: white;
+        font-size: 15px;
+    }
+
+    .copyright {
+        margin-left: 60px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: small;
+        background-color: rgba(237, 235, 223, 0.51);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* tab size  */
+
+@media (min-width:401px) and (max-width:1024px) {
+
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    *::selection {
+        background-color: rgb(97, 82, 72);
+        color: white;
+    }
+
+    btn::selection {
+        background-color: white;
+        color: rgb(97, 82, 72);
+    }
+
+    header {
+        background-color: rgb(235, 230, 215);
+        opacity: 0.9;
+        height: 100px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+            rgba(0, 0, 0, 0.3) 0px 3px 5px -3px;
+    }
+
+    .nav-item {
+        font-size: 13px;
+    }
+
+    .nav-item:hover {
+        transform: scale(1.02);
+    }
+
+    .nav-item a::selection {
+        background-color: rgb(97, 82, 72);
+        color: white;
+    }
+
+    .AGD-logo {
+        font-size: 30px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        font-style: italic;
+        color: rgb(170, 146, 146);
+        margin-left: 22px;
+    }
+
+    .AGD-img {
+        margin-left: 38px;
+    }
+
+    .AGDname {
+        font-size: 13px;
+        margin-left: 32px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    .AGDname::selection {
+        background-color: rgb(97, 82, 72);
+        color: white;
+    }
+
+    .Nlist {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+
+    html,
+    body {
+        background-color: rgba(237, 235, 223, 0.51) !important;
+    }
+
+
+
+    .hero-section {
+        /* position: relative;
+        width: 100%;
+        height: auto; */
+        position: relative;
+        width: 100vw;
+        /* Full viewport width */
+        height: 662px;
+        /* Set desired height */
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0px;
+        background-color: rgba(237, 235, 223, 0.51);
+    }
+
+    #heroVideo {
+        width: 100%;
+        height: 100%;
+        margin-top: 150px;
+        margin-bottom: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* Center the video */
+        min-width: 100%;
+        /* Ensure it fills the width */
+        min-height: 100%;
+        /* Ensure it fills the height */
+        object-fit: cover;
+        /* Crop video to cover the container */
+    }
+
+    #toggleSoundButton {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        z-index: 3;
+        text-transform: uppercase;
+        /* font-family: Arial, sans-serif; */
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        background: none;
+        /* Remove background */
+        border: none;
+        /* Remove border */
+        padding: 0;
+        /* Remove padding */
+        outline: none;
+        /* Remove outline */
+        margin-bottom: 10px;
+        margin-right: 16px;
+    }
+
+    .sound-icon {
+        font-size: 16px;
+    }
+
+    /* section2 */
+
+    #blogPosts {
+        margin-top: 80px;
+        background-color: rgba(237, 235, 223, 1);
+    }
+
+    .Blog-items {
+        display: flex;
+        padding: 10px;
+    }
+
+    .blog-content {
+        margin: 12px;
+    }
+
+    .blog-content img {
+        height: 310px;
+        width: 230px;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .blog-content img:hover {
+        transform: scale(1.02);
+    }
+
+    .blog-content a {
+        text-decoration: none;
+    }
+
+    .blog-head {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 100;
+        font-size: 18px;
+        text-align: center;
+        color: rgb(97, 82, 72);
+        margin-top: 10px;
+        /* text-decoration: none; */
+    }
+
+    .blog-head:hover {
+        color: black;
+    }
+
+    .blog-text {
+        margin-top: 20px;
+        padding: 10px 30px;
+        color: #987459;
+    }
+
+    .blogH1 {
+        font-size: 25px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 400;
+        color: rgb(97, 82, 72);
+    }
+
+    .blogH2 {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-size: 18px;
+    }
+
+    /* BUTTON*/
+    .contact-button-container {
+        display: flex;
+        /* justify-content: center; */
+        margin: 30px 0 10px 0px;
+    }
+
+    .contact-button {
+        /* display: inline-block; */
+        padding: 10px 15px;
+        border: 1px solid #b0b0b0;
+        /* light grey color */
+        text-decoration: none;
+        color: #b0b0b0;
+        /* light grey color */
+        font-size: 14px;
+        font-weight: normal;
+        letter-spacing: 2px;
+        transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .contact-button:hover {
+        color: #ffffff;
+        background-color: rgb(97, 82, 72);
+    }
+
+    /* section3 */
+
+    #About {
+        margin-top: 90px;
+    }
+
+    .about-items {
+        display: flex;
+    }
+
+    .aboutImg {
+        /* margin: 12px; */
+        margin-left: 10px;
+        height: 300px;
+        width: 230px;
+    }
+
+    #img-1 {
+        padding-bottom: 40px;
+        margin-top: 50px;
+        margin-right: 20px;
+    }
+
+    #img-2 {
+        padding-top: 170px;
+        margin-right: 30px;
+    }
+
+    .about-text {
+        /* padding: 50px 80px; */
+        /* background-color: rgb(242, 239, 233); */
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 400;
+        /* margin: 40px; */
+        margin-right: 0px;
+    }
+
+    .about-content {
+        background-color: rgba(220, 209, 182, 0.3);
+        /* opacity: 0.6; */
+        padding: 40px 40px;
+        height: 530px;
+        width: 480px;
+    }
+
+    .aboutH1 {
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .aboutH2 {
+        font-size: 42px;
+        font-weight: lighter;
+        padding-right: 90px;
+        line-height: 60px;
+        color: rgb(97, 82, 72);
+    }
+
+    .about-para {
+        font-size: 16px;
+        color: #987459;
+    }
+
+    .about-para2 {
+        font-size: 16px;
+        color: #987459;
+    }
+
+    /* section4 */
+
+    #page-cards {
+        margin-top: 100px;
+    }
+
+    .pageCard-items {
+        display: flex;
+    }
+
+    .card-content {
+        /* margin: 0px 20px; */
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease;
+        pointer-events: none;
+    }
+
+    .overlay-text {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        border: 1px solid white;
+        /* padding: 250px 80px; */
+        /* margin: 20px; */
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 800;
+        margin: 30px 295px 140px 292px;
+        padding: 150px 122px;
+        /* box-shadow: rgba(100, 100, 111, 0.2) 0px 5px 29px 0px; */
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    .cardImg {
+        height: 430px;
+        width: 320px;
+        display: block;
+        /* width: 100%; */
+        transition: transform 0.5s ease;
+        margin: 0px 20px;
+    }
+
+    .card-content:hover img {
+        transform: scale(1.03);
+    }
+
+    .overlay-text:hover {
+        border-color: white;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .card-content:hover .overlay-text {
+        opacity: 1;
+    }
+
+    .space {
+        color: rgba(237, 235, 223, 0.51);
+        font-size: x-small;
+    }
+
+    .card-head {
+        font-size: 25px;
+        text-align: center;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        margin: 20px 0px 0px 100px;
+        /* padding-top: 30px; */
+        /* margin-top: 80px; */
+        text-decoration: none;
+        color: rgb(97, 82, 72);
+        letter-spacing: 2px;
+    }
+
+    .card-head:hover {
+        opacity: 0.6;
+    }
+
+    /* section5 */
+
+    #functionality {
+        margin-top: 100px;
+        padding: 70px 30px 20px 10px;
+        background-color: rgba(237, 235, 223, 1);
+    }
+
+    .functionality-items {
+        height: 450px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 20px;
+        /* Adjust gap as needed */
+    }
+
+    .function-head {
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-weight: lighter;
+        font-style: normal;
+        font-size: 35px;
+        text-align: center;
+        padding-top: 10px;
+        color: rgb(97, 82, 72);
+    }
+
+    .function-head02 {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        text-align: center;
+        font-size: xx-large;
+        margin-top: 0;
+        color: #987459;
+    }
+
+    .function-para {
+        font-size: 18px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 100;
+        text-align: center;
+        padding: 10px 30px;
+        color: #987459;
+    }
+
+
+    /* BUTTON*/
+    .functionality-button-container {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0 10px 0px;
+    }
+
+    .functionality-button {
+        display: inline-block;
+        /* justify-content: center;
+        text-align: center; */
+        padding: 15px 30px;
+        border: 1px solid #b0b0b0;
+        /* light grey color */
+        text-decoration: none;
+        color: #b0b0b0;
+        /* light grey color */
+        font-size: 16px;
+        font-weight: normal;
+        letter-spacing: 2px;
+        transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .functionality-button:hover {
+        color: #ffffff;
+        background-color: rgb(97, 82, 72);
+    }
+
+    .vertical-line {
+        width: 1px;
+        background-color: black;
+        /* Line color */
+        height: 870px;
+        /* Adjust height as needed */
+        margin: 10px 10px 10px 10px;
+        /* justify-content: center;
+        align-items: center; */
+    }
+
+    /* Basic horizontal line styling */
+    .horizontal-line {
+        border: none;
+        border-top: 1px solid #333;
+        /* Line color and thickness */
+        width: 99%;
+        /* Line width */
+        margin: 0px 10px 30px 10px;
+        /* Center alignment and spacing */
+        opacity: 0.7;
+        /* Line transparency */
+    }
+
+    /* section06 */
+
+    #instagram {
+        margin-top: 100px;
+    }
+
+    .insta-items {
+        display: flex;
+    }
+
+    .ig-content {
+        padding: 130px 100px 10px 30px;
+        background-color: rgba(220, 209, 182, 0.3);
+        margin-left: 10px;
+        margin-right: 10px;
+        color: rgb(97, 82, 72);
+        height: 348px;
+        width: 330px;
+        margin-top: 5px;
+    }
+
+    .ig-head {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: lighter;
+        font-size: 20px;
+    }
+
+    .ig-head02 {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 5px;
+    }
+
+    .ig-head03 {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 200;
+        font-size: large;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(97, 82, 72);
+        /* Same color as your text */
+        line-height: 50px;
+        padding: 0px;
+        margin: 0px 2px;
+    }
+
+    .ig-head03 .line {
+        flex: 1;
+        height: 1px;
+        background-color: rgb(97, 82, 72);
+        /* Same color as your text */
+        margin: 0 2px;
+        /* Space between the line and the text */
+    }
+
+    .ig-head03 a {
+        text-decoration: none;
+        color: rgb(97, 82, 72);
+    }
+
+    .ig-head03:hover {
+        transform: scale(0.9);
+    }
+
+    .insta-img {
+        height: 170px;
+        width: 160px;
+        /* transition: transform 0.4s ease-in-out; */
+    }
+
+    .insta-img:hover {
+        opacity: 0.7;
+        /* transform: scale(0.9); */
+    }
+
+    #ig-img01 {
+        margin: 5px;
+    }
+
+    #ig-img02 {
+        margin: 5px;
+    }
+
+    #ig-img03 {
+        margin: 5px;
+    }
+
+    #ig-img04 {
+        margin: 5px;
+    }
+
+    /* section07 */
+
+    #writtenContent {
+        margin-top: 100px;
+    }
+
+    .WC-items {
+        text-align: center;
+    }
+
+    .WC-para {
+        padding: 0px 240px;
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-weight: lighter;
+        font-style: normal;
+        color: rgb(169, 169, 169);
+        font-size: 25px;
+    }
+
+    .WC-para02 {
+        margin-top: 25px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 200;
+        font-size: 20px;
+        padding: 0px 180px;
+        color: rgb(97, 82, 72);
+    }
+
+    .WC-btn {
+        /* margin-top: 20px;
+        padding: 7px 18px;
+        background-color: rgb(97, 82, 72);
+        border: 2px solid rgb(97, 82, 72);
+        color: white; */
+        padding: 5px 10px;
+        border: 2px solid rgb(97, 82, 72);
+        background-color: rgb(97, 82, 72);
+        color: white;
+        margin-top: 25px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 200;
+        height: 50px;
+        width: 200px;
+        font-size: larger;
+    }
+
+    .WC-btn:hover {
+        opacity: 0.6;
+    }
+
+    .WC-btn a {
+        text-decoration: none;
+        color: white;
+    }
+
+    /* section08 */
+
+    .test-container {
+        height: 300px;
+        width: 380px;
+        margin-left: 20px;
+    }
+
+    .testimonials {
+        margin-top: 100px;
+        background-color: rgba(237, 235, 223, 1);
+        padding-top: 30px;
+    }
+
+    .testimonials-head {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        /* text-shadow: 0px 0px 15px rgb(137, 121, 110); */
+    }
+
+    .TH {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 400;
+        font-size: 30px;
+        margin-bottom: 30px;
+        color: rgb(97, 82, 72);
+        letter-spacing: 1px;
+    }
+
+    .test-head,
+    .test-para {
+        text-align: center;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: lighter;
+        color: #987459;
+        font-size: smaller;
+    }
+
+    .test-head {
+        margin-top: 30px;
+    }
+
+    .vertical-line02 {
+        width: 1px;
+        background-color: #987459;
+        height: 240px;
+        margin: 0 10 0 0px;
+        /* padding-top: 20px; */
+    }
+
+
+    /* test form  */
+    .testimonial-form-section {
+        margin-top: 20px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .testimonial-form-section h3 {
+        font-family: "Cormorant Garamond", serif;
+        color: rgb(97, 82, 72);
+    }
+
+    #testimonialForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #testimonialForm input,
+    #testimonialForm textarea {
+        width: 50%;
+        margin: 10px 0;
+        padding: 10px;
+        font-family: "Cormorant Garamond", serif;
+        border: 1px solid #987459;
+        border-radius: 50px;
+    }
+
+    .submit-btn {
+        margin-top: 10px;
+        font-family: "Cormorant Garamond", serif;
+        padding: 10px 10px;
+        color: #b0b0b0;
+        border: 1px solid #b0b0b0;
+        cursor: pointer;
+        font-weight: normal;
+        letter-spacing: 2px;
+        background-color: rgba(237, 235, 223, 1);
+    }
+
+    .submit-btn:hover {
+        color: #ffffff;
+        background-color: rgb(97, 82, 72);
+    }
+
+    .form-message {
+        margin-top: 10px;
+        color: rgb(97, 82, 72);
+        font-size: 0.9em;
+    }
+
+    .form-message.error {
+        color: red;
+    }
+
+
+    /* section webinar sign up  */
+
+    #web-signup {
+        margin-top: 100px;
+        border: 1px solid #ddd;
+        padding: 30px 10px;
+    }
+
+    .web-para {
+        text-align: center;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        color: rgb(97, 82, 72);
+    }
+
+    /* section09 */
+
+    #featuredIn {
+        margin-top: 100px;
+        overflow: hidden;
+        /* Hide overflow for the scrolling effect */
+        position: relative;
+    }
+
+    .featured-head {
+        text-align: center;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: lighter;
+        font-size: 22px;
+        color: rgb(97, 82, 72);
+        letter-spacing: 3px;
+    }
+
+    .featured-img {
+        display: flex;
+        /* height: 200px;
+        width: 200px; */
+        animation: scroll 20s linear infinite;
+        /* Adjust duration for speed */
+        white-space: nowrap;
+        /* Prevent wrapping of logos */
+    }
+
+    .FImg {
+        height: 90px;
+        width: 250px;
+        margin: 40px;
+        border: 2px solid white;
+        padding: 5px;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+            /* Start from right */
+        }
+
+        100% {
+            transform: translateX(-100%);
+            /* Move to left */
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* newsletter  */
+
+    /* Signup box styling */
+    .newsletter {
+        margin-top: 100px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .signup-box {
+        width: 700px;
+        height: 270px;
+        padding: 20px 100px;
+        border-radius: 0px;
+        background-color: rgba(237, 235, 223, 1);
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+        text-align: center;
+        transition: transform 0.3s ease;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border: 1px solid #ddd;
+    }
+
+    .news-head {
+        font-size: 15px;
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        font-weight: 300;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .news-head02 {
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        font-size: 0.7em;
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+    /* Input styling */
+    .signup-box input[type="email"] {
+        margin-top: 15px;
+        width: 100%;
+        padding: 10px;
+        font-size: 0.8em;
+        margin-bottom: 15px;
+        background-color: rgba(237, 235, 223, 0.51);
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+    }
+
+    /* Checkbox and label styling */
+    .signup-box label {
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        font-size: 0.9em;
+        color: #555;
+        display: inline-block;
+        margin-bottom: 13px;
+        cursor: pointer;
+        background-color: rgba(237, 235, 223, 1);
+    }
+
+    .signup-box input[type="checkbox"] {
+        margin-right: 5px;
+        background-color: rgba(237, 235, 223, 1);
+    }
+
+    /* newsletter button  */
+    .news-btn {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0 20px 0px;
+    }
+
+    .signup-box button {
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        padding: 8px 45px;
+        color: #b0b0b0;
+        border: 1px solid #b0b0b0;
+        cursor: pointer;
+        font-weight: normal;
+        letter-spacing: 2px;
+        background-color: rgba(237, 235, 223, 1);
+    }
+
+    .signup-box button:hover {
+        color: #ffffff;
+        background-color: rgb(97, 82, 72);
+    }
+
+    /* Thank you message styling */
+    .thank-you {
+        margin-top: 70px;
+        display: none;
+        font-size: 2em;
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        font-weight: 400px;
+    }
+
+
+    /* footer */
+    footer {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+        height: 270px;
+        color: white;
+        margin-top: 100px;
+    }
+
+    .fc {
+        align-items: center;
+    }
+
+    .fc2 {
+        padding-left: 45px;
+        padding-top: 50px;
+        list-style-type: none;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .fc2 ul {
+        margin-right: 150px;
+    }
+
+    .fc2 ul a {
+        text-decoration: none;
+    }
+
+    .fc2 ul li {
+        margin-bottom: 20px;
+    }
+
+    .fi {
+        padding-top: 80px;
+    }
+
+    .fc2 ul li a {
+        margin-right: 18px;
+        color: white;
+        font-size: 24px;
+    }
+
+    .copyright {
+        margin-left: 350px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: larger;
+        background-color: rgba(237, 235, 223, 0.51);
+    }
+}

@@ -1,0 +1,1147 @@
+/* header */
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+*::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
+
+btn::selection {
+    background-color: white;
+    color: rgb(97, 82, 72);
+}
+
+header {
+    background-color: rgb(235, 230, 215);
+    opacity: 0.9;
+    height: 100px;
+    /* height: 100px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center; */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 5px -3px;
+}
+
+.nav-item:hover {
+    transform: scale(1.02);
+}
+
+.nav-item a::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
+
+.AGD-logo {
+    font-size: 40px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: italic;
+    color: rgb(170, 146, 146);
+    margin-left: 52px;
+}
+
+.AGD-img {
+    margin-left: 48px;
+}
+
+.AGDname {
+    font-size: 17px;
+    margin-left: 30px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.AGDname::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
+
+.Nlist {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+html,
+body {
+    background-color: rgba(237, 235, 223, 0.51) !important;
+}
+
+/* budget-estimator heading  */
+
+.BDC {
+    margin-top: 0px;
+    padding-top: 150px;
+    background-color: rgb(230, 228, 217);
+}
+
+.BDC-head {
+    background-color: rgb(230, 228, 217);
+    font-size: 50px;
+    font-family: "Cormorant Garamond", serif;
+    color: rgb(136, 113, 97);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+}
+
+.sub-head {
+    font-size: 30px;
+    font-family: "Alex Brush", serif;
+    color: rgb(173, 138, 114);
+    text-align: center;
+    margin-bottom: 10px;
+    opacity: 0.6;
+    letter-spacing: 2px;
+}
+
+#budgetForm {
+    height: 840px;
+    width: 1000px;
+    margin: 50px auto;
+    background-color: rgb(230, 228, 217);
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.flex-container {
+    display: flex;
+    gap: 100px;
+}
+
+.btn-container {
+    text-align: center;
+    margin: 20px auto;
+    /* background-color: black; */
+    width: 150px;
+    margin-right: 450px;
+    /* padding: 0px 30px; */
+}
+
+.form-btn {
+    text-align: center;
+    margin: 4px auto;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(187, 186, 178);
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 250px;
+    align-items: center;
+    font-family: "Cormorant Garamond", serif;
+}
+
+.form-btn:hover {
+    background-color: rgb(146, 146, 144);
+    color: rgb(247, 247, 247);
+}
+
+.BDC-fields {
+    font-family: "Cormorant Garamond", serif;
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: rgb(136, 113, 97);
+}
+
+input[type="text"],
+input[type="number"],
+.BDC-fields .form-select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-family: "Cormorant Garamond", serif;
+    opacity: 0.9;
+    color: rgb(136, 113, 97);
+}
+
+.budget-display {
+    font-family: "Cormorant Garamond", serif;
+    margin-bottom: 0px;
+    font-size: 20px;
+    color: rgb(136, 113, 97);
+}
+
+#convertButton {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(187, 186, 178);
+    color: white;
+    padding: 5px 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 250px;
+    align-items: center;
+    font-family: "Cormorant Garamond", serif;
+}
+
+#convertButton:hover {
+    background-color: rgb(146, 146, 144);
+    color: rgb(247, 247, 247);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+footer {
+    margin-top: 100px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    height: 300px;
+    color: white;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 5px -3px; */
+}
+
+fc {
+    align-items: center;
+}
+
+.fc2 {
+    padding-left: 242px;
+    padding-top: 80px;
+    list-style-type: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fc2 ul li::selection {
+    background-color: white;
+    color: rgb(97, 82, 72);
+}
+
+.fc2 ul {
+    margin-right: 200px;
+}
+
+.fc2 ul a {
+    text-decoration: none;
+}
+
+.fc2 ul li {
+    margin-bottom: 20px;
+}
+
+.fi {
+    padding-top: 80px;
+}
+
+.fc2 ul li a {
+    margin-right: 18px;
+    color: white;
+    font-size: 24px;
+}
+
+.f3list li h4::selection {
+    background-color: white;
+    color: rgb(97, 82, 72);
+}
+
+.f3list li p::selection {
+    background-color: white;
+    color: rgb(97, 82, 72);
+}
+
+.copyright {
+    margin-top: 4px;
+    margin-left: 500px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: larger;
+    background-color: rgba(237, 235, 223, 0.51);
+}
+
+.copyright p::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
+
+
+
+
+/* newsletter  */
+
+/* Signup box styling */
+.newsletter {
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.signup-box {
+    width: 1050px;
+    height: 300px;
+    padding: 30px 100px;
+    border-radius: 0px;
+    background-color: rgba(237, 235, 223, 1);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 1px solid #ddd;
+}
+
+.news-head {
+    font-size: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.news-head02 {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Input styling */
+.signup-box input[type="email"] {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    background-color: rgba(237, 235, 223, 0.51);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+}
+
+/* Checkbox and label styling */
+.signup-box label {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 0.9em;
+    color: #555;
+    display: inline-block;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: rgba(237, 235, 223, 1);
+}
+
+.signup-box input[type="checkbox"] {
+    margin-right: 5px;
+    background-color: rgba(237, 235, 223, 1);
+}
+
+/* newsletter button  */
+.news-btn {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px 0px;
+}
+
+.signup-box button {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    padding: 10px 50px;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+}
+
+.signup-box button:hover {
+    color: #ffffff;
+    background-color: rgb(97, 82, 72);
+}
+
+/* Thank you message styling */
+.thank-you {
+    margin-top: 70px;
+    display: none;
+    font-size: 2em;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: 400px;
+}
+
+
+/* Style for the Google Translate hamburger icon */
+.translate-icon {
+    position: fixed;
+    bottom: 20px;
+    /* Adjust position as needed */
+    right: 20px;
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Style the icon itself */
+.translate-icon i {
+    color: #333;
+    font-size: 24px;
+}
+
+/* Style for the Google Translate dropdown */
+.translate-dropdown {
+    position: fixed;
+    bottom: 80px;
+    /* Adjust position based on icon location */
+    right: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#googleTranslateContainer {
+    display: none;
+    position: fixed;
+    /* top: 60px; */
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    /* padding: 30px 100px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
+
+/* phone size  */
+@media (min-width: 0px) and (max-width: 400px) {
+
+    /* header */
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    *::selection {
+        background-color: rgb(97, 82, 72);
+        color: white;
+    }
+
+    btn::selection {
+        background-color: white;
+        color: rgb(97, 82, 72);
+    }
+
+    header {
+        background-color: rgb(235, 230, 215);
+        opacity: 0.9;
+        height: 80px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+            rgba(0, 0, 0, 0.3) 0px 3px 5px -3px;
+    }
+
+    .nav-item:hover {
+        transform: scale(1.02);
+    }
+
+    .nav-item a::selection {
+        background-color: rgb(97, 82, 72);
+        color: white;
+    }
+
+    .AGD-logo {
+        font-size: 30px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        font-style: italic;
+        color: rgb(170, 146, 146);
+        margin-left: 32px;
+    }
+
+    .AGD-img {
+        margin-left: 0px;
+        height: 50px;
+        width: 90px;
+    }
+
+    .AGDname {
+        font-size: 14px;
+        margin-left: 0px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    .AGDname::selection {
+        background-color: rgb(97, 82, 72);
+        color: white;
+    }
+
+    .Nlist {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+        background-color: rgb(235, 230, 215);
+        opacity: 0.9;
+        margin-top: 5px;
+    }
+
+
+
+
+    /* budget-estimator heading  */
+
+    .BDC {
+        margin-top: 0px;
+        padding-top: 120px;
+        background-color: rgb(230, 228, 217);
+    }
+
+    .BDC-head {
+        background-color: rgb(230, 228, 217);
+        font-size: 40px;
+        font-family: "Cormorant Garamond", serif;
+        color: rgb(136, 113, 97);
+        margin-top: 0px;
+        margin-bottom: 0px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.6;
+    }
+
+    .sub-head {
+        font-size: 25px;
+        font-family: "Alex Brush", serif;
+        color: rgb(173, 138, 114);
+        text-align: center;
+        margin-bottom: 10px;
+        opacity: 0.6;
+        letter-spacing: 2px;
+    }
+
+    #budgetForm {
+        height: 1400px;
+        width: 400px;
+        margin: 50px auto;
+        background-color: rgb(230, 228, 217);
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .flex-container {
+        display: block;
+        gap: 100px;
+    }
+
+    .btn-container {
+        text-align: center;
+        margin: 20px auto;
+        /* background-color: black; */
+        width: 150px;
+        margin-right: 450px;
+        /* padding: 0px 30px; */
+    }
+
+    .form-btn {
+        text-align: center;
+        margin: 4px auto;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(187, 186, 178);
+        color: white;
+        padding: 10px 20px;
+        font-size: 20px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 250px;
+        align-items: center;
+        font-family: "Cormorant Garamond", serif;
+    }
+
+    .form-btn:hover {
+        background-color: rgb(146, 146, 144);
+        color: rgb(247, 247, 247);
+    }
+
+    .BDC-fields {
+        font-family: "Cormorant Garamond", serif;
+        margin-bottom: 8px;
+        font-size: 20px;
+        color: rgb(136, 113, 97);
+    }
+
+    input[type="text"],
+    input[type="number"],
+    .BDC-fields .form-select {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        font-family: "Cormorant Garamond", serif;
+        opacity: 0.9;
+        color: rgb(136, 113, 97);
+    }
+
+    .budget-display {
+        font-family: "Cormorant Garamond", serif;
+        margin-bottom: 0px;
+        font-size: 20px;
+        color: rgb(136, 113, 97);
+    }
+
+    #convertButton {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(187, 186, 178);
+        color: white;
+        padding: 5px 10px;
+        font-size: 20px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 250px;
+        align-items: center;
+        font-family: "Cormorant Garamond", serif;
+    }
+
+    #convertButton:hover {
+        background-color: rgb(146, 146, 144);
+        color: rgb(247, 247, 247);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    /* newsletter  */
+
+    /* Signup box styling */
+    .newsletter {
+        margin-top: 80px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .signup-box {
+        width: 300px;
+        height: 180px;
+        padding: 5px 10px;
+        border-radius: 0px;
+        background-color: rgba(237, 235, 223, 1);
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+        text-align: center;
+        transition: transform 0.3s ease;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border: 1px solid #ddd;
+    }
+
+    .news-head {
+        font-size: 14px;
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        font-weight: 300;
+        margin-bottom: 4px;
+        color: #333;
+    }
+
+    .news-head02 {
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        font-size: 0.6em;
+        color: #666;
+        margin-bottom: 4px;
+    }
+
+    /* Input styling */
+    .signup-box input[type="email"] {
+        margin-top: 15px;
+        width: 100%;
+        padding: 5px;
+        font-size: 0.7em;
+        margin-bottom: 5px;
+        background-color: rgba(237, 235, 223, 0.51);
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+    }
+
+    /* Checkbox and label styling */
+    .signup-box label {
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        font-size: 0.7em;
+        color: #555;
+        display: inline-block;
+        margin-bottom: 15px;
+        cursor: pointer;
+        background-color: rgba(237, 235, 223, 1);
+    }
+
+    .signup-box input[type="checkbox"] {
+        height: 10px;
+        margin-right: 5px;
+        background-color: rgba(237, 235, 223, 1);
+    }
+
+    /* newsletter button  */
+    .news-btn {
+        display: flex;
+        justify-content: center;
+        margin: 5px 0 10px 0px;
+    }
+
+    .signup-box button {
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        padding: 5px 15px;
+        color: #b0b0b0;
+        border: 1px solid #b0b0b0;
+        cursor: pointer;
+        font-weight: normal;
+        letter-spacing: 1px;
+        background-color: rgba(237, 235, 223, 1);
+        font-size: small;
+    }
+
+    .signup-box button:hover {
+        color: #ffffff;
+        background-color: rgb(97, 82, 72);
+    }
+
+    /* Thank you message styling */
+    .thank-you {
+        margin-top: 40px;
+        display: none;
+        font-size: 1em;
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        font-weight: 400px;
+    }
+
+    /* footer */
+    footer {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+        height: 150px;
+        color: white;
+        margin-top: 70px;
+        font-size: x-small;
+    }
+
+    .fc {
+        align-items: center;
+    }
+
+    .fc2 {
+        padding-left: 5px;
+        padding-top: 15px;
+        list-style-type: none;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .fc2 ul {
+        margin-right: 10px;
+    }
+
+    .fc2 ul a {
+        text-decoration: none;
+    }
+
+    .fc2 ul li {
+        margin-bottom: 10px;
+    }
+
+    .fi {
+        padding-top: 10px;
+    }
+
+    .fc2 ul li a {
+        margin-right: 18px;
+        color: white;
+        font-size: 15px;
+    }
+
+    .copyright {
+        margin-left: 60px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: small;
+        background-color: rgba(237, 235, 223, 0.51);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* tab size  */
+
+/* tab size  */
+@media (min-width:401px) and (max-width:1024px){
+
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+    
+    *::selection {
+        background-color: rgb(97, 82, 72);
+        color: white;
+    }
+    
+    btn::selection {
+        background-color: white;
+        color: rgb(97, 82, 72);
+    }
+    
+    header {
+        background-color: rgb(235, 230, 215);
+        opacity: 0.9;
+        height: 100px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+            rgba(0, 0, 0, 0.3) 0px 3px 5px -3px;
+    }
+    
+    .nav-item{
+        font-size: 13px;
+    }
+    .nav-item:hover {
+        transform: scale(1.02);
+    }
+    
+    .nav-item a::selection {
+        background-color: rgb(97, 82, 72);
+        color: white;
+    }
+    
+    .AGD-logo {
+        font-size: 30px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        font-style: italic;
+        color: rgb(170, 146, 146);
+        margin-left: 22px;
+    }
+    
+    .AGD-img {
+        margin-left: 38px;
+    }
+    
+    .AGDname {
+        font-size: 13px;
+        margin-left: 32px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+    
+    .AGDname::selection {
+        background-color: rgb(97, 82, 72);
+        color: white;
+    }
+    
+    .Nlist {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+
+    #budgetForm {
+        height: 840px;
+        width: 900px;
+        margin: 50px auto;
+        background-color: rgb(230, 228, 217);
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+
+
+
+    /* newsletter  */
+    
+    /* Signup box styling */
+    .newsletter {
+        margin-top: 100px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    
+    .signup-box {
+        width: 700px;
+        height: 270px;
+        padding: 20px 100px;
+        border-radius: 0px;
+        background-color: rgba(237, 235, 223, 1);
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+        text-align: center;
+        transition: transform 0.3s ease;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border: 1px solid #ddd;
+    }
+    
+    .news-head {
+        font-size: 15px;
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        font-weight: 300;
+        margin-bottom: 10px;
+        color: #333;
+    }
+    
+    .news-head02 {
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        font-size: 0.7em;
+        color: #666;
+        margin-bottom: 10px;
+    }
+    
+    /* Input styling */
+    .signup-box input[type="email"] {
+        margin-top: 15px;
+        width: 100%;
+        padding: 10px;
+        font-size: 0.8em;
+        margin-bottom: 15px;
+        background-color: rgba(237, 235, 223, 0.51);
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+    }
+    
+    /* Checkbox and label styling */
+    .signup-box label {
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        font-size: 0.9em;
+        color: #555;
+        display: inline-block;
+        margin-bottom: 13px;
+        cursor: pointer;
+        background-color: rgba(237, 235, 223, 1);
+    }
+    
+    .signup-box input[type="checkbox"] {
+        margin-right: 5px;
+        background-color: rgba(237, 235, 223, 1);
+    }
+    
+    /* newsletter button  */
+    .news-btn {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0 20px 0px;
+    }
+    
+    .signup-box button {
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        padding: 8px 45px;
+        color: #b0b0b0;
+        border: 1px solid #b0b0b0;
+        cursor: pointer;
+        font-weight: normal;
+        letter-spacing: 2px;
+        background-color: rgba(237, 235, 223, 1);
+    }
+    
+    .signup-box button:hover {
+        color: #ffffff;
+        background-color: rgb(97, 82, 72);
+    }
+    
+    /* Thank you message styling */
+    .thank-you {
+        margin-top: 70px;
+        display: none;
+        font-size: 2em;
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        font-weight: 400px;
+    }
+
+
+    /* footer */
+    footer {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+        height: 270px;
+        color: white;
+        margin-top: 100px;
+    }
+    
+    .fc {
+        align-items: center;
+    }
+    
+    .fc2 {
+        padding-left: 45px;
+        padding-top: 50px;
+        list-style-type: none;
+    }
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .fc2 ul {
+        margin-right: 150px;
+    }
+    
+    .fc2 ul a {
+        text-decoration: none;
+    }
+    
+    .fc2 ul li {
+        margin-bottom: 20px;
+    }
+    
+    .fi {
+        padding-top: 80px;
+    }
+    
+    .fc2 ul li a {
+        margin-right: 18px;
+        color: white;
+        font-size: 24px;
+    }
+    
+    .copyright {
+        margin-left: 350px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: larger;
+        background-color: rgba(237, 235, 223, 0.51);
+    }
+}

@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Style Quiz</title>
+
+    <!-- External css link:- -->
+    <link rel="stylesheet" href="quiz.final.css" />
+
+    <!-- bootstrap css CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- lightbox css link -->
+    <link rel="stylesheet" href="./lightbox.css" />
+    <!-- <link rel="stylesheet" href="./lightbox2-dev/dist/css/lightbox.min.css"> -->
+
+    <!-- AOS cdn link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Grey+Qo&family=Italiana&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid align-items-center">
+                <div class="LOGO d-flex flex-column ms-5 me-auto">
+                    <!-- <p class="AGD-logo mb-0 ">AGD</p> -->
+                    <img class="AGD-img" class="Logo-img ms-5" src="/images/AGDlogo.png" alt="" height="60px"
+                        width="100px" />
+                    <p class="AGDname mb-0">Aditi Gupta Designs</p>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="Nlist navbar-nav pe-5 ps-5">
+                        <li class="nav-item">
+                            <a class="nav-link mt-3 me-5 active" aria-current="page"
+                                href="http://127.0.0.1:5500/home/design01.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/servicesDH/design02.html">SERVICES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/about/design03.html">ABOUT US</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/portfolio/design04.html">PORTFOLIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/blog/blog01.final.html">BLOG</a>
+                        </li>
+                        <li class="nav-item mt-3 me-0">
+                            <a class="nav-link" href="http://127.0.0.1:5500/contactUS/contactUs.refined.html">CONTACT US</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!-- Make sure to include Font Awesome for the hamburger icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Google Translate Hamburger Icon positioned outside the header and navbar -->
+  <button id="translateToggleBtn" class="translate-icon">
+    <i class="fas fa-language"></i> <!-- Font Awesome language icon -->
+  </button>
+
+  <!-- Hidden Google Translate Element -->
+  <div id="googleTranslateContainer" class="translate-dropdown" style="display: none;">
+    <div id="google_translate_element"></div>
+  </div>
+
+  <!-- Page content continues -->
+
+
+    <!-- section hero  -->
+    <section class="hero-video">
+        <div class="media-container">
+            <div class="hero-overlay"></div>
+            <img src="//static.showit.co/2400/I-AbWA8VTVqbR97GERoAaw/94164/image-16.jpg" alt="" class="hero-img">
+            <div class="hero-text">
+                <p class="hero-head">FIND YOUR STYLE</p>
+                <p class="hero-head02">DESIGN STYLE QUIZ</p>
+                <div class="text-with-lines">
+                    <a href="#space" class="button">TAKE QUIZ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="space">
+        <div>.</div>
+    </section>
+
+    <div id="quiz-container">
+        <p class="DQhead">What's Your Design Style?</p>
+        <form id="styleQuiz">
+            <div class="port-Q">
+                <!-- Question 1 -->
+                <div class="question active">
+                    <p>1. How do you feel about open spaces?</p>
+                    <div class="options">
+                        <div class="card" class="image-checkbox"
+                            onclick="document.getElementById('styleCheckbox7').click()">
+                            <div class="checkbox-wrapper">
+                                <input type="radio" id="styleCheckbox7" name="q2" value="scandinavian">
+                                <label for="styleCheckbox7" class="custom-checkbox"></label>
+                            </div>
+                            <img src="https://i.pinimg.com/564x/54/47/9a/54479af1d5f5d1bf5dc99cea8b5dd1b6.jpg"
+                                alt="Room Image">
+                            <p>Open and airy</p>
+                        </div>
+                        <div class="card" class="image-checkbox"
+                            onclick="document.getElementById('styleCheckbox8').click()">
+                            <div class="checkbox-wrapper">
+                                <input type="radio" id="styleCheckbox8" name="q2" value="modern">
+                                <label for="styleCheckbox8" class="custom-checkbox"></label>
+                            </div>
+                            <img src="https://i.pinimg.com/564x/3d/9d/15/3d9d15a7f9693bd58a74da9a098bed98.jpg"
+                                alt="Room Image">
+                            <p>Modern & spacious</p>
+                        </div>
+                        <div class="card" class="image-checkbox"
+                            onclick="document.getElementById('styleCheckbox9').click()">
+                            <div class="checkbox-wrapper">
+                                <input type="radio" id="styleCheckbox9" name="q2" value="traditional">
+                                <label for="styleCheckbox9" class="custom-checkbox"></label>
+                            </div>
+                            <img src="https://i.pinimg.com/564x/2b/4b/38/2b4b38c33dbfa4dd7942eee7cbcaf748.jpg"
+                                alt="Room Image">
+                            <p>Cozy, separated rooms</p>
+                        </div>
+                    </div>
+                    <div class="options">
+                        <div class="card" class="image-checkbox"
+                            onclick="document.getElementById('styleCheckbox10').click()">
+                            <div class="checkbox-wrapper">
+                                <input type="radio" id="styleCheckbox10" name="q2" value="industrial">
+                                <label for="styleCheckbox10" class="custom-checkbox"></label>
+                            </div>
+                            <img src="https://i.pinimg.com/564x/33/8a/02/338a0247c3326b7cb2496d18d272b306.jpg"
+                                alt="Room Image">
+                            <p>Exposed features</p>
+                        </div>
+                        <div class="card" class="image-checkbox"
+                            onclick="document.getElementById('styleCheckbox11').click()">
+                            <div class="checkbox-wrapper">
+                                <input type="radio" id="styleCheckbox11" name="q2" value="rustic">
+                                <label for="styleCheckbox11" class="custom-checkbox"></label>
+                            </div>
+                            <img src="https://i.pinimg.com/564x/78/b9/34/78b934d321be97941fe70762afd6b189.jpg"
+                                alt="Room Image">
+                            <p>Rustic</p>
+                        </div>
+                        <div class="card" class="image-checkbox"
+                            onclick="document.getElementById('styleCheckbox12').click()">
+                            <div class="checkbox-wrapper">
+                                <input type="radio" id="styleCheckbox12" name="q2" value="bohemian">
+                                <label for="styleCheckbox12" class="custom-checkbox"></label>
+                            </div>
+                            <img src="https://i.pinimg.com/564x/ba/d2/65/bad2653dd9fce95984e02242198686e8.jpg"
+                                alt="Room Image">
+                            <p>Bohemian</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <p>2. What color palette do you prefer?</p>
+                <div class="options">
+                    <div class="card" class="image-checkbox" onclick="document.getElementById('styleCheckbox').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox" name="q1" value="modern">
+                            <label for="styleCheckbox" class="custom-checkbox"></label>
+                        </div>
+                        <img src="/images/modern.png" alt="Room Image">
+                        <p>Bold & vibrant</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox2').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox2" name="q1" value="minimalist">
+                            <label for="styleCheckbox2" class="custom-checkbox"></label>
+                        </div>
+                        <img src="/images/calm.png" alt="Room Image">
+                        <p>Neutral & calm</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox3').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox3" name="q1" value="traditional">
+                            <label for="styleCheckbox3" class="custom-checkbox"></label>
+                        </div>
+                        <img src="/images/warm&earthy.png" alt="Room Image">
+                        <p>Warm & earthy</p>
+                    </div>
+                </div>
+                <div class="options">
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox4').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox4" name="q1" value="vintage">
+                            <label for="styleCheckbox4" class="custom-checkbox"></label>
+                        </div>
+                        <img src="/images/pastels.png" alt="Room Image">
+                        <p>Soft pastels</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox5').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox5" name="q1" value="bohemian">
+                            <label for="styleCheckbox5" class="custom-checkbox"></label>
+                        </div>
+                        <img src="/images/mix.png" alt="Room Image">
+                        <p>Eclectic mix</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox6').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox6" name="q1" value="rustic">
+                            <label for="styleCheckbox6" class="custom-checkbox"></label>
+                        </div>
+                        <img src="/images/rustic.png" alt="Room Image">
+                        <p>Rustic</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- question 3 -->
+            <div class="question">
+                <p>3. What kind of furniture do you like?</p>
+                <div class="options">
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox13').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox13" name="q3" value="mid-century">
+                            <label for="styleCheckbox13" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/5a/13/c3/5a13c34a800578865c913c52e2d8edbd.jpg"
+                            alt="Room Image">
+                        <p>Mid-century shapes</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox14').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox14" name="q3" value="bohemian">
+                            <label for="styleCheckbox14" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/19/c1/26/19c1262de1bad4f2796847434bb9807f.jpg"
+                            alt="Room Image">
+                        <p>Rattan and eclectic</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox15').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox15" name="q3" value="minimalist">
+                            <label for="styleCheckbox15" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/736x/51/30/a0/5130a09df0d64f620f37f178c69d80a6.jpg"
+                            alt="Room Image">
+                        <p>Minimalist & functional</p>
+                    </div>
+                </div>
+                <div class="options">
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox16').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox16" name="q3" value="rustic">
+                            <label for="styleCheckbox16" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/b8/86/b5/b886b5485abd53550b13279420871ebc.jpg"
+                            alt="Room Image">
+                        <p>Wooden and rugged</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox17').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox17" name="q3" value="vintage">
+                            <label for="styleCheckbox17" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/78/4d/d6/784dd620c3411ae51bcd5fca68b01ea5.jpg"
+                            alt="Room Image">
+                        <p>Antique and elegant</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox18').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox18" name="q3" value="industrial">
+                            <label for="styleCheckbox18" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/ea/f6/a1/eaf6a13e1404d5c7a787dc766ebfb9e9.jpg"
+                            alt="Room Image">
+                        <p>Industrial style</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- question 4 -->
+            <div class="question">
+                <p>4. How do you feel about patterns and textures?</p>
+                <div class="options">
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox19').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox19" name="q4" value="modern">
+                            <label for="styleCheckbox19" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/bf/5e/15/bf5e15176c16bb8e413f9d75f6b97a24.jpg"
+                            alt="Room Image">
+                        <p>Geometric patterns</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox20').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox20" name="q4" value="scandinavian">
+                            <label for="styleCheckbox20" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/fa/fb/a8/fafba8612dfb0a929ba8b33b3ec28a2e.jpg"
+                            alt="Room Image">
+                        <p>Subtle textures</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox21').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox21" name="q4" value="vintage">
+                            <label for="styleCheckbox21" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/6b/d7/a1/6bd7a1c850361af7e8fb8a1c091d85ba.jpg"
+                            alt="Room Image">
+                        <p>Floral or vintage prints</p>
+                    </div>
+                </div>
+                <div class="options">
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox22').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox22" name="q4" value="industrial">
+                            <label for="styleCheckbox22" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/cc/48/3d/cc483d1c60429d8dd9b81a555618a911.jpg"
+                            alt="Room Image">
+                        <p>Raw materials and textures</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox23').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox23" name="q4" value="traditional">
+                            <label for="styleCheckbox23" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/7c/f0/6b/7cf06b30f9d8d28adec65929d566c224.jpg"
+                            alt="Room Image">
+                        <p>Ornate patterns</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox24').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox24" name="q4" value="bohemian">
+                            <label for="styleCheckbox24" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/2d/75/65/2d7565026194b5d4747bbfed656c40a9.jpg"
+                            alt="Room Image">
+                        <p>Bohemian patterns</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- question 5  -->
+            <div class="question">
+                <p>5. What describes your ideal flooring?</p>
+                <div class="options">
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox25').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox25" name="q5" value="rustic">
+                            <label for="styleCheckbox25" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/21/a4/1e/21a41e17c343febb0cd8e4728895509c.jpg"
+                            alt="Room Image">
+                        <p>Hardwood or stone</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox26').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox26" name="q5" value="minimalist">
+                            <label for="styleCheckbox26" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/70/da/48/70da48d4187e7d59d89ad4edb9fa3388.jpg"
+                            alt="Room Image">
+                        <p>Polished concrete</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox27').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox27" name="q5" value="scandinavian">
+                            <label for="styleCheckbox27" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/01/8b/f8/018bf872b72e24acc3b66e3ace74b649.jpg"
+                            alt="Room Image">
+                        <p>Light wood</p>
+                    </div>
+                </div>
+                <div class="options">
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox28').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox28" name="q5" value="industrial">
+                            <label for="styleCheckbox28" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/9b/12/19/9b1219d2657377986925775a6fe45375.jpg"
+                            alt="Room Image">
+                        <p>Exposed concrete</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox29').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox29" name="q5" value="traditional">
+                            <label for="styleCheckbox29" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/b2/e3/b8/b2e3b87f74a1433fc2b7942b16ce06c4.jpg"
+                            alt="Room Image">
+                        <p>Carpeting or rich wood</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox30').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox30" name="q5" value="bohemian">
+                            <label for="styleCheckbox30" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/736x/f0/36/f6/f036f6c51e847900b1232d8d417cf7af.jpg"
+                            alt="Room Image">
+                        <p>Woven or textured flooring</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Question 6 -->
+            <div class="question">
+                <p>6. How do you feel about lighting?</p>
+                <div class="options">
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox31').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox31" name="q6" value="modern">
+                            <label for="styleCheckbox31" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/0c/39/2b/0c392bc29eccce90a1340b0b3968ef07.jpg"
+                            alt="Room Image">
+                        <p>Sleek and minimal fixtures</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox32').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox32" name="q6" value="industrial">
+                            <label for="styleCheckbox32" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/cd/7b/99/cd7b99d27e187727a4cf8c87fc71f430.jpg"
+                            alt="Room Image">
+                        <p>Exposed bulbs and fixtures</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox33').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox33" name="q6" value="vintage">
+                            <label for="styleCheckbox33" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/ba/31/10/ba311094b619c024b02d1fecc8fd817b.jpg"
+                            alt="Room Image">
+                        <p>Chandeliers and sconces</p>
+                    </div>
+                </div>
+                <div class="options">
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox34').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox34" name="q6" value="bohemian">
+                            <label for="styleCheckbox34" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/b1/14/ec/b114ec5cc7638caf520406cfb24f8381.jpg"
+                            alt="Room Image">
+                        <p>Layered, warm lighting</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox35').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox35" name="q6" value="scandinavian">
+                            <label for="styleCheckbox35" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/0e/6b/29/0e6b29a5964671edd4f5dca3e54b988b.jpg"
+                            alt="Room Image">
+                        <p>Soft and functional</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox36').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox36" name="q6" value="rustic">
+                            <label for="styleCheckbox36" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/c4/20/89/c4208904affd1e1e06fe438f164ae8d9.jpg"
+                            alt="Room Image">
+                        <p>Rustic and earthy lighting</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Question 7 -->
+            <div class="question">
+                <p>7. What's your approach to decor?</p>
+                <div class="options">
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox37').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox37" name="q7" value="minimalist">
+                            <label for="styleCheckbox37" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/f8/50/05/f850052038aa46ca1d49bd7923dba73f.jpg"
+                            alt="Room Image">
+                        <p>Less is more</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox38').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox38" name="q7" value="bohemian">
+                            <label for="styleCheckbox38" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/736x/00/ef/3e/00ef3e28bb809dd2afdc1156e4c91e7b.jpg"
+                            alt="Room Image">
+                        <p>Personal and eclectic items </p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox39').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox39" name="q7" value="traditional">
+                            <label for="styleCheckbox39" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/8c/19/b9/8c19b97c3961313497fcaf05cc08cc1d.jpg"
+                            alt="Room Image">
+                        <p>Decorative and classic</p>
+                    </div>
+                </div>
+                <div class="options">
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox40').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox40" name="q7" value="rustic">
+                            <label for="styleCheckbox40" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/3e/07/4a/3e074ac7eaeff0ff707137302d9bb2d7.jpg"
+                            alt="Room Image">
+                        <p>Natural and handcrafted</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox41').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox41" name="q7" value="mid-century">
+                            <label for="styleCheckbox41" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/d0/31/5b/d0315be41a3db0735bbb32531a153f85.jpg"
+                            alt="Room Image">
+                        <p>Functional and aesthetic</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox42').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox42" name="q7" value="industrial">
+                            <label for="styleCheckbox42" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/736x/de/4b/c1/de4bc1a8a3d5f22f0ededd6a1e383d97.jpg"
+                            alt="Room Image">
+                        <p>Industrial and modern</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- question 8  -->
+            <div class="question">
+                <p>8. How do you feel about wall art?</p>
+                <div class="options">
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox43').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox43" name="q8" value="industrial">
+                            <label for="styleCheckbox43" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/1a/f5/69/1af5698c284e40f2b0ad956fe1810e68.jpg"
+                            alt="Room Image">
+                        <p>Large, bold pieces</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox44').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox44" name="q8" value="modern">
+                            <label for="styleCheckbox44" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/b7/0f/cf/b70fcf173a9a9bbddd89d4901456b597.jpg"
+                            alt="Room Image">
+                        <p>Abstract art </p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox45').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox45" name="q8" value="vintage">
+                            <label for="styleCheckbox45" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/d3/4b/de/d34bdec6f680d0759e9e66e6db41a2fe.jpg"
+                            alt="Room Image">
+                        <p>Portraits or classic art</p>
+                    </div>
+                </div>
+                <div class="options">
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox46').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox46" name="q8" value="scandinavian">
+                            <label for="styleCheckbox46" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/736x/96/4c/9b/964c9b749f7cae2e5857b5b54aaee93d.jpg"
+                            alt="Room Image">
+                        <p>Simple and minimal</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox47').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox47" name="q8" value="bohemian">
+                            <label for="styleCheckbox47" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/f5/45/50/f545503aeee4ec4b18aad7b29242113c.jpg"
+                            alt="Room Image">
+                        <p>Personal photos or handmade</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox48').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox48" name="q8" value="vintage">
+                            <label for="styleCheckbox48" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/83/f1/20/83f1209bf50f5a0a595241795ffde991.jpg"
+                            alt="Room Image">
+                        <p>Vintage and decorative</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Question 9 -->
+            <div class="question">
+                <p>9. How do you like to use color?</p>
+                <div class="options">
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox49').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox49" name="q9" value="traditional">
+                            <label for="styleCheckbox49" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/a6/e3/6b/a6e36b7c8b675cb5ddd24a9cb82ca7c8.jpg"
+                            alt="Room Image">
+                        <p>Warm neutrals with rich accents</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox50').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox50" name="q9" value="modern">
+                            <label for="styleCheckbox50" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/d7/8b/2b/d78b2b4e65b8cc9198f611e4ccbe33e2.jpg"
+                            alt="Room Image">
+                        <p>Neutrals with pops of bold color</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox51').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox51" name="q9" value="mid-century">
+                            <label for="styleCheckbox51" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/736x/8a/06/35/8a06351c93adc3e70155754bae57a603.jpg"
+                            alt="Room Image">
+                        <p>Retro colors like teal and orange</p>
+                    </div>
+                </div>
+                <div class="options">
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox52').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox52" name="q9" value="bohemian">
+                            <label for="styleCheckbox52" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5e/fe/44/5efe4458d7e58c0d1b885f087fde5d9b.jpg"
+                            alt="Room Image">
+                        <p>Mixed patterns and vibrant colors</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox53').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox53" name="q9" value="scandinavian">
+                            <label for="styleCheckbox53" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/736x/02/44/d5/0244d5c9e412acbd0a44194a1e064f4d.jpg"
+                            alt="Room Image">
+                        <p>Whites with soft pastels</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox54').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox54" name="q9" value="industrial">
+                            <label for="styleCheckbox54" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/79/27/1e/79271e7f4e5edeee8b1bf729f66f2c89.jpg"
+                            alt="Room Image">
+                        <p>Grays with metallics and dark tones</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Question 10 -->
+            <div class="question">
+                <p>10. What's your ideal ambiance?</p>
+                <div class="options">
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox55').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox55" name="q10" value="vintage">
+                            <label for="styleCheckbox55" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/84/cb/56/84cb56fd160319113a695af71d6e40af.jpg"
+                            alt="Room Image">
+                        <p>Romantic and nostalgic</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox56').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox56" name="q10" value="industrial">
+                            <label for="styleCheckbox56" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/564x/13/2f/a6/132fa6d33a28f3af879df27212f7df5c.jpg"
+                            alt="Room Image">
+                        <p>Urban and edgy</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox57').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox57" name="q10" value="rustic">
+                            <label for="styleCheckbox57" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/736x/97/fa/7a/97fa7a2da056deeddd8b089cadc80baa.jpg"
+                            alt="Room Image">
+                        <p>Cozy and grounded</p>
+                    </div>
+                </div>
+                <div class="options">
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox58').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox58" name="q10" value="modern">
+                            <label for="styleCheckbox58" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/736x/de/8a/38/de8a3807ca52004b5ff2333119616259.jpg"
+                            alt="Room Image">
+                        <p>Sleek and stylish</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox59').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox59" name="q10" value="traditional">
+                            <label for="styleCheckbox59" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/736x/24/a2/ec/24a2ec56c939b1d6558fc413f1973aab.jpg"
+                            alt="Room Image">
+                        <p>Warm and inviting</p>
+                    </div>
+                    <div class="card" class="image-checkbox"
+                        onclick="document.getElementById('styleCheckbox60').click()">
+                        <div class="checkbox-wrapper">
+                            <input type="radio" id="styleCheckbox60" name="q10" value="bohemian">
+                            <label for="styleCheckbox60" class="custom-checkbox"></label>
+                        </div>
+                        <img src="https://i.pinimg.com/736x/89/fc/34/89fc34de8a6301ce2da1168270308c48.jpg"
+                            alt="Room Image">
+                        <p>Personal and eclectic</p>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-container">
+                <button type="button" onclick="nextQuestion()">Next</button>
+                <button type="button" id="submitButton" onclick="calculateStyle()" style="display: none">
+                    Submit
+                </button>
+            </div>
+    </div>
+    <div id="styleResult"></div>
+    </form>
+    </div>
+
+
+
+
+
+    <!-- newsletter  -->
+    <section class="newsletter">
+        <div class="signup-box">
+          <p class="news-head">SIGN UP TO OUR NEWSLETTER</p>
+          <p class="news-head02">Stay updated with our latest design trends and updates</p>
+          
+          <!-- Form Content -->
+          <form id="signupForm">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            
+            <label>
+              <input type="checkbox" required> I agree to the privacy policy *
+            </label>
+            <div class="news-btn"><button onclick="subscribe()">Subscribe</button></div>
+          </form>
+        
+          <!-- Thank you message -->
+          <p class="thank-you" id="thankYouMessage">Thank you for signing up!</p>
+        </div>
+      </section>
+
+
+
+    <!-- footer  -->
+    <footer style="background-color: rgb(97, 82, 72)">
+        <div class="fc container-fluid d-flex">
+          <div class="fc2 d-flex">
+            <ul>
+              <a href="http://127.0.0.1:5500/servicesDH/design02.html" target="_blank">
+                <li class="text-white">SERVICES</li>
+              </a>
+              <a href="http://127.0.0.1:5500/about/design03.html" target="_blank">
+                <li class="text-white">ABOUT</li>
+              </a>
+              <a href="http://127.0.0.1:5500/portfolio/design04.html" target="_blank">
+                <li class="text-white">PORTFOLIO</li>
+              </a>
+              <a href="http://127.0.0.1:5500/contactUS/contactUs.refined.html" target="_blank">
+                <li class="text-white">CONTACT US</li>
+              </a>
+            </ul>
+            <ul>
+              <a href="">
+                <li class="text-white">TERMS</li>
+              </a>
+              <a href="">
+                <li class="text-white">PRIVACY</li>
+              </a>
+              <li class="text-white">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://x.com/" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+              </li>
+            </ul>
+            <ul class="f3list">
+              <li>
+                <h4>CONTACT:</h4>
+              </li>
+              <li>
+                <p>+91 70489 24351</p>
+                <p>aditi@aditiguptadesigns.com</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <div class="copyright">
+        <p>&copy 2024 Aditi Gupta Designs. All rights reserved.</p>
+      </div>
+
+    <!-- lightbox js link  -->
+    <script src="./lightbox-plus-jquery.js"></script>
+    <script src="./lightbox.js"></script>
+
+    <!-- bootstrap javascript cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- AOS javascript link -->
+
+    <script>
+
+        let currentQuestion = 0;
+        const questions = document.querySelectorAll(".question");
+        const submitButton = document.getElementById("submitButton");
+        const quizContainer = document.getElementById("quiz-container"); // Main quiz container
+
+        // Hide the submit button initially
+        submitButton.style.display = "none";
+
+        // Show the first question
+        questions[currentQuestion].classList.add("active");
+
+        function nextQuestion() {
+            // Move to next question
+            if (currentQuestion < questions.length - 1) {
+                questions[currentQuestion].classList.remove("active");
+                currentQuestion++;
+                questions[currentQuestion].classList.add("active");
+                // Show submit button if it's the last question
+                if (currentQuestion === questions.length - 1) {
+                    submitButton.style.display = "inline-block";
+                }
+            }
+        }
+
+        function calculateStyle() {
+            // Initialize scores for each style
+            let scores = {
+                modern: 0,
+                minimalist: 0,
+                traditional: 0,
+                industrial: 0,
+                bohemian: 0,
+                scandinavian: 0,
+                "mid-century": 0,
+                vintage: 0,
+                rustic: 0,
+            };
+
+            // Get all selected answers
+            let answers = document.querySelectorAll('input[type="radio"]:checked');
+
+            // Increment the score for each selected answer
+            answers.forEach((answer) => {
+                scores[answer.value]++;
+            });
+
+            // Determine the highest score
+            let highestScore = 0;
+            let styleResult = "";
+            for (let style in scores) {
+                if (scores[style] > highestScore) {
+                    highestScore = scores[style];
+                    styleResult = style;
+                }
+            }
+            displayStyleResult(styleResult);
+        }
+        function displayStyleResult(styleResult) {
+            const quizContainer = document.getElementById("quiz-container");
+
+            // Use the styleResult to select the correct images from the styleImages object
+            const styleImages = {
+                modern: [
+                    "/images/modernR01.png",
+                    "/images/modernR02.png",
+                    "/images/modernR03.png",
+                    "/images/modernR04.png"
+                ],
+                minimalist: [
+                    "/images/minimalistR01.png",
+                    "/images/minimalistR02.png",
+                    "/images/minimalistR03.png",
+                    "/images/minimalistR04.png"
+                ],
+                traditional: [
+                    "/images/traditionalR01.png",
+                    "/images/traditionalR02.png",
+                    "/images/traditionalR03.png",
+                    "/images/traditionalR04.png"
+                ],
+                rustic: [
+                    "/images/rustic01.png",
+                    "/images/rustic02.png",
+                    "/images/rustic03.png",
+                    "/images/rustic04.png"
+                ],
+                industrial: [
+                    "/images/industrialR01.png",
+                    "/images/industrialR02.png",
+                    "/images/industrialR03.png",
+                    "/images/industrialR04.png"
+                ],
+                bohemian: [
+                    "/images/bohoR01.png",
+                    "/images/bohoR02.png",
+                    "/images/bohoR03.png",
+                    "/images/bohoR04.png"
+                ],
+                scandinavian: [
+                    "/images/scandinavianR01.png",
+                    "/images/scandinavianR02.png",
+                    "/images/scandinavianR03.png",
+                    "/images/scandinavianR04.png"
+                ],
+                "mid-century": [
+                    "/images/midR01.png",
+                    "/images/midR02.png",
+                    "/images/midR03.png",
+                    "/images/midR04.png"
+                ],
+                vintage: [
+                    "/images/vintageR01.png",
+                    "/images/vintageR02.png",
+                    "/images/vintageR03.png",
+                    "/images/vintageR04.png"
+                ]
+            };
+
+            // Check if the style exists in the styleImages object
+            if (styleImages[styleResult]) {
+                quizContainer.innerHTML = `
+            <p class="result-para">Your design style is: ${styleResult.charAt(0).toUpperCase() + styleResult.slice(1)}!</p>
+            <div class="result-images">
+                <img src="${styleImages[styleResult][0]}" alt="${styleResult} design 1">
+                <img src="${styleImages[styleResult][1]}" alt="${styleResult} design 2">
+                <img src="${styleImages[styleResult][2]}" alt="${styleResult} design 3">
+                <img src="${styleImages[styleResult][3]}" alt="${styleResult} design 4">
+            </div>
+        `;
+            }
+        }
+
+    </script>
+
+
+<script>
+    // Form submission event listener
+    document.getElementById("signupForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+  
+      // Hide form and show thank you message
+      document.getElementById("signupForm").style.display = "none";
+      document.getElementById("thankYouMessage").style.display = "block";
+    });
+  </script>
+
+
+<!-- Google Translate Script -->
+<script type="text/javascript"
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- Google Translate Script -->
+<script type="text/javascript">
+  // Initialize Google Translate only when button is clicked and ensure script is loaded
+  function loadGoogleTranslate() {
+    // Load Google Translate script if it hasn't been loaded yet
+    if (!window.google || !window.google.translate) {
+      const script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      document.head.appendChild(script);
+    } else {
+      googleTranslateElementInit();
+    }
+  }
+
+  // Initialize Google Translate Element
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,hi,pa',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+
+  // Toggle the visibility of the Google Translate container when the icon is clicked
+  document.getElementById("translateToggleBtn").addEventListener("click", function () {
+    const translateContainer = document.getElementById("googleTranslateContainer");
+
+    // Toggle visibility
+    if (translateContainer.style.display === "none" || translateContainer.style.display === "") {
+      loadGoogleTranslate(); // Ensure Translate is loaded
+      translateContainer.style.display = "block";
+    } else {
+      translateContainer.style.display = "none";
+    }
+  });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Timeline Estimator</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f5f5f5;
+    }
+    .container {
+      width: 100%;
+      max-width: 500px;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+    }
+    h2, h4 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .form-label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #333;
+    }
+    .form-control, .form-select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #fff;
+    }
+    .form-control:focus, .form-select:focus {
+      outline: none;
+      border-color: #007bff;
+      box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+    }
+    .text-muted {
+      font-size: 0.9em;
+      color: #666;
+    }
+    .btn-primary {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      border: none;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+    .mt-4 {
+      margin-top: 20px;
+    }
+    .mb-3 {
+      margin-bottom: 15px;
+    }
+    .fs-5 {
+      font-size: 1.25em;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Project Timeline Estimator</h2>
+  
+  <!-- Timeline Estimator Form -->
+  <div class="mt-4">
+    <form id="timelineForm">
+      <div class="mb-3">
+        <label for="projectScope" class="form-label">Scope of Project</label>
+        <select id="projectScope" class="form-select" required>
+          <option value="residential">Residential</option>
+          <option value="commercial">Commercial</option>
+          <option value="office">Office Space</option>
+          <option value="retail">Retail Store</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="projectSize" class="form-label">Project Size (in sq ft)</label>
+        <input type="number" id="projectSize" class="form-control" placeholder="Enter the area size" required>
+      </div>
+      <div class="mb-3">
+        <label for="aestheticPreference" class="form-label">Aesthetic Preference</label>
+        <select id="aestheticPreference" class="form-select" required>
+          <option value="simple">Simple</option>
+          <option value="luxurious">Luxurious</option>
+          <option value="natureInspired">Nature-Inspired</option>
+          <option value="industrial">Industrial</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="urgency" class="form-label">Project Urgency</label>
+        <select id="urgency" class="form-select" required>
+          <option value="flexible">Flexible</option>
+          <option value="normal">Normal Timeline</option>
+          <option value="urgent">Urgent</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="features" class="form-label">Desired Features</label>
+        <select id="features" class="form-select" multiple>
+          <option value="smartHome">Smart Home Integration</option>
+          <option value="energyEfficient">Energy Efficient Solutions</option>
+          <option value="customCabinetry">Custom Cabinetry</option>
+          <option value="indoorOutdoor">Indoor-Outdoor Flow</option>
+          <option value="3dVisualization">3D Visualization</option>
+          <option value="homeTheater">Home Theater Setup</option>
+          <option value="pool">Swimming Pool</option>
+          <option value="gardenLandscaping">Garden Landscaping</option>
+          <option value="solarPanels">Solar Panels</option>
+          <option value="securitySystem">Advanced Security System</option>
+        </select>
+        <small class="text-muted">Hold Ctrl (Windows) or Command (Mac) to select multiple options.</small>
+      </div>
+      <button type="submit" class="btn-primary">Estimate Timeline</button>
+    </form>
+  </div>
+
+  <!-- Timeline Display -->
+  <div class="mt-4">
+    <h4>Estimated Timeline</h4>
+    <p id="timelineResult" class="fs-5">Please fill out the form and click "Estimate Timeline" to see the result.</p>
+  </div>
+</div>
+
+<script>
+  document.getElementById("timelineForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Get values from the form
+    const projectScope = document.getElementById("projectScope").value;
+    const projectSize = parseFloat(document.getElementById("projectSize").value);
+    const aestheticPreference = document.getElementById("aestheticPreference").value;
+    const urgency = document.getElementById("urgency").value;
+    const features = Array.from(document.getElementById("features").selectedOptions).map(opt => opt.value);
+
+    // Base days based on scope of project
+    let baseDays = 0;
+    if (projectScope === "residential") baseDays = 15;
+    else if (projectScope === "commercial") baseDays = 25;
+    else if (projectScope === "office") baseDays = 20;
+    else if (projectScope === "retail") baseDays = 18;
+
+    // Additional days based on project size (1 day per 40 sq ft)
+    const sizeDays = Math.ceil(projectSize / 40);
+
+    // Adjust for urgency
+    let urgencyMultiplier = 1;
+    if (urgency === "normal") urgencyMultiplier = 1.2;
+    else if (urgency === "urgent") urgencyMultiplier = 1.5;
+
+    // Days for each feature
+    let featureDays = 0;
+    features.forEach(feature => {
+      if (feature === "smartHome") featureDays += 5;
+      if (feature === "energyEfficient") featureDays += 4;
+      if (feature === "customCabinetry") featureDays += 6;
+      if (feature === "indoorOutdoor") featureDays += 3;
+      if (feature === "3dVisualization") featureDays += 7;
+      if (feature === "homeTheater") featureDays += 8;
+      if (feature === "pool") featureDays += 10;
+      if (feature === "gardenLandscaping") featureDays += 5;
+      if (feature === "solarPanels") featureDays += 6;
+      if (feature === "securitySystem") featureDays += 4;
+    });
+
+    // Calculate total estimated days
+    const estimatedDays = Math.ceil((baseDays + sizeDays + featureDays) * urgencyMultiplier);
+
+    // Display result
+    document.getElementById("timelineResult").innerText = `Estimated Timeline: ${estimatedDays} days`;
+  });
+</script>
+
+</body>
+</html>

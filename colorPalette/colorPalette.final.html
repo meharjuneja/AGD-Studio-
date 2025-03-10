@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Palette</title>
+
+    <!-- External css link:- -->
+    <link rel="stylesheet" href="colorPalette.final.css" />
+
+    <!-- bootstrap css CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- lightbox css link -->
+    <link rel="stylesheet" href="./lightbox.css" />
+    <!-- <link rel="stylesheet" href="./lightbox2-dev/dist/css/lightbox.min.css"> -->
+
+    <!-- AOS cdn link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Grey+Qo&family=Italiana&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid align-items-center">
+                <div class="LOGO d-flex flex-column ms-5 me-auto">
+                    <!-- <p class="AGD-logo mb-0 ">AGD</p> -->
+                    <img class="AGD-img" class="Logo-img ms-5" src="/images/AGDlogo.png" alt="" height="60px"
+                        width="100px" />
+                    <p class="AGDname mb-0">Aditi Gupta Designs</p>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="Nlist navbar-nav pe-5 ps-5">
+                        <li class="nav-item">
+                            <a class="nav-link mt-3 me-5 active" aria-current="page"
+                                href="http://127.0.0.1:5500/home/design01.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/servicesDH/design02.html">SERVICES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/about/design03.html">ABOUT US</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/portfolio/design04.html">PORTFOLIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/blog/blog01.final.html">BLOG</a>
+                        </li>
+                        <li class="nav-item mt-3 me-0">
+                            <a class="nav-link" href="http://127.0.0.1:5500/contactUS/contactUs.refined.html">CONTACT US</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Make sure to include Font Awesome for the hamburger icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Google Translate Hamburger Icon positioned outside the header and navbar -->
+  <button id="translateToggleBtn" class="translate-icon">
+    <i class="fas fa-language"></i> <!-- Font Awesome language icon -->
+  </button>
+
+  <!-- Hidden Google Translate Element -->
+  <div id="googleTranslateContainer" class="translate-dropdown" style="display: none;">
+    <div id="google_translate_element"></div>
+  </div>
+
+  <!-- Page content continues -->
+
+
+
+    <div class="container CP-tool">
+        <div class="text-with-lines">
+            <h2 class="CP-head">Color Palette Generator</h2>
+          </div>
+        
+        <div class="CP-content">
+            <!-- How to Use Section -->
+            <div class="HTU-inputs">
+                <div class="HTU">
+                    <p class="head01">How to Use the Interactive Color Palette Selector?</p>
+                    <p class="head02">
+                        Welcome to the Interactive Color Palette Selector! This tool allows you to experiment with color
+                        combinations to create a beautiful palette for your design projects. Here's how to get started:
+                    </p>
+                    <ul class="way">
+                        <li class="li01">1. Select Colors: Choose a color for each element:</li>
+                        <ul class="mini-list">
+                            <li class="mini-li01">Wall Color for the background</li>
+                            <li class="mini-li01">Furniture Color for main features</li>
+                            <li class="mini-li01">Accent Color for highlights</li>
+                            <li class="mini-li01">Decor Color for extra touches</li>
+                        </ul>
+                        <li class="li01">2. Apply Colors: Once you've chosen your colors, click “Apply Colors” to see
+                            your palette come to life in the preview box.</li>
+                        <li class="li01">3. Copy Hex Codes: Hover over each color section to see its hex code. Click
+                            "Copy" to save the color code to your clipboard. A checkmark will briefly appear to confirm
+                            that it's been copied.</li>
+                    </ul>
+                    <p class="head03">Experiment, mix, and match to find the palette that best fits your style!</p>
+                </div>
+
+                <!-- Color Selector Form -->
+                <div class="CP-inputs d-flex">
+                    <form id="colorForm">
+                        <div class="form-container">
+                            <div class="color-input-group me-4 ms-1">
+                                <label for="wallColor" class="label">Wall Color</label>
+                                <input type="color" id="wallColor" class="form-control form-control-color"
+                                    value="#FFCDD2">
+                            </div>
+                            <div class="color-input-group me-4">
+                                <label for="furnitureColor" class="label">Furniture Color</label>
+                                <input type="color" id="furnitureColor" class="form-control form-control-color"
+                                    value="#BBDEFB">
+                            </div>
+                            <div class="color-input-group me-4">
+                                <label for="accentColor" class="label">Accent Color</label>
+                                <input type="color" id="accentColor" class="form-control form-control-color"
+                                    value="#C8E6C9">
+                            </div>
+                            <div class="color-input-group me-5">
+                                <label for="decorColor" class="label">Decor Color</label>
+                                <input type="color" id="decorColor" class="form-control form-control-color"
+                                    value="#FFAB91">
+                            </div>
+                            <button type="submit" class="button">Apply Colors</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Preview Box -->
+            <div class="box01">
+                <div class="preview-box">
+                    <div class="wall">
+                        <p class="box-head fs-5 mb-4">Wall Color</p>
+                        <span class="color-code fs-6" id="wallCode">#FFCDD2</span>
+                        <span class="copy-message fs-6">Copy</span>
+                    </div>
+                    <div class="furniture">
+                        <p class="box-head fs-5 mb-4">Furniture Color</p>
+                        <span class="color-code fs-6" id="furnitureCode">#BBDEFB</span>
+                        <span class="copy-message fs-6">Copy</span>
+                    </div>
+                    <div class="accent">
+                        <p class="box-head fs-5 mb-4">Accent Color</p>
+                        <span class="color-code fs-6" id="accentCode">#C8E6C9</span>
+                        <span class="copy-message fs-6">Copy</span>
+                    </div>
+                    <div class="decor">
+                        <p class="box-head fs-5 mb-4">Decor Color</p>
+                        <span class="color-code fs-6" id="decorCode">#FFAB91</span>
+                        <span class="copy-message fs-6">Copy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- section heading  -->
+
+
+    <section class="WC">
+        <div class="WC-content">
+            <p class="WC-head">Explore Our Curated Color Palettes for Inspiration!</p>
+            <p class="WC-para">Discover a range of color palettes designed to spark creativity and elevate your projects. Each palette is crafted to set a unique mood—whether bold, calming, or sophisticated. Use these as they are or as inspiration to create a look that's all your own!</p>
+        </div>
+    </section>
+
+
+    <!-- rows  -->
+    <section class="rows" id="row01">
+        <div class="image-container">
+            <img src="https://i.pinimg.com/736x/98/49/b0/9849b06b44586960cff0b851e8cefd03.jpg" alt="Image"
+                class="image" />
+            <div class="colors-container">
+                <div class="color-box" style="background-color: #F5C8C7;" data-hex="#F5C8C7">
+                    <p class="hex-code">#F5C8C7</p>
+                    <p class="color-name">Soft Pink</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #FFD8C2;" data-hex="#FFD8C2">
+                    <p class="hex-code">#FFD8C2</p>
+                    <p class="color-name">Light Peach</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #FFFFFF;" data-hex="#FFFFFF">
+                    <p class="hex-code" style="color: black;">#FFFFFF</p>
+                    <p class="color-name" style="color: black;">White</p>
+                    <p class="copy-message" style="color: black;">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #A0E7E5;" data-hex="#A0E7E5">
+                    <p class="hex-code">#A0E7E5</p>
+                    <p class="color-name">Tiffany Blue</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <img src="https://i.pinimg.com/564x/00/dd/ca/00ddcaa1c31b134812df75fddd3fa835.jpg" alt="Image"
+                class="image" />
+            <div class="colors-container">
+                <div class="color-box" style="background-color: #52514A;" data-hex="#52514A">
+                    <p class="hex-code">#52514A</p>
+                    <p class="color-name">Fuscous Gray</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #CEC6BB;" data-hex="#CEC6BB">
+                    <p class="hex-code">#CEC6BB</p>
+                    <p class="color-name">Swirl</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #A3A3A4;" data-hex="#A3A3A4">
+                    <p class="hex-code">#A3A3A4</p>
+                    <p class="color-name">Santas Gray</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #A4AE9A;" data-hex="#A4AE9A">
+                    <p class="hex-code">#A4AE9A</p>
+                    <p class="color-name">Bud</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <img src="https://i.pinimg.com/564x/6c/10/16/6c10168de1f1124aa53dbb1c9c75da54.jpg" alt="Image"
+                class="image" />
+            <div class="colors-container">
+                <div class="color-box" style="background-color: #5F4320;" data-hex="#5F4320">
+                    <p class="hex-code">#5FA4230</p>
+                    <p class="color-name">Quincy</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #E0BE9E;" data-hex="#EOBE9E">
+                    <p class="hex-code">#EOBE9E</p>
+                    <p class="color-name">Brandy</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #B8A686;" data-hex="#B8A686">
+                    <p class="hex-code">#B8A686</p>
+                    <p class="color-name">Mongoose</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #B89894;" data-hex="#B89894">
+                    <p class="hex-code">#B89894</p>
+                    <p class="color-name">Thatch</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rows">
+        <div class="image-container">
+            <img src="https://i.pinimg.com/564x/8f/8d/c1/8f8dc12f50f25950581da4aa92c580ff.jpg" alt="Image"
+                class="image" />
+            <div class="colors-container">
+                <div class="color-box" style="background-color: #939878;" data-hex="#939878">
+                    <p class="hex-code">#939878</p>
+                    <p class="color-name">Gurkha</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #C5BDA4;" data-hex="#C5BDA4">
+                    <p class="hex-code">#C5BDA4</p>
+                    <p class="color-name">Coral Reef</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #84848C;" data-hex="#84848C">
+                    <p class="hex-code">#84848C</p>
+                    <p class="color-name">Jumbo</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #2B271D;" data-hex="#2B271D">
+                    <p class="hex-code" >#2B271D</p>
+                    <p class="color-name" >Zeus</p>
+                    <p class="copy-message" >Copy</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <img src="https://i.pinimg.com/564x/3f/9c/dd/3f9cdd39358960491180a70ffa571729.jpg" alt="Image"
+                class="image" />
+            <div class="colors-container">
+                <div class="color-box" style="background-color: #C3A994;" data-hex="#C3A994">
+                    <p class="hex-code">#C3A994</p>
+                    <p class="color-name">Indian Khaki</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #945833;" data-hex="#945833">
+                    <p class="hex-code">#945833</p>
+                    <p class="color-name">Mule Fawn</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #6A361B;" data-hex="#6A361B">
+                    <p class="hex-code">#6A361B</p>
+                    <p class="color-name">Metallic Copper</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #19120D;" data-hex="#19120D">
+                    <p class="hex-code" >#19120D</p>
+                    <p class="color-name" >Night Rider</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <img src="https://i.pinimg.com/736x/f8/ea/b7/f8eab70a75873004918c176c39a6450e.jpg" alt="Image"
+                class="image" />
+            <div class="colors-container">
+                <div class="color-box" style="background-color: #C5AC99;" data-hex="#C5AC99">
+                    <p class="hex-code">#C5AC99</p>
+                    <p class="color-name">Rodeo Dust</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #8A9785;" data-hex="#8A9785">
+                    <p class="hex-code">#8A9785</p>
+                    <p class="color-name">Stack</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #2F211A;" data-hex="#2F211A">
+                    <p class="hex-code" >#2F211A</p>
+                    <p class="color-name" >Oil</p>
+                    <p class="copy-message" >Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #808384;" data-hex="#808384">
+                    <p class="hex-code">#808384</p>
+                    <p class="color-name">Rolling Stone</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rows">
+        <div class="image-container">
+            <img src="https://i.pinimg.com/564x/15/36/96/1536963b6c102ab411035f348ae4e2f1.jpg" alt="Image"
+                class="image" />
+            <div class="colors-container">
+                <div class="color-box" style="background-color: #67A436;" data-hex="#67A436">
+                    <p class="hex-code">#67A436</p>
+                    <p class="color-name">Apple</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #B39A5F;" data-hex="#B39A5F">
+                    <p class="hex-code">#B39A5F</p>
+                    <p class="color-name">Teak</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #DAD6C3;" data-hex="#DAD6C3">
+                    <p class="hex-code">#DAD6C3</p>
+                    <p class="color-name">Sisal</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #221E15;" data-hex="#221E15">
+                    <p class="hex-code" >#221E15</p>
+                    <p class="color-name" >Charcoal Brown</p>
+                    <p class="copy-message" >Copy</p>
+                </div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="https://i.pinimg.com/736x/97/51/62/9751625af659d33cff585ace77a5ba35.jpg" alt="Image"
+                class="image" />
+            <div class="colors-container">
+                <div class="color-box" style="background-color: #533D29;" data-hex="#533D29">
+                    <p class="hex-code">#533D29</p>
+                    <p class="color-name">Saddle</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #6D5734;" data-hex="#6D5734">
+                    <p class="hex-code">#6D5734</p>
+                    <p class="color-name">Shingle Fawn</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #AD9F8D;" data-hex="#AD9F8D">
+                    <p class="hex-code">#AD9F8D</p>
+                    <p class="color-name">Napa</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #17130F;" data-hex="#17130F">
+                    <p class="hex-code" >#17130F</p>
+                    <p class="color-name" >Dark Expresso</p>
+                    <p class="copy-message" >Copy</p>
+                </div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="https://i.pinimg.com/564x/11/9f/14/119f14dd0966cf12e48335c670bfc1c6.jpg" alt="Image"
+                class="image" />
+            <div class="colors-container">
+                <div class="color-box" style="background-color: #1F0F0E;" data-hex="#1F0F0E">
+                    <p class="hex-code" >#1F0F0E</p>
+                    <p class="color-name" >Onyx</p>
+                    <p class="copy-message" >Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #6C2B2C;" data-hex="#6C2B2C">
+                    <p class="hex-code">#6C2B2C</p>
+                    <p class="color-name">Buccaneer</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #A46456;" data-hex="#A46456">
+                    <p class="hex-code">#A46465</p>
+                    <p class="color-name">Matrix</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #E8CCC8;" data-hex="#E8CCC8">
+                    <p class="hex-code">#E8CCC8</p>
+                    <p class="color-name">Oyster Pink</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rows">
+        <div class="image-container">
+            <img src="https://i.pinimg.com/564x/b1/ea/0d/b1ea0d69c4aa2ed80e3d96c463725df9.jpg" alt="Image"
+                class="image" />
+            <div class="colors-container">
+                <div class="color-box" style="background-color: #18120E;" data-hex="#18120E">
+                    <p class="hex-code" >#18120E</p>
+                    <p class="color-name" >Rich Mocha</p>
+                    <p class="copy-message" >Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #8F705A;" data-hex="#8F705A">
+                    <p class="hex-code">#8F705A</p>
+                    <p class="color-name">Beaver</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #ACAFB4;" data-hex="#ACAFB4">
+                    <p class="hex-code">#ACAFB4</p>
+                    <p class="color-name">Bombay</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #E3E5E2;" data-hex="#E3E5E2">
+                    <p class="hex-code">#E3E5E2</p>
+                    <p class="color-name">Gray Nurse</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="https://i.pinimg.com/564x/0c/31/31/0c31319e5dc6af59cbae61af83d36979.jpg" alt="Image"
+                class="image" />
+            <div class="colors-container">
+                <div class="color-box" style="background-color: #171412;" data-hex="#171412">
+                    <p class="hex-code" >#171412</p>
+                    <p class="color-name" >Chestnut Black</p>
+                    <p class="copy-message" >Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #A98C72;" data-hex="#A98C72">
+                    <p class="hex-code">#A98C72</p>
+                    <p class="color-name">Sandal</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #BEAA98;" data-hex="#BEAA98">
+                    <p class="hex-code">#BEAA98</p>
+                    <p class="color-name">Malta</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #E1D5C8;" data-hex="#E1D5C8">
+                    <p class="hex-code">#E1D5C8</p>
+                    <p class="color-name">Pearl Blush</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="https://i.pinimg.com/564x/75/cf/3c/75cf3c610c867823b580caf80e834889.jpg" alt="Image"
+                class="image" />
+            <div class="colors-container">
+                <div class="color-box" style="background-color: #323232;" data-hex="#323232">
+                    <p class="hex-code" >#323232</p>
+                    <p class="color-name" >Mine Shaft</p>
+                    <p class="copy-message" >Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #86939C;" data-hex="#86939C">
+                    <p class="hex-code">#86939C</p>
+                    <p class="color-name">Regent Gray</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #8BA097;" data-hex="#8BA097">
+                    <p class="hex-code">#8BA097</p>
+                    <p class="color-name">Mantle</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #C5C3BD;" data-hex="#C5C3BD">
+                    <p class="hex-code">#C5C3BD</p>
+                    <p class="color-name">Cloud</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rows">
+        <div class="image-container">
+            <img src="https://i.pinimg.com/564x/54/aa/4b/54aa4b00d1e11dd30c8744f01e87ab01.jpg" alt="Image"
+                class="image" />
+            <div class="colors-container">
+                <div class="color-box" style="background-color: #2A2315;" data-hex="#2A2315">
+                    <p class="hex-code" >#2A2315</p>
+                    <p class="color-name" >Olive Brown</p>
+                    <p class="copy-message" >Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #84848C;" data-hex="#84848C">
+                    <p class="hex-code">#84848C</p>
+                    <p class="color-name">Slate Gray</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #89994D" data-hex="#89994D">
+                    <p class="hex-code">#89994D</p>
+                    <p class="color-name">Asparagus</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #C09D5D;" data-hex="#C09D5D">
+                    <p class="hex-code">#C09D5D</p>
+                    <p class="color-name">Twine</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="https://i.pinimg.com/564x/41/9f/07/419f07a31a999d0c142a3ba512bd6d6c.jpg" alt="Image"
+                class="image" />
+            <div class="colors-container">
+                <div class="color-box" style="background-color: #918B8D;" data-hex="#918B8D">
+                    <p class="hex-code">#918B8D</p>
+                    <p class="color-name">Venus</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #5E2F22;" data-hex="#5E2F22">
+                    <p class="hex-code" >#5E2F22</p>
+                    <p class="color-name" >Irish Brown</p>
+                    <p class="copy-message" >Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #D3AA91;" data-hex="#D3AA91">
+                    <p class="hex-code">#D3AA91</p>
+                    <p class="color-name">Tan</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #A8997E;" data-hex="#A8997E">
+                    <p class="hex-code">#A8997E</p>
+                    <p class="color-name">Donkey Brown</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="https://i.pinimg.com/564x/69/7e/e8/697ee84625426b32cf9c217941a5ae28.jpg" alt="Image"
+                class="image" />
+            <div class="colors-container">
+                <div class="color-box" style="background-color: #2E2927;" data-hex="#2E2927">
+                    <p class="hex-code" >#2E2927</p>
+                    <p class="color-name" >Dune</p>
+                    <p class="copy-message" >Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #8E9081;" data-hex="#8E9081">
+                    <p class="hex-code">#8E9081</p>
+                    <p class="color-name">Bitter</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #8C808D;" data-hex="#8C808D">
+                    <p class="hex-code">#8C808D</p>
+                    <p class="color-name">Mamba</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #C3BCBA;" data-hex="#C3BCBA">
+                    <p class="hex-code">#C3BCBA</p>
+                    <p class="color-name">Silver Rust</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- newsletter  -->
+    <section class="newsletter">
+        <div class="signup-box">
+          <p class="news-head">SIGN UP TO OUR NEWSLETTER</p>
+          <p class="news-head02">Stay updated with our latest design trends and updates</p>
+          
+          <!-- Form Content -->
+          <form id="signupForm">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            
+            <label>
+              <input type="checkbox" required> I agree to the privacy policy *
+            </label>
+            <div class="news-btn"><button onclick="subscribe()">Subscribe</button></div>
+          </form>
+        
+          <!-- Thank you message -->
+          <p class="thank-you" id="thankYouMessage">Thank you for signing up!</p>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer  -->
+    <footer style="background-color: rgb(97, 82, 72)">
+        <div class="fc container-fluid d-flex">
+          <div class="fc2 d-flex">
+            <ul>
+              <a href="http://127.0.0.1:5500/servicesDH/design02.html" target="_blank">
+                <li class="text-white">SERVICES</li>
+              </a>
+              <a href="http://127.0.0.1:5500/about/design03.html" target="_blank">
+                <li class="text-white">ABOUT</li>
+              </a>
+              <a href="http://127.0.0.1:5500/portfolio/design04.html" target="_blank">
+                <li class="text-white">PORTFOLIO</li>
+              </a>
+              <a href="http://127.0.0.1:5500/contactUS/contactUs.refined.html" target="_blank">
+                <li class="text-white">CONTACT US</li>
+              </a>
+            </ul>
+            <ul>
+              <a href="">
+                <li class="text-white">TERMS</li>
+              </a>
+              <a href="">
+                <li class="text-white">PRIVACY</li>
+              </a>
+              <li class="text-white">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://x.com/" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+              </li>
+            </ul>
+            <ul class="f3list">
+              <li>
+                <h4>CONTACT:</h4>
+              </li>
+              <li>
+                <p>+91 70489 24351</p>
+                <p>aditi@aditiguptadesigns.com</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <div class="copyright">
+        <p>&copy 2024 Aditi Gupta Designs. All rights reserved.</p>
+      </div>
+
+    <!-- lightbox js link  -->
+    <script src="./lightbox-plus-jquery.js"></script>
+    <script src="./lightbox.js"></script>
+
+    <!-- bootstrap javascript cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- AOS javascript link -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+
+
+    <script>
+        // Function to apply colors
+        document.getElementById("colorForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Get color values from inputs
+            const wallColor = document.getElementById("wallColor").value;
+            const furnitureColor = document.getElementById("furnitureColor").value;
+            const accentColor = document.getElementById("accentColor").value;
+            const decorColor = document.getElementById("decorColor").value;
+
+            // Apply colors to preview box sections
+            document.querySelector(".wall").style.backgroundColor = wallColor;
+            document.querySelector(".furniture").style.backgroundColor = furnitureColor;
+            document.querySelector(".accent").style.backgroundColor = accentColor;
+            document.querySelector(".decor").style.backgroundColor = decorColor;
+
+            // Update hex codes in preview
+            document.getElementById("wallCode").textContent = wallColor;
+            document.getElementById("furnitureCode").textContent = furnitureColor;
+            document.getElementById("accentCode").textContent = accentColor;
+            document.getElementById("decorCode").textContent = decorColor;
+        });
+
+
+        // Function to copy color code and show confirmation
+function copyColorCode(hexCode, messageElement) {
+    navigator.clipboard.writeText(hexCode).then(() => {
+        messageElement.textContent = '✔';
+        messageElement.classList.add('copied');
+        setTimeout(() => {
+            messageElement.textContent = 'Copy';
+            messageElement.classList.remove('copied');
+        }, 1000);
+    });
+}
+
+// Apply the copy function to both preview and color boxes
+document.querySelectorAll('.copy-message, .copy-message').forEach(copyElement => {
+    copyElement.addEventListener('click', function () {
+        const hexCode = this.previousElementSibling.textContent;
+        copyColorCode(hexCode, this);
+    });
+});
+
+    </script>
+
+
+    <script>
+        // Function to copy the hex code to clipboard
+        function copyToClipboard(hexCode, box) {
+            navigator.clipboard.writeText(hexCode).then(() => {
+                // Change 'Copy' to a checkmark
+                const copyMessage = box.querySelector('.copy-message');
+                copyMessage.textContent = '✔';
+                copyMessage.classList.add('copied');
+
+                // Reset the message after 2 seconds
+                setTimeout(() => {
+                    copyMessage.textContent = 'Copy';
+                    copyMessage.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        // Add hover and click events to the color boxes
+        const colorBoxes = document.querySelectorAll('.color-box');
+        colorBoxes.forEach(box => {
+            // Hover effect to show 'Copy' message
+            const copyMessage = box.querySelector('.copy-message');
+            copyMessage.classList.add('active');
+
+            // Click event to copy the hex code
+            box.addEventListener('click', () => {
+                const hex = box.getAttribute('data-hex');
+                copyToClipboard(hex, box);
+            });
+        });
+    </script>
+    <script>
+        // Form submission event listener
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+          event.preventDefault();
+      
+          // Hide form and show thank you message
+          document.getElementById("signupForm").style.display = "none";
+          document.getElementById("thankYouMessage").style.display = "block";
+        });
+      </script>
+
+      <!-- Google Translate Script -->
+<script type="text/javascript"
+src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- Google Translate Script -->
+<script type="text/javascript">
+// Initialize Google Translate only when button is clicked and ensure script is loaded
+function loadGoogleTranslate() {
+  // Load Google Translate script if it hasn't been loaded yet
+  if (!window.google || !window.google.translate) {
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    document.head.appendChild(script);
+  } else {
+    googleTranslateElementInit();
+  }
+}
+
+// Initialize Google Translate Element
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'en,hi,pa',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+
+// Toggle the visibility of the Google Translate container when the icon is clicked
+document.getElementById("translateToggleBtn").addEventListener("click", function () {
+  const translateContainer = document.getElementById("googleTranslateContainer");
+
+  // Toggle visibility
+  if (translateContainer.style.display === "none" || translateContainer.style.display === "") {
+    loadGoogleTranslate(); // Ensure Translate is loaded
+    translateContainer.style.display = "block";
+  } else {
+    translateContainer.style.display = "none";
+  }
+});
+</script>
+</body>
+
+</html>

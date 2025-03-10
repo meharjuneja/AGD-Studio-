@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us</title>
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="design03.css" />
+
+  <!-- bootstrap css CDN link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <!-- font-awesome cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- lightbox css link -->
+  <link rel="stylesheet" href="./lightbox.css" />
+  <!-- <link rel="stylesheet" href="./lightbox2-dev/dist/css/lightbox.min.css"> -->
+
+  <!-- AOS cdn link -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- google fonts link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Grey+Qo&family=Italiana&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid align-items-center">
+        <div class="LOGO d-flex flex-column ms-5 me-auto">
+          <img class="AGD-img" class="Logo-img ms-5" src="/images/AGDlogo.png" alt="" height="60px" width="100px" />
+          <p class="AGDname mb-0">Aditi Gupta Designs</p>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="Nlist navbar-nav pe-5 ps-5">
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5 active" aria-current="page"
+                href="http://127.0.0.1:5500/home/design01.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/servicesDH/design02.html">SERVICES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/about/design03.html">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/portfolio/design04.html">PORTFOLIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/blog/blog01.final.html">BLOG</a>
+            </li>
+            <li class="nav-item mt-3 me-0">
+              <a class="nav-link" href="http://127.0.0.1:5500/contactUS/contactUs.refined.html">CONTACT US</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Make sure to include Font Awesome for the hamburger icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Google Translate Hamburger Icon positioned outside the header and navbar -->
+  <button id="translateToggleBtn" class="translate-icon">
+    <i class="fas fa-language"></i> <!-- Font Awesome language icon -->
+  </button>
+
+  <!-- Hidden Google Translate Element -->
+  <div id="googleTranslateContainer" class="translate-dropdown" style="display: none;">
+    <div id="google_translate_element"></div>
+  </div>
+
+  <!-- Page content continues -->
+
+
+  <!-- section hero  -->
+  <section class="hero-video">
+    <div class="media-container">
+      <img src="https://laurahammettliving.com/cdn/shop/files/LH_33_EDIT.jpg?v=1713280603&width=1500" alt=""
+        class="hero-img">
+      <div class="hero-text">
+        <p class="hero-head">THE COMPANY</p>
+        <p class="hero-head02">ABOUT US</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Carousel -->
+  <div class="ring">
+    <!-- Carousel slider -->
+    <div class="container-fluid-carousel">
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/images/ilisha04.png" class="d-block" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="/images/ilisha05.png" class="d-block" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="/images/ilisha06.png" class="d-block" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="/images/ilisha07.png" class="d-block" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="/images/ilisha03.png" class="d-block" alt="..." />
+          </div>
+        </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Scrollable Text -->
+    <div class="scroll-container">
+      <div class="scroll-content">
+        <div class="line-container top-line">
+          <div class="half-line"></div>
+        </div>
+        <div class="scrWC">
+          <p class="scroll-head">PASSION AND <b>PURPOSE</b></p>
+          <p class="scroll-head02">FOUNDER's STORY</p>
+          <div class="scroll-paragraphs">
+            <p class="scroll-para">
+              Aditi Gupta is a talented interior designer and the visionary behind
+              her eponymous design studio. Born and raised in the vibrant city of
+              Mumbai, Aditi's passion for design blossomed from a young age,
+              influenced by the rich culture and stunning architecture that
+              surrounded her. Her dedication to her craft led her to pursue a
+              degree in Interior Architecture from the prestigious University of
+              the Arts London (UAL), where she immersed herself in the world of
+              design.
+            </p>
+
+            <p class="scroll-para">
+              During her time at UAL, Aditi gained a comprehensive education in
+              various aspects of design, including space planning, material
+              selection, and sustainable practices. She had the opportunity to
+              collaborate on diverse projects, ranging from chic urban apartments
+              to innovative commercial spaces. This experience allowed her to
+              refine her unique aesthetic and develop a design philosophy centered
+              around functionality and beauty.
+            </p>
+
+            <p class="scroll-para">
+              Aditi's education not only equipped her with technical skills but
+              also fostered a deep appreciation for global design trends and
+              cultural nuances. She draws inspiration from her travels, exploring
+              different architectural styles and design practices around the
+              world. Her ability to blend contemporary elements with traditional
+              influences results in spaces that are both innovative and timeless.
+            </p>
+
+            <p class="scroll-para">
+              Beyond her design expertise, Aditi is committed to sustainability
+              and believes in the power of thoughtful design to enhance the
+              quality of life. She actively seeks out eco-friendly materials and
+              practices, ensuring that her projects not only look beautiful but
+              also contribute positively to the environment.
+            </p>
+
+            <p class="scroll-para">
+              With a keen eye for detail and a passion for creating personalized
+              spaces, Aditi strives to transform her clients' visions into
+              reality. She believes that every space should tell a story,
+              reflecting the individuality and lifestyle of its inhabitants. Her
+              dedication to excellence and her ability to connect with clients
+              make her a sought-after designer in the industry, and she continues
+              to push the boundaries of creativity and innovation in her work.
+            </p>
+          </div>
+        </div>
+        <div class="line-container bottom-line">
+          <div class="half-line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- brand story  -->
+
+  <section class="brand-story">
+    <div class="BScontent">
+      <div class="BS-box">
+        <div class="line-container top-line">
+          <div class="half-line"></div>
+        </div>
+        <div class="scrWC">
+          <p class="scroll-head">ESTD <b>2008</b></p>
+          <p class="scroll-head02">BRAND STORY</p>
+          <div class="scroll-paragraphs">
+            <p class="scroll-para">
+              Aditi Gupta Designs was born from a simple idea: to create designs that inspire, captivate, and resonate
+              on a deeply personal level. Founded by Aditi Gupta, a passionate interior designer with an eye for detail
+              and a
+              flair for innovation, the brand has grown from a one-person dream into a sought-after name known for its
+              creative excellence.
+            </p>
+
+            <p class="scroll-para">
+              At the core of Aditi Gupta Designs is a commitment to quality, originality, and meaningful connections.
+              Every project is a collaborative journey, blending Aditi's creative expertise with her clients' visions to
+              produce something truly special. As Aditi Gupta Designs continues to grow, it remains dedicated to the
+              same values that inspired its founding—a relentless pursuit of beauty, authenticity, and the art of
+              storytelling through design.
+            </p>
+          </div>
+        </div>
+        <div class="line-container bottom-line">
+          <div class="half-line"></div>
+        </div>
+      </div>
+      <div class="BSimg-container">
+        <img src="/images/brand-story.png" alt="" class="BSimg">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- our approach  -->
+  <section class="brand-story">
+    <div class="BScontent">
+      <div class="BSimg-container">
+        <img src="/images/our-approach.png" alt="" class="BSimg">
+      </div>
+      <div class="BS-box">
+        <div class="line-container top-line">
+          <div class="half-line"></div>
+        </div>
+        <div class="scrWC">
+          <p class="scroll-head">WEALTH OF <b>EXPERTISE</b></p>
+          <p class="scroll-head02">OUR APPROACH</p>
+          <div class="scroll-paragraphs">
+            <p class="scroll-para">
+              At Aditi Gupta Designs, our approach is grounded in the belief that every interior should be a true
+              reflection of the client's unique needs and lifestyle. We craft bespoke, thoughtfully designed spaces that
+              harmoniously blend aesthetics with functionality, creating homes that are as liveable as they are
+              beautiful.
+            </p>
+
+            <p class="scroll-para">
+              With a deep understanding that success is defined not only by the outcome but by the client's experience,
+              we take on a select number of projects each year. This ensures each client receives the highest level of
+              personalised attention and service. From the first meeting to the final reveal, we are committed to
+              delivering exceptional results, ensuring every space feels elegant, comfortable, and distinctly tailored
+              to its owner
+            </p>
+          </div>
+        </div>
+        <div class="line-container bottom-line">
+          <div class="half-line"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- our philosophy  -->
+  <section class="our-philosophy">
+    <div class="philosophy">
+      <h1>Our Philosophy</h1>
+      <div class="sub-title">
+        <h4>Designing with Purpose, Crafting with Passion</h4>
+      </div>
+      <p class="card-text">At Aditi Gupta Designs, every creation is more than just aesthetics; it's a thoughtful blend
+        of
+        creativity, functionality, and individuality. Our philosophy centers on bringing out the unique story of each
+        client, ensuring that every design isn't just visually captivating but also deeply resonant. By combining
+        innovation with timeless elegance, we strive to craft pieces that stand out and stand the test of time.</p>
+    </div>
+  </section>
+
+
+  <!-- our team  -->
+  <section id="instagram">
+    <div class="insta-items">
+      <div class="ig-content">
+        <p class="ig-head">OUR TEAM</p>
+        <p class="ig-head02">Our group of talented senior interior designers each bring their own multi-faceted
+          experience to the practice. The luxury interior designers within the Helen Green Design team work
+          collaboratively with local artists to commission works and with British artisans to realise our clients'
+          aspirations.</p>
+      </div>
+
+      <div id="ig-img02">
+        <div class="insta-img-container-spl">
+          <div class="overlay-spl">
+            <img class="insta-img-spl mb-2" src="/images/radhika02.png" alt="" />
+            <div class="overlay-text-spl">
+              <p class="overlay-head-spl">Radhika Seth</p>
+              <p class="overlay-pos-spl">Creative Lead</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="ig-img03">
+        <div class="insta-img-container">
+          <div class="overlay">
+            <img class="insta-img mb-2" src="/images/medha.png" alt="" />
+            <div class="overlay-text">
+              <p class="overlay-head">Medha </p>
+              <p class="overlay-pos">Associate Director</p>
+            </div>
+          </div>
+        </div>
+        <div class="insta-img-container">
+          <div class="overlay">
+            <img class="insta-img mb-2" src="/images/harshita.png" alt="" />
+            <div class="overlay-text">
+              <p class="overlay-head">Harshita</p>
+              <p class="overlay-pos">Senior Designer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="ig-img04">
+        <div class="insta-img-container">
+          <div class="overlay">
+            <img class="insta-img mb-2" src="/images/dua.png" alt="" />
+            <div class="overlay-text">
+              <p class="overlay-head">Dua Singh</p>
+              <p class="overlay-pos">Senior Designer</p>
+            </div>
+          </div>
+        </div>
+        <div class="insta-img-container">
+          <div class="overlay">
+            <img class="insta-img mb-2" src="/images/ria02.png" alt="" />
+            <div class="overlay-text">
+              <p class="overlay-head">Ria Vohra</p>
+              <p class="overlay-pos">Designer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Contact Button -->
+  <div class="contact-button-container">
+    <a href="http://127.0.0.1:5500/contactUS/contactUs.refined.html" class="contact-button" target="_blank">CONTACT US ABOUT YOUR PROJECT</a>
+  </div>
+
+  <!-- Global Reach -->
+  <div class="text-with-lines">
+    <p>GLOBAL REACH</p>
+  </div>
+  <div class="global-reach">
+    <img
+      src="https://katharinepooley.b-cdn.net/wp-content/uploads/2021/06/World-Map-Sketch-with-annotations-2560x1259.jpg"
+      alt="" />
+  </div>
+
+
+  <!-- Awards -->
+  <section id="featuredIn">
+    <div class="featured-items">
+      <div class="featured-content">
+        <div class="text-with-lines">
+          <p class="featured-head">AWARDS</p>
+        </div>
+      </div>
+      <div class="featured-img">
+        <img src="/images/award01.png" alt="" class="FImg" />
+        <img src="/images/award02.png" alt="" class="FImg" />
+        <img src="/images/award03.png" alt="" class="FImg" />
+        <img src="/images/award04.png" alt="" class="FImg" />
+        <img src="/images/award05.png" alt="" class="FImg" />
+        <!-- Duplicate logos for infinite scroll -->
+        <img src="/images/award01.png" alt="" class="FImg" />
+        <img src="/images/award02.png" alt="" class="FImg" />
+        <img src="/images/award03.png" alt="" class="FImg" />
+        <img src="/images/award04.png" alt="" class="FImg" />
+        <img src="/images/award05.png" alt="" class="FImg" />
+        <!-- Duplicate logos for infinite scroll -->
+        <img src="/images/award01.png" alt="" class="FImg" />
+        <img src="/images/award02.png" alt="" class="FImg" />
+        <img src="/images/award03.png" alt="" class="FImg" />
+        <img src="/images/award04.png" alt="" class="FImg" />
+        <img src="/images/award05.png" alt="" class="FImg" />
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Latest Project -->
+  <div class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h2>THE LATEST PROJECT</h2>
+      <div class="text-with-lines">
+        <a href="http://127.0.0.1:5500/project/project01.html" class="button" target="_blank">TAKE A LOOK</a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- newsletter  -->
+  <section class="newsletter">
+    <div class="signup-box">
+      <p class="news-head">SIGN UP TO OUR NEWSLETTER</p>
+      <p class="news-head02">Stay updated with our latest design trends and updates</p>
+
+      <!-- Form Content -->
+      <form id="signupForm">
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label>
+          <input type="checkbox" required> I agree to the privacy policy *
+        </label>
+        <div class="news-btn"><button onclick="subscribe()">Subscribe</button></div>
+      </form>
+
+      <!-- Thank you message -->
+      <p class="thank-you" id="thankYouMessage">Thank you for signing up!</p>
+    </div>
+  </section>
+
+
+
+  <!-- footer  -->
+  <footer style="background-color: rgb(97, 82, 72)">
+    <div class="fc container-fluid d-flex">
+      <div class="fc2 d-flex">
+        <ul>
+          <a href="http://127.0.0.1:5500/servicesDH/design02.html" target="_blank">
+            <li class="text-white">SERVICES</li>
+          </a>
+          <a href="http://127.0.0.1:5500/about/design03.html" target="_blank">
+            <li class="text-white">ABOUT</li>
+          </a>
+          <a href="http://127.0.0.1:5500/portfolio/design04.html" target="_blank">
+            <li class="text-white">PORTFOLIO</li>
+          </a>
+          <a href="http://127.0.0.1:5500/contactUS/contactUs.refined.html" target="_blank">
+            <li class="text-white">CONTACT US</li>
+          </a>
+        </ul>
+        <ul>
+          <a href="">
+            <li class="text-white">TERMS</li>
+          </a>
+          <a href="">
+            <li class="text-white">PRIVACY</li>
+          </a>
+          <li class="text-white">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://x.com/" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+          </li>
+        </ul>
+        <ul class="f3list">
+          <li>
+            <h4>CONTACT:</h4>
+          </li>
+          <li>
+            <p>+91 70489 24351</p>
+            <p>aditi@aditiguptadesigns.com</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="copyright">
+    <p>&copy 2024 Aditi Gupta Designs. All rights reserved.</p>
+  </div>
+
+  </section>
+
+  <!-- lightbox js link  -->
+  <script src="./lightbox-plus-jquery.js"></script>
+  <script src="./lightbox.js"></script>
+
+  <!-- bootstrap javascript cdn link -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <!-- AOS javascript link -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- newsletter  -->
+<script>
+  // Form submission event listener
+  document.getElementById("signupForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Hide form and show thank you message
+    document.getElementById("signupForm").style.display = "none";
+    document.getElementById("thankYouMessage").style.display = "block";
+  });
+</script>
+
+
+<!-- Google Translate Script -->
+<script type="text/javascript"
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- Google Translate Script -->
+<script type="text/javascript">
+  // Initialize Google Translate only when button is clicked and ensure script is loaded
+  function loadGoogleTranslate() {
+    // Load Google Translate script if it hasn't been loaded yet
+    if (!window.google || !window.google.translate) {
+      const script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      document.head.appendChild(script);
+    } else {
+      googleTranslateElementInit();
+    }
+  }
+
+  // Initialize Google Translate Element
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,hi,pa',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+
+  // Toggle the visibility of the Google Translate container when the icon is clicked
+  document.getElementById("translateToggleBtn").addEventListener("click", function () {
+    const translateContainer = document.getElementById("googleTranslateContainer");
+
+    // Toggle visibility
+    if (translateContainer.style.display === "none" || translateContainer.style.display === "") {
+      loadGoogleTranslate(); // Ensure Translate is loaded
+      translateContainer.style.display = "block";
+    } else {
+      translateContainer.style.display = "none";
+    }
+  });
+</script>
+
+</html>

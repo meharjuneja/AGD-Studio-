@@ -1,0 +1,89 @@
+.rows{
+    display: flex;
+    margin-top: 40px;
+}
+.image-container {
+    text-align: center;
+    margin-left: 30px;
+  }
+  
+  .colors-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    /* font-family: "Cormorant Garamond", serif;
+      font-weight: 300;
+      font-style: normal; */
+  }
+  .image{
+      height: 350px;
+      width: 436px;
+      border-radius: 10px;
+  }
+  .color-box {
+    width: 80px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .color-box:hover {
+    transform: scale(1.05);
+  }
+  
+  .color-box .hex-code {
+    font-size: 14px;
+    margin-bottom: 0px;
+    margin-top: 0;
+  }
+  
+  .color-box .color-name {
+    font-size: 12px;
+    margin-bottom: 50px;
+  }
+  .input{
+    padding-bottom: 30px;
+  }
+  .color-box .copy-message {
+    font-size: 15px;
+    color: #fff;
+    /* background: rgba(0, 0, 0, 0.7); */
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease-in-out;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .color-box .copy-message.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .color-box .copy-message.copied {
+    visibility: visible;
+    opacity: 1;
+    /* background: green; */
+    color: white;
+  }
+  
+  .color-box:hover .copy-message {
+    visibility: visible;
+    opacity: 1;
+  }

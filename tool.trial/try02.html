@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Timeline Estimator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container my-5">
+  <h2 class="text-center">Project Timeline Estimator</h2>
+  
+  <!-- Timeline Estimator Form -->
+  <div class="mt-4">
+    <form id="timelineForm">
+      <div class="mb-3">
+        <label for="projectSize" class="form-label">Project Size (in sq ft)</label>
+        <input type="number" id="projectSize" class="form-control" placeholder="Enter the area size" required>
+      </div>
+      <div class="mb-3">
+        <label for="complexity" class="form-label">Complexity Level</label>
+        <select id="complexity" class="form-select" required>
+          <option value="simple">Simple</option>
+          <option value="moderate">Moderate</option>
+          <option value="complex">Complex</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="additionalFeatures" class="form-label">Additional Features</label>
+        <select id="additionalFeatures" class="form-select" multiple>
+          <option value="customFurniture">Custom Furniture</option>
+          <option value="advancedLighting">Advanced Lighting</option>
+          <option value="3dModeling">3D Modeling</option>
+          <option value="landscaping">Landscaping</option>
+        </select>
+        <small class="text-muted">Hold Ctrl (Windows) or Command (Mac) to select multiple options.</small>
+      </div>
+      <button type="submit" class="btn btn-primary">Estimate Timeline</button>
+    </form>
+  </div>
+
+  <!-- Timeline Display -->
+  <div class="mt-4">
+    <h4>Estimated Timeline</h4>
+    <p id="timelineResult" class="fs-5">Please fill out the form and click "Estimate Timeline" to see the result.</p>
+  </div>
+</div>
+
+<script>
+  document.getElementById("timelineForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Get values from the form
+    const projectSize = parseFloat(document.getElementById("projectSize").value);
+    const complexity = document.getElementById("complexity").value;
+    const additionalFeatures = Array.from(document.getElementById("additionalFeatures").selectedOptions).map(opt => opt.value);
+
+    // Base days for simple, moderate, and complex projects
+    let baseDays;
+    if (complexity === "simple") {
+      baseDays = 10;
+    } else if (complexity === "moderate") {
+      baseDays = 20;
+    } else if (complexity === "complex") {
+      baseDays = 30;
+    }
+
+    // Calculate days based on project size (e.g., 1 day per 50 sq ft)
+    const sizeDays = Math.ceil(projectSize / 50);
+
+    // Additional days for selected features
+    let featureDays = 0;
+    additionalFeatures.forEach(feature => {
+      if (feature === "customFurniture") featureDays += 5;
+      if (feature === "advancedLighting") featureDays += 3;
+      if (feature === "3dModeling") featureDays += 7;
+      if (feature === "landscaping") featureDays += 4;
+    });
+
+    // Calculate total estimated days
+    const estimatedDays = baseDays + sizeDays + featureDays;
+
+    // Display result
+    document.getElementById("timelineResult").innerText = `Estimated Timeline: ${estimatedDays} days`;
+  });
+</script>
+
+</body>
+</html>

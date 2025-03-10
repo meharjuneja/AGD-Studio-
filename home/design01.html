@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+
+  <!-- External css link:- -->
+  <link rel="stylesheet" href="design01.css" />
+
+  <!-- bootstrap css CDN link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <!-- font-awesome cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- lightbox css link -->
+  <link rel="stylesheet" href="./lightbox.css" />
+  <!-- <link rel="stylesheet" href="./lightbox2-dev/dist/css/lightbox.min.css"> -->
+
+  <!-- AOS cdn link -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- google fonts link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Grey+Qo&family=Italiana&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid align-items-center">
+        <div class="LOGO d-flex flex-column ms-5 me-auto">
+          <img class="AGD-img" class="Logo-img ms-5" src="/images/AGDlogo.png" alt="" height="60px" width="100px" />
+          <p class="AGDname mb-0">Aditi Gupta Designs</p>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="Nlist navbar-nav pe-5 ps-5">
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5 active" aria-current="page"
+                href="http://127.0.0.1:5500/home/design01.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/servicesDH/design02.html">SERVICES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/about/design03.html">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/portfolio/design04.html">PORTFOLIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/blog/blog01.final.html">BLOG</a>
+            </li>
+            <li class="nav-item mt-3 me-0">
+              <a class="nav-link" href="http://127.0.0.1:5500/contactUS/contactUs.refined.html">CONTACT US</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+  <!-- Make sure to include Font Awesome for the hamburger icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Google Translate Hamburger Icon positioned outside the header and navbar -->
+  <button id="translateToggleBtn" class="translate-icon">
+    <i class="fas fa-language"></i> <!-- Font Awesome language icon -->
+  </button>
+
+  <!-- Hidden Google Translate Element -->
+  <div id="googleTranslateContainer" class="translate-dropdown" style="display: none;">
+    <div id="google_translate_element"></div>
+  </div>
+
+  <!-- Page content continues -->
+
+
+  <!-- section1 -->
+  <section>
+    <div class="hero-section">
+      <video id="heroVideo" playsinline="playsinline" autoplay="autoplay" loop="loop" muted="muted" preload="metadata"
+        poster="//laurahammettliving.com/cdn/shop/files/preview_images/23b4460d84f74436a9eeeb9516cd186f.thumbnail.0000000000_2000x.jpg?v=1726132884">
+        <source
+          src="//laurahammettliving.com/cdn/shop/videos/c/vp/23b4460d84f74436a9eeeb9516cd186f/23b4460d84f74436a9eeeb9516cd186f.HD-1080p-7.2Mbps-34659447.mp4?v=0"
+          type="video/mp4" />
+        <img
+          src="//laurahammettliving.com/cdn/shop/files/preview_images/23b4460d84f74436a9eeeb9516cd186f.thumbnail.0000000000_2000x.jpg?v=1726132884" />
+      </video>
+      <button id="toggleSoundButton" onclick="toggleSound()">
+        CLICK FOR SOUND
+        <span class="sound-icon"><i class="fa-solid fa-volume-off"></i></span>
+      </button>
+    </div>
+  </section>
+
+
+
+  <!-- section2 -->
+  <section id="blogPosts">
+    <div class="Blog-items">
+      <div id="blog1">
+        <div class="blog-content">
+          <a target="_blank" href="https://www.designsbylaila.com/subtle-and-soft-thanksgiving-tablescape/"><img
+              src="https://www.designsbylaila.com/wp-content/uploads/2019/10/subtle-and-soft-thanksgiving-tablescape-2.1jpg-e1572038291286.jpg"
+              alt="" class="blog-img" /></a>
+          <a target="_blank" href="https://www.designsbylaila.com/subtle-and-soft-thanksgiving-tablescape/">
+            <p class="blog-head">
+              Subtle and Soft Thanksgiving Tablescape
+            </p>
+          </a>
+        </div>
+      </div>
+      <div id="blog2">
+        <div class="blog-content">
+          <a target="_blank" href="https://www.designsbylaila.com/patio-revamp-before-and-after"><img
+              src="https://www.designsbylaila.com/wp-content/uploads/2020/08/IMG_7454-1366x2048.png" alt=""
+              class="blog-img" /></a>
+          <a target="_blank" href="https://www.designsbylaila.com/patio-revamp-before-and-after">
+            <p class="blog-head">Patio Revamp; Before and After</p>
+          </a>
+        </div>
+      </div>
+      <div id="blog3">
+        <div class="blog-content">
+          <a target="_blank" href="https://www.designsbylaila.com/tis-the-season-to-decorate/"><img
+              src="https://www.designsbylaila.com/wp-content/uploads/2018/12/tis-the-season-to-be-festive-868x1024.png"
+              alt="" class="blog-img" /></a>
+          <a target="_blank" href="https://www.designsbylaila.com/tis-the-season-to-decorate/">
+            <p class="blog-head">Tis The Season to Decorate</p>
+          </a>
+        </div>
+      </div>
+      <div class="blog-text">
+        <p class="blogH1">Recent Posts</p>
+        <p class="blogH2">
+          Explore our latest posts and let your imagination drift into a
+          captivating world of beauty, interior design, exterior elegance, and
+          decor inspiration!
+        </p>
+        <div class="contact-button-container">
+          <a href="http://127.0.0.1:5500/blog/blog01.final.html" class="contact-button" target="_blank">SEE MORE POSTS</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section3 -->
+  <section id="About">
+    <div class="about-items">
+      <div id="img-1" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine">
+        <img src="/images/home01.png" alt="" class="aboutImg" />
+      </div>
+      <div id="img-2" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine">
+        <img src="/images/ilisha02.png" alt="" class="aboutImg" />
+      </div>
+      <div class="about-text">
+        <div class="about-content">
+          <p class="aboutH1">THE <b>COMPANY</b></p>
+          <p class="aboutH2">ABOUT ADITI <i>and</i> THE TEAM</p>
+          <p class="about-para">
+            Aditi Gupta Designs is a Mumbai-based design studio specializing
+            in luxury residential interiors and exteriors across India and
+            internationally for both private clients and developers.
+          </p>
+          <p class="about-para2">
+            Led by Aditi, our experienced team of talented Interior &
+            Architectural Designers provides a personalized design service to
+            create detail-driven, luxury spaces that perfectly suit their
+            context, meet client needs, and stand the test of time.
+          </p>
+          <!-- <button class="about-btn"><a href="">READ MORE</a></button> -->
+          <div class="contact-button-container">
+            <a href="http://127.0.0.1:5500/about/design03.html" class="contact-button" target="_blank">READ MORE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section4 -->
+  <section id="page-cards">
+    <div class="pageCard-items" data-aos="fade-up" data-aos-duration="3000">
+      <div class="card-content col-4">
+        <a href="http://127.0.0.1:5500/servicesDH/design02.html" target="_blank"><img
+            src="https://katharinepooley.b-cdn.net/wp-content/uploads/2024/04/katharine_pooley_living_room_interior_design_middle_east.webp"
+            alt="" class="cardImg" /></a>
+        <div class="space">.</div>
+        <div class="overlay">
+          <span class="overlay-text">VIEW SERVICES</span>
+        </div>
+        <!-- <p class="card-head">SERVICES</p> -->
+        <a class="card-head" href="http://127.0.0.1:5500/servicesDH/design02.html" target="_blank">SERVICES</a>
+      </div>
+      <div class="card-content col-4">
+        <a href="http://127.0.0.1:5500/portfolio/design04.html" target="_blank"><img
+            src="https://katharinepooley.b-cdn.net/wp-content/uploads/2021/07/1_12_Contemporary_Doha_Home-scaled-aspect-ratio-760-1086-1.jpg"
+            alt="" class="cardImg" /></a>
+        <div class="space">.</div>
+        <div class="overlay">
+          <span class="overlay-text">VIEW PORTFOLIO</span>
+        </div>
+        <!-- <p class="card-head">PORTFOLIO</p> -->
+        <a class="card-head" href="http://127.0.0.1:5500/portfolio/design04.html" target="_blank">PORTFOLIO</a>
+      </div>
+      <div class="card-content">
+        <a href="http://127.0.0.1:5500/contactUS/contactUs.refined.html" target="_blank"><img
+            src="https://katharinepooley.b-cdn.net/wp-content/uploads/2024/10/Katharine-Pooley-Interior-Design-Marble-Arch-Drawing-Room-Lounge-Detail-aspect-ratio-760-1086.webp"
+            alt="" class="cardImg" /></a>
+        <div class="space">.</div>
+        <div class="overlay">
+          <span class="overlay-text">LET'S CONNECT</span>
+        </div>
+        <!-- <p class="card-head">CONTACT US</p> -->
+        <a class="card-head" href="http://127.0.0.1:5500/contactUS/contactUs.refined.html" target="_blank">CONTACT US</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- section5 -->
+  <section id="functionality">
+    <div class="functionality-items">
+      <div class="function01">
+        <p class="function-head">Find Your Perfect Style</p>
+        <p class="function-head02">Design Style Quiz</p>
+        <p class="function-para">
+          Discover your ideal design style with our quick and easy quiz!
+          Whether you're drawn to modern minimalism, classic elegance, or
+          something in between, our quiz will help you identify the style that
+          best reflects your personality and preferences. Get personalized
+          recommendations to guide your design journey.
+        </p>
+        <!-- <button class="function-btn"><a href="">START QUIZ</a></button> -->
+        <div class="functionality-button-container">
+          <a href="http://127.0.0.1:5500/designQuiz/quiz.final.html" class="functionality-button" target="_blank">START QUIZ</a>
+        </div>
+      </div>
+      <div class="vertical-line"></div>
+      <div id="function02">
+        <p class="function-head">Plan Your Dream Within Budget</p>
+        <p class="function-head02">Budget Calculator</p>
+        <p class="function-para">
+          Take the guesswork out of planning with our budget calculator. Input
+          your project details, and get an estimate tailored to your vision
+          and financial goals. Whether you're planning a single room or an
+          entire home, our calculator ensures you stay on track without
+          compromising on style.
+        </p>
+        <!-- <button class="function-btn"><a href="">CALCULATE</a></button> -->
+        <div class="functionality-button-container">
+          <a href="http://127.0.0.1:5500/BudgetCalculator/BudgetCalculator.F.html" class="functionality-button" target="_blank">CALCULATE</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Basic Horizontal Line -->
+    <hr class="horizontal-line" />
+
+    <div class="functionality-items">
+      <div class="function01">
+        <p class="function-head">Discover Your Perfect Color Palette</p>
+        <p class="function-head02">Color Palette Finder</p>
+        <p class="function-para">
+          Find the colors that capture your style with our Color Palette Finder! Whether you're drawn to vibrant, bold
+          hues, calming neutrals, or something uniquely personal, our tool will help you select the perfect palette for
+          your project. Get personalized color recommendations that bring out the best in your space and reflect your
+          aesthetic vision.
+        </p>
+        <!-- <button class="function-btn"><a href="">START QUIZ</a></button> -->
+        <div class="functionality-button-container">
+          <a href="http://127.0.0.1:5500/colorPalette/colorPalette.final.html" class="functionality-button" target="_blank">DISCOVER</a>
+        </div>
+      </div>
+      <!-- <div class="vertical-line"></div> -->
+      <div id="function02">
+        <p class="function-head">Plan Your Project Timeline</p>
+        <p class="function-head02">Project Timeline Estimator</p>
+        <p class="function-para">
+          Stay on track with our Project Timeline Estimator! Whether your project is large or small, our tool helps you
+          determine an optimal timeline based on your project scope, complexity, and urgency. Get a personalized
+          timeline that sets realistic milestones, helping you achieve your design goals efficiently and on schedule.
+        </p>
+        <!-- <button class="function-btn"><a href="">CALCULATE</a></button> -->
+        <div class="functionality-button-container">
+          <a href="http://127.0.0.1:5500/projectTimeline/ProjectTimeline.html" class="functionality-button" target="_blank">ESTIMATE</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section6 -->
+  <section id="instagram">
+    <div class="insta-items">
+      <div class="ig-content">
+        <p class="ig-head"># B T S</p>
+        <p class="ig-head02">INSTAGRAM</p>
+        <p class="ig-head03">
+          <span class="line"></span>
+          <a target="_blank"
+            href="https://www.instagram.com/home_design68?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">FOLLOW
+            US</a><span class="line"></span>
+        </p>
+      </div>
+      <div id="ig-img01">
+        <div class="insta-img-container">
+          <a href="https://www.instagram.com/p/DB1jKq9SLUf/?utm_source=ig_web_copy_link" target="_blank"><img
+              class="insta-img mb-2" src="/images/insta01.png" alt="" /></a>
+        </div>
+        <div class="insta-img-container">
+          <a href="https://www.instagram.com/reel/DBr3xScyahI/?utm_source=ig_web_copy_link" target="_blank"><img
+              class="insta-img" src="/images/insta02.png" alt="" /></a>
+        </div>
+      </div>
+      <div id="ig-img02">
+        <div class="insta-img-container">
+          <a href="https://www.instagram.com/p/DBv-p27ob1Z/?utm_source=ig_web_copy_link" target="_blank"><img
+              class="insta-img mb-2" src="/images/insta03.png" alt="" /></a>
+        </div>
+        <div class="insta-img-container">
+          <a href="https://www.instagram.com/reel/DBqc6Acu1sc/?utm_source=ig_web_copy_link" target="_blank"><img
+              class="insta-img mb-2" src="/images/insta04.png" alt="" /></a>
+        </div>
+      </div>
+      <div id="ig-img03">
+        <div class="insta-img-container">
+          <a href="https://www.instagram.com/reel/DBn5Sn6Ok6J/?utm_source=ig_web_copy_link" target="_blank"><img
+              class="insta-img mb-2" src="/images/insta05.png" alt="" /></a>
+        </div>
+        <div class="insta-img-container">
+          <a href="https://www.instagram.com/p/DB1Dodzyo9H/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            target="_blank"><img class="insta-img" src="/images/insta06.png" alt="" /></a>
+        </div>
+      </div>
+      <div id="ig-img04">
+        <div class="insta-img-container">
+          <a href="https://www.instagram.com/p/DBbWQMyAOXw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            target="_blank"><img class="insta-img mb-2" src="/images/insta07.png" alt="" /></a>
+        </div>
+        <div class="insta-img-container">
+          <a href="https://www.instagram.com/p/C2J9aiHyjmB/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            target="_blank"><img class="insta-img" src="/images/insta08.png" alt="" /></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section07 -->
+
+  <section id="writtenContent">
+    <div class="WC-items">
+      <p class="WC-para">
+        “Luxury is most importantly about meeting a client's aspiration.
+        Understanding and finding solutions to fit their needs and lifestyle.”
+      </p>
+      <p class="WC-para02">
+        Driven by creativity and dedication, we strive to push the boundaries
+        of innovation. Explore our latest endeavors as we craft unique
+        experiences and groundbreaking projects. From concept to execution,
+        every step is a commitment to excellence. Discover what's new and
+        witness the evolution of our journey.
+      </p>
+      <!-- <button class="WC-btn"><a href="">LATEST PROJECT</a></button> -->
+      <div class="functionality-button-container">
+        <a href="http://127.0.0.1:5500/project/project01.html" class="functionality-button" target="_blank">LATEST PROJECT</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- section8 -->
+
+  <!-- Section 8: Testimonials -->
+  <section class="testimonials">
+    <div class="testimonials-head">
+      <p class="TH">TESTIMONIALS</p>
+    </div>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="test-container col-md-3">
+              <p class="test-head">James R. - Sydney, Australia</p>
+              <p class="test-para">
+                "Working with Aditi Gupta Designs was an absolute pleasure!
+                Their vision transformed our dull backyard into a stunning
+                outdoor oasis. Our family now has a beautiful, functional
+                space to relax in."
+              </p>
+            </div>
+            <div class="vertical col-md-1">
+              <div class="vertical-line02"></div>
+            </div>
+            <div class="test-container col-md-3">
+              <p class="test-head">Priya S. - New Delhi, India</p>
+              <p class="test-para">
+                "Aditi Gupta's team captured my dream interior perfectly.
+                Every room in my home now feels modern, warm, and elegant.
+                Their attention to detail and creativity are unmatched!"
+              </p>
+            </div>
+            <div class="vertical col-md-1">
+              <div class="vertical-line02"></div>
+            </div>
+            <div class="test-container col-md-3">
+              <p class="test-head">Oliver T. - Toronto, Canada</p>
+              <p class="test-para">
+                "Aditi's designs brought new life to my home's exterior. I'm
+                constantly receiving compliments on the stylish, modern
+                aesthetic. I couldn't be happier with the results!"
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row">
+            <div class="test-container col-md-3">
+              <p class="test-head">Sarah M. - London, UK</p>
+              <p class="test-para">
+                "The landscape design from Aditi Gupta Designs exceeded my
+                expectations! Their artistic approach turned our garden into a
+                serene escape, and their team was so friendly and
+                professional."
+              </p>
+            </div>
+            <div class="vertical col-md-1">
+              <div class="vertical-line02"></div>
+            </div>
+            <div class="test-container col-md-3">
+              <p class="test-head">Rahul K. - Mumbai, India</p>
+              <p class="test-para">
+                "I am amazed at how they transformed my small apartment. Aditi
+                Gupta Designs made it feel spacious and welcoming, with each
+                corner reflecting my personality. Highly recommended!"
+              </p>
+            </div>
+            <div class="vertical col-md-1">
+              <div class="vertical-line02"></div>
+            </div>
+            <div class="test-container col-md-3">
+              <p class="test-head">Mia L. - New York, USA</p>
+              <p class="test-para">
+                "Aditi Gupta Designs turned my outdated kitchen and living
+                room into modern masterpieces! The team's expertise in
+                maximizing space and blending styles is phenomenal."
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="row">
+            <div class="test-container col-md-3">
+              <p class="test-head">Ben A. - Auckland, New Zealand</p>
+              <p class="test-para">
+                "I chose Aditi Gupta Designs for our office remodel, and they
+                delivered an inspiring, contemporary workspace. It's both
+                functional and stylish, and our team loves it!"
+              </p>
+            </div>
+            <div class="vertical col-md-1">
+              <div class="vertical-line02"></div>
+            </div>
+            <div class="test-container col-md-3">
+              <p class="test-head">Sanjay P. - Bangalore, India</p>
+              <p class="test-para">
+                "Their landscape design gave my house incredible curb appeal.
+                Aditi Gupta and her team listened to every idea I had and
+                crafted a layout that is both elegant and easy to maintain."
+              </p>
+            </div>
+            <div class="vertical col-md-1">
+              <div class="vertical-line02"></div>
+            </div>
+            <div class="test-container col-md-3">
+              <p class="test-head">Emily C. - Melbourne, Australia</p>
+              <p class="test-para">
+                "From start to finish, Aditi Gupta Designs provided
+                exceptional service. My home's interior is now cozy, stylish,
+                and uniquely mine. I couldn't have asked for a better
+                experience!"
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section for User-Submitted Testimonial Form -->
+    <div class="testimonial-form-section">
+      <h3>Submit Your Testimonial</h3>
+      <form id="testimonialForm">
+        <input type="text" id="userName" name="userName" placeholder="Your Name" required>
+        <textarea id="userReview" name="userReview" placeholder="Your Review" required></textarea>
+        <button type="submit" class="submit-btn">Submit Testimonial</button>
+      </form>
+      <p id="formMessage" class="form-message"></p>
+    </div>
+
+  </section>
+
+
+  <section id="web-signup">
+    <div class="web-container">
+      <p class="web-para">Join our exclusive AGD webinar to discover expert design insights and elevate your space!</p>
+      <div class="functionality-button-container">
+        <a href="http://127.0.0.1:5500/webinar/webinar.morning.html" class="functionality-button" target="_blank">Sign Up Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- section09 -->
+  <section id="featuredIn">
+    <div class="featured-items">
+      <div class="featured-content">
+        <p class="featured-head">FEATURED IN</p>
+      </div>
+      <div class="featured-img">
+        <img src="/images/logo01.png" alt="" class="FImg" />
+        <img src="/images/logo02.png" alt="" class="FImg" />
+        <img src="/images/logo03.png" alt="" class="FImg" />
+        <img src="/images/logo04.png" alt="" class="FImg" />
+        <img src="/images/logo05.png" alt="" class="FImg" />
+        <!-- Duplicate logos for infinite scroll -->
+        <img src="/images/logo01.png" alt="" class="FImg" />
+        <img src="/images/logo02.png" alt="" class="FImg" />
+        <img src="/images/logo03.png" alt="" class="FImg" />
+        <img src="/images/logo04.png" alt="" class="FImg" />
+        <img src="/images/logo05.png" alt="" class="FImg" />
+      </div>
+    </div>
+  </section>
+
+  <!-- newsletter  -->
+  <section class="newsletter">
+    <div class="signup-box">
+      <p class="news-head">SIGN UP TO OUR NEWSLETTER</p>
+      <p class="news-head02">Stay updated with our latest design trends and updates</p>
+
+      <!-- Form Content -->
+      <form id="signupForm">
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label>
+          <input type="checkbox" required> I agree to the privacy policy *
+        </label>
+        <div class="news-btn"><button onclick="subscribe()">Subscribe</button></div>
+      </form>
+
+      <!-- Thank you message -->
+      <p class="thank-you" id="thankYouMessage">Thank you for signing up!</p>
+    </div>
+  </section>
+
+  <!-- footer  -->
+  <footer style="background-color: rgb(97, 82, 72)">
+    <div class="fc container-fluid d-flex">
+      <div class="fc2 d-flex">
+        <ul>
+          <a href="http://127.0.0.1:5500/servicesDH/design02.html" target="_blank">
+            <li class="text-white">SERVICES</li>
+          </a>
+          <a href="http://127.0.0.1:5500/about/design03.html" target="_blank">
+            <li class="text-white">ABOUT</li>
+          </a>
+          <a href="http://127.0.0.1:5500/portfolio/design04.html" target="_blank">
+            <li class="text-white">PORTFOLIO</li>
+          </a>
+          <a href="http://127.0.0.1:5500/contactUS/contactUs.refined.html" target="_blank">
+            <li class="text-white">CONTACT US</li>
+          </a>
+        </ul>
+        <ul>
+          <a href="">
+            <li class="text-white">TERMS</li>
+          </a>
+          <a href="">
+            <li class="text-white">PRIVACY</li>
+          </a>
+          <li class="text-white">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://x.com/" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+          </li>
+        </ul>
+        <ul class="f3list">
+          <li>
+            <h4>CONTACT:</h4>
+          </li>
+          <li>
+            <p>+91 70489 24351</p>
+            <p>aditi@aditiguptadesigns.com</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="copyright">
+    <p>&copy 2024 Aditi Gupta Designs. All rights reserved.</p>
+  </div>
+
+
+
+
+
+  <!-- lightbox js link  -->
+  <script src="./lightbox-plus-jquery.js"></script>
+  <script src="./lightbox.js"></script>
+
+  <!-- bootstrap javascript cdn link -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <!-- AOS javascript link -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- <script>
+          const audio = document.querySelector('audio');
+          audio.volume = 0.5; // Set volume to 50%
+      </script> -->
+  <script>
+    function toggleSound() {
+      const video = document.getElementById("heroVideo");
+      const button = document.getElementById("toggleSoundButton");
+
+      if (video.muted) {
+        video.muted = false;
+        button.innerHTML =
+          'CLICK TO MUTE <span class="sound-icon"><i class="fa-solid fa-volume-xmark"></i></span>';
+      } else {
+        video.muted = true;
+        button.innerHTML =
+          'CLICK FOR SOUND <span class="sound-icon"><i class="fa-solid fa-volume-off"></i></span>';
+      }
+    }
+  </script>
+
+  <!-- Google Translate Script -->
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- instagram posts  -->
+  <script async src="//www.instagram.com/embed.js"></script>
+  <script async src="//www.instagram.com/embed.js"></script>
+
+  <!-- newsletter  -->
+  <script>
+    // Form submission event listener
+    document.getElementById("signupForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      // Hide form and show thank you message
+      document.getElementById("signupForm").style.display = "none";
+      document.getElementById("thankYouMessage").style.display = "block";
+    });
+  </script>
+
+  <script>
+    document.getElementById('testimonialForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent form from submitting traditionally
+
+      // Get form data
+      const userName = document.getElementById('userName').value.trim();
+      const userReview = document.getElementById('userReview').value.trim();
+      const formMessage = document.getElementById('formMessage');
+
+      // Validate inputs
+      if (userName === '' || userReview === '') {
+        formMessage.textContent = 'Please enter both your name and your review.';
+        formMessage.classList.add('error');
+        return;
+      }
+
+      // Create a new testimonial item
+      const newTestimonial = document.createElement('div');
+      newTestimonial.classList.add('carousel-item');
+
+      newTestimonial.innerHTML = `
+        <div class="row">
+            <div class="test-container col-md-3">
+                <p class="test-head">${userName}</p>
+                <p class="test-para">"${userReview}"</p>
+            </div>
+            <div class="vertical col-md-1">
+                <div class="vertical-line02"></div>
+            </div>
+            <div class="test-container col-md-3">
+                <p class="test-head">Placeholder</p>
+                <p class="test-para">"This is a placeholder for the carousel layout to remain balanced."</p>
+            </div>
+            <div class="vertical col-md-1">
+                <div class="vertical-line02"></div>
+            </div>
+            <div class="test-container col-md-3">
+                <p class="test-head">Placeholder</p>
+                <p class="test-para">"This is a placeholder for the carousel layout to remain balanced."</p>
+            </div>
+        </div>
+    `;
+
+      // Append the new testimonial to the carousel inner container
+      document.querySelector('.carousel-inner').appendChild(newTestimonial);
+
+      // Add active class to the first item if none exist
+      if (document.querySelectorAll('.carousel-item.active').length === 0) {
+        newTestimonial.classList.add('active');
+      }
+
+      // Reset the form
+      document.getElementById('testimonialForm').reset();
+      formMessage.textContent = 'Thank you for your testimonial!';
+      formMessage.classList.add('success');
+      formMessage.classList.remove('error');
+    });
+
+  </script>
+
+  
+
+
+   <!-- Google Translate Script -->
+  <script type="text/javascript">
+    // Initialize Google Translate only when button is clicked and ensure script is loaded
+    function loadGoogleTranslate() {
+      // Load Google Translate script if it hasn't been loaded yet
+      if (!window.google || !window.google.translate) {
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+        document.head.appendChild(script);
+      } else {
+        googleTranslateElementInit();
+      }
+    }
+
+    // Initialize Google Translate Element
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,pa',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+
+    // Toggle the visibility of the Google Translate container when the icon is clicked
+    document.getElementById("translateToggleBtn").addEventListener("click", function() {
+      const translateContainer = document.getElementById("googleTranslateContainer");
+      
+      // Toggle visibility
+      if (translateContainer.style.display === "none" || translateContainer.style.display === "") {
+        loadGoogleTranslate(); // Ensure Translate is loaded
+        translateContainer.style.display = "block";
+      } else {
+        translateContainer.style.display = "none";
+      }
+    });
+  </script>
+ 
+</body>
+
+</html>

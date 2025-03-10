@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Home Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .chat-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+            position: relative;
+        }
+        .chat-box {
+            text-align: left;
+            min-height: 200px;
+            margin-bottom: 20px;
+        }
+        .message {
+            padding: 10px;
+            border-radius: 10px;
+            margin: 5px 0;
+        }
+        .bot-message {
+            background: #dfffd6;
+        }
+        .user-message {
+            background: #d6e0ff;
+            text-align: right;
+        }
+        button {
+            background: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .tree-container {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <h2>Sustainable Home Quiz 🌱</h2>
+        <div class="tree-container" id="tree">🌱</div>
+        <div class="chat-box" id="chatBox"></div>
+        <div id="buttons"></div>
+    </div>
+    
+    <script>
+        const questions = [
+            {
+                text: "What material is your house made of?",
+                options: ["Brick", "Wood", "Concrete", "Insulated Panels"],
+                scores: { "Brick": 6, "Wood": 8, "Concrete": 5, "Insulated Panels": 9 },
+                suggestions: {
+                    "Brick": "Consider using recycled bricks or sustainable mortar.",
+                    "Wood": "Ensure the wood is sourced sustainably or FSC-certified.",
+                    "Concrete": "Opt for low-carbon concrete alternatives.",
+                    "Insulated Panels": "You're making a great choice for energy efficiency!"
+                }
+            },
+            {
+                text: "How do you power your home?",
+                options: ["Solar", "Wind", "Gas", "Electric"],
+                scores: { "Solar": 10, "Wind": 9, "Gas": 4, "Electric": 6 },
+                suggestions: {
+                    "Solar": "Great choice! Ensure panels are well-maintained for efficiency.",
+                    "Wind": "Consider small wind turbines if space allows.",
+                    "Gas": "Try switching to biogas or reducing gas consumption.",
+                    "Electric": "Use energy-efficient appliances and consider green electricity providers."
+                }
+            },
+            {
+                text: "Do you recycle waste?",
+                options: ["Yes", "No"],
+                scores: { "Yes": 10, "No": 3 },
+                suggestions: {
+                    "Yes": "Awesome! Consider composting organic waste as well.",
+                    "No": "Try setting up a simple recycling system at home."
+                }
+            },
+            {
+                text: "How do you conserve water?",
+                options: ["Rainwater Harvesting", "Low-Flow Fixtures", "Both", "None"],
+                scores: { "Rainwater Harvesting": 7, "Low-Flow Fixtures": 7, "Both": 10, "None": 3 },
+                suggestions: {
+                    "Rainwater Harvesting": "A great step! Use stored rainwater for gardening and cleaning.",
+                    "Low-Flow Fixtures": "These help save water! Also, fix any leaks at home.",
+                    "Both": "Fantastic! You're maximizing water conservation!",
+                    "None": "Start small by turning off taps when not in use."
+                }
+            }
+        ];
+
+        let score = 0;
+        let currentQuestion = 0;
+        const chatBox = document.getElementById("chatBox");
+        const buttonsContainer = document.getElementById("buttons");
+        const tree = document.getElementById("tree");
+
+        function addMessage(text, type) {
+            const message = document.createElement("div");
+            message.classList.add("message", type);
+            message.innerText = text;
+            chatBox.appendChild(message);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function updateTree() {
+            if (score >= 30) {
+                tree.innerText = "🌳";
+            } else if (score >= 20) {
+                tree.innerText = "🌲";
+            } else if (score >= 10) {
+                tree.innerText = "🌿";
+            } else {
+                tree.innerText = "🌱";
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < questions.length) {
+                const q = questions[currentQuestion];
+                addMessage(q.text, "bot-message");
+                buttonsContainer.innerHTML = "";
+                q.options.forEach(option => {
+                    const btn = document.createElement("button");
+                    btn.innerText = option;
+                    btn.onclick = () => selectAnswer(option, q.scores[option], q.suggestions[option]);
+                    buttonsContainer.appendChild(btn);
+                });
+            } else {
+                showResult();
+            }
+        }
+
+        function selectAnswer(option, points, suggestion) {
+            addMessage(option, "user-message");
+            addMessage(`Tip: ${suggestion}`, "bot-message");
+            score += points;
+            updateTree();
+            currentQuestion++;
+            setTimeout(nextQuestion, 1000);
+        }
+
+        function showResult() {
+            buttonsContainer.innerHTML = "";
+            let message;
+            if (score >= 35) {
+                message = "You're a **Green Guru!** 🌱 Keep up the great work!";
+            } else if (score >= 20) {
+                message = "You're an **Eco Explorer!** 🚀 Small changes can boost your impact!";
+            } else {
+                message = "You're an **Eco Newbie!** 🌍 Start making sustainable choices today!";
+            }
+            addMessage(`Your Sustainable Home Score: ${score}/40 \n ${message}`, "bot-message");
+            updateTree();
+            buttonsContainer.innerHTML = '<button onclick="restartQuiz()">Try Again</button>';
+        }
+
+        function restartQuiz() {
+            score = 0;
+            currentQuestion = 0;
+            chatBox.innerHTML = "";
+            tree.innerText = "🌱";
+            nextQuestion();
+        }
+
+        nextQuestion();
+    </script>
+</body>
+</html>

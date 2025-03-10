@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+
+  <!-- External css link:- -->
+  <link rel="stylesheet" href="design04.css" />
+
+  <!-- bootstrap css CDN link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <!-- font-awesome cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- lightbox css link -->
+  <link rel="stylesheet" href="/lightboxUsed/lightbox.css" />
+  <!-- <link rel="stylesheet" href="./lightbox2-dev/dist/css/lightbox.min.css"> -->
+
+  <!-- AOS cdn link -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- google fonts link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Grey+Qo&family=Italiana&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- header -->
+  <!-- header -->
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid align-items-center">
+        <div class="LOGO d-flex flex-column ms-5 me-auto">
+          <img class="AGD-img" class="Logo-img ms-5" src="/images/AGDlogo.png" alt="" height="60px" width="100px" />
+          <p class="AGDname mb-0">Aditi Gupta Designs</p>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="Nlist navbar-nav pe-5 ps-5">
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5 active" aria-current="page"
+                href="http://127.0.0.1:5500/home/design01.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/servicesDH/design02.html">SERVICES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/about/design03.html">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/portfolio/design04.html">PORTFOLIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/blog/blog01.final.html">BLOG</a>
+            </li>
+            <li class="nav-item mt-3 me-0">
+              <a class="nav-link" href="http://127.0.0.1:5500/contactUS/contactUs.refined.html">CONTACT US</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Make sure to include Font Awesome for the hamburger icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Google Translate Hamburger Icon positioned outside the header and navbar -->
+  <button id="translateToggleBtn" class="translate-icon">
+    <i class="fas fa-language"></i> <!-- Font Awesome language icon -->
+  </button>
+
+  <!-- Hidden Google Translate Element -->
+  <div id="googleTranslateContainer" class="translate-dropdown" style="display: none;">
+    <div id="google_translate_element"></div>
+  </div>
+
+  <!-- Page content continues -->
+
+
+  <!-- section1 -->
+  <section>
+    <div class="P-heading">
+      <p class="P-head fs-3">Crafting Dream Homes with Exquisite Detail</p>
+      <p class="PP fs-4">
+        "From concept to completion, every home we design is a reflection of
+        our unwavering commitment to quality and elegance. Our portfolio
+        captures the essence of dream homes, tailored to the desires of those
+        who appreciate the finer things in life."
+      </p>
+    </div>
+  </section>
+
+  <!-- section2 -->
+  <section id="ext">
+    <ul class="portOptions">
+      <a href="#ext" class="po">
+        <li>EXTERIORS</li>
+      </a>
+      <p class="VrtLine">|</p>
+      <a href="#int" class="po">
+        <li>INTERIORS</li>
+      </a>
+      <p class="VrtLine">|</p>
+      <a href="#out" class="po">
+        <li>OUTDOOR SPACES</li>
+      </a>
+      <!-- <p class="po">EXTERIORS</p>
+      <p class="po">INTERIORS</p>
+      <p class="po">OUTDOOR SPACES</p> -->
+    </ul>
+  </section>
+
+  <!-- section-heh -->
+  <section class="trans" id="">
+    <div class="transDiv">
+      <p class="transP">.</p>
+    </div>
+  </section>
+
+  <!-- section3 -->
+  <section id="">
+    <div class="lineHead mt-4">
+      <div class="line-container">
+        <div class="line"></div>
+        <div class="text">EXTERIORS</div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section4 -->
+  <section class="gallery d-flex justify-content-center mx-auto">
+    <div class="container-fluid justify-content-center align-items-center">
+      <!-- <br><br><br><br><br><br><br><br> -->
+
+      <!-- <br><br><br> -->
+
+      <!-- row1 -->
+      <div class="R1 row row-gap-4 justify-content-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="column col-2 col-xs-4 C1">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/93/aa/6e/93aa6efb6c6e2aa26a1ed48eb88118fa.jpg" data-lightbox="exteriors"
+              data-title="Doha Pearl Villa"><img
+                src="https://i.pinimg.com/564x/93/aa/6e/93aa6efb6c6e2aa26a1ed48eb88118fa.jpg" alt="" height="185"
+                width="330" class="" /></a>
+          </div>
+          <p class="img-caption">Doha Pearl Villa</p>
+          <p class="img-location">DOHA</p>
+        </div>
+        <div class="column col-2 col-xs-4 C2">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/dd/dc/5b/dddc5ba9c81b29ebacfe0962499f20b3.jpg" data-lightbox="exteriors"
+              data-title="Elysian Mansion"><img
+                src="https://i.pinimg.com/736x/dd/dc/5b/dddc5ba9c81b29ebacfe0962499f20b3.jpg" alt="" height="185"
+                width="330" class="" /></a>
+          </div>
+          <p class="img-caption">Elysian Mansion</p>
+          <p class="img-location">BULGARIA</p>
+        </div>
+        <div class="column col-2 col-xs-4 C3">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/85/80/a9/8580a9f64afcd9932dcae030698b2132.jpg" data-lightbox="exteriors"
+              data-title="Cannes Chateau"><img
+                src="https://i.pinimg.com/564x/85/80/a9/8580a9f64afcd9932dcae030698b2132.jpg" alt="" height="185"
+                width="330" class="" /></a>
+          </div>
+          <p class="img-caption">Cannes Chateau</p>
+          <p class="img-location">FRANCE</p>
+        </div>
+        <div class="column col-2 col-xs-4 C4">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/21/08/f8/2108f81fdd5c398c1de3b72fb609acbb.jpg" data-lightbox="exteriors"
+              data-title="Palm Grove Residence"><img
+                src="https://i.pinimg.com/736x/21/08/f8/2108f81fdd5c398c1de3b72fb609acbb.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Palm Grove Residence</p>
+          <p class="img-location">MIAMI</p>
+        </div>
+      </div>
+      <!-- <br> -->
+
+      <!-- row2 -->
+      <div class="row row-gap-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="col-2 col-xs-4 C1">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/16/83/9e/16839e18550949bb3658dac073a52518.jpg" data-lightbox="exteriors"
+              data-title="Sundown Retreat"><img
+                src="https://i.pinimg.com/564x/16/83/9e/16839e18550949bb3658dac073a52518.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Sundown Retreat</p>
+          <p class="img-location">MALIBU</p>
+        </div>
+        <div class="col-2 col-xs-4 C2">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/52/5f/ff/525fff9a770a4cda3a790bdb78f710a3.jpg" data-lightbox="exteriors"
+              data-title="The Riviera Estate"><img
+                src="https://i.pinimg.com/564x/52/5f/ff/525fff9a770a4cda3a790bdb78f710a3.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">The Riviera Estate</p>
+          <p class="img-location">FRENCH RIVIERA</p>
+        </div>
+        <div class="col-2 col-xs-4 C3">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/b5/9e/87/b59e87c657a480f5c1b6a44920095f47.jpg" data-lightbox="exteriors"
+              data-title="Villa Paradiso"><img
+                src="https://i.pinimg.com/564x/b5/9e/87/b59e87c657a480f5c1b6a44920095f47.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Villa Paradiso</p>
+          <p class="img-location">LAKE COMO</p>
+        </div>
+        <div class="col-2 col-xs-4 C4">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/75/cc/d4/75ccd461871fea939df4bc8c56d81fed.jpg" data-lightbox="exteriors"
+              data-title="Oceanview Terrace"><img
+                src="https://i.pinimg.com/564x/75/cc/d4/75ccd461871fea939df4bc8c56d81fed.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Oceanview Terrace</p>
+          <p class="img-location">SYDNEY</p>
+        </div>
+      </div>
+      <!-- <br> -->
+
+      <!-- row3 -->
+      <div class="row row-gap-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="col-2 col-xs-4 C1">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/f8/df/6c/f8df6ca2f68f7d7e19315eba2ce7ec2a.jpg" data-lightbox="exteriors"
+              data-title="Villa Belle Vie"><img
+                src="https://i.pinimg.com/564x/f8/df/6c/f8df6ca2f68f7d7e19315eba2ce7ec2a.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Villa Belle Vie</p>
+          <p class="img-location">PROVENCE</p>
+        </div>
+        <div class="col-2 col-xs-4 C2">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/33/e6/6c/33e66c16edca01934f6e5036e6d519ac.jpg" data-lightbox="exteriors"
+              data-title="Eden's Edge Retreat"><img
+                src="https://i.pinimg.com/564x/33/e6/6c/33e66c16edca01934f6e5036e6d519ac.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Eden's Edge Retreat</p>
+          <p class="img-location">QUEENSTOWN</p>
+        </div>
+        <div class="col-2 col-xs-4 C3">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/f7/d3/53/f7d35384e5ea2dde03761193e067231f.jpg" data-lightbox="exteriors"
+              data-title="Zen Garden Residence"><img
+                src="https://i.pinimg.com/736x/f7/d3/53/f7d35384e5ea2dde03761193e067231f.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Zen Garden Residence</p>
+          <p class="img-location">BALI</p>
+        </div>
+        <div class="col-2 col-xs-4 C4">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/95/28/d9/9528d9e5e7a32c806eba5f3f3a9b48b1.jpg" data-lightbox="exteriors"
+              data-title="Villa Montreux"><img
+                src="https://i.pinimg.com/736x/95/28/d9/9528d9e5e7a32c806eba5f3f3a9b48b1.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Villa Montreux</p>
+          <p class="img-location">MONTREUX</p>
+        </div>
+      </div>
+      <!-- <br> -->
+
+      <!-- row4 -->
+      <div class="row row-gap-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="col-2 col-xs-4 C1">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/59/4d/04/594d04cd56e7deb51a804bc12b7d07c6.jpg" data-lightbox="exteriors"
+              data-title="Azure Haven Villa"><img
+                src="https://i.pinimg.com/564x/59/4d/04/594d04cd56e7deb51a804bc12b7d07c6.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Azure Haven Villa</p>
+          <p class="img-location">CAPE TOWN</p>
+        </div>
+        <div class="col-2 col-xs-4 C2">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/04/98/5d/04985d0b6a55a7cfc6f0a21e369a899b.jpg" data-lightbox="exteriors"
+              data-title="Casa Blanca Estate"><img
+                src="https://i.pinimg.com/736x/04/98/5d/04985d0b6a55a7cfc6f0a21e369a899b.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Casa Blanca Estate</p>
+          <p class="img-location">SANTORINI</p>
+        </div>
+        <div class="col-2 col-xs-4 C3">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/b2/c0/9c/b2c09cbbbe1a75e3502288943b50fa71.jpg" data-lightbox="exteriors"
+              data-title="Monte Carlo Haven"><img
+                src="https://i.pinimg.com/736x/b2/c0/9c/b2c09cbbbe1a75e3502288943b50fa71.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Monte Carlo Haven</p>
+          <p class="img-location">MONTE CARLO</p>
+        </div>
+        <div class="col-2 col-xs-4 C4">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/0b/31/bf/0b31bfd7960d46d7aaf2991d117fff7b.jpg" data-lightbox="exteriors"
+              data-title="Golden Horizon Villa"><img
+                src="https://i.pinimg.com/736x/0b/31/bf/0b31bfd7960d46d7aaf2991d117fff7b.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Golden Horizon Villa</p>
+          <p class="img-location">MARRAKECH</p>
+        </div>
+      </div>
+      <!-- <br> -->
+
+      <!-- row5 -->
+      <div class="row row-gap-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="col-2 col-xs-4 C1">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/1d/1e/f9/1d1ef9f1ef4d6b4530f9fe9450da7376.jpg" data-lightbox="exteriors"
+              data-title="Pacific Oasis Estate"><img
+                src="https://i.pinimg.com/736x/1d/1e/f9/1d1ef9f1ef4d6b4530f9fe9450da7376.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Pacific Oasis Estate</p>
+          <p class="img-location">MAUI</p>
+        </div>
+        <div class="col-2 col-xs-4 C2">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/474x/b4/6e/a4/b46ea4d8c5f5799a57e304c66fee86c5.jpg" data-lightbox="exteriors"
+              data-title="Azure Coast Villa"><img
+                src="https://i.pinimg.com/474x/b4/6e/a4/b46ea4d8c5f5799a57e304c66fee86c5.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Azure Coast Villa</p>
+          <p class="img-location">AMALFI COAST</p>
+        </div>
+        <div class="col-2 col-xs-4 C3">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/2b/d8/db/2bd8dbd51164d375a8e2d6a2561c5b03.jpg" data-lightbox="exteriors"
+              data-title="Aspen Hill Lodge"><img
+                src="https://i.pinimg.com/564x/2b/d8/db/2bd8dbd51164d375a8e2d6a2561c5b03.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Aspen Hill Lodge</p>
+          <p class="img-location">ASPEN</p>
+        </div>
+        <div class="col-2 col-xs-4 C4">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/ed/4e/f3/ed4ef3ebc826b5e98727ad9b70bbab4b.jpg" data-lightbox="exteriors"
+              data-title="Haven At Hillside"><img
+                src="https://i.pinimg.com/736x/ed/4e/f3/ed4ef3ebc826b5e98727ad9b70bbab4b.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Haven At Hillside</p>
+          <p class="img-location">VANCOUVER</p>
+        </div>
+      </div>
+      <!-- <br> -->
+    </div>
+  </section>
+
+  <!-- section-heh -->
+  <section class="trans" id="int">
+    <div class="transDiv">
+      <p class="transP">.</p>
+      <p class="transP">.</p>
+    </div>
+  </section>
+
+  <!-- section5 -->
+  <section id="">
+    <div class="lineHead mt-5 mb-0">
+      <div class="line-container">
+        <div class="line"></div>
+        <div class="text">INTERIORS</div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section6 -->
+  <section class="gallery d-flex justify-content-center mx-auto">
+    <div class="container-fluid justify-content-center align-items-center">
+      <!-- row6 -->
+      <div class="row row-gap-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="col-2 col-xs-4 C1">
+          <div class="img-container">
+            <a href="https://static.wixstatic.com/media/de43b8_888729759ea644fca33c5de368ebdce5~mv2.jpg/v1/fill/w_560,h_714,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/8.jpg"
+              data-lightbox="interiors" data-title="Elegant Escape"><img
+                src="https://static.wixstatic.com/media/de43b8_888729759ea644fca33c5de368ebdce5~mv2.jpg/v1/fill/w_560,h_714,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/8.jpg"
+                alt="" height="185" width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Elegant Escape</p>
+          <p class="img-location">LONDON</p>
+        </div>
+        <div class="col-2 col-xs-4 C2">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/9b/91/04/9b9104a193b67a6326e948b2136f6fc8.jpg" data-lightbox="interiors"
+              data-title="Modern Luxe"><img
+                src="https://i.pinimg.com/564x/9b/91/04/9b9104a193b67a6326e948b2136f6fc8.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Modern Luxe</p>
+          <p class="img-location">NEW YORK CITY</p>
+        </div>
+        <div class="col-2 col-xs-4 C3">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/b9/c8/27/b9c827287c1233f4e5de4d082c19ceea.jpg" data-lightbox="interiors"
+              data-title="Downtown Dwelling"><img
+                src="https://i.pinimg.com/564x/b9/c8/27/b9c827287c1233f4e5de4d082c19ceea.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Downtown Dwelling</p>
+          <p class="img-location">SEATTLE</p>
+        </div>
+        <div class="col-2 col-xs-4 C4">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/a2/ab/d3/a2abd30e9b09abdd9299dc924bfa8916.jpg" data-lightbox="interiors"
+              data-title="Loft Lounge"><img
+                src="https://i.pinimg.com/736x/a2/ab/d3/a2abd30e9b09abdd9299dc924bfa8916.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Loft Lounge</p>
+          <p class="img-location">SAN FRANCISCO</p>
+        </div>
+      </div>
+      <!-- <br> -->
+
+      <!-- row7 -->
+      <div class="row row-gap-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="col-2 col-xs-4 C1">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/68/9f/aa/689faa204c5ab11b18139892fc0dd673.jpg" data-lightbox="interiors"
+              data-title="East Side Escape"><img
+                src="https://i.pinimg.com/564x/68/9f/aa/689faa204c5ab11b18139892fc0dd673.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">East Side Escape</p>
+          <p class="img-location">UPPER EASTSIDE</p>
+        </div>
+        <div class="col-2 col-xs-4 C2">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/d5/b0/cb/d5b0cbe7863c5b5063d30536f7203724.jpg" data-lightbox="interiors"
+              data-title="Minimalist Alcove"><img
+                src="https://i.pinimg.com/564x/d5/b0/cb/d5b0cbe7863c5b5063d30536f7203724.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Minimalist Alcove</p>
+          <p class="img-location">TORONTO</p>
+        </div>
+        <div class="col-2 col-xs-4 C3">
+          <div class="img-container">
+            <a href="https://static.wixstatic.com/media/de43b8_d526cbc664194ab09be937384965712f~mv2.jpg/v1/fill/w_400,h_452,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/18.jpg"
+              data-lightbox="interiors" data-title="Art Deco Haven"><img
+                src="https://static.wixstatic.com/media/de43b8_d526cbc664194ab09be937384965712f~mv2.jpg/v1/fill/w_400,h_452,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/18.jpg"
+                alt="" height="185" width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Art Deco Haven</p>
+          <p class="img-location">STOCKHOLM</p>
+        </div>
+        <div class="col-2 col-xs-4 C4">
+          <div class="img-container">
+            <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwlRTtE1t0XMzHUKknktKr_mJ_V0M09dETGQ&s"
+              data-lightbox="interiors" data-title="Timeless Style"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwlRTtE1t0XMzHUKknktKr_mJ_V0M09dETGQ&s"
+                alt="" height="185" width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Timeless Style</p>
+          <p class="img-location">PARIS</p>
+        </div>
+      </div>
+      <!-- <br> -->
+
+      <!-- row8 -->
+      <div class="row row-gap-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="col-2 col-xs-4 C1">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/fb/b6/51/fbb6513922766334eb3c776c8b3cfa5d.jpg" data-lightbox="interiors"
+              data-title="Soho Sanctuary"><img
+                src="https://i.pinimg.com/736x/fb/b6/51/fbb6513922766334eb3c776c8b3cfa5d.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Soho Sanctuary</p>
+          <p class="img-location">NEW YORK</p>
+        </div>
+        <div class="col-2 col-xs-4 C2">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/ce/48/41/ce4841fa650b83a81eaa56c5854d60c3.jpg" data-lightbox="interiors"
+              data-title="Coastal Retreat"><img
+                src="https://i.pinimg.com/564x/ce/48/41/ce4841fa650b83a81eaa56c5854d60c3.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Coastal Retreat</p>
+          <p class="img-location">MALIBU</p>
+        </div>
+        <div class="col-2 col-xs-4 C3">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/0d/2a/bd/0d2abd8acdc69deec802a5ac15f68bcd.jpg" data-lightbox="interiors"
+              data-title="Cozy Nook"><img src="https://i.pinimg.com/564x/0d/2a/bd/0d2abd8acdc69deec802a5ac15f68bcd.jpg"
+                alt="" height="185" width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Cozy Nook</p>
+          <p class="img-location">AUSTIN</p>
+        </div>
+        <div class="col-2 col-xs-4 C4">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/8f/53/d8/8f53d868d455bb6896cf8d8164871a71.jpg" data-lightbox="interiors"
+              data-title="City Charm"><img src="https://i.pinimg.com/564x/8f/53/d8/8f53d868d455bb6896cf8d8164871a71.jpg"
+                alt="" height="185" width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">City Charm</p>
+          <p class="img-location">FRANKFURT</p>
+        </div>
+      </div>
+      <!-- <br> -->
+
+      <!-- row9 -->
+      <div class="row row-gap-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="col-2 col-xs-4 C1">
+          <div class="img-container">
+            <a href="https://static.wixstatic.com/media/de43b8_506ca6348d2c4362b85bc2490fca7c16~mv2.jpg/v1/fill/w_400,h_452,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/36.jpg"
+              data-lightbox="interiors" data-title="British Charm"><img
+                src="https://static.wixstatic.com/media/de43b8_506ca6348d2c4362b85bc2490fca7c16~mv2.jpg/v1/fill/w_400,h_452,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/36.jpg"
+                alt="" height="185" width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">British Charm</p>
+          <p class="img-location">MUMBAI</p>
+        </div>
+        <div class="col-2 col-xs-4 C2">
+          <div class="img-container">
+            <a href="https://static.wixstatic.com/media/50617e_10b978cefd1947149c8a0f745c33a659~mv2.jpg/v1/fill/w_640,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/50617e_10b978cefd1947149c8a0f745c33a659~mv2.jpg"
+              data-lightbox="interiors" data-title="Serene Suite"><img
+                src="https://static.wixstatic.com/media/50617e_10b978cefd1947149c8a0f745c33a659~mv2.jpg/v1/fill/w_640,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/50617e_10b978cefd1947149c8a0f745c33a659~mv2.jpg"
+                alt="" height="185" width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Serene Suite</p>
+          <p class="img-location">DUBAI</p>
+        </div>
+        <div class="col-2 col-xs-4 C3">
+          <div class="img-container">
+            <a href="https://cdn-bopkm.nitrocdn.com/jWuLZZZjRiRniCJIhKEIkdhqwGytRnrk/assets/images/optimized/rev-bd7ecec/www.helengreendesign.com/wp-content/uploads/2022/01/HG_EN_0027.jpg"
+              data-lightbox="interiors" data-title="Chic Retreat"><img
+                src="https://cdn-bopkm.nitrocdn.com/jWuLZZZjRiRniCJIhKEIkdhqwGytRnrk/assets/images/optimized/rev-bd7ecec/www.helengreendesign.com/wp-content/uploads/2022/01/HG_EN_0027.jpg"
+                alt="" height="185" width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Chic Retreat</p>
+          <p class="img-location">LONDON</p>
+        </div>
+        <div class="col-2 col-xs-4 C4">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/55/b7/6d/55b76dc982ee7398fc465758f8bfcb06.jpg" data-lightbox="interiors"
+              data-title="Peaceful Hideaway"><img
+                src="https://i.pinimg.com/564x/55/b7/6d/55b76dc982ee7398fc465758f8bfcb06.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Peaceful Hideaway</p>
+          <p class="img-location">CHICAGO</p>
+        </div>
+      </div>
+      <!-- <br> -->
+
+      <!-- row10 -->
+      <div class="row row-gap-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="col-2 col-xs-4 C1">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/cf/8a/7d/cf8a7ded57395046c4caae1136086a28.jpg" data-lightbox="interiors"
+              data-title="Ocean Serenity"><img
+                src="https://i.pinimg.com/564x/cf/8a/7d/cf8a7ded57395046c4caae1136086a28.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Ocean Serenity</p>
+          <p class="img-location">SANTORINI</p>
+        </div>
+        <div class="col-2 col-xs-4 C2">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/00/a4/51/00a451c8ada6520b078bf90b23fc5377.jpg" data-lightbox="interiors"
+              data-title="The Loft"><img src="https://i.pinimg.com/564x/00/a4/51/00a451c8ada6520b078bf90b23fc5377.jpg"
+                alt="" height="185" width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">The Loft</p>
+          <p class="img-location">NEW YORK CITY</p>
+        </div>
+        <div class="col-2 col-xs-4 C3">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/0b/37/ff/0b37ffc3f2fa0a45766ff3c8b0f5a371.jpg" data-lightbox="interiors"
+              data-title="The Vintage Haven"><img
+                src="https://i.pinimg.com/564x/0b/37/ff/0b37ffc3f2fa0a45766ff3c8b0f5a371.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">The Vintage Haven</p>
+          <p class="img-location">MILAN</p>
+        </div>
+        <div class="col-2 col-xs-4 C4">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/60/96/3b/60963ba3c0ff3d003a26af0d236ee3df.jpg" data-lightbox="interiors"
+              data-title="Belle Époque"><img
+                src="https://i.pinimg.com/736x/60/96/3b/60963ba3c0ff3d003a26af0d236ee3df.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Belle Époque</p>
+          <p class="img-location">SAINT TROPÉZ</p>
+        </div>
+      </div>
+      <!-- <br> -->
+
+      <!-- row11 -->
+      <div class="row row-gap-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="col-2 col-xs-4 C1">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/f4/52/b8/f452b85083d13972b482118315e39362.jpg" data-lightbox="interiors"
+              data-title="Parisian Dream"><img
+                src="https://i.pinimg.com/564x/f4/52/b8/f452b85083d13972b482118315e39362.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Parisian Dream</p>
+          <p class="img-location">PARIS</p>
+        </div>
+        <div class="col-2 col-xs-4 C2">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/10/e7/31/10e73131da142235d0e52c15f95567eb.jpg" data-lightbox="interiors"
+              data-title="Vintage Villa"><img
+                src="https://i.pinimg.com/564x/10/e7/31/10e73131da142235d0e52c15f95567eb.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Vintage Villa</p>
+          <p class="img-location">FLORENCE</p>
+        </div>
+        <div class="col-2 col-xs-4 C3">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/b4/e3/3d/b4e33df41c2ca4912d70247da0cb515a.jpg" data-lightbox="interiors"
+              data-title="French Vista"><img
+                src="https://i.pinimg.com/564x/b4/e3/3d/b4e33df41c2ca4912d70247da0cb515a.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">French Vista</p>
+          <p class="img-location">LYON</p>
+        </div>
+        <div class="col-2 col-xs-4 C4">
+          <div class="img-container">
+            <a href="https://static.wixstatic.com/media/50617e_13f6694c70a4498db50cc1182e46f6de~mv2.jpg/v1/fill/w_640,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/50617e_13f6694c70a4498db50cc1182e46f6de~mv2.jpg"
+              data-lightbox="interiors" data-title="Provence Escape"><img
+                src="https://static.wixstatic.com/media/50617e_13f6694c70a4498db50cc1182e46f6de~mv2.jpg/v1/fill/w_640,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/50617e_13f6694c70a4498db50cc1182e46f6de~mv2.jpg"
+                alt="" height="185" width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Provence Escape</p>
+          <p class="img-location">MANCHESTER</p>
+        </div>
+      </div>
+      <!-- <br> -->
+
+      <!-- row12 -->
+      <div class="row row-gap-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="col-2 col-xs-4 C1">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/29/87/ee/2987eef8d442e382c78f01a050302f70.jpg" data-lightbox="interiors"
+              data-title="Boutique Suite"><img
+                src="https://i.pinimg.com/564x/29/87/ee/2987eef8d442e382c78f01a050302f70.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Boutique Suite</p>
+          <p class="img-location">LONDON</p>
+        </div>
+        <div class="col-2 col-xs-4 C2">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/c0/ae/53/c0ae5371ea75252e5b2187db961c00ed.jpg" data-lightbox="interiors"
+              data-title="Luxury Suite"><img
+                src="https://i.pinimg.com/564x/c0/ae/53/c0ae5371ea75252e5b2187db961c00ed.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Luxury Suite</p>
+          <p class="img-location">PARIS</p>
+        </div>
+        <div class="col-2 col-xs-4 C3">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/0d/44/f4/0d44f4da82b2d8e13d39befb755aa444.jpg" data-lightbox="interiors"
+              data-title="Walk-In"><img src="https://i.pinimg.com/736x/0d/44/f4/0d44f4da82b2d8e13d39befb755aa444.jpg"
+                alt="" height="185" width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Walk-In</p>
+          <p class="img-location">MANHATTAN</p>
+        </div>
+        <div class="col-2 col-xs-4 C4">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/db/cc/ac/dbccac1975ca3b547b174caae37216c1.jpg" data-lightbox="interiors"
+              data-title="Chic Nook"><img src="https://i.pinimg.com/564x/db/cc/ac/dbccac1975ca3b547b174caae37216c1.jpg"
+                alt="" height="185" width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Chic Nook</p>
+          <p class="img-location">ROME</p>
+        </div>
+      </div>
+      <!-- <br> -->
+
+      <!-- row13 -->
+      <div class="row row-gap-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="col-2 col-xs-4 C1">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/d1/3b/ac/d13bac2a76dc55f11c516f20da9cc00c.jpg" data-lightbox="interiors"
+              data-title="The Skyline Bath"><img
+                src="https://i.pinimg.com/736x/d1/3b/ac/d13bac2a76dc55f11c516f20da9cc00c.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">The Skyline Bath</p>
+          <p class="img-location">NEW YORK</p>
+        </div>
+        <div class="col-2 col-xs-4 C2">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/52/0a/12/520a12e6d8a142df8bb89ad044de2a4f.jpg" data-lightbox="interiors"
+              data-title="The Chelsea Suite"><img
+                src="https://i.pinimg.com/564x/52/0a/12/520a12e6d8a142df8bb89ad044de2a4f.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">The Chelsea Suite</p>
+          <p class="img-location">WEST END</p>
+        </div>
+        <div class="col-2 col-xs-4 C3">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/4d/13/b9/4d13b91c907d5a06c7a70005d3a70347.jpg" data-lightbox="interiors"
+              data-title="Soho Luxe"><img src="https://i.pinimg.com/736x/4d/13/b9/4d13b91c907d5a06c7a70005d3a70347.jpg"
+                alt="" height="185" width="330" class="" /></a>
+          </div>
+          <p class="img-caption">Soho Luxe</p>
+          <p class="img-location">SOHO</p>
+        </div>
+        <div class="col-2 col-xs-4 C4">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/24/94/fb/2494fbf02196744c5d0baa3ed12b2b2d.jpg" data-lightbox="interiors"
+              data-title="Kensington Elegance"><img
+                src="https://i.pinimg.com/736x/24/94/fb/2494fbf02196744c5d0baa3ed12b2b2d.jpg" alt="" height="185"
+                width="330" class="" /></a>
+          </div>
+          <p class="img-caption">Kensington Elegance</p>
+          <p class="img-location">LONDON</p>
+        </div>
+      </div>
+      <!-- <br> -->
+
+      <!-- row14 -->
+      <div class="row row-gap-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="col-2 col-xs-4 C1">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/30/43/9e/30439e42e83fb406ed650bb41432fc24.jpg" data-lightbox="interiors"
+              data-title="Med Culinary Hub"><img
+                src="https://i.pinimg.com/736x/30/43/9e/30439e42e83fb406ed650bb41432fc24.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Med Culinary Hub</p>
+          <p class="img-location">GREECE</p>
+        </div>
+        <div class="col-2 col-xs-4 C2">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/b4/92/04/b49204d25318a3049e659c69bdb031cb.jpg" data-lightbox="interiors"
+              data-title="The Balgravia Bistro"><img
+                src="https://i.pinimg.com/564x/b4/92/04/b49204d25318a3049e659c69bdb031cb.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">The Balgravia Bistro</p>
+          <p class="img-location">LONDON</p>
+        </div>
+        <div class="col-2 col-xs-4 C3">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/23/ac/84/23ac8412c9f32dbac31c0193232c05d3.jpg" data-lightbox="interiors"
+              data-title="Brooklyn Brunch Bar"><img
+                src="https://i.pinimg.com/564x/23/ac/84/23ac8412c9f32dbac31c0193232c05d3.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Brooklyn Brunch Bar</p>
+          <p class="img-location">NYC</p>
+        </div>
+        <div class="col-2 col-xs-4 C4">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/64/d1/97/64d1974265d548c9aee99dade0377a88.jpg" data-lightbox="interiors"
+              data-title="Greenwich Grandeur"><img
+                src="https://i.pinimg.com/736x/64/d1/97/64d1974265d548c9aee99dade0377a88.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Greenwich Grandeur</p>
+          <p class="img-location">SURREY</p>
+        </div>
+      </div>
+      <!-- <br> -->
+    </div>
+  </section>
+
+  <!-- section-heh -->
+  <section class="trans" id="out">
+    <div class="transDiv">
+      <p class="transP">.</p>
+      <p class="transP">.</p>
+    </div>
+  </section>
+
+  <!-- section7 -->
+  <section id="">
+    <div class="lineHead mt-5 mb-0">
+      <div class="line-container">
+        <div class="line"></div>
+        <div class="text">OUTDOOR SPACES</div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section8 -->
+  <section class="gallery d-flex justify-content-center mx-auto">
+    <div class="container-fluid justify-content-center align-items-center">
+      <!-- row15 -->
+      <div class="row row-gap-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="col-2 col-xs-4 C1">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/25/6b/58/256b5893e8719176d8e46289894dbe69.jpg"
+              data-lightbox="outdoor-spaces" data-title="Theatre On The Green"><img
+                src="https://i.pinimg.com/564x/25/6b/58/256b5893e8719176d8e46289894dbe69.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Theatre On The Green</p>
+          <p class="img-location">BEVERLY HILLS</p>
+        </div>
+        <div class="col-2 col-xs-4 C2">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/a6/87/58/a68758f879eb000ba7583ec78185c4ba.jpg"
+              data-lightbox="outdoor-spaces" data-title="Vista Lounge"><img
+                src="https://i.pinimg.com/564x/a6/87/58/a68758f879eb000ba7583ec78185c4ba.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Vista Lounge</p>
+          <p class="img-location">NYC</p>
+        </div>
+        <div class="col-2 col-xs-4 C3">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/9d/87/2f/9d872fc6631c0aa0bd76173e31357636.jpg"
+              data-lightbox="outdoor-spaces" data-title="Riverside Cinema"><img
+                src="https://i.pinimg.com/736x/9d/87/2f/9d872fc6631c0aa0bd76173e31357636.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Riverside Cinema</p>
+          <p class="img-location">AUSTIN</p>
+        </div>
+        <div class="col-2 col-xs-4 C4">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/b0/b7/8b/b0b78b62a334375b3953667b2cc5ac61.jpg"
+              data-lightbox="outdoor-spaces" data-title="Sunset Theatre"><img
+                src="https://i.pinimg.com/564x/b0/b7/8b/b0b78b62a334375b3953667b2cc5ac61.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Sunset Theatre</p>
+          <p class="img-location">SPAIN</p>
+        </div>
+      </div>
+      <!-- <br> -->
+
+      <!-- row16 -->
+      <div class="row row-gap-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="col-2 col-xs-4 C1">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/7b/a2/c0/7ba2c04e7d64c8076848f7227594b6aa.jpg"
+              data-lightbox="outdoor-spaces" data-title="Shoreline Solace"><img
+                src="https://i.pinimg.com/564x/7b/a2/c0/7ba2c04e7d64c8076848f7227594b6aa.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Shoreline Solace</p>
+          <p class="img-location">MIAMI</p>
+        </div>
+        <div class="col-2 col-xs-4 C2">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/6a/7b/c7/6a7bc7d0a2e1ac05b10dbe496b04675b.jpg"
+              data-lightbox="outdoor-spaces" data-title="Hillside Retreat"><img
+                src="https://i.pinimg.com/736x/6a/7b/c7/6a7bc7d0a2e1ac05b10dbe496b04675b.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Hillside Retreat</p>
+          <p class="img-location">SCOTTSDALE</p>
+        </div>
+        <div class="col-2 col-xs-4 C3">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/ec/1a/42/ec1a422456c55fef09e8d2ce0f15a410.jpg"
+              data-lightbox="outdoor-spaces" data-title="The Vine Terrace"><img
+                src="https://i.pinimg.com/736x/ec/1a/42/ec1a422456c55fef09e8d2ce0f15a410.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">The Vine Terrace</p>
+          <p class="img-location">SANOMA</p>
+        </div>
+        <div class="col-2 col-xs-4 C4">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/6b/a5/10/6ba5104a00449f21227ce16b91cea438.jpg"
+              data-lightbox="outdoor-spaces" data-title="Garden Veranda"><img
+                src="https://i.pinimg.com/564x/6b/a5/10/6ba5104a00449f21227ce16b91cea438.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Garden Veranda</p>
+          <p class="img-location">SOUTH CAROLINA</p>
+        </div>
+      </div>
+      <!-- <br> -->
+
+      <!-- row17 -->
+      <div class="row row-gap-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="col-2 col-xs-4 C1">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/84/1b/2b/841b2b3cc5603470dcc31bec17f58d95.jpg"
+              data-lightbox="outdoor-spaces" data-title="Lakeside Embers"><img
+                src="https://i.pinimg.com/736x/84/1b/2b/841b2b3cc5603470dcc31bec17f58d95.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Lakeside Embers</p>
+          <p class="img-location">LAKE TAHOE</p>
+        </div>
+        <div class="col-2 col-xs-4 C2">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/7e/bf/cf/7ebfcf9d3f7fea1f06713b61e7d0112f.jpg"
+              data-lightbox="outdoor-spaces" data-title="Fire Pit Sanctuary"><img
+                src="https://i.pinimg.com/564x/7e/bf/cf/7ebfcf9d3f7fea1f06713b61e7d0112f.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Fire Pit Sanctuary</p>
+          <p class="img-location">JACKSON HOLE</p>
+        </div>
+        <div class="col-2 col-xs-4 C3">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/02/e2/4b/02e24bff262f8ffed74a1e68f19f74a5.jpg"
+              data-lightbox="outdoor-spaces" data-title="Intimate Flames"><img
+                src="https://i.pinimg.com/564x/02/e2/4b/02e24bff262f8ffed74a1e68f19f74a5.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Intimate Flames</p>
+          <p class="img-location">SANOMA</p>
+        </div>
+        <div class="col-2 col-xs-4 C4">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/c9/e1/33/c9e1333329edcbe4364dfdc5c8f98b2e.jpg"
+              data-lightbox="outdoor-spaces" data-title="Cozy Circle"><img
+                src="https://i.pinimg.com/564x/c9/e1/33/c9e1333329edcbe4364dfdc5c8f98b2e.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Cozy Circle</p>
+          <p class="img-location">SANTA FE</p>
+        </div>
+      </div>
+      <!-- <br> -->
+
+      <!-- row18 -->
+      <div class="row row-gap-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="col-2 col-xs-4 C1">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/b2/04/7a/b2047aef9589f8876ca3a4732e28a257.jpg"
+              data-lightbox="outdoor-spaces" data-title="Santorini Splash"><img
+                src="https://i.pinimg.com/564x/b2/04/7a/b2047aef9589f8876ca3a4732e28a257.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Santorini Splash</p>
+          <p class="img-location">GREECE</p>
+        </div>
+        <div class="col-2 col-xs-4 C2">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/b6/bf/b1/b6bfb1f8be9724ad759d4efed0066675.jpg"
+              data-lightbox="outdoor-spaces" data-title="Tuscan Poolside"><img
+                src="https://i.pinimg.com/564x/b6/bf/b1/b6bfb1f8be9724ad759d4efed0066675.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Tuscan Poolside</p>
+          <p class="img-location">PALM SPRINGS</p>
+        </div>
+        <div class="col-2 col-xs-4 C3">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/1b/0a/98/1b0a98eb205598bad8c7e962d1cefd36.jpg"
+              data-lightbox="outdoor-spaces" data-title="The Palm Court"><img
+                src="https://i.pinimg.com/564x/1b/0a/98/1b0a98eb205598bad8c7e962d1cefd36.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">The Palm Court</p>
+          <p class="img-location">FLORENCE</p>
+        </div>
+        <div class="col-2 col-xs-4 C4">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/33/2f/45/332f458e681710645de8a1561ef26c51.jpg"
+              data-lightbox="outdoor-spaces" data-title="Sunset Lagoon"><img
+                src="https://i.pinimg.com/736x/33/2f/45/332f458e681710645de8a1561ef26c51.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Sunset Lagoon</p>
+          <p class="img-location">MIAMI</p>
+        </div>
+      </div>
+      <!-- <br> -->
+
+      <!-- row19 -->
+      <div class="row row-gap-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="col-2 col-xs-4 C1">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/19/c0/56/19c0562e0b5ed8c538132644705f6a88.jpg"
+              data-lightbox="outdoor-spaces" data-title="Secret Garden Grove"><img
+                src="https://i.pinimg.com/736x/19/c0/56/19c0562e0b5ed8c538132644705f6a88.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Secret Garden Grove</p>
+          <p class="img-location">PORTLAND</p>
+        </div>
+        <div class="col-2 col-xs-4 C2">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/c9/21/55/c92155db3e81fd3c1a04a81da4f669f6.jpg"
+              data-lightbox="outdoor-spaces" data-title="English Flora"><img
+                src="https://i.pinimg.com/564x/c9/21/55/c92155db3e81fd3c1a04a81da4f669f6.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">English Flora</p>
+          <p class="img-location">OXFORD</p>
+        </div>
+        <div class="col-2 col-xs-4 C3">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/e0/2c/53/e02c5353fa20511925abd95697dda75d.jpg"
+              data-lightbox="outdoor-spaces" data-title="Country Bloom"><img
+                src="https://i.pinimg.com/564x/e0/2c/53/e02c5353fa20511925abd95697dda75d.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Country Bloom</p>
+          <p class="img-location">BUCKINGHAMSHIRE</p>
+        </div>
+        <div class="col-2 col-xs-4 C4">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/94/a9/8c/94a98c5eb53d2e4b644fa409f2a1598d.jpg"
+              data-lightbox="outdoor-spaces" data-title="Flora Bliss"><img
+                src="https://i.pinimg.com/564x/94/a9/8c/94a98c5eb53d2e4b644fa409f2a1598d.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Flora Bliss</p>
+          <p class="img-location">NAPA VALLEY</p>
+        </div>
+      </div>
+      <!-- <br> -->
+
+      <!-- row20 -->
+      <div class="row row-gap-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="col-2 col-xs-4 C1">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/2d/9f/b9/2d9fb93a752a5b437e5047ca96aa4e31.jpg"
+              data-lightbox="outdoor-spaces" data-title="Courtyard Feast"><img
+                src="https://i.pinimg.com/564x/2d/9f/b9/2d9fb93a752a5b437e5047ca96aa4e31.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Courtyard Feast</p>
+          <p class="img-location">SAVANNAH</p>
+        </div>
+        <div class="col-2 col-xs-4 C2">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/a0/a2/12/a0a2129dfa7f2bfdbba1c4594013d5a8.jpg"
+              data-lightbox="outdoor-spaces" data-title="Highland Patio"><img
+                src="https://i.pinimg.com/736x/a0/a2/12/a0a2129dfa7f2bfdbba1c4594013d5a8.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Highland Patio</p>
+          <p class="img-location">ASPEN</p>
+        </div>
+        <div class="col-2 col-xs-4 C3">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/564x/77/37/af/7737afef8c2ea75e61fda30a79730e8c.jpg"
+              data-lightbox="outdoor-spaces" data-title="Al Fresco Bistro"><img
+                src="https://i.pinimg.com/564x/77/37/af/7737afef8c2ea75e61fda30a79730e8c.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Al Fresco Bistro</p>
+          <p class="img-location">TUSCANY</p>
+        </div>
+        <div class="col-2 col-xs-4 C4">
+          <div class="img-container">
+            <a href="https://i.pinimg.com/736x/e9/b4/f1/e9b4f170e779cd6b501a25827075f352.jpg"
+              data-lightbox="outdoor-spaces" data-title="Wine & Dine"><img
+                src="https://i.pinimg.com/736x/e9/b4/f1/e9b4f170e779cd6b501a25827075f352.jpg" alt="" height="185"
+                width="330" class="" />
+            </a>
+          </div>
+          <p class="img-caption">Wine & Dine</p>
+          <p class="img-location">SONOMA</p>
+        </div>
+      </div>
+      <!-- <br> -->
+      <br />
+    </div>
+  </section>
+
+
+
+  <!-- newsletter  -->
+  <section class="newsletter">
+    <div class="signup-box">
+      <p class="news-head">SIGN UP TO OUR NEWSLETTER</p>
+      <p class="news-head02">Stay updated with our latest design trends and updates</p>
+
+      <!-- Form Content -->
+      <form id="signupForm">
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label>
+          <input type="checkbox" required> I agree to the privacy policy *
+        </label>
+        <div class="news-btn"><button onclick="subscribe()">Subscribe</button></div>
+      </form>
+
+      <!-- Thank you message -->
+      <p class="thank-you" id="thankYouMessage">Thank you for signing up!</p>
+    </div>
+  </section>
+
+  <!-- footer  -->
+  <footer style="background-color: rgb(97, 82, 72)">
+    <div class="fc container-fluid d-flex">
+      <div class="fc2 d-flex">
+        <ul>
+          <a href="http://127.0.0.1:5500/servicesDH/design02.html" target="_blank">
+            <li class="text-white">SERVICES</li>
+          </a>
+          <a href="http://127.0.0.1:5500/about/design03.html" target="_blank">
+            <li class="text-white">ABOUT</li>
+          </a>
+          <a href="http://127.0.0.1:5500/portfolio/design04.html" target="_blank">
+            <li class="text-white">PORTFOLIO</li>
+          </a>
+          <a href="http://127.0.0.1:5500/contactUS/contactUs.refined.html" target="_blank">
+            <li class="text-white">CONTACT US</li>
+          </a>
+        </ul>
+        <ul>
+          <a href="">
+            <li class="text-white">TERMS</li>
+          </a>
+          <a href="">
+            <li class="text-white">PRIVACY</li>
+          </a>
+          <li class="text-white">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://x.com/" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+          </li>
+        </ul>
+        <ul class="f3list">
+          <li>
+            <h4>CONTACT:</h4>
+          </li>
+          <li>
+            <p>+91 70489 24351</p>
+            <p>aditi@aditiguptadesigns.com</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="copyright">
+    <p>&copy 2024 Aditi Gupta Designs. All rights reserved.</p>
+  </div>
+
+  <!-- lightbox js link  -->
+  <script src="/lightboxUsed/lightbox-plus-jquery.js"></script>
+  <script src="/lightboxUsed/lightbox.js"></script>
+
+  <!-- bootstrap javascript cdn link -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <!-- AOS javascript link -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- newsletter  -->
+  <script>
+    // Form submission event listener
+    document.getElementById("signupForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      // Hide form and show thank you message
+      document.getElementById("signupForm").style.display = "none";
+      document.getElementById("thankYouMessage").style.display = "block";
+    });
+  </script>
+
+
+  <!-- Google Translate Script -->
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- Google Translate Script -->
+  <script type="text/javascript">
+    // Initialize Google Translate only when button is clicked and ensure script is loaded
+    function loadGoogleTranslate() {
+      // Load Google Translate script if it hasn't been loaded yet
+      if (!window.google || !window.google.translate) {
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+        document.head.appendChild(script);
+      } else {
+        googleTranslateElementInit();
+      }
+    }
+
+    // Initialize Google Translate Element
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,pa',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+
+    // Toggle the visibility of the Google Translate container when the icon is clicked
+    document.getElementById("translateToggleBtn").addEventListener("click", function () {
+      const translateContainer = document.getElementById("googleTranslateContainer");
+
+      // Toggle visibility
+      if (translateContainer.style.display === "none" || translateContainer.style.display === "") {
+        loadGoogleTranslate(); // Ensure Translate is loaded
+        translateContainer.style.display = "block";
+      } else {
+        translateContainer.style.display = "none";
+      }
+    });
+  </script>
+</body>
+
+</html>

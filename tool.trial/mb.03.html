@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Board Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.10.11/interact.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #mood-board {
+            width: 1200px;
+            height: 500px;
+            border: 2px dashed #ccc;
+            position: relative;
+            margin: 20px auto;
+            background-color: #f9f9f9;
+            overflow: hidden;
+        }
+        .draggable {
+            width: 100px;
+            height: 100px;
+            cursor: grab;
+        }
+        .color-swatch {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            margin: 5px;
+            cursor: grab;
+        }
+        #palette {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+        .palette-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #save-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #save-btn:hover {
+            background-color: #218838;
+        }
+        .resizable {
+            position: absolute;
+            touch-action: none;
+            display: inline-block;
+            padding: 5px;
+        }
+        .delete-btn {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 12px;
+            cursor: pointer;
+            display: none;
+        }
+        .resizable:hover .delete-btn {
+            display: block;
+        }
+        .resize-handle {
+            width: 10px;
+            height: 10px;
+            background-color: grey;
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            cursor: se-resize;
+            display: none;
+        }
+        .text-box {
+            resize: both;
+            overflow: auto;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            border: 2px dashed #ccc;
+            padding: 10px;
+        }
+        .toolbar {
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .toolbar select, .toolbar button {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Drag & Drop Mood Board</h2>
+
+    <!-- Mood Board Area -->
+    <div id="mood-board"></div>
+
+    <h3>Drag and drop items below</h3>
+
+    <!-- Color Picker -->
+    <input type="color" id="colorPicker">
+    <button onclick="addColor()">Add Color</button>
+
+    <!-- Color Swatches -->
+    <div id="palette"></div>
+
+    <!-- Images to Drag -->
+    <img src="/images/rustic04.png" class="draggable" alt="Sample Image 1">
+    <img src="/images/traditionalR02.png" class="draggable" alt="Sample Image 2">
+
+    <!-- Font and Text Toolbar -->
+    <div class="toolbar">
+        <select id="fontFamily">
+            <option value="Arial">Arial</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Helvetica">Helvetica</option>
+            <option value="Tahoma">Tahoma</option>
+            <option value="Trebuchet MS">Trebuchet MS</option>
+            <option value="Comic Sans MS">Comic Sans MS</option>
+            <option value="Impact">Impact</option>
+        </select>
+
+        <select id="fontSize">
+            <option value="8px">8px</option>
+            <option value="10px">10px</option>
+            <option value="12px">12px</option>
+            <option value="14px">14px</option>
+            <option value="16px">16px</option>
+            <option value="18px">18px</option>
+            <option value="20px">20px</option>
+            <option value="22px">22px</option>
+            <option value="24px">24px</option>
+            <option value="26px">26px</option>
+            <option value="28px">28px</option>
+            <option value="30px">30px</option>
+        </select>
+
+        <input type="color" id="fontColor" value="#000000">
+        <input type="color" id="highlightColor" value="#f9f9f9">
+
+        <button onclick="toggleBold()">B</button>
+        <button onclick="toggleItalic()">I</button>
+        <button onclick="addText()">Add Text</button>
+    </div>
+
+    <!-- Save Button -->
+    <button id="save-btn">Save as Image</button>
+
+    <script>
+        let draggedItem = null;
+        let isBold = false;
+        let isItalic = false;
+
+        // Add draggable images
+        document.querySelectorAll('.draggable').forEach(item => {
+            item.setAttribute("draggable", true);
+            item.addEventListener('dragstart', (e) => {
+                draggedItem = e.target;
+            });
+        });
+
+        const moodBoard = document.getElementById("mood-board");
+
+        // Handle the drop event on the mood board
+        moodBoard.addEventListener('dragover', (e) => {
+            e.preventDefault();
+        });
+
+        moodBoard.addEventListener('drop', (e) => {
+            e.preventDefault();
+            if (draggedItem) {
+                let clone = draggedItem.cloneNode(true);
+                clone.style.position = "absolute";
+                clone.style.left = e.offsetX + "px";
+                clone.style.top = e.offsetY + "px";
+                clone.classList.add("resizable");
+
+                // Add delete button for image
+                let deleteBtn = document.createElement("button");
+                deleteBtn.className = "delete-btn";
+                deleteBtn.innerHTML = "❌";
+                deleteBtn.onclick = () => clone.remove();
+
+                clone.appendChild(deleteBtn);
+                moodBoard.appendChild(clone);
+                makeResizable(clone);
+            }
+        });
+
+        // Make an element resizable
+        function makeResizable(element) {
+            interact(element)
+                .draggable({
+                    listeners: {
+                        move(event) {
+                            let target = event.target;
+                            let x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx;
+                            let y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+                            target.style.transform = `translate(${x}px, ${y}px)`;
+                            target.setAttribute('data-x', x);
+                            target.setAttribute('data-y', y);
+                        }
+                    }
+                })
+                .resizable({
+                    edges: { left: true, right: true, bottom: true, top: true },
+                    listeners: {
+                        move(event) {
+                            let target = event.target;
+                            let { x, y } = target.dataset;
+                            x = parseFloat(x) || 0;
+                            y = parseFloat(y) || 0;
+                            
+                            target.style.width = `${event.rect.width}px`;
+                            target.style.height = `${event.rect.height}px`;
+
+                            // Adjust position when resizing from left/top
+                            target.style.transform = `translate(${x + event.deltaRect.left}px, ${y + event.deltaRect.top}px)`;
+                            target.setAttribute('data-x', x + event.deltaRect.left);
+                            target.setAttribute('data-y', y + event.deltaRect.top);
+                        }
+                    }
+                });
+        }
+
+        // Add color swatch
+        function addColor() {
+            let colorValue = document.getElementById("colorPicker").value;
+            let colorBox = document.createElement("div");
+            colorBox.className = "color-swatch draggable";
+            colorBox.style.backgroundColor = colorValue;
+            colorBox.setAttribute("draggable", true);
+
+            let paletteItem = document.createElement("div");
+            paletteItem.className = "palette-item";
+
+            let removeBtn = document.createElement("button");
+            removeBtn.innerText = "Remove";
+            removeBtn.onclick = function () {
+                paletteItem.remove();
+            };
+
+            paletteItem.appendChild(colorBox);
+            paletteItem.appendChild(removeBtn);
+            document.getElementById("palette").appendChild(paletteItem);
+
+            colorBox.addEventListener('dragstart', (e) => {
+                draggedItem = colorBox;
+            });
+        }
+
+        // Add text to the mood board
+        function addText() {
+            let textElement = document.createElement("div");
+            textElement.classList.add("text-box");
+            textElement.contentEditable = "true";
+            textElement.style.position = "absolute";
+            textElement.style.left = "100px";
+            textElement.style.top = "100px";
+            textElement.style.fontFamily = document.getElementById("fontFamily").value;
+            textElement.style.fontSize = document.getElementById("fontSize").value;
+            textElement.style.color = document.getElementById("fontColor").value;
+            textElement.style.backgroundColor = document.getElementById("highlightColor").value;
+            textElement.innerText = "Click to edit text...";
+
+            // Add delete button for text box
+            let deleteBtn = document.createElement("button");
+            deleteBtn.className = "delete-btn";
+            deleteBtn.innerHTML = "❌";
+            deleteBtn.onclick = () => textElement.remove();
+
+            textElement.appendChild(deleteBtn);
+            moodBoard.appendChild(textElement);
+
+            textElement.onblur = function () {
+                this.style.border = "none"; // Remove border on click out
+                this.style.resize = "none"; // Disable resizing when clicked out
+            };
+
+            // Make the text box movable and resizable
+            makeResizable(textElement);
+        }
+
+        // Toggle bold
+        function toggleBold() {
+            isBold = !isBold;
+            document.querySelector('.text-box').style.fontWeight = isBold ? 'bold' : 'normal';
+        }
+
+        // Toggle italic
+        function toggleItalic() {
+            isItalic = !isItalic;
+            document.querySelector('.text-box').style.fontStyle = isItalic ? 'italic' : 'normal';
+        }
+
+        // Save mood board as an image
+        document.getElementById('save-btn').addEventListener('click', function () {
+            html2canvas(moodBoard).then(function (canvas) {
+                const link = document.createElement('a');
+                link.href = canvas.toDataURL();
+                link.download = 'mood-board.png';
+                link.click();
+            });
+        });
+    </script>
+
+</body>
+</html>
+

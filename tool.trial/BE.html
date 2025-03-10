@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Budget Estimator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container my-5">
+  <h2 class="text-center">Project Budget Estimator</h2>
+  
+  <!-- Budget Estimator Form -->
+  <div class="mt-4">
+    <form id="budgetForm">
+      
+      <div class="mb-3">
+        <label for="projectType" class="form-label">Type of Project</label>
+        <select id="projectType" class="form-select" required>
+          <option value="residential">Residential</option>
+          <option value="commercial">Commercial</option>
+          <option value="office">Office Space</option>
+          <option value="retail">Retail Store</option>
+        </select>
+      </div>
+      
+      <div class="mb-3">
+        <label for="projectScope" class="form-label">Scope of Project</label>
+        <select id="projectScope" class="form-select" required>
+          <option value="basic">Basic</option>
+          <option value="moderate">Moderate</option>
+          <option value="premium">Premium</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="projectSize" class="form-label">Project Size (in sq ft)</label>
+        <input type="number" id="projectSize" class="form-control" placeholder="Enter the area size" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="materialQuality" class="form-label">Material Quality</label>
+        <select id="materialQuality" class="form-select" required>
+          <option value="standard">Standard</option>
+          <option value="premium">Premium</option>
+          <option value="luxury">Luxury</option>
+        </select>
+      </div>
+
+      <!-- Urban/Rural Selection -->
+      <div class="mb-3">
+        <label for="locationType" class="form-label">Project Location Type</label>
+        <select id="locationType" class="form-select" required>
+          <option value="urban">Urban</option>
+          <option value="rural">Rural</option>
+          <option value="suburban">Suburban</option>
+        </select>
+      </div>
+
+      <!-- Preferred Material Section -->
+      <div class="mb-3">
+        <label for="preferredMaterials" class="form-label">Preferred Materials</label>
+        <select id="preferredMaterials" class="form-select" multiple>
+          <option value="wood">Wood</option>
+          <option value="steel">Steel</option>
+          <option value="concrete">Concrete</option>
+          <option value="glass">Glass</option>
+          <option value="stone">Stone</option>
+          <option value="bricks">Bricks</option>
+        </select>
+        <small class="text-muted">Hold Ctrl (Windows) or Command (Mac) to select multiple options.</small>
+      </div>
+
+      <!-- Interior, Exterior, and Landscape -->
+      <div class="mb-3">
+        <label for="projectArea" class="form-label">Project Area</label>
+        <select id="projectArea" class="form-select" required>
+          <option value="interior">Interior</option>
+          <option value="exterior">Exterior</option>
+          <option value="landscape">Landscape</option>
+        </select>
+      </div>
+
+      <!-- Basic/Moderate/Luxury for Selected Areas -->
+      <div id="areaScope" class="mb-3" style="display: none;">
+        <label for="areaScope" class="form-label">Scope of Area</label>
+        <select id="areaScope" class="form-select">
+          <option value="basic">Basic</option>
+          <option value="moderate">Moderate</option>
+          <option value="luxury">Luxury</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="additionalFeatures" class="form-label">Additional Features</label>
+        <select id="additionalFeatures" class="form-select" multiple>
+          <option value="smartHome">Smart Home Integration</option>
+          <option value="energyEfficient">Energy Efficient Solutions</option>
+          <option value="customCabinetry">Custom Cabinetry</option>
+          <option value="indoorOutdoor">Indoor-Outdoor Flow</option>
+          <option value="3dVisualization">3D Visualization</option>
+          <option value="homeTheater">Home Theater Setup</option>
+          <option value="pool">Swimming Pool</option>
+          <option value="gardenLandscaping">Garden Landscaping</option>
+          <option value="solarPanels">Solar Panels</option>
+          <option value="securitySystem">Advanced Security System</option>
+        </select>
+        <small class="text-muted">Hold Ctrl (Windows) or Command (Mac) to select multiple options.</small>
+      </div>
+
+      <div class="mb-3">
+        <label for="projectLocation" class="form-label">Project Location</label>
+        <input type="text" id="projectLocation" class="form-control" placeholder="Enter city or region" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="timelineUrgency" class="form-label">Timeline Urgency</label>
+        <select id="timelineUrgency" class="form-select" required>
+          <option value="flexible">Flexible</option>
+          <option value="standard">Standard</option>
+          <option value="urgent">Urgent</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Estimate Budget</button>
+    </form>
+  </div>
+
+  <!-- Budget Display -->
+  <div class="mt-4">
+    <h4>Estimated Budget</h4>
+    <p id="budgetResult" class="fs-5">Please fill out the form and click "Estimate Budget" to see the result.</p>
+    <button id="convertButton" class="btn btn-secondary mt-2" style="display: none;">Convert to USD</button>
+    <p id="usdResult" class="fs-5 mt-2"></p>
+  </div>
+</div>
+
+<script>
+  // Conversion rate from INR to USD
+  const conversionRate = 0.012; // example rate, adjust as needed
+
+  document.getElementById("budgetForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Get values from the form
+    const projectType = document.getElementById("projectType").value;
+    const projectScope = document.getElementById("projectScope").value;
+    const projectSize = parseFloat(document.getElementById("projectSize").value);
+    const materialQuality = document.getElementById("materialQuality").value;
+    const additionalFeatures = Array.from(document.getElementById("additionalFeatures").selectedOptions).map(opt => opt.value);
+    const projectLocation = document.getElementById("projectLocation").value;
+    const timelineUrgency = document.getElementById("timelineUrgency").value;
+    const locationType = document.getElementById("locationType").value;
+    const preferredMaterials = Array.from(document.getElementById("preferredMaterials").selectedOptions).map(opt => opt.value);
+    const projectArea = document.getElementById("projectArea").value;
+    const areaScope = document.getElementById("areaScope").value;
+
+    // Base rates for different project types (per sq ft in INR)
+    let baseRate;
+    if (projectType === "residential") baseRate = 800;
+    else if (projectType === "commercial") baseRate = 1200;
+    else if (projectType === "office") baseRate = 1000;
+    else if (projectType === "retail") baseRate = 1100;
+
+    // Base cost calculation
+    const baseCost = projectSize * baseRate;
+
+    // Material quality cost adjustment
+    let materialCost = 0;
+    if (materialQuality === "premium") materialCost = baseCost * 0.2;
+    else if (materialQuality === "luxury") materialCost = baseCost * 0.4;
+
+    // Feature cost additions
+    let featureCost = 0;
+    additionalFeatures.forEach(feature => {
+      if (feature === "smartHome") featureCost += 30000;
+      if (feature === "energyEfficient") featureCost += 20000;
+      if (feature === "customCabinetry") featureCost += 25000;
+      if (feature === "indoorOutdoor") featureCost += 20000;
+      if (feature === "3dVisualization") featureCost += 15000;
+      if (feature === "homeTheater") featureCost += 40000;
+      if (feature === "pool") featureCost += 100000;
+      if (feature === "gardenLandscaping") featureCost += 15000;
+      if (feature === "solarPanels") featureCost += 50000;
+      if (feature === "securitySystem") featureCost += 25000;
+    });
+
+    // Calculate total budget
+    let totalBudget = baseCost + materialCost + featureCost;
+
+    // Display budget
+    document.getElementById("budgetResult").textContent = `Estimated Budget: ₹${totalBudget.toLocaleString()}`;
+
+    // Show conversion button
+    document.getElementById("convertButton").style.display = "inline-block";
+    
+    // Conversion to USD
+    document.getElementById("convertButton").onclick = function() {
+      const usdAmount = totalBudget * conversionRate;
+      document.getElementById("usdResult").textContent = `Estimated Budget in USD: $${usdAmount.toFixed(2)}`;
+    };
+  });
+
+  // Show area scope based on the selected area type
+  document.getElementById("projectArea").addEventListener("change", function() {
+    const areaScopeDiv = document.getElementById("areaScope");
+    areaScopeDiv.style.display = this.value === "interior" || this.value === "exterior" || this.value === "landscape" ? "block" : "none";
+  });
+
+</script>
+
+</body>
+</html>

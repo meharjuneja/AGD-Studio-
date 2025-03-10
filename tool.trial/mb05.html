@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Board Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .container { display: flex; justify-content: center; margin-top: 20px; }
+        .sidebar { width: 250px; padding: 10px; border-right: 2px solid #ccc; }
+        .board { width: 600px; height: 400px; border: 2px dashed #aaa; position: relative; background: #f8f8f8; }
+        .element { position: absolute; cursor: move; padding: 5px; }
+        .text { background: white; padding: 5px; border: 1px solid #ccc; min-width: 80px; min-height: 20px; }
+        .remove { cursor: pointer; color: red; font-size: 14px; float: right; }
+        .controls { margin-top: 10px; }
+        .toolbar { display: flex; gap: 5px; margin-bottom: 5px; }
+        .color-box { width: 20px; height: 20px; display: inline-block; cursor: pointer; }
+        .circle { border-radius: 50%; }
+    </style>
+</head>
+<body>
+    <h2>Mood Board Generator</h2>
+    <div class="container">
+        <div class="sidebar">
+            <h3>Add Elements</h3>
+            <button onclick="addText()">Add Text</button>
+            <input type="file" id="uploadImage" accept="image/*">
+            <button onclick="addImageURL()">Add Image URL</button>
+            <input type="text" id="imageURL" placeholder="Enter Image URL">
+        </div>
+        <div class="board" id="moodBoard"></div>
+    </div>
+    <div class="controls">
+        <button onclick="saveBoard()">Save as Image</button>
+    </div>
+    
+    <script>
+        function addText() {
+            let textElement = $('<div class="element text" contenteditable="true">New Text <span class="remove">×</span></div>');
+            let toolbar = $('<div class="toolbar">' +
+                '<button onclick="boldText(this)">B</button>' +
+                '<button onclick="italicText(this)">I</button>' +
+                '<input type="color" onchange="changeColor(this)">' +
+                '<div class="color-box" style="background: red;" onclick="setTextColor(this)"></div>' +
+                '<div class="color-box circle" style="background: blue;" onclick="setTextColor(this)"></div>' +
+                '</div>');
+            textElement.prepend(toolbar);
+            $("#moodBoard").append(textElement);
+            makeElementDraggable(textElement);
+        }
+        
+        function addImageURL() {
+            let url = $('#imageURL').val();
+            if (url) {
+                let imgElement = $(`<div class="element"><img src="${url}" width="100"><span class="remove">×</span></div>`);
+                $("#moodBoard").append(imgElement);
+                makeElementDraggable(imgElement);
+            }
+        }
+        
+        $("#uploadImage").change(function(event) {
+            let reader = new FileReader();
+            reader.onload = function(e) {
+                let imgElement = $(`<div class="element"><img src="${e.target.result}" width="100"><span class="remove">×</span></div>`);
+                $("#moodBoard").append(imgElement);
+                makeElementDraggable(imgElement);
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        });
+
+        function makeElementDraggable(element) {
+            element.draggable({ containment: "parent" }).resizable();
+            element.find(".remove").click(function() { element.remove(); });
+        }
+        
+        function boldText(button) {
+            let textDiv = $(button).closest(".element");
+            textDiv.css("font-weight", textDiv.css("font-weight") === "700" ? "400" : "700");
+        }
+
+        function italicText(button) {
+            let textDiv = $(button).closest(".element");
+            textDiv.css("font-style", textDiv.css("font-style") === "italic" ? "normal" : "italic");
+        }
+        
+        function changeColor(input) {
+            let textDiv = $(input).closest(".element");
+            textDiv.css("color", input.value);
+        }
+        
+        function setTextColor(colorBox) {
+            let textDiv = $(colorBox).closest(".element");
+            textDiv.css("color", $(colorBox).css("background-color"));
+        }
+    </script>
+</body>
+</html>

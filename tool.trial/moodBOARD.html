@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Board Generator</title>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #mood-board {
+            width: 600px;
+            height: 400px;
+            border: 2px dashed #ccc;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .draggable {
+            width: 100px;
+            height: 100px;
+            cursor: grab;
+            position: absolute;
+        }
+        .color-swatch {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            margin: 5px;
+            cursor: grab;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mood Board Generator</h1>
+    <div id="mood-board"></div>
+    <button id="save-board">Save as Image</button>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const moodBoard = document.getElementById("mood-board");
+            const elements = document.querySelectorAll(".draggable");
+
+            // Make elements draggable
+            interact(".draggable").draggable({
+                inertia: true,
+                modifiers: [
+                    interact.modifiers.restrictRect({
+                        restriction: "parent",
+                        endOnly: true
+                    })
+                ],
+                autoScroll: true,
+                listeners: {
+                    move(event) {
+                        const target = event.target;
+                        const x = (parseFloat(target.getAttribute("data-x")) || 0) + event.dx;
+                        const y = (parseFloat(target.getAttribute("data-y")) || 0) + event.dy;
+
+                        target.style.transform = `translate(${x}px, ${y}px)`;
+                        target.setAttribute("data-x", x);
+                        target.setAttribute("data-y", y);
+                    }
+                }
+            });
+
+            // Save as image function
+            document.getElementById("save-board").addEventListener("click", function () {
+                html2canvas(moodBoard).then((canvas) => {
+                    const link = document.createElement("a");
+                    link.download = "mood-board.png";
+                    link.href = canvas.toDataURL();
+                    link.click();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
