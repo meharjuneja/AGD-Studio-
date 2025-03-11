@@ -12,6 +12,8 @@ Design a Mood Board Feature – Enable users to visualize and curate home design
 Evaluate Home Décor Page Feasibility – Assess the viability of integrating a marketplace where users can explore and purchase home décor items.
 
 
+
+
 tuesday, 11th march - tuesday 18th march TTD (tasks to do):
 
 complete atleast 70% documentation related work (with diagrams etc)
