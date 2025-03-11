@@ -138,7 +138,8 @@
 
         <!-- Contact Form -->
         <div class="form-section">
-            <form id="contactForm" onsubmit="return validateForm()">
+            <form id="contactForm" onsubmit="return validateForm()"action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="9614a823-a66f-4620-8347-d354a92948c7">
                 <input type="text" id="firstName" name="firstName" placeholder="First Name" class="form-input" required>
                 <input type="text" id="lastName" name="lastName" placeholder="Last Name" class="form-input" required>
                 <input type="email" id="email" name="email" placeholder="Email Address" class="form-input" required>
