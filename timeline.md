@@ -10,3 +10,11 @@ Implement a Chatbot for AGD – Develop a chatbot to assist users with inquiries
 Design a Mood Board Feature – Enable users to visualize and curate home design themes aligned with their personal aesthetics.
 
 Evaluate Home Décor Page Feasibility – Assess the viability of integrating a marketplace where users can explore and purchase home décor items.
+
+
+tuesday, 11th march - tuesday 18th march TTD (tasks to do):
+
+complete atleast 70% documentation related work (with diagrams etc)
+fix sustainability score tool. 
+numerology based home placement tool should be completed along with styling. 
+check the progress of login ID and sign Up page
