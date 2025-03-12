@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link rel="stylesheet" href="design06.css">
-    <link rel="stylesheet" href="design06.js">
+   
 
     <!-- Icon (Font-Awesome Link) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -138,31 +138,33 @@
 
         <!-- Contact Form -->
         <div class="form-section">
-            <form id="contactForm" onsubmit="return validateForm()">
+          <form id="contactForm" onsubmit="return validateForm(event)"action="http://localhost:5000/addContact" method="POST">
+              <input type="text" id="firstName" name="firstName" placeholder="First Name" class="form-input" required>
+              <input type="text" id="lastName" name="lastName" placeholder="Last Name" class="form-input" required>
+              <input type="email" id="email" name="email" placeholder="Email Address" class="form-input" required>
               
-                <input type="text" id="firstName" name="firstName" placeholder="First Name" class="form-input" required>
-                <input type="text" id="lastName" name="lastName" placeholder="Last Name" class="form-input" required>
-                <input type="email" id="email" name="email" placeholder="Email Address" class="form-input" required>
-                <select id="reason" name="reason" class="form-input" required>
-                    <option disabled selected>Reason for Enquiry</option>
-                    <option value="General">General Inquiry</option>
-                    <option value="Support">Support</option>
-                    <option value="Feedback">Feedback</option>
-                </select>
-                <textarea id="message" name="message" placeholder="Message" class="form-input"></textarea>
-                <div class="box">
-                    <input type="checkbox" id="robotCheck" required>
-                    <p>I'm not a robot</p>
-                    <img class="captcha-img" src="/images/reCAPTCHA.png" alt="Captcha placeholder" height="100px">
-                </div>
-                <button type="submit" class="submit-btn">Submit</button>
-                <p id="formMessage" class="error"></p>
-            </form>
-            <div id="successMessage" style="display: none; color: #333 ; text-align: center; margin-top: 20px;"> </div>
-        </div>
-    </div>
-
-
+              <select id="reason" name="reason" class="form-input" required>
+                  <option disabled selected>Reason for Enquiry</option>
+                  <option value="General">General Inquiry</option>
+                  <option value="Support">Support</option>
+                  <option value="Feedback">Feedback</option>
+              </select>
+      
+              <textarea id="message" name="message" placeholder="Message" class="form-input"></textarea>
+      
+              <div class="box">
+                  <input type="checkbox" id="robotCheck" required>
+                  <p>I'm not a robot</p>
+                  <img class="captcha-img" src="/images/reCAPTCHA.png" alt="Captcha placeholder" height="100px">
+              </div>
+      
+              <button type="submit" class="submit-btn">Submit</button>
+              <p id="formMessage" class="error"></p>
+          </form>
+      
+          <div id="successMessage" style="display: none; color: green; text-align: center; margin-top: 20px;"></div>
+      </div>
+      
     <!-- newsletter  -->
     <section class="newsletter">
         <div class="signup-box">
@@ -236,7 +238,6 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-    <script src="design06.css"></script>
 
 
 
@@ -293,6 +294,7 @@
             }
         });
     </script>
+<script src="design06.js"></script>
 </body>
 
 </html>

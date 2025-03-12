@@ -168,6 +168,7 @@ body {
     justify-content: space-between;
     gap: 20px;
     margin-top: 50px;
+   flex-direction: column;
 }
 
 .info-section,
