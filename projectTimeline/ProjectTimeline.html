@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Project Timeline Estimator</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="ProjectTimeline.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+<body>
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Grey+Qo&family=Italiana&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+
+    <!-- google fonts link2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Grey+Qo&family=Italiana&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Grey+Qo&family=Italiana&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+        <!-- header -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+        </head>
+
+        <body>
+            <!-- header  -->
+            <header>
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid align-items-center">
+                        <div class="LOGO d-flex flex-column ms-5 me-auto">
+                            <img class="AGD-img" class="Logo-img ms-5" src="/images/AGDlogo.png" alt="" height="60px"
+                                width="100px" />
+                            <p class="AGDname mb-0">Aditi Gupta Designs</p>
+                        </div>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                            <ul class="Nlist navbar-nav pe-5 ps-5">
+                                <li class="nav-item">
+                                    <a class="nav-link mt-3 me-5 active" aria-current="page"
+                                        href="http://127.0.0.1:5500/home/design01.html">HOME</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link mt-3 me-5"
+                                        href="http://127.0.0.1:5500/servicesDH/design02.html">SERVICES</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/about/design03.html">ABOUT US</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link mt-3 me-5"
+                                        href="http://127.0.0.1:5500/portfolio/design04.html">PORTFOLIO</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/blog/blog01.final.html">BLOG</a>
+                                </li>
+                                <li class="nav-item mt-3 me-0">
+                                    <a class="nav-link" href="http://127.0.0.1:5500/contactUS/contactUs.refined.html">CONTACT US</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+
+            <!-- Make sure to include Font Awesome for the hamburger icon -->
+            <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+            <!-- Google Translate Hamburger Icon positioned outside the header and navbar -->
+            <button id="translateToggleBtn" class="translate-icon">
+                <i class="fas fa-language"></i> <!-- Font Awesome language icon -->
+            </button>
+
+            <!-- Hidden Google Translate Element -->
+            <div id="googleTranslateContainer" class="translate-dropdown" style="display: none;">
+                <div id="google_translate_element"></div>
+            </div>
+
+            <!-- Page content continues -->
+
+
+
+            <!-- heading -->
+            <section id="bg-color">
+                <section>
+                    <div class="title">Timeline Estimator
+                        <p class="sub-t">Estimate the time of completion of your dream interior in few easy steps</p>
+                    </div>
+                </section>
+                <!-- timeline estimator -->
+
+                <div class="form-container">
+                    <form action="/submit" method="POST" id="timelineForm">
+                        <div class="form-row">
+                            <!-- First Column (3 fields) -->
+                            <div class="column-1">
+                                <div class="form-group">
+                                    <label for="projectScope" class="form-label">Scope of Project</label>
+                                    <select id="projectScope" class="form-select" required>
+                                        <option value="residential">Residential</option>
+                                        <option value="commercial">Commercial</option>
+                                        <option value="office">Office Space</option>
+                                        <option value="retail">Retail Store</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="projectSize" class="form-label">Project Size (in sq ft)</label>
+                                    <input type="number" id="projectSize" class="form-control"
+                                        placeholder="Enter the area size" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="aestheticPreference" class="form-label">Aesthetic Preference</label><br>
+                                    <select id="aestheticPreference" class="form-select" required>
+                                        <option value="simple">Simple</option>
+                                        <option value="luxurious">Luxurious</option>
+                                        <option value="natureInspired">Nature-Inspired</option>
+                                        <option value="industrial">Industrial</option>
+                                    </select>
+                                </div>
+
+                                <label for="urgency" class="form-label">Project Urgency</label>
+                                <select id="urgency" class="form-select" style="margin-top: 0%;" required>
+                                    <option value="flexible">Flexible</option>
+                                    <option value="normal">Normal Timeline</option>
+                                    <option value="urgent">Urgent</option>
+                                </select>
+                                
+                            </div>
+
+                            <!-- Second Column (2 fields) -->
+                            <div class="column-2">
+
+                                
+                                <div class="form-group">
+                                    <label for="features" class="form-label">Desired Features</label>
+                                    <select id="features" class="form-select" multiple>
+                                        <option value="smartHome">Smart Home Integration</option>
+                                        <option value="energyEfficient">Energy Efficient Solutions</option>
+                                        <option value="customCabinetry">Custom Cabinetry</option>
+                                        <option value="indoorOutdoor">Indoor-Outdoor Flow</option>
+                                        <option value="3dVisualization">3D Visualization</option>
+                                        <option value="homeTheater">Home Theater Setup</option>
+                                        <option value="pool">Swimming Pool</option>
+                                        <option value="gardenLandscaping">Garden Landscaping</option>
+                                        <option value="solarPanels">Solar Panels</option>
+                                        <option value="securitySystem">Advanced Security System</option>
+                                    </select>
+                                    <small class="text-muted" style="margin-top:5px ;">Hold Ctrl (Windows) or Command
+                                        (Mac) to select multiple options.</small>
+
+                                        <!-- Submit Button -->
+
+                                <div class="form-group mt-0">
+                                    <button type="submit" class="btn btn-primary"
+                                        style=" background-color:rgb(187, 186, 178) ;color: white; border: none;border-radius: 10px; ">Estimate
+                                        Timeline</button>
+                                </div>
+                                
+                                </div>
+                                <!-- Timeline Display -->
+                                <div class="display">
+                                    <h4>Estimated Timeline :</h4>
+                                    <p id="timelineResult" class="result">Please fill out the form and click "Estimate Timeline"
+                            to see the result.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                </div>
+                </form>
+                <hr>
+                </div>
+
+
+                <div class="sched-img"><img
+                        src="https://simplyhomedecorating.com/wp-content/uploads/2023/07/Simply-Home-Decorating-Watercolor-Leaves-Graphic.png"
+                        height="100px" width="100px"></div>
+                <p class="h-title">Ready to transform your experience of home ?</p>
+                <p class="h-sub">Request A Complemantary Call With Our Creative Director ,<br>Loori Steves , To Learn
+                    More
+                    About Your Project </p>
+                <div class="form-group">
+                    <button type="submit" class="btn1 btn-primary">Schedule A Call</button>
+                </div>
+
+
+                <!-- newsletter  -->
+                <section class="newsletter">
+                    <div class="signup-box">
+                        <p class="news-head">SIGN UP TO OUR NEWSLETTER</p>
+                        <p class="news-head02">Stay updated with our latest design trends and updates</p>
+
+                        <!-- Form Content -->
+                        <form id="signupForm">
+                            <input type="email" id="email" placeholder="Enter your email" required>
+
+                            <label>
+                                <input type="checkbox" required> I agree to the privacy policy *
+                            </label>
+                            <div class="news-btn"><button onclick="subscribe()">Subscribe</button></div>
+                        </form>
+
+                        <!-- Thank you message -->
+                        <p class="thank-you" id="thankYouMessage">Thank you for signing up!</p>
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <footer style="background-color: rgb(97, 82, 72)">
+                    <div class="fc container-fluid d-flex">
+                      <div class="fc2 d-flex">
+                        <ul>
+                          <a href="http://127.0.0.1:5500/servicesDH/design02.html" target="_blank">
+                            <li class="text-white">SERVICES</li>
+                          </a>
+                          <a href="http://127.0.0.1:5500/about/design03.html" target="_blank">
+                            <li class="text-white">ABOUT</li>
+                          </a>
+                          <a href="http://127.0.0.1:5500/portfolio/design04.html" target="_blank">
+                            <li class="text-white">PORTFOLIO</li>
+                          </a>
+                          <a href="http://127.0.0.1:5500/contactUS/contactUs.refined.html" target="_blank">
+                            <li class="text-white">CONTACT US</li>
+                          </a>
+                        </ul>
+                        <ul>
+                          <a href="">
+                            <li class="text-white">TERMS</li>
+                          </a>
+                          <a href="">
+                            <li class="text-white">PRIVACY</li>
+                          </a>
+                          <li class="text-white">
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                            <a href="https://x.com/" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+                          </li>
+                        </ul>
+                        <ul class="f3list">
+                          <li>
+                            <h4>CONTACT:</h4>
+                          </li>
+                          <li>
+                            <p>+91 70489 24351</p>
+                            <p>aditi@aditiguptadesigns.com</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </footer>
+                  <div class="copyright">
+                    <p>&copy 2024 Aditi Gupta Designs. All rights reserved.</p>
+                  </div>
+            </section>
+        </body>
+        <script>
+            document.getElementById("timelineForm").addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                // Get values from the form
+                const projectScope = document.getElementById("projectScope").value;
+                const projectSize = parseFloat(document.getElementById("projectSize").value);
+                const aestheticPreference = document.getElementById("aestheticPreference").value;
+                const urgency = document.getElementById("urgency").value;
+                const features = Array.from(document.getElementById("features").selectedOptions).map(opt => opt.value);
+
+                // Base days based on scope of project
+                let baseDays = 0;
+                if (projectScope === "residential") baseDays = 15;
+                else if (projectScope === "commercial") baseDays = 25;
+                else if (projectScope === "office") baseDays = 20;
+                else if (projectScope === "retail") baseDays = 18;
+
+                // Additional days based on project size (1 day per 40 sq ft)
+                const sizeDays = Math.ceil(projectSize / 40);
+
+                // Adjust for urgency
+                let urgencyMultiplier = 1;
+                if (urgency === "normal") urgencyMultiplier = 1.2;
+                else if (urgency === "urgent") urgencyMultiplier = 1.5;
+
+                // Days for each feature
+                let featureDays = 0;
+                features.forEach(feature => {
+                    if (feature === "smartHome") featureDays += 5;
+                    if (feature === "energyEfficient") featureDays += 4;
+                    if (feature === "customCabinetry") featureDays += 6;
+                    if (feature === "indoorOutdoor") featureDays += 3;
+                    if (feature === "3dVisualization") featureDays += 7;
+                    if (feature === "homeTheater") featureDays += 8;
+                    if (feature === "pool") featureDays += 10;
+                    if (feature === "gardenLandscaping") featureDays += 5;
+                    if (feature === "solarPanels") featureDays += 6;
+                    if (feature === "securitySystem") featureDays += 4;
+                });
+
+                // Calculate total estimated days
+                const estimatedDays = Math.ceil((baseDays + sizeDays + featureDays) * urgencyMultiplier);
+
+                // Display result
+                document.getElementById("timelineResult").innerText = `Estimated Timeline: ${estimatedDays} days`;
+            });
+
+        </script>
+
+
+        <script>
+            // Form submission event listener
+            document.getElementById("signupForm").addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                // Hide form and show thank you message
+                document.getElementById("signupForm").style.display = "none";
+                document.getElementById("thankYouMessage").style.display = "block";
+            });
+        </script>
+
+
+        <!-- Google Translate Script -->
+        <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        <!-- Google Translate Script -->
+        <script type="text/javascript">
+            // Initialize Google Translate only when button is clicked and ensure script is loaded
+            function loadGoogleTranslate() {
+                // Load Google Translate script if it hasn't been loaded yet
+                if (!window.google || !window.google.translate) {
+                    const script = document.createElement('script');
+                    script.type = 'text/javascript';
+                    script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+                    document.head.appendChild(script);
+                } else {
+                    googleTranslateElementInit();
+                }
+            }
+
+            // Initialize Google Translate Element
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en',
+                    includedLanguages: 'en,hi,pa',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                }, 'google_translate_element');
+            }
+
+            // Toggle the visibility of the Google Translate container when the icon is clicked
+            document.getElementById("translateToggleBtn").addEventListener("click", function () {
+                const translateContainer = document.getElementById("googleTranslateContainer");
+
+                // Toggle visibility
+                if (translateContainer.style.display === "none" || translateContainer.style.display === "") {
+                    loadGoogleTranslate(); // Ensure Translate is loaded
+                    translateContainer.style.display = "block";
+                } else {
+                    translateContainer.style.display = "none";
+                }
+            });
+        </script>
+
+    </body>
+
+</html>

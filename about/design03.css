@@ -1,0 +1,2805 @@
+/* header */
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+*::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
+
+btn::selection {
+    background-color: white;
+    color: rgb(97, 82, 72);
+}
+
+header {
+    background-color: rgb(235, 230, 215);
+    opacity: 0.9;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 5px -3px;
+}
+
+.nav-item:hover {
+    transform: scale(1.02);
+}
+
+.nav-item a::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
+
+.AGD-logo {
+    font-size: 40px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: italic;
+    color: rgb(170, 146, 146);
+    margin-left: 52px;
+}
+
+.AGD-img {
+    margin-left: 48px;
+}
+
+.AGDname {
+    font-size: 17px;
+    margin-left: 30px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.AGDname::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
+
+.Nlist {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+html,
+body {
+    background-color: rgba(237, 235, 223, 0.51) !important;
+}
+
+
+/* Style for the Google Translate hamburger icon */
+.translate-icon {
+    position: fixed;
+    bottom: 20px;
+    /* Adjust position as needed */
+    right: 20px;
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Style the icon itself */
+.translate-icon i {
+    color: #333;
+    font-size: 24px;
+}
+
+/* Style for the Google Translate dropdown */
+.translate-dropdown {
+    position: fixed;
+    bottom: 80px;
+    /* Adjust position based on icon location */
+    right: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#googleTranslateContainer {
+    display: none;
+    position: fixed;
+    /* top: 60px; */
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    /* padding: 30px 100px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+
+/* hero section  */
+.hero-video {
+    margin-top: 152px;
+    position: relative;
+}
+
+.media-container {
+    position: relative;
+}
+
+.hero-img {
+    height: 610px;
+    width: 1440px;
+}
+
+.hero-text {
+    position: absolute;
+    top: 14%;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    /* Center horizontally */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-head {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-size: 25px;
+    margin-bottom: 0;
+}
+
+.hero-head02 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-size: 100px;
+}
+
+
+
+/* Carousel */
+.ring {
+    display: flex;
+    margin-top: 110px;
+}
+
+.container-fluid-carousel {
+    width: 400px;
+    height: 550px;
+    padding: 0px;
+    margin: 0 0 0 30px;
+}
+
+.carousel-inner img {
+    width: 400px;
+    height: 550px;
+}
+
+
+/* Scrollable container */
+.scroll-container {
+    width: 1300px;
+    height: 550px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0 0px 0 0px;
+    margin: 0 30px 0 30px;
+    background-color: rgba(220, 209, 182, 0.3);
+}
+
+/* Custom scrollbar styling */
+.scroll-container::-webkit-scrollbar {
+    width: 18px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    /* background: #f1f1f1; */
+    background: rgba(220, 209, 182, 0.3);
+    border-radius: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: #a4a2a2;
+    border: 3px solid #f1f1f1;
+    border-radius: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+
+
+.line-container {
+    position: relative;
+    margin: 40px 0px 85px 0;
+    /* Adjust spacing as needed */
+    width: 100%;
+}
+
+.half-line {
+    position: absolute;
+    height: 1px;
+    background: #000;
+    width: 100%;
+}
+
+.top-line .half-line {
+    width: 300px;
+    right: 0;
+    top: 0;
+    margin-top: 0px;
+}
+
+.bottom-line .half-line {
+    width: 300px;
+    left: 0;
+    bottom: 0;
+    margin: 30px 0 0px 0px;
+    margin-top: 0px;
+}
+
+.scroll-paragraphs {
+    font-size: 18px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 200;
+    color: #987459;
+    margin-bottom: 50px;
+}
+
+.scroll-head {
+    font-size: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    margin-bottom: 0;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    color: rgb(97, 82, 72);
+}
+
+.scroll-head02 {
+    font-size: 50px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    color: rgb(97, 82, 72);
+}
+
+.scrWC {
+    padding: 20px 40px 0px 40px;
+}
+
+
+/* brand story  */
+
+.brand-story {
+    margin-top: 80px;
+}
+
+.BScontent {
+    display: flex;
+    margin-left: 30px;
+
+}
+
+.BSimg {
+    height: 550px;
+    width: 400px;
+    padding: 0px;
+    margin: 0px 30px 0 0px;
+}
+
+.BS-box {
+    margin-right: 30px;
+    background-color: rgba(220, 209, 182, 0.3);
+    height: 550px;
+    width: 1300px;
+}
+
+
+/* Our Philosophy */
+
+.our-philosophy {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.philosophy {
+    font-family: "Cormorant Garamond", serif;
+    text-align: center;
+    justify-content: center;
+    color: rgb(136, 113, 97);
+    margin-top: 50px;
+}
+
+.sub-title {
+    font-family: "Alex Brush", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    justify-content: center;
+    color: rgb(175, 164, 164);
+    margin-left: 80px;
+    margin-right: 80px;
+    /* font-size: 100px; */
+}
+
+.card-text {
+    font-family: "Cormorant Garamond", serif;
+    margin-left: 70px;
+    margin-right: 70px;
+    justify-content: center;
+    color: rgb(136, 113, 97);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+
+.lineHead {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: x-large;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 800;
+    font-style: normal;
+    color: rgb(107, 105, 105);
+    font-weight: 400;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+
+/* our team  */
+#instagram {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    /* border: 1px solid black; */
+    /* padding: 0px; */
+    /* margin-left: 30px;
+    margin-right: 30px; */
+}
+
+.insta-items {
+    display: flex;
+}
+
+.ig-content {
+    padding: 150px 100px 10px 30px;
+    margin-left: 30px;
+    margin-right: 10px;
+    color: rgb(97, 82, 72);
+    height: 540px;
+    width: 524px;
+    margin-top: 15px;
+    border: 1px solid rgb(97, 82, 72);
+}
+
+.ig-head {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: lighter;
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(97, 82, 72);
+}
+
+.ig-head02 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #987459;
+    /* line-height: 5px; */
+}
+
+.ig-head03 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 200;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(97, 82, 72);
+    line-height: 50px;
+    padding: 0px;
+    margin: 0px 2px;
+}
+
+.ig-head03 .line {
+    flex: 1;
+    height: 1px;
+    background-color: rgb(97, 82, 72);
+    margin: 0 2px;
+}
+
+.insta-img {
+    height: 266px;
+    width: 220px;
+}
+
+#ig-img01 {
+    margin: 5px;
+}
+
+#ig-img02 {
+    margin: 5px;
+}
+
+#ig-img03 {
+    margin: 5px;
+}
+
+#ig-img04 {
+    margin: 5px;
+}
+
+.insta-img-spl {
+    height: 540px;
+    width: 380px;
+}
+
+/* Container for overlay effect */
+.insta-img-container {
+    position: relative;
+    cursor: pointer;
+    height: 266px;
+    width: 220px;
+}
+
+.overlay img {
+    display: block;
+    filter: grayscale(100%);
+    transition: 0.3s ease;
+    margin: 10px;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(162, 149, 139, 0.8);
+    padding: 2px 1px;
+    height: 50px;
+    width: 150px;
+    margin-left: 10px;
+}
+
+.overlay-text p {
+    margin: 0;
+}
+
+.overlay::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover effect */
+.overlay:hover img {
+    filter: sepia(100%);
+}
+
+.overlay:hover::before,
+.overlay:hover .overlay-text {
+    opacity: 1;
+}
+
+
+/* rads */
+.insta-img-container-spl {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    height: 540px;
+    width: 380px;
+}
+
+.overlay-spl img {
+    display: block;
+    filter: grayscale(100);
+    transition: 0.3s ease;
+    margin: 10px;
+}
+
+.overlay-text-spl {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(162, 149, 139, 0.8);
+    padding: 2px 1px;
+    margin-right: 10px;
+    height: 70px;
+    width: 200px;
+}
+
+.overlay-text-spl p {
+    margin: 0;
+}
+
+.overlay-spl::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover effect */
+.overlay-spl:hover img {
+    filter: sepia(100%);
+}
+
+.overlay-spl:hover::before,
+.overlay-spl:hover .overlay-text-spl {
+    opacity: 1;
+}
+
+
+.overlay-head {
+    color: white;
+    font-size: 18px;
+}
+
+.overlay-pos {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 10px;
+}
+
+.overlay-head-spl {
+    color: white;
+    font-size: 25px;
+}
+
+.overlay-pos-spl {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+
+
+
+/* Contact Button */
+.contact-button-container {
+    display: flex;
+    justify-content: center;
+    margin: 90px 0;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 1px solid #B0B0B0;
+    /* light grey color */
+    text-decoration: none;
+    color: #B0B0B0;
+    /* light grey color */
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    color: #FFFFFF;
+    background-color: rgb(97, 82, 72);
+}
+
+/* Global Reach */
+.text-with-lines {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    /* color: #333; */
+    margin: 20px 0;
+    letter-spacing: 2px;
+    color: rgb(97, 82, 72);
+    font-weight: 100;
+
+}
+
+.text-with-lines::before,
+.text-with-lines::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid rgb(202, 198, 198);
+    margin: 0 30px 0 30px;
+}
+
+.global-reach img {
+    width: 1380px;
+    margin: 20px 30px 20px 30px;
+    height: 650px;
+    /* filter: ; */
+    filter: sepia(50%) hue-rotate(5deg) brightness(100%);
+    opacity: 0.8;
+}
+
+.text-with-lines p::selection {
+    color: #fff;
+    background-color: rgb(97, 82, 72);
+}
+
+/* Awards */
+/* .awards {
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.awards img {
+    width: 100px;
+}
+
+.image1 {
+    margin-left: 30px;
+} */
+
+/* awards  */
+
+#featuredIn {
+    margin-top: 70px;
+    overflow: hidden;
+    position: relative;
+}
+
+.featured-head {
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: lighter;
+    font-size: 22px;
+    color: rgb(97, 82, 72);
+    letter-spacing: 3px;
+}
+
+.featured-img {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    white-space: nowrap;
+    /* background-color: white; */
+}
+
+.FImg {
+    height: 90px;
+    width: 250px;
+    margin: 40px;
+    border: 2px solid white;
+    padding: 5px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+        /* Start from right */
+    }
+
+    100% {
+        transform: translateX(-100%);
+        /* Move to left */
+    }
+}
+
+
+/* Latest Project */
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://images.prismic.io/luxdeco-dev/MTFmOGYyMGYtYmVkZi00MGQyLThmMDEtNjQ3MmM1Y2MyZTVj_how-to-plan-the-perfect-room-with-sophie-paterson_eab5edf9-8179-4250-88a9-7d45a3e61a66.jpg?auto=compress,format&w=1200&q=100');
+    background-size: cover;
+    background-position: center;
+    height: 550px;
+    margin-top: 70px;
+    margin-bottom: 0px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 550px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-size: larger;
+}
+
+.hero h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.hero h3::selection {
+    background-color: rgb(97, 82, 72);
+}
+
+.hero .button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #B0B0B0;
+    color: #B0B0B0;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+    font-size: 14px
+}
+
+.hero .button:hover {
+    color: #FFFFFF;
+    background-color: rgb(97, 82, 72)
+}
+
+
+
+/* Signup box styling */
+.newsletter {
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.signup-box {
+    width: 1050px;
+    height: 300px;
+    padding: 30px 100px;
+    border-radius: 0px;
+    background-color: rgba(237, 235, 223, 1);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 1px solid #ddd;
+}
+
+.news-head {
+    font-size: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.news-head02 {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Input styling */
+.signup-box input[type="email"] {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    background-color: rgba(237, 235, 223, 0.51);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+}
+
+/* Checkbox and label styling */
+.signup-box label {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 0.9em;
+    color: #555;
+    display: inline-block;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: rgba(237, 235, 223, 1);
+}
+
+.signup-box input[type="checkbox"] {
+    margin-right: 5px;
+    background-color: rgba(237, 235, 223, 1);
+}
+
+/* newsletter button  */
+.news-btn {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px 0px;
+}
+
+.signup-box button {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    padding: 10px 50px;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+}
+
+.signup-box button:hover {
+    color: #ffffff;
+    background-color: rgb(97, 82, 72);
+}
+
+/* Thank you message styling */
+.thank-you {
+    margin-top: 70px;
+    display: none;
+    font-size: 2em;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: 400px;
+}
+
+
+/* footer */
+footer {
+    margin-top: 100px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    height: 300px;
+    color: white;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 5px -3px; */
+}
+
+fc {
+    align-items: center;
+}
+
+.fc2 {
+    padding-left: 242px;
+    padding-top: 80px;
+    list-style-type: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fc2 ul li::selection {
+    background-color: white;
+    color: rgb(97, 82, 72);
+}
+
+.fc2 ul {
+    margin-right: 200px;
+}
+
+.fc2 ul a {
+    text-decoration: none;
+}
+
+.fc2 ul li {
+    margin-bottom: 20px;
+}
+
+.fi {
+    padding-top: 80px;
+}
+
+.fc2 ul li a {
+    margin-right: 18px;
+    color: white;
+    font-size: 24px;
+}
+
+.f3list li h4::selection {
+    background-color: white;
+    color: rgb(97, 82, 72);
+}
+
+.f3list li p::selection {
+    background-color: white;
+    color: rgb(97, 82, 72);
+}
+
+.copyright {
+    margin-top: 4px;
+    margin-left: 500px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: larger;
+    background-color: rgba(237, 235, 223, 0.51);
+}
+
+.copyright p::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
+
+/* Small Text */
+.small-text {
+    font-family: "Cormorant Garamond", serif;
+}
+
+.smallHead {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.smallPara {
+    font-size: 18px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
+
+/* phone size  */
+@media (min-width: 0px) and (max-width: 400px) {
+
+    /* header */
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    *::selection {
+        background-color: rgb(97, 82, 72);
+        color: white;
+    }
+
+    btn::selection {
+        background-color: white;
+        color: rgb(97, 82, 72);
+    }
+
+    header {
+        background-color: rgb(235, 230, 215);
+        opacity: 0.9;
+        height: 80px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+            rgba(0, 0, 0, 0.3) 0px 3px 5px -3px;
+    }
+
+    .nav-item:hover {
+        transform: scale(1.02);
+    }
+
+    .nav-item a::selection {
+        background-color: rgb(97, 82, 72);
+        color: white;
+    }
+
+    .AGD-logo {
+        font-size: 30px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        font-style: italic;
+        color: rgb(170, 146, 146);
+        margin-left: 32px;
+    }
+
+    .AGD-img {
+        margin-left: 0px;
+        height: 50px;
+        width: 90px;
+    }
+
+    .AGDname {
+        font-size: 14px;
+        margin-left: 0px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    .AGDname::selection {
+        background-color: rgb(97, 82, 72);
+        color: white;
+    }
+
+    .Nlist {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+        background-color: rgb(235, 230, 215);
+        opacity: 0.9;
+        margin-top: 5px;
+    }
+
+
+    /* hero section  */
+    .hero-video {
+        margin-top: 132px;
+        position: relative;
+    }
+
+    .media-container {
+        position: relative;
+    }
+
+    .hero-img {
+        height: 310px;
+        width: 400px;
+    }
+
+    .hero-text {
+        position: absolute;
+        top: 0%;
+        bottom: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(50%);
+        /* Center horizontally */
+        color: white;
+        text-align: center;
+        padding: 10px;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-head {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        letter-spacing: 3px;
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    .hero-head02 {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 400;
+        font-size: 37px;
+    }
+
+
+
+    /* Carousel */
+    .ring {
+        display: block;
+        margin-top: 80px;
+    }
+
+    .container-fluid-carousel {
+        width: 320px;
+        height: 350px;
+        padding: 0px;
+        margin: 0 0 0 50px;
+        margin-bottom: 30px;
+    }
+
+    .carousel-inner img {
+        width: 320px;
+        height: 350px;
+    }
+
+
+    /* Scrollable container */
+    .scroll-container {
+        width: 320px;
+        height: 350px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 0 0px 0 0px;
+        margin: 0 10px 0 50px;
+        background-color: rgba(220, 209, 182, 0.3);
+    }
+
+    /* Custom scrollbar styling */
+    .scroll-container::-webkit-scrollbar {
+        width: 15px;
+    }
+
+    .scroll-container::-webkit-scrollbar-track {
+        /* background: #f1f1f1; */
+        background: rgba(220, 209, 182, 0.3);
+        border-radius: 8px;
+    }
+
+    .scroll-container::-webkit-scrollbar-thumb {
+        background-color: #a4a2a2;
+        border: 3px solid #f1f1f1;
+        border-radius: 8px;
+    }
+
+    .scroll-container::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+    }
+
+
+
+    .line-container {
+        position: relative;
+        margin: 20px 0px 25px 0;
+        width: 0%;
+    }
+
+    .half-line {
+        position: absolute;
+        height: 1px;
+        background: #000;
+        width: 0%;
+    }
+
+    .top-line .half-line {
+        width: 0px;
+        right: 0;
+        top: 0;
+        margin-top: 0px;
+    }
+
+    .bottom-line .half-line {
+        width: 0px;
+        left: 0;
+        bottom: 0;
+        margin: 0px 0 0px 0px;
+        margin-top: 0px;
+    }
+
+    .scroll-paragraphs {
+        font-size: 10px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 200;
+        color: #987459;
+        margin-bottom: 50px;
+    }
+
+    .scroll-head {
+        font-size: 12px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        margin-bottom: 0;
+        letter-spacing: 2px;
+        margin-top: 30px;
+        color: rgb(97, 82, 72);
+    }
+
+    .scroll-head02 {
+        font-size: 26px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 400;
+        color: rgb(97, 82, 72);
+    }
+
+    .scrWC {
+        padding: 10px 40px 0px 40px;
+    }
+
+
+    /* brand story  */
+
+    .brand-story {
+        margin-top: 40px;
+    }
+
+    .BScontent {
+        display: block;
+        margin-left: 50px;
+        margin-bottom: 40px;
+    }
+
+    .BSimg {
+        height: 350px;
+        width: 320px;
+        padding: 0px;
+        margin: 0px 30px 0 0px;
+    }
+
+    .BS-box {
+        margin-right: 30px;
+        background-color: rgba(220, 209, 182, 0.3);
+        height: 350px;
+        width: 320px;
+        margin-bottom: 20px;
+    }
+
+
+    /* Our Philosophy */
+
+    .our-philosophy {
+        margin-top: 80px;
+        margin-bottom: 80px;
+        font-size: smaller;
+    }
+
+    .philosophy {
+        font-family: "Cormorant Garamond", serif;
+        text-align: center;
+        justify-content: center;
+        color: rgb(136, 113, 97);
+        margin-top: 0px;
+        font-size: smaller;
+    }
+
+    .sub-title {
+        font-family: "Alex Brush", serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+        justify-content: center;
+        color: rgb(175, 164, 164);
+        margin-left: 80px;
+        margin-right: 80px;
+        /* font-size: 100px; */
+    }
+
+    .card-text {
+        font-family: "Cormorant Garamond", serif;
+        margin-left: 70px;
+        margin-right: 70px;
+        justify-content: center;
+        color: rgb(136, 113, 97);
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 14px;
+    }
+
+
+    .lineHead {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: x-large;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 800;
+        font-style: normal;
+        color: rgb(107, 105, 105);
+        font-weight: 400;
+        margin-bottom: 50px;
+        letter-spacing: 2px;
+    }
+
+
+    /* our team  */
+    #instagram {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        /* border: 1px solid black; */
+        /* padding: 0px; */
+        /* margin-left: 30px;
+    margin-right: 30px; */
+    }
+
+    .insta-items {
+        display: block;
+    }
+
+    .ig-content {
+        padding: 40px 70px 10px 30px;
+        margin-left: 30px;
+        margin-right: 50px;
+        color: rgb(97, 82, 72);
+        height: 340px;
+        width: 345px;
+        margin-top: 15px;
+        border: 1px solid rgb(97, 82, 72);
+    }
+
+    .ig-head {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: lighter;
+        font-size: 22px;
+        font-weight: 600;
+        color: rgb(97, 82, 72);
+    }
+
+    .ig-head02 {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: #987459;
+        /* line-height: 5px; */
+    }
+
+    .ig-head03 {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 200;
+        font-size: large;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(97, 82, 72);
+        line-height: 50px;
+        padding: 0px;
+        margin: 0px 2px;
+    }
+
+    .ig-head03 .line {
+        flex: 1;
+        height: 1px;
+        background-color: rgb(97, 82, 72);
+        margin: 0 2px;
+    }
+
+    .insta-img {
+        height: 216px;
+        width: 180px;
+    }
+
+    #ig-img01 {
+        margin: 5px;
+    }
+
+    #ig-img02 {
+        margin: 5px;
+    }
+
+    #ig-img03 {
+        margin: 5px;
+        display: flex;
+    }
+
+    #ig-img04 {
+        margin: 5px;
+        display: flex;
+    }
+
+    .insta-img-spl {
+        height: 440px;
+        width: 360px;
+        /* margin-left: 0px;
+        margin-right: 0px; */
+        padding-left: 15px;
+        margin-bottom: 0px;
+    }
+
+    /* Container for overlay effect */
+    .insta-img-container {
+        position: relative;
+        cursor: pointer;
+        height: 266px;
+        width: 220px;
+    }
+
+    .overlay img {
+        display: block;
+        filter: grayscale(100%);
+        transition: 0.3s ease;
+        margin: 0px;
+    }
+
+    .overlay-text {
+        position: absolute;
+        top: 30px;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        font-family: "Cormorant Garamond", serif;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        background-color: rgba(162, 149, 139, 0.8);
+        padding: 2px 1px;
+        height: 50px;
+        width: 150px;
+        margin-left: 10px;
+    }
+
+    .overlay-text p {
+        margin: 0;
+    }
+
+    .overlay::before {
+        content: "";
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Hover effect */
+    .overlay:hover img {
+        filter: sepia(100%);
+    }
+
+    .overlay:hover::before,
+    .overlay:hover .overlay-text {
+        opacity: 1;
+    }
+
+
+    /* rads */
+    .insta-img-container-spl {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        height: 540px;
+        width: 380px;
+    }
+
+    .overlay-spl img {
+        display: block;
+        filter: grayscale(100);
+        transition: 0.3s ease;
+        margin: 10px;
+    }
+
+    .overlay-text-spl {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        font-family: "Cormorant Garamond", serif;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        background-color: rgba(162, 149, 139, 0.8);
+        padding: 2px 1px;
+        margin-right: 10px;
+        height: 70px;
+        width: 200px;
+    }
+
+    .overlay-text-spl p {
+        margin: 0;
+    }
+
+    .overlay-spl::before {
+        content: "";
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Hover effect */
+    .overlay-spl:hover img {
+        filter: sepia(100%);
+    }
+
+    .overlay-spl:hover::before,
+    .overlay-spl:hover .overlay-text-spl {
+        opacity: 1;
+    }
+
+
+    .overlay-head {
+        color: white;
+        font-size: 18px;
+    }
+
+    .overlay-pos {
+        color: white;
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: 10px;
+    }
+
+    .overlay-head-spl {
+        color: white;
+        font-size: 25px;
+    }
+
+    .overlay-pos-spl {
+        color: white;
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: larger;
+    }
+
+
+
+
+    /* Contact Button */
+    .contact-button-container {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0;
+    }
+
+    .contact-button {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #B0B0B0;
+        /* light grey color */
+        text-decoration: none;
+        color: #B0B0B0;
+        /* light grey color */
+        font-size: 15px;
+        font-weight: normal;
+        letter-spacing: 2px;
+        transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .contact-button:hover {
+        color: #FFFFFF;
+        background-color: rgb(97, 82, 72);
+    }
+
+    /* Global Reach */
+    .text-with-lines {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Georgia', serif;
+        font-size: 15px;
+        /* color: #333; */
+        margin: 20px 0;
+        letter-spacing: 2px;
+        color: rgb(97, 82, 72);
+        font-weight: 100;
+
+    }
+
+    .text-with-lines::before,
+    .text-with-lines::after {
+        content: "";
+        flex: 1;
+        border-bottom: 1px solid rgb(202, 198, 198);
+        margin: 0 30px 0 30px;
+    }
+
+    .global-reach img {
+        width: 400px;
+        margin: 10px 60px 20px 0px;
+        height: 300px;
+        /* filter: ; */
+        filter: sepia(50%) hue-rotate(5deg) brightness(100%);
+        opacity: 0.8;
+    }
+
+    .text-with-lines p::selection {
+        color: #fff;
+        background-color: rgb(97, 82, 72);
+    }
+
+    #featuredIn {
+        margin-top: 50px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .featured-head {
+        text-align: center;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: lighter;
+        font-size: 18px;
+        color: rgb(97, 82, 72);
+        letter-spacing: 2px;
+    }
+
+    .featured-img {
+        display: flex;
+        animation: scroll 20s linear infinite;
+        white-space: nowrap;
+        /* background-color: white; */
+    }
+
+    .FImg {
+        height: 60px;
+        width: 200px;
+        margin: 10px;
+        border: 2px solid white;
+        padding: 5px;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+            /* Start from right */
+        }
+
+        100% {
+            transform: translateX(-100%);
+            /* Move to left */
+        }
+    }
+
+
+    /* Latest Project */
+    .hero {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('https://images.prismic.io/luxdeco-dev/MTFmOGYyMGYtYmVkZi00MGQyLThmMDEtNjQ3MmM1Y2MyZTVj_how-to-plan-the-perfect-room-with-sophie-paterson_eab5edf9-8179-4250-88a9-7d45a3e61a66.jpg?auto=compress,format&w=1200&q=100');
+        background-size: cover;
+        background-position: center;
+        height: 350px;
+        margin-top: 70px;
+        margin-bottom: 0px;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 350px;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-content {
+        position: relative;
+        text-align: center;
+        color: #fff;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-size: medium;
+    }
+
+    .hero h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+    .hero h3::selection {
+        background-color: rgb(97, 82, 72);
+    }
+
+    .hero .button {
+        display: inline-block;
+        padding: 10px 15px;
+        border: 1px solid #B0B0B0;
+        color: #B0B0B0;
+        text-decoration: none;
+        font-weight: 500;
+        text-align: center;
+        font-size: 12px
+    }
+
+    .hero .button:hover {
+        color: #FFFFFF;
+        background-color: rgb(97, 82, 72)
+    }
+
+    /* newsletter  */
+
+    /* Signup box styling */
+    .newsletter {
+        margin-top: 80px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .signup-box {
+        width: 300px;
+        height: 180px;
+        padding: 5px 10px;
+        border-radius: 0px;
+        background-color: rgba(237, 235, 223, 1);
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+        text-align: center;
+        transition: transform 0.3s ease;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border: 1px solid #ddd;
+    }
+
+    .news-head {
+        font-size: 14px;
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        font-weight: 300;
+        margin-bottom: 4px;
+        color: #333;
+    }
+
+    .news-head02 {
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        font-size: 0.6em;
+        color: #666;
+        margin-bottom: 4px;
+    }
+
+    /* Input styling */
+    .signup-box input[type="email"] {
+        margin-top: 15px;
+        width: 100%;
+        padding: 5px;
+        font-size: 0.7em;
+        margin-bottom: 5px;
+        background-color: rgba(237, 235, 223, 0.51);
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+    }
+
+    /* Checkbox and label styling */
+    .signup-box label {
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        font-size: 0.7em;
+        color: #555;
+        display: inline-block;
+        margin-bottom: 15px;
+        cursor: pointer;
+        background-color: rgba(237, 235, 223, 1);
+    }
+
+    .signup-box input[type="checkbox"] {
+        height: 10px;
+        margin-right: 5px;
+        background-color: rgba(237, 235, 223, 1);
+    }
+
+    /* newsletter button  */
+    .news-btn {
+        display: flex;
+        justify-content: center;
+        margin: 5px 0 10px 0px;
+    }
+
+    .signup-box button {
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        padding: 5px 15px;
+        color: #b0b0b0;
+        border: 1px solid #b0b0b0;
+        cursor: pointer;
+        font-weight: normal;
+        letter-spacing: 1px;
+        background-color: rgba(237, 235, 223, 1);
+        font-size: small;
+    }
+
+    .signup-box button:hover {
+        color: #ffffff;
+        background-color: rgb(97, 82, 72);
+    }
+
+    /* Thank you message styling */
+    .thank-you {
+        margin-top: 40px;
+        display: none;
+        font-size: 1em;
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        font-weight: 400px;
+    }
+
+    /* footer */
+    footer {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+        height: 150px;
+        color: white;
+        margin-top: 70px;
+        font-size: x-small;
+    }
+
+    .fc {
+        align-items: center;
+    }
+
+    .fc2 {
+        padding-left: 5px;
+        padding-top: 15px;
+        list-style-type: none;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .fc2 ul {
+        margin-right: 10px;
+    }
+
+    .fc2 ul a {
+        text-decoration: none;
+    }
+
+    .fc2 ul li {
+        margin-bottom: 10px;
+    }
+
+    .fi {
+        padding-top: 10px;
+    }
+
+    .fc2 ul li a {
+        margin-right: 18px;
+        color: white;
+        font-size: 15px;
+    }
+
+    .copyright {
+        margin-left: 60px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: small;
+        background-color: rgba(237, 235, 223, 0.51);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* tab size  */
+
+/* tab size  */
+@media (min-width:401px) and (max-width:1024px) {
+
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    *::selection {
+        background-color: rgb(97, 82, 72);
+        color: white;
+    }
+
+    btn::selection {
+        background-color: white;
+        color: rgb(97, 82, 72);
+    }
+
+    header {
+        background-color: rgb(235, 230, 215);
+        opacity: 0.9;
+        height: 100px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+            rgba(0, 0, 0, 0.3) 0px 3px 5px -3px;
+    }
+
+    .nav-item {
+        font-size: 13px;
+    }
+
+    .nav-item:hover {
+        transform: scale(1.02);
+    }
+
+    .nav-item a::selection {
+        background-color: rgb(97, 82, 72);
+        color: white;
+    }
+
+    .AGD-logo {
+        font-size: 30px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        font-style: italic;
+        color: rgb(170, 146, 146);
+        margin-left: 22px;
+    }
+
+    .AGD-img {
+        margin-left: 38px;
+    }
+
+    .AGDname {
+        font-size: 13px;
+        margin-left: 32px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    .AGDname::selection {
+        background-color: rgb(97, 82, 72);
+        color: white;
+    }
+
+    .Nlist {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+
+    html,
+    body {
+        background-color: rgba(237, 235, 223, 0.51) !important;
+    }
+
+
+    /* hero section  */
+    .hero-video {
+        margin-top: 152px;
+        position: relative;
+    }
+
+    .media-container {
+        position: relative;
+    }
+
+    .hero-img {
+        height: 610px;
+        width: 1440px;
+    }
+
+    .hero-text {
+        position: absolute;
+        top: 14%;
+        left: 50%;
+        transform: translateX(-50%) translateY(50%);
+        /* Center horizontally */
+        color: white;
+        text-align: center;
+        padding: 10px;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-head {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        letter-spacing: 3px;
+        font-size: 25px;
+        margin-bottom: 0;
+    }
+
+    .hero-head02 {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 400;
+        font-size: 100px;
+    }
+
+
+
+    /* Carousel */
+    .ring {
+        display: flex;
+        margin-top: 110px;
+    }
+
+    .container-fluid-carousel {
+        width: 350px;
+        height: 500px;
+        padding: 0px;
+        margin: 0 0 0 20px;
+    }
+
+    .carousel-inner img {
+        width: 350px;
+        height: 500px;
+    }
+
+
+    /* Scrollable container */
+    .scroll-container {
+        width: 650px;
+        height: 500px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 0 0px 0 0px;
+        margin: 0 20px 0 20px;
+        background-color: rgba(220, 209, 182, 0.3);
+    }
+
+    /* Custom scrollbar styling */
+    .scroll-container::-webkit-scrollbar {
+        width: 18px;
+    }
+
+    .scroll-container::-webkit-scrollbar-track {
+        /* background: #f1f1f1; */
+        background: rgba(220, 209, 182, 0.3);
+        border-radius: 8px;
+    }
+
+    .scroll-container::-webkit-scrollbar-thumb {
+        background-color: #a4a2a2;
+        border: 3px solid #f1f1f1;
+        border-radius: 8px;
+    }
+
+    .scroll-container::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+    }
+
+
+
+    .line-container {
+        position: relative;
+        margin: 40px 0px 85px 0;
+        /* Adjust spacing as needed */
+        width: 100%;
+    }
+
+    .half-line {
+        position: absolute;
+        height: 1px;
+        background: #000;
+        width: 100%;
+    }
+
+    .top-line .half-line {
+        width: 300px;
+        right: 0;
+        top: 0;
+        margin-top: 0px;
+    }
+
+    .bottom-line .half-line {
+        width: 300px;
+        left: 0;
+        bottom: 0;
+        margin: 30px 0 0px 0px;
+        margin-top: 0px;
+    }
+
+    .scroll-paragraphs {
+        font-size: 14px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 200;
+        color: #987459;
+        margin-bottom: 50px;
+    }
+
+    .scroll-head {
+        font-size: 16px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        margin-bottom: 0;
+        letter-spacing: 2px;
+        margin-top: 0px;
+        color: rgb(97, 82, 72);
+    }
+
+    .scroll-head02 {
+        font-size: 40px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 400;
+        color: rgb(97, 82, 72);
+    }
+
+    .scrWC {
+        padding: 20px 40px 0px 40px;
+    }
+
+
+    /* brand story  */
+
+    .brand-story {
+        margin-top: 80px;
+    }
+
+    .BScontent {
+        display: flex;
+        margin-left: 20px;
+
+    }
+
+    .BSimg {
+        height: 500px;
+        width: 350px;
+        padding: 0px;
+        margin: 0px 20px 0 0px;
+    }
+
+    .BS-box {
+        margin-right: 30px;
+        background-color: rgba(220, 209, 182, 0.3);
+        height: 500px;
+        width: 600px;
+    }
+
+
+    /* Our Philosophy */
+
+    .our-philosophy {
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+
+    .philosophy {
+        font-family: "Cormorant Garamond", serif;
+        text-align: center;
+        justify-content: center;
+        color: rgb(136, 113, 97);
+        margin-top: 50px;
+    }
+
+    .sub-title {
+        font-family: "Alex Brush", serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+        justify-content: center;
+        color: rgb(175, 164, 164);
+        margin-left: 80px;
+        margin-right: 80px;
+        /* font-size: 100px; */
+    }
+
+    .card-text {
+        font-family: "Cormorant Garamond", serif;
+        margin-left: 70px;
+        margin-right: 70px;
+        justify-content: center;
+        color: rgb(136, 113, 97);
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 20px;
+    }
+
+
+    .lineHead {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: x-large;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 800;
+        font-style: normal;
+        color: rgb(107, 105, 105);
+        font-weight: 400;
+        margin-bottom: 50px;
+        letter-spacing: 2px;
+    }
+
+
+    /* our team  */
+    #instagram {
+        margin-top: 80px;
+        margin-bottom: 80px;
+        /* border: 1px solid black; */
+        /* padding: 0px; */
+        /* margin-left: 30px;
+    margin-right: 30px; */
+    }
+
+    .insta-items {
+        display: flex;
+        margin-left: 30px;
+    }
+
+    .ig-content {
+        padding: 50px 10px 10px 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        color: rgb(97, 82, 72);
+        height: 510px;
+        width: 454px;
+        margin-top: 10px;
+        border: 1px solid rgb(97, 82, 72);
+    }
+
+    .ig-head {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: lighter;
+        font-size: 20px;
+        font-weight: 600;
+        color: rgb(97, 82, 72);
+    }
+
+    .ig-head02 {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 400;
+        font-size: 12px;
+        color: #987459;
+        /* line-height: 5px; */
+    }
+
+    .ig-head03 {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 200;
+        font-size: large;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(97, 82, 72);
+        line-height: 50px;
+        padding: 0px;
+        margin: 0px 2px;
+    }
+
+    .ig-head03 .line {
+        flex: 1;
+        height: 1px;
+        background-color: rgb(97, 82, 72);
+        margin: 0 2px;
+    }
+
+    .ig-content{
+        width: 600px;
+    }
+
+    .insta-img {
+        height: 236px;
+        width: 220px;
+    }
+
+    #ig-img01 {
+        margin: 0px;
+    }
+
+    #ig-img02 {
+        margin: 0px;
+    }
+
+    #ig-img03 {
+        margin: 5px;
+    }
+
+    #ig-img04 {
+        margin: 5px;
+    }
+
+    .insta-img-spl {
+        height: 510px;
+        width: 380px;
+        margin-right: 10px;
+    }
+
+    /* Container for overlay effect */
+    .insta-img-container {
+        position: relative;
+        cursor: pointer;
+        height: 266px;
+        width: 220px;
+        margin-right: 10px;
+    }
+
+    .overlay img {
+        display: block;
+        filter: grayscale(100%);
+        transition: 0.3s ease;
+        margin: 0px;
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+
+    .overlay-text {
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        font-family: "Cormorant Garamond", serif;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        background-color: rgba(162, 149, 139, 0.8);
+        padding: 2px 1px;
+        height: 50px;
+        width: 150px;
+        margin-left: 10px;
+    }
+
+    .overlay-text p {
+        margin: 0;
+    }
+
+    .overlay::before {
+        content: "";
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Hover effect */
+    .overlay:hover img {
+        filter: sepia(100%);
+    }
+
+    .overlay:hover::before,
+    .overlay:hover .overlay-text {
+        opacity: 1;
+    }
+
+
+    /* rads */
+    .insta-img-container-spl {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        height: 540px;
+        width: 380px;
+    }
+
+    .overlay-spl img {
+        display: block;
+        filter: grayscale(100);
+        margin-right: 0px;
+        padding-left: 20px;
+    }
+
+    .overlay-text-spl {
+        position: absolute;
+        top: 10%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        font-family: "Cormorant Garamond", serif;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        background-color: rgba(162, 149, 139, 0.8);
+        padding: 2px 1px;
+        margin-right: 10px;
+        height: 70px;
+        width: 200px;
+    }
+
+    .overlay-text-spl p {
+        margin: 0;
+    }
+
+    .overlay-spl::before {
+        content: "";
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Hover effect */
+    .overlay-spl:hover img {
+        filter: sepia(100%);
+    }
+
+    .overlay-spl:hover::before,
+    .overlay-spl:hover .overlay-text-spl {
+        opacity: 1;
+    }
+
+
+    .overlay-head {
+        color: white;
+        font-size: 18px;
+    }
+
+    .overlay-pos {
+        color: white;
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: 10px;
+    }
+
+    .overlay-head-spl {
+        color: white;
+        font-size: 25px;
+    }
+
+    .overlay-pos-spl {
+        color: white;
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: larger;
+    }
+
+
+
+
+    /* Contact Button */
+    .contact-button-container {
+        display: flex;
+        justify-content: center;
+        margin: 90px 0;
+    }
+
+    .contact-button {
+        display: inline-block;
+        padding: 15px 30px;
+        border: 1px solid #B0B0B0;
+        /* light grey color */
+        text-decoration: none;
+        color: #B0B0B0;
+        /* light grey color */
+        font-size: 16px;
+        font-weight: normal;
+        letter-spacing: 2px;
+        transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .contact-button:hover {
+        color: #FFFFFF;
+        background-color: rgb(97, 82, 72);
+    }
+
+    /* Global Reach */
+    .text-with-lines {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Georgia', serif;
+        font-size: 20px;
+        /* color: #333; */
+        margin: 20px 0;
+        letter-spacing: 2px;
+        color: rgb(97, 82, 72);
+        font-weight: 100;
+
+    }
+
+    .text-with-lines::before,
+    .text-with-lines::after {
+        content: "";
+        flex: 1;
+        border-bottom: 1px solid rgb(202, 198, 198);
+        margin: 0 30px 0 30px;
+    }
+
+    .global-reach img {
+        width: 1024px;
+        margin: 20px 30px 20px 0px;
+        height: 600px;
+        /* filter: ; */
+        filter: sepia(50%) hue-rotate(5deg) brightness(100%);
+        opacity: 0.8;
+    }
+
+    .text-with-lines p::selection {
+        color: #fff;
+        background-color: rgb(97, 82, 72);
+    }
+
+    /* awards  */
+
+    #featuredIn {
+        margin-top: 70px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .featured-head {
+        text-align: center;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: lighter;
+        font-size: 22px;
+        color: rgb(97, 82, 72);
+        letter-spacing: 3px;
+    }
+
+    .featured-img {
+        display: flex;
+        animation: scroll 20s linear infinite;
+        white-space: nowrap;
+        /* background-color: white; */
+    }
+
+    .FImg {
+        height: 90px;
+        width: 250px;
+        margin: 40px;
+        border: 2px solid white;
+        padding: 5px;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+            /* Start from right */
+        }
+
+        100% {
+            transform: translateX(-100%);
+            /* Move to left */
+        }
+    }
+
+
+    /* Latest Project */
+    .hero {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('https://images.prismic.io/luxdeco-dev/MTFmOGYyMGYtYmVkZi00MGQyLThmMDEtNjQ3MmM1Y2MyZTVj_how-to-plan-the-perfect-room-with-sophie-paterson_eab5edf9-8179-4250-88a9-7d45a3e61a66.jpg?auto=compress,format&w=1200&q=100');
+        background-size: cover;
+        background-position: center;
+        height: 550px;
+        margin-top: 70px;
+        margin-bottom: 0px;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 550px;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-content {
+        position: relative;
+        text-align: center;
+        color: #fff;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-size: larger;
+    }
+
+    .hero h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+    .hero h3::selection {
+        background-color: rgb(97, 82, 72);
+    }
+
+    .hero .button {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 1px solid #B0B0B0;
+        color: #B0B0B0;
+        text-decoration: none;
+        font-weight: 500;
+        text-align: center;
+        font-size: 14px
+    }
+
+    .hero .button:hover {
+        color: #FFFFFF;
+        background-color: rgb(97, 82, 72)
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* newsletter  */
+
+    /* Signup box styling */
+    .newsletter {
+        margin-top: 100px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .signup-box {
+        width: 700px;
+        height: 270px;
+        padding: 20px 100px;
+        border-radius: 0px;
+        background-color: rgba(237, 235, 223, 1);
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+        text-align: center;
+        transition: transform 0.3s ease;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border: 1px solid #ddd;
+    }
+
+    .news-head {
+        font-size: 15px;
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        font-weight: 300;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .news-head02 {
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        font-size: 0.7em;
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+    /* Input styling */
+    .signup-box input[type="email"] {
+        margin-top: 15px;
+        width: 100%;
+        padding: 10px;
+        font-size: 0.8em;
+        margin-bottom: 15px;
+        background-color: rgba(237, 235, 223, 0.51);
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+    }
+
+    /* Checkbox and label styling */
+    .signup-box label {
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        font-size: 0.9em;
+        color: #555;
+        display: inline-block;
+        margin-bottom: 13px;
+        cursor: pointer;
+        background-color: rgba(237, 235, 223, 1);
+    }
+
+    .signup-box input[type="checkbox"] {
+        margin-right: 5px;
+        background-color: rgba(237, 235, 223, 1);
+    }
+
+    /* newsletter button  */
+    .news-btn {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0 20px 0px;
+    }
+
+    .signup-box button {
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        padding: 8px 45px;
+        color: #b0b0b0;
+        border: 1px solid #b0b0b0;
+        cursor: pointer;
+        font-weight: normal;
+        letter-spacing: 2px;
+        background-color: rgba(237, 235, 223, 1);
+    }
+
+    .signup-box button:hover {
+        color: #ffffff;
+        background-color: rgb(97, 82, 72);
+    }
+
+    /* Thank you message styling */
+    .thank-you {
+        margin-top: 70px;
+        display: none;
+        font-size: 2em;
+        font-family: "Cormorant Garamond", serif;
+        font-style: normal;
+        font-weight: 400px;
+    }
+
+
+    /* footer */
+    footer {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+        height: 270px;
+        color: white;
+        margin-top: 100px;
+    }
+
+    .fc {
+        align-items: center;
+    }
+
+    .fc2 {
+        padding-left: 45px;
+        padding-top: 50px;
+        list-style-type: none;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .fc2 ul {
+        margin-right: 150px;
+    }
+
+    .fc2 ul a {
+        text-decoration: none;
+    }
+
+    .fc2 ul li {
+        margin-bottom: 20px;
+    }
+
+    .fi {
+        padding-top: 80px;
+    }
+
+    .fc2 ul li a {
+        margin-right: 18px;
+        color: white;
+        font-size: 24px;
+    }
+
+    .copyright {
+        margin-left: 350px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: larger;
+        background-color: rgba(237, 235, 223, 0.51);
+    }
+}

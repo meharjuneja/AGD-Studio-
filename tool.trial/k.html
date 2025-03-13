@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Interior Design Quiz</title>
+    <style>
+        /* Main quiz container styling */
+        .quiz-container {
+            width: 80%;
+            max-width: 600px;
+            margin: 40px auto; /* Spacing from the top */
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+        }
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .result {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>Find Your Home Interior Style</h1>
+
+    <!-- Question 1 -->
+    <div class="question">
+        <h2>1. What's your ideal color palette?</h2>
+        <div class="options">
+            <label><input type="radio" name="question1" value="Neutral Tones"> Neutral Tones (e.g., beige, white)</label>
+            <label><input type="radio" name="question1" value="Bold Colors"> Bold Colors (e.g., red, navy)</label>
+            <label><input type="radio" name="question1" value="Earthy Hues"> Earthy Hues (e.g., greens, browns)</label>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question">
+        <h2>2. What's your preferred furniture style?</h2>
+        <div class="options">
+            <label><input type="radio" name="question2" value="Modern"> Modern (sleek, minimal)</label>
+            <label><input type="radio" name="question2" value="Rustic"> Rustic (wooden, cozy)</label>
+            <label><input type="radio" name="question2" value="Vintage"> Vintage (retro, unique)</label>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question">
+        <h2>3. Which material speaks to you the most?</h2>
+        <div class="options">
+            <label><input type="radio" name="question3" value="Wood"> Wood</label>
+            <label><input type="radio" name="question3" value="Metal"> Metal</label>
+            <label><input type="radio" name="question3" value="Marble"> Marble</label>
+        </div>
+    </div>
+
+    <!-- Submit button and result area -->
+    <button onclick="submitQuiz()">Get Your Style</button>
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    function submitQuiz() {
+        const answer1 = document.querySelector('input[name="question1"]:checked');
+        const answer2 = document.querySelector('input[name="question2"]:checked');
+        const answer3 = document.querySelector('input[name="question3"]:checked');
+        const resultElement = document.getElementById('result');
+
+        if (answer1 && answer2 && answer3) {
+            // Determine the result based on choices
+            let styleResult = '';
+
+            if (answer1.value === "Neutral Tones" && answer2.value === "Modern" && answer3.value === "Metal") {
+                styleResult = "Your style is Modern Minimalist.";
+            } else if (answer1.value === "Earthy Hues" && answer2.value === "Rustic" && answer3.value === "Wood") {
+                styleResult = "Your style is Rustic Chic.";
+            } else if (answer1.value === "Bold Colors" && answer2.value === "Vintage" && answer3.value === "Marble") {
+                styleResult = "Your style is Vintage Glam.";
+            } else {
+                styleResult = "You have an Eclectic Mix! You enjoy a blend of styles.";
+            }
+
+            resultElement.textContent = styleResult;
+            resultElement.style.color = "#4CAF50";
+        } else {
+            resultElement.textContent = "Please answer all questions to get your result!";
+            resultElement.style.color = "red";
+        }
+    }
+</script>
+
+</body>
+</html>

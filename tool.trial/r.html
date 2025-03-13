@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read Aloud Example</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container my-5">
+    <h1>Welcome to Our Website</h1>
+    <p id="text-to-read">This is a sample website content that you can listen to. Click the button below to read the text aloud.</p>
+    
+    <!-- Button to trigger Read Aloud -->
+    <button id="read-aloud" class="btn btn-primary">Read Aloud</button>
+    <button id="stop-reading" class="btn btn-danger">Stop Reading</button>
+    
+    <!-- Language & Voice Options -->
+    <div class="mt-3">
+      <label for="voices">Choose Voice:</label>
+      <select id="voices" class="form-select" style="width: 200px;">
+        <!-- Options will be dynamically added here -->
+      </select>
+    </div>
+  </div>
+
+  <script>
+    let speechSynthesisInstance = null;
+
+    // Function to get available voices
+    function getVoices() {
+      const voices = window.speechSynthesis.getVoices();
+      const voicesSelect = document.getElementById("voices");
+
+      voicesSelect.innerHTML = ''; // Clear existing options
+
+      // Add the voices to the dropdown
+      voices.forEach(voice => {
+        const option = document.createElement("option");
+        option.value = voice.name;
+        option.textContent = voice.name;
+        voicesSelect.appendChild(option);
+      });
+
+      // If voices are available, set the first one as the default
+      if (voices.length) {
+        speechSynthesisInstance.voice = voices[0];
+      }
+    }
+
+    // Function to read text aloud
+    function readAloud() {
+      const textToRead = document.getElementById('text-to-read').innerText;
+
+      if ('speechSynthesis' in window) {
+        const speech = new SpeechSynthesisUtterance(textToRead);
+        speech.lang = 'en-US'; // Default language
+        speech.rate = 1; // Normal speed
+        speech.pitch = 1; // Normal pitch
+        speech.voice = speechSynthesisInstance.voice || null; // Set voice selected by user
+
+        window.speechSynthesis.speak(speech);
+      } else {
+        alert("Speech synthesis is not supported in this browser.");
+      }
+    }
+
+    // Stop the speech synthesis
+    function stopReading() {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+    }
+
+    // Event listeners for buttons
+    document.getElementById('read-aloud').addEventListener('click', readAloud);
+    document.getElementById('stop-reading').addEventListener('click', stopReading);
+
+    // Load voices and set up the dropdown when voices are available
+    window.speechSynthesis.onvoiceschanged = getVoices;
+
+    // Make sure voices are available on page load (for some browsers)
+    window.onload = function() {
+      if (window.speechSynthesis.getVoices().length === 0) {
+        setTimeout(getVoices, 100); // Retry loading voices if initially empty
+      } else {
+        getVoices(); // Directly load voices if already available
+      }
+    };
+
+    // Listen for voice change selection
+    document.getElementById('voices').addEventListener('change', (event) => {
+      const selectedVoice = event.target.value;
+      const voices = window.speechSynthesis.getVoices();
+      speechSynthesisInstance.voice = voices.find(voice => voice.name === selectedVoice);
+    });
+
+  </script>
+
+</body>
+</html>

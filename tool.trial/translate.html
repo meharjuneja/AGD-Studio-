@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website with Language Translation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Translate Customization Meta Tag -->
+  <meta name="google-translate-customization" content="optional_customization_id">
+</head>
+<body>
+
+<div class="container my-5">
+  <!-- Google Translate Element -->
+  <div id="google_translate_element" class="mb-4"></div>
+
+  <!-- Page Content -->
+  <h1>Welcome to Our Website</h1>
+  <p>This website allows you to switch between languages for a better experience.</p>
+  <p>Feel free to explore the content in your preferred language.</p>
+
+  <h2>About Us</h2>
+  <p>We are dedicated to providing high-quality services tailored to your needs.</p>
+  
+  <h2>Services</h2>
+  <p>We offer a wide range of services, including custom design, consulting, and more.</p>
+</div>
+
+<!-- Google Translate Initialization Script -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en', // Default page language
+      includedLanguages: 'en,hi,pa' // Languages available for translation: English, Hindi, Punjabi
+    }, 'google_translate_element');
+  }
+</script>
+
+<!-- Google Translate Script -->
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

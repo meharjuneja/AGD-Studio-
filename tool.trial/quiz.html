@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Style Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .question {
+            margin-top: 20px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>What's Your Interior Design Style?</h1>
+    <form id="styleQuiz">
+        <!-- Question 1 -->
+        <div class="question">
+            <p>1. What color palette do you prefer?</p>
+            <label><input type="radio" name="q1" value="modern"> Bold & vibrant</label><br>
+            <label><input type="radio" name="q1" value="minimalist"> Neutral & calm</label><br>
+            <label><input type="radio" name="q1" value="traditional"> Warm & earthy</label><br>
+            <label><input type="radio" name="q1" value="vintage"> Soft pastels</label><br>
+            <label><input type="radio" name="q1" value="bohemian"> Eclectic mix</label><br>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <p>2. How do you feel about open spaces?</p>
+            <label><input type="radio" name="q2" value="scandinavian"> Open and airy</label><br>
+            <label><input type="radio" name="q2" value="modern"> Modern & spacious</label><br>
+            <label><input type="radio" name="q2" value="traditional"> Cozy, separated rooms</label><br>
+            <label><input type="radio" name="q2" value="industrial"> Open with exposed features</label><br>
+            <label><input type="radio" name="q2" value="rustic"> Rustic and warm</label><br>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <p>3. What kind of furniture do you like?</p>
+            <label><input type="radio" name="q3" value="mid-century"> Mid-century shapes</label><br>
+            <label><input type="radio" name="q3" value="bohemian"> Rattan and eclectic</label><br>
+            <label><input type="radio" name="q3" value="minimalist"> Minimalist & functional</label><br>
+            <label><input type="radio" name="q3" value="rustic"> Wooden and rugged</label><br>
+            <label><input type="radio" name="q3" value="vintage"> Antique and elegant</label><br>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <p>4. How do you feel about patterns and textures?</p>
+            <label><input type="radio" name="q4" value="modern"> Geometric patterns</label><br>
+            <label><input type="radio" name="q4" value="scandinavian"> Subtle textures</label><br>
+            <label><input type="radio" name="q4" value="vintage"> Floral or vintage prints</label><br>
+            <label><input type="radio" name="q4" value="industrial"> Raw materials and textures</label><br>
+            <label><input type="radio" name="q4" value="traditional"> Ornate patterns</label><br>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <p>5. What describes your ideal flooring?</p>
+            <label><input type="radio" name="q5" value="rustic"> Hardwood or stone</label><br>
+            <label><input type="radio" name="q5" value="minimalist"> Polished concrete</label><br>
+            <label><input type="radio" name="q5" value="scandinavian"> Light wood</label><br>
+            <label><input type="radio" name="q5" value="industrial"> Exposed concrete</label><br>
+            <label><input type="radio" name="q5" value="traditional"> Carpeting or rich wood</label><br>
+        </div>
+
+
+        <!-- Question 6 -->
+        <div class="question">
+            <p>6. How do you feel about lighting?</p>
+            <label><input type="radio" name="q6" value="modern"> Sleek and minimal fixtures</label><br>
+            <label><input type="radio" name="q6" value="industrial"> Exposed bulbs and fixtures</label><br>
+            <label><input type="radio" name="q6" value="vintage"> Chandeliers and sconces</label><br>
+            <label><input type="radio" name="q6" value="bohemian"> Layered, warm lighting</label><br>
+            <label><input type="radio" name="q6" value="scandinavian"> Soft and functional</label><br>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <p>7. What’s your approach to decor?</p>
+            <label><input type="radio" name="q7" value="minimalist"> Less is more</label><br>
+            <label><input type="radio" name="q7" value="bohemian">Personal and eclectic items</label><br>
+            <label><input type="radio" name="q7" value="traditional"> Decorative and classic</label><br>
+            <label><input type="radio" name="q7" value="rustic">Natural and handcrafted</label><br>
+            <label><input type="radio" name="q7" value="mid-century">Functional and aesthetic</label><br>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <p>8. How do you feel about wall art?</p>
+            <label><input type="radio" name="q8" value="industrial">Large, bold pieces</label><br>
+            <label><input type="radio" name="q8" value="modern">Abstract art</label><br>
+            <label><input type="radio" name="q8" value="vintage">Portraits or classic art</label><br>
+            <label><input type="radio" name="q8" value="scandinavian">Simple and minimal</label><br>
+            <label><input type="radio" name="q8" value="bohemian">Personal photos or handmade</label><br>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <p>9. How do you like to use color?</p>
+            <label><input type="radio" name="q9" value="traditional">Warm neutrals with rich accents</label><br>
+            <label><input type="radio" name="q9" value="modern">Neutrals with pops of bold color</label><br>
+            <label><input type="radio" name="q9" value="mid-century">Retro colors like teal and orange</label><br>
+            <label><input type="radio" name="q9" value="bohemian">Mixed patterns and vibrant colors</label><br>
+            <label><input type="radio" name="q9" value="scandinavian">Whites with soft pastels</label><br>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <p>10. What's your ideal ambiance?</p>
+            <label><input type="radio" name="q10" value="vintage">Romantic and nostalgic</label><br>
+            <label><input type="radio" name="q10" value="industrial">Urban and edgy</label><br>
+            <label><input type="radio" name="q10" value="rustic">Cozy and grounded</label><br>
+            <label><input type="radio" name="q10" value="modern">Sleek and stylish</label><br>
+            <label><input type="radio" name="q10" value="traditional">Warm and inviting</label><br>
+        </div>
+
+        <button type="button" onclick="calculateStyle()">Get My Style</button>
+    </form>
+
+    <p id="styleResult"></p>
+
+    <script>
+        function calculateStyle() {
+            // Initialize scores for each style
+            let scores = {
+                modern: 0,
+                minimalist: 0,
+                traditional: 0,
+                industrial: 0,
+                bohemian: 0,
+                scandinavian: 0,
+                "mid-century": 0,
+                vintage: 0,
+                rustic: 0
+            };
+
+            // Get all selected answers
+            let answers = document.querySelectorAll('input[type="radio"]:checked');
+
+            // Increment the score for each selected answer
+            answers.forEach((answer) => {
+                scores[answer.value]++;
+            });
+
+            // Determine the highest score
+            let highestScore = 0;
+            let styleResult = "";
+            for (let style in scores) {
+                if (scores[style] > highestScore) {
+                    highestScore = scores[style];
+                    styleResult = style;
+                }
+            }
+
+            // Display the result
+            document.getElementById("styleResult").textContent = `Your design style is: ${styleResult.charAt(0).toUpperCase() + styleResult.slice(1)}!`;
+        }
+    </script>
+</body>
+</html>

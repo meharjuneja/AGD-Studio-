@@ -1,0 +1,70 @@
+header {
+    background-color: rgb(235, 230, 215);
+    opacity: 0.9;
+    height: 100px;
+    /* height: 100px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center; */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 5px -3px;
+}
+
+.nav-item:hover {
+    transform: scale(1.02);
+}
+
+.nav-item a::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
+
+.AGD-logo {
+    font-size: 40px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: italic;
+    color: rgb(170, 146, 146);
+    margin-left: 52px;
+}
+.AGD-img{
+    margin-left: 48px;
+}
+.AGDname {
+    font-size: 17px;
+    margin-left: 30px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.AGDname::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
+
+.Nlist {
+    font-family: "Cormorant Garamond", serif !important;
+    font-weight: 300 !important;
+    font-style: normal !important;
+}
+
+section{
+    margin-top: 160px;
+}
+/* Ensuring navbar links are not affected by external styling */
+.navbar .nav-link {
+    font-weight: lighter !important;
+    color: inherit; 
+}
+
+.dropdown-item{
+    width: 60px;
+}
+.navbar-toggler-icon{
+    margin-right: 10px;
+}

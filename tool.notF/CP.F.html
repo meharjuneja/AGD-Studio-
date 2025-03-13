@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Color Palette Selector</title>
+  <style>
+    .preview-box {
+      width: 100%;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+    }
+    .wall, .furniture, .accent, .decor {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: bold;
+      position: relative;
+      cursor: pointer;
+    }
+    .color-code {
+      position: absolute;
+      bottom: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.9em;
+      color: #fff;
+    }
+    .message {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      padding: 5px;
+      border-radius: 5px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container my-5">
+  <h2 class="text-center">Interactive Color Palette Selector</h2>
+  
+  <!-- Preview Box -->
+  <div class="preview-box border rounded mt-4">
+    <div class="wall">Wall Color <span class="color-code" id="wallCode">#FFCDD2</span></div>
+    <div class="furniture">Furniture Color <span class="color-code" id="furnitureCode">#BBDEFB</span></div>
+    <div class="accent">Accent Color <span class="color-code" id="accentCode">#C8E6C9</span></div>
+    <div class="decor">Decor Color <span class="color-code" id="decorCode">#FFAB91</span></div>
+  </div>
+
+  <!-- Color Selector Form -->
+  <div class="mt-4">
+    <form id="colorForm">
+      <div class="mb-3">
+        <label for="wallColor" class="form-label">Wall Color</label>
+        <input type="color" id="wallColor" class="form-control form-control-color" value="#FFCDD2">
+      </div>
+      <div class="mb-3">
+        <label for="furnitureColor" class="form-label">Furniture Color</label>
+        <input type="color" id="furnitureColor" class="form-control form-control-color" value="#BBDEFB">
+      </div>
+      <div class="mb-3">
+        <label for="accentColor" class="form-label">Accent Color</label>
+        <input type="color" id="accentColor" class="form-control form-control-color" value="#C8E6C9">
+      </div>
+      <div class="mb-3">
+        <label for="decorColor" class="form-label">Decor Color</label>
+        <input type="color" id="decorColor" class="form-control form-control-color" value="#FFAB91">
+      </div>
+      <button type="submit" class="btn btn-primary">Apply Colors</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Function to apply colors
+  document.getElementById("colorForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Get color values from inputs
+    const wallColor = document.getElementById("wallColor").value;
+    const furnitureColor = document.getElementById("furnitureColor").value;
+    const accentColor = document.getElementById("accentColor").value;
+    const decorColor = document.getElementById("decorColor").value;
+
+    // Apply colors to preview box sections
+    document.querySelector(".wall").style.backgroundColor = wallColor;
+    document.querySelector(".furniture").style.backgroundColor = furnitureColor;
+    document.querySelector(".accent").style.backgroundColor = accentColor;
+    document.querySelector(".decor").style.backgroundColor = decorColor;
+
+    // Update hex codes in preview
+    document.getElementById("wallCode").textContent = wallColor;
+    document.getElementById("furnitureCode").textContent = furnitureColor;
+    document.getElementById("accentCode").textContent = accentColor;
+    document.getElementById("decorCode").textContent = decorColor;
+  });
+
+  // Function to copy color code on click
+  document.querySelectorAll('.color-code').forEach(code => {
+    code.addEventListener('click', function() {
+      const colorCode = this.textContent;
+      
+      // Copy to clipboard
+      navigator.clipboard.writeText(colorCode).then(() => {
+        // Show message
+        const message = document.createElement('div');
+        message.className = 'message';
+        message.textContent = 'Copied!';
+        this.parentNode.appendChild(message);
+        setTimeout(() => {
+          message.textContent = '✔';
+          setTimeout(() => message.remove(), 1000);
+        }, 500);
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

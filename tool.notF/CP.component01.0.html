@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CP.component01.0.css">
+</head>
+
+<body>
+    <section class="rows">
+        <div class="image-container">
+            <img src="images/Cp01.png" alt="Image" class="image" />
+            <div class="colors-container">
+                <div class="color-box" style="background-color: #FFAEBC;" data-hex="#FFAEBC">
+                    <p class="hex-code">#FFAEBC</p>
+                    <p class="color-name">Hot Pink</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #A0E7E5;" data-hex="#A0E7E5">
+                    <p class="hex-code">#A0E7E5</p>
+                    <p class="color-name">Tiffany Blue</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #B4F8C8;" data-hex="#B4F8C8">
+                    <p class="hex-code">#B4F8C8</p>
+                    <p class="color-name">Mint</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #FBE7C6;" data-hex="#FBE7C6">
+                    <p class="hex-code">#FBE7C6</p>
+                    <p class="color-name">Yellow</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <img src="images/Cp01.png" alt="Image" class="image" />
+            <div class="colors-container">
+                <div class="color-box" style="background-color: #FFAEBC;" data-hex="#FFAEBC">
+                    <p class="hex-code">#FFAEBC</p>
+                    <p class="color-name">Hot Pink</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #A0E7E5;" data-hex="#A0E7E5">
+                    <p class="hex-code">#A0E7E5</p>
+                    <p class="color-name">Tiffany Blue</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #B4F8C8;" data-hex="#B4F8C8">
+                    <p class="hex-code">#B4F8C8</p>
+                    <p class="color-name">Mint</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #FBE7C6;" data-hex="#FBE7C6">
+                    <p class="hex-code">#FBE7C6</p>
+                    <p class="color-name">Yellow</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <img src="images/Cp01.png" alt="Image" class="image" />
+            <div class="colors-container">
+                <div class="color-box" style="background-color: #FFAEBC;" data-hex="#FFAEBC">
+                    <p class="hex-code">#FFAEBC</p>
+                    <p class="color-name">Hot Pink</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #A0E7E5;" data-hex="#A0E7E5">
+                    <p class="hex-code">#A0E7E5</p>
+                    <p class="color-name">Tiffany Blue</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #B4F8C8;" data-hex="#B4F8C8">
+                    <p class="hex-code">#B4F8C8</p>
+                    <p class="color-name">Mint</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+                <div class="color-box" style="background-color: #FBE7C6;" data-hex="#FBE7C6">
+                    <p class="hex-code">#FBE7C6</p>
+                    <p class="color-name">Yellow</p>
+                    <p class="copy-message">Copy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Function to copy the hex code to clipboard
+        function copyToClipboard(hexCode, box) {
+            navigator.clipboard.writeText(hexCode).then(() => {
+                // Change 'Copy' to a checkmark
+                const copyMessage = box.querySelector('.copy-message');
+                copyMessage.textContent = '✔';
+                copyMessage.classList.add('copied');
+
+                // Reset the message after 2 seconds
+                setTimeout(() => {
+                    copyMessage.textContent = 'Copy';
+                    copyMessage.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        // Add hover and click events to the color boxes
+        const colorBoxes = document.querySelectorAll('.color-box');
+        colorBoxes.forEach(box => {
+            // Hover effect to show 'Copy' message
+            const copyMessage = box.querySelector('.copy-message');
+            copyMessage.classList.add('active');
+
+            // Click event to copy the hex code
+            box.addEventListener('click', () => {
+                const hex = box.getAttribute('data-hex');
+                copyToClipboard(hex, box);
+            });
+        });
+
+    </script>
+</body>
+
+</html>

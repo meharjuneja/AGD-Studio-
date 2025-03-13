@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numerology-Based Home Placement Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 350px;
+        }
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Numerology-Based Home Placement Guide</h2>
+        <label for="dob">Enter Your Date of Birth (1-31):</label>
+        <input type="number" id="dob" min="1" max="31">
+        <button onclick="calculateVaastu()">Check Placement</button>
+        <h3>Numerology Calculation:</h3>
+        <p id="calculation" class="fade-in"></p>
+        <h3>Recommended Placement:</h3>
+        <p id="result" class="fade-in"></p>
+    </div>
+    
+    <script>
+        function calculateVaastu() {
+            const dob = document.getElementById('dob').value;
+            const calculation = document.getElementById('calculation');
+            const result = document.getElementById('result');
+            
+            if (dob < 1 || dob > 31 || isNaN(dob)) {
+                calculation.innerHTML = "";
+                result.innerHTML = "Please enter a valid date (1-31).";
+                calculation.classList.remove("show");
+                result.classList.remove("show");
+                return;
+            }
+            
+            let num = dob;
+            let steps = `${num}`;
+            while (num > 9) {
+                num = num.toString().split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
+                steps += ` → ${num}`;
+            }
+            
+            calculation.innerHTML = `Your numerology number: ${steps}`;
+            calculation.classList.add("show");
+            
+            const vaastuRecommendations = {
+                1: { "Mirror": "should be placed on the East wall for leadership and clarity.", "Bed": "should be in the South for stability.", "Windows": "should be on the North side for fresh energy.", "Plants": "should be in the East for growth.", "Pooja Room": "should be in the Northeast for spirituality.", "Clock": "should be in the North for prosperity.", "Main Door Entrance": "should be in the East for success.", "Kitchen": "should be in the Southeast for energy flow.", "Work Desk": "should be in the West for concentration.", "Shoe Rack": "should be in the Southwest for grounding." },
+                2: { "Mirror": "should be placed in the North for harmony.", "Bed": "should be in the Southwest for balance.", "Windows": "should be on the East side for positivity.", "Plants": "should be in the North for peace.", "Pooja Room": "should be in the East for calmness.", "Clock": "should be in the West for balance.", "Main Door Entrance": "should be in the North for stability.", "Kitchen": "should be in the Northwest for organization.", "Work Desk": "should be in the South for efficiency.", "Shoe Rack": "should be in the West for order." },
+                3: { "Mirror": "should be placed in the East for wisdom.", "Bed": "should be in the West for mental peace.", "Windows": "should be on the North to attract knowledge.", "Plants": "should be in the East for creativity.", "Pooja Room": "should be in the Northeast for divine knowledge.", "Clock": "should be in the North for structured planning.", "Main Door Entrance": "should be in the North or East for success.", "Kitchen": "should be in the Southeast for balance.", "Work Desk": "should be in the West for logical thinking.", "Shoe Rack": "should be in the Southwest for grounding." },
+                4: { "Mirror": "should be placed in the South to enhance focus.", "Bed": "should be in the Southwest for stability.", "Windows": "should be on the West for patience.", "Plants": "should be in the Southwest for grounding energy.", "Pooja Room": "should be in the North for inner peace.", "Clock": "should be in the West for discipline.", "Main Door Entrance": "should be in the West for steady growth.", "Kitchen": "should be in the Southeast for transformation.", "Work Desk": "should be in the Northwest for clarity.", "Shoe Rack": "should be in the West for grounding." },
+                5: { "Mirror": "should be in the Northeast for positivity.", "Bed": "should be in the South for comfort.", "Windows": "should be on the East for ventilation.", "Plants": "should be in the North for energy.", "Pooja Room": "should be in the Northeast for peace.", "Clock": "should be in the West for time management.", "Main Door Entrance": "should be in the East for prosperity.", "Kitchen": "should be in the Southeast for efficiency.", "Work Desk": "should be in the West for focus.", "Shoe Rack": "should be in the South for grounding." },
+                6: { "Mirror": "should be in the Southwest for emotional balance.", "Bed": "should be in the West for rest.", "Windows": "should be on the South for warmth.", "Plants": "should be in the East for beauty.", "Pooja Room": "should be in the North for devotion.", "Clock": "should be in the South for rhythm.", "Main Door Entrance": "should be in the North for protection.", "Kitchen": "should be in the Southeast for nourishment.", "Work Desk": "should be in the East for creativity.", "Shoe Rack": "should be in the East for harmony." },
+                7: { "Mirror": "should be in the North for wisdom.", "Bed": "should be in the East for tranquility.", "Windows": "should be on the North for inspiration.", "Plants": "should be in the South for grounding.", "Pooja Room": "should be in the West for wisdom.", "Clock": "should be in the North for awareness.", "Main Door Entrance": "should be in the South for discipline.", "Kitchen": "should be in the Southeast for stability.", "Work Desk": "should be in the North for focus.", "Shoe Rack": "should be in the West for stability." },
+                8: { "Mirror": "should be in the West for stability.", "Bed": "should be in the South for security.", "Windows": "should be on the East for ventilation.", "Plants": "should be in the North for vitality.", "Pooja Room": "should be in the Northeast for peace.", "Clock": "should be in the South for discipline.", "Main Door Entrance": "should be in the West for protection.", "Kitchen": "should be in the Southeast for nourishment.", "Work Desk": "should be in the East for clarity.", "Shoe Rack": "should be in the Southwest for organization." },
+                9: { "Mirror": "should be in the North for reflection.", "Bed": "should be in the West for relaxation.", "Windows": "should be on the South for balance.", "Plants": "should be in the East for growth.", "Pooja Room": "should be in the Northeast for spirituality.", "Clock": "should be in the West for time consciousness.", "Main Door Entrance": "should be in the South for strength.", "Kitchen": "should be in the Southeast for energy.", "Work Desk": "should be in the North for productivity.", "Shoe Rack": "should be in the East for harmony." }
+            };
+            
+            let output = "";
+            for (let item in vaastuRecommendations[num]) {
+                output += `${item} ${vaastuRecommendations[num][item]}<br>`;
+            }
+            
+            result.innerHTML = output;
+            result.classList.add("show");
+        }
+    </script>
+</body>
+</html>
+

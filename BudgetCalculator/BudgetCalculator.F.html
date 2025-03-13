@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Budget Calculator</title>
+
+  <!-- External css link:- -->
+  <link rel="stylesheet" href="BudgetCalculator.F.css" />
+
+  <!-- bootstrap css CDN link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <!-- font-awesome cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- lightbox css link -->
+  <link rel="stylesheet" href="./lightbox.css" />
+  <!-- <link rel="stylesheet" href="./lightbox2-dev/dist/css/lightbox.min.css"> -->
+
+  <!-- AOS cdn link -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- google fonts link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Grey+Qo&family=Italiana&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+
+  <!-- header -->
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid align-items-center">
+        <div class="LOGO d-flex flex-column ms-5 me-auto">
+          <!-- <p class="AGD-logo mb-0 ">AGD</p> -->
+          <img class="AGD-img" class="Logo-img ms-5" src="/images/AGDlogo.png" alt="" height="60px" width="100px" />
+          <p class="AGDname mb-0">Aditi Gupta Designs</p>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="Nlist navbar-nav pe-5 ps-5">
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5 active" aria-current="page"
+                href="http://127.0.0.1:5500/home/design01.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/servicesDH/design02.html">SERVICES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/about/design03.html">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/portfolio/design04.html">PORTFOLIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mt-3 me-5" href="http://127.0.0.1:5500/blog/blog01.final.html">BLOG</a>
+            </li>
+            <li class="nav-item mt-3 me-0">
+              <a class="nav-link" href="http://127.0.0.1:5500/contactUS/contactUs.refined.html">CONTACT US</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Make sure to include Font Awesome for the hamburger icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Google Translate Hamburger Icon positioned outside the header and navbar -->
+  <button id="translateToggleBtn" class="translate-icon">
+    <i class="fas fa-language"></i> <!-- Font Awesome language icon -->
+  </button>
+
+  <!-- Hidden Google Translate Element -->
+  <div id="googleTranslateContainer" class="translate-dropdown" style="display: none;">
+    <div id="google_translate_element"></div>
+  </div>
+
+  <!-- Page content continues -->
+
+
+  <!-- budget estimator heading  -->
+  <section id="budgetCalculator">
+    <div class="BDC">
+      <p class="BDC-head">Project Budget Estimator</p>
+      <p class="sub-head">Plan Your Finances with Ease</p>
+    </div>
+  </section>
+
+
+  <!-- Budget Estimator Form -->
+  <section id="BDC-form">
+    <div class="BDC-ques">
+      <form id="budgetForm">
+        <div class="flex-container">
+          <div class="Col1">
+            <div class="BDC-fields">
+              <label for="projectType" class="form-label">Type of Project</label>
+              <select id="projectType" class="form-select" required>
+                <option value="residential">Residential</option>
+                <option value="commercial">Commercial</option>
+                <option value="office">Office Space</option>
+                <option value="retail">Retail Store</option>
+              </select>
+            </div>
+
+            <div class="BDC-fields">
+              <label for="projectScope" class="form-label">Scope of Project</label>
+              <select id="projectScope" class="form-select" required>
+                <option value="basic">Basic</option>
+                <option value="moderate">Moderate</option>
+                <option value="premium">Premium</option>
+              </select>
+            </div>
+
+            <div class="BDC-fields">
+              <label for="projectSize" class="form-label">Project Size (in sq ft)</label>
+              <input type="number" id="projectSize" class="form-control" placeholder="Enter the area size" required>
+            </div>
+
+            <div class="BDC-fields">
+              <label for="materialQuality" class="form-label">Material Quality</label>
+              <select id="materialQuality" class="form-select" required>
+                <option value="standard">Standard</option>
+                <option value="premium">Premium</option>
+                <option value="luxury">Luxury</option>
+              </select>
+            </div>
+
+            <!-- Preferred Material Section -->
+            <div class="BDC-fields">
+              <label for="preferredMaterials" class="form-label">Preferred Materials</label>
+              <select id="preferredMaterials" class="form-select" multiple>
+                <option value="wood">Wood</option>
+                <option value="steel">Steel</option>
+                <option value="concrete">Concrete</option>
+                <option value="glass">Glass</option>
+                <option value="stone">Stone</option>
+                <option value="bricks">Bricks</option>
+              </select>
+              <small class="text-muted">Hold Ctrl (Windows) or Command (Mac) to select multiple options.</small>
+            </div>
+          </div>
+          <div class="col2">
+            <!-- Urban/Rural Selection -->
+            <div class="BDC-fields">
+              <label for="locationType" class="form-label">Project Location Type</label>
+              <select id="locationType" class="form-select" required>
+                <option value="urban">Urban</option>
+                <option value="rural">Rural</option>
+                <option value="suburban">Suburban</option>
+              </select>
+            </div>
+            <!-- Interior, Exterior, and Landscape -->
+            <div class="BDC-fields">
+              <label for="projectArea" class="form-label">Project Area</label>
+              <select id="projectArea" class="form-select" required>
+                <option value="interior">Interior</option>
+                <option value="exterior">Exterior</option>
+                <option value="landscape">Landscape</option>
+              </select>
+            </div>
+
+            <!-- Basic/Moderate/Luxury for Selected Areas -->
+            <div id="areaScope" class="BDC-fields" style="display: none;">
+              <label for="areaScope" class="form-label">Scope of Area</label>
+              <select id="areaScope" class="form-select">
+                <option value="basic">Basic</option>
+                <option value="moderate">Moderate</option>
+                <option value="luxury">Luxury</option>
+              </select>
+            </div>
+
+
+            <div class="BDC-fields">
+              <label for="projectLocation" class="form-label">Project Location</label>
+              <input type="text" id="projectLocation" class="form-control" placeholder="Enter city or region" required>
+            </div>
+
+            <div class="BDC-fields">
+              <label for="timelineUrgency" class="form-label">Timeline Urgency</label>
+              <select id="timelineUrgency" class="form-select" required>
+                <option value="flexible">Flexible</option>
+                <option value="standard">Standard</option>
+                <option value="urgent">Urgent</option>
+              </select>
+            </div>
+
+            <div class="BDC-fields">
+              <label for="additionalFeatures" class="form-label">Additional Features</label>
+              <select id="additionalFeatures" class="form-select" multiple>
+                <option value="smartHome">Smart Home Integration</option>
+                <option value="energyEfficient">Energy Efficient Solutions</option>
+                <option value="customCabinetry">Custom Cabinetry</option>
+                <option value="indoorOutdoor">Indoor-Outdoor Flow</option>
+                <option value="3dVisualization">3D Visualization</option>
+                <option value="homeTheater">Home Theater Setup</option>
+                <option value="pool">Swimming Pool</option>
+                <option value="gardenLandscaping">Garden Landscaping</option>
+                <option value="solarPanels">Solar Panels</option>
+                <option value="securitySystem">Advanced Security System</option>
+              </select>
+              <small class="text-muted">Hold Ctrl (Windows) or Command (Mac) to select multiple options.</small>
+            </div>
+          </div>
+        </div>
+        <div class="btn-container">
+          <button type="submit" class="form-btn">Estimate Budget</button>
+        </div>
+        <!-- Budget Display -->
+        <div class="budget-display">
+          <!-- <p class="result-head">Estimated Budget</p> -->
+          <p id="budgetResult" class="">Please fill out the form and click "Estimate Budget" to see the result.</p>
+          <button id="convertButton" class="convert-btn" style="display: none;">Convert into USD</button>
+          <p id="usdResult" class="mt-3"></p>
+        </div>
+      </form>
+    </div>
+
+
+    </div>
+  </section>
+
+  <!-- newsletter  -->
+  <section class="newsletter">
+    <div class="signup-box">
+      <p class="news-head">SIGN UP TO OUR NEWSLETTER</p>
+      <p class="news-head02">Stay updated with our latest design trends and updates</p>
+      
+      <!-- Form Content -->
+      <form id="signupForm">
+        <input type="email" id="email" placeholder="Enter your email" required>
+        
+        <label>
+          <input type="checkbox" required> I agree to the privacy policy *
+        </label>
+        <div class="news-btn"><button onclick="subscribe()">Subscribe</button></div>
+      </form>
+    
+      <!-- Thank you message -->
+      <p class="thank-you" id="thankYouMessage">Thank you for signing up!</p>
+    </div>
+  </section>
+
+  <!-- Js part  -->
+
+  <script>
+    // Conversion rate from INR to USD
+    const conversionRate = 0.012; // example rate, adjust as needed
+
+    document.getElementById("budgetForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      // Get values from the form
+      const projectType = document.getElementById("projectType").value;
+      const projectScope = document.getElementById("projectScope").value;
+      const projectSize = parseFloat(document.getElementById("projectSize").value);
+      const materialQuality = document.getElementById("materialQuality").value;
+      const additionalFeatures = Array.from(document.getElementById("additionalFeatures").selectedOptions).map(opt => opt.value);
+      const projectLocation = document.getElementById("projectLocation").value;
+      const timelineUrgency = document.getElementById("timelineUrgency").value;
+      const locationType = document.getElementById("locationType").value;
+      const preferredMaterials = Array.from(document.getElementById("preferredMaterials").selectedOptions).map(opt => opt.value);
+      const projectArea = document.getElementById("projectArea").value;
+      const areaScope = document.getElementById("areaScope").value;
+
+      // Base rates for different project types (per sq ft in INR)
+      let baseRate;
+      if (projectType === "residential") baseRate = 800;
+      else if (projectType === "commercial") baseRate = 1200;
+      else if (projectType === "office") baseRate = 1000;
+      else if (projectType === "retail") baseRate = 1100;
+
+      // Base cost calculation
+      const baseCost = projectSize * baseRate;
+
+      // Material quality cost adjustment
+      let materialCost = 0;
+      if (materialQuality === "premium") materialCost = baseCost * 0.2;
+      else if (materialQuality === "luxury") materialCost = baseCost * 0.4;
+
+      // Feature cost additions
+      let featureCost = 0;
+      additionalFeatures.forEach(feature => {
+        if (feature === "smartHome") featureCost += 30000;
+        if (feature === "energyEfficient") featureCost += 20000;
+        if (feature === "customCabinetry") featureCost += 25000;
+        if (feature === "indoorOutdoor") featureCost += 20000;
+        if (feature === "3dVisualization") featureCost += 15000;
+        if (feature === "homeTheater") featureCost += 40000;
+        if (feature === "pool") featureCost += 100000;
+        if (feature === "gardenLandscaping") featureCost += 15000;
+        if (feature === "solarPanels") featureCost += 50000;
+        if (feature === "securitySystem") featureCost += 25000;
+      });
+
+      // Calculate total budget
+      let totalBudget = baseCost + materialCost + featureCost;
+
+      // Display budget
+      document.getElementById("budgetResult").textContent = `Estimated Budget: ₹${totalBudget.toLocaleString()}`;
+
+      // Show conversion button
+      document.getElementById("convertButton").style.display = "inline-block";
+
+      // Conversion to USD
+      document.getElementById("convertButton").onclick = function () {
+        const usdAmount = totalBudget * conversionRate;
+        document.getElementById("usdResult").textContent = `Estimated Budget in USD: $${usdAmount.toFixed(2)}`;
+      };
+    });
+
+    // Show area scope based on the selected area type
+    document.getElementById("projectArea").addEventListener("change", function () {
+      const areaScopeDiv = document.getElementById("areaScope");
+      areaScopeDiv.style.display = this.value === "interior" || this.value === "exterior" || this.value === "landscape" ? "block" : "none";
+    });
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- footer  -->
+  <footer style="background-color: rgb(97, 82, 72)">
+    <div class="fc container-fluid d-flex">
+      <div class="fc2 d-flex">
+        <ul>
+          <a href="http://127.0.0.1:5500/servicesDH/design02.html" target="_blank">
+            <li class="text-white">SERVICES</li>
+          </a>
+          <a href="http://127.0.0.1:5500/about/design03.html" target="_blank">
+            <li class="text-white">ABOUT</li>
+          </a>
+          <a href="http://127.0.0.1:5500/portfolio/design04.html" target="_blank">
+            <li class="text-white">PORTFOLIO</li>
+          </a>
+          <a href="http://127.0.0.1:5500/contactUS/contactUs.refined.html" target="_blank">
+            <li class="text-white">CONTACT US</li>
+          </a>
+        </ul>
+        <ul>
+          <a href="">
+            <li class="text-white">TERMS</li>
+          </a>
+          <a href="">
+            <li class="text-white">PRIVACY</li>
+          </a>
+          <li class="text-white">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://x.com/" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+          </li>
+        </ul>
+        <ul class="f3list">
+          <li>
+            <h4>CONTACT:</h4>
+          </li>
+          <li>
+            <p>+91 70489 24351</p>
+            <p>aditi@aditiguptadesigns.com</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="copyright">
+    <p>&copy 2024 Aditi Gupta Designs. All rights reserved.</p>
+  </div>
+
+  <!-- lightbox js link  -->
+  <script src="./lightbox-plus-jquery.js"></script>
+  <script src="./lightbox.js"></script>
+
+  <!-- bootstrap javascript cdn link -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <!-- AOS javascript link -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- <script>
+            const audio = document.querySelector('audio');
+            audio.volume = 0.5; // Set volume to 50%
+        </script> -->
+  <script>
+    function toggleSound() {
+      const video = document.getElementById("heroVideo");
+      const button = document.getElementById("toggleSoundButton");
+
+      if (video.muted) {
+        video.muted = false;
+        button.innerHTML =
+          'CLICK TO MUTE <span class="sound-icon"><i class="fa-solid fa-volume-xmark"></i></span>';
+      } else {
+        video.muted = true;
+        button.innerHTML =
+          'CLICK FOR SOUND <span class="sound-icon"><i class="fa-solid fa-volume-off"></i></span>';
+      }
+    }
+  </script>
+
+  <!-- instagram posts  -->
+  <script async src="//www.instagram.com/embed.js"></script>
+  <script async src="//www.instagram.com/embed.js"></script>
+
+  <script>
+    // Form submission event listener
+    document.getElementById("signupForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+  
+      // Hide form and show thank you message
+      document.getElementById("signupForm").style.display = "none";
+      document.getElementById("thankYouMessage").style.display = "block";
+    });
+  </script>
+
+
+<!-- Google Translate Script -->
+<script type="text/javascript"
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- Google Translate Script -->
+<script type="text/javascript">
+  // Initialize Google Translate only when button is clicked and ensure script is loaded
+  function loadGoogleTranslate() {
+    // Load Google Translate script if it hasn't been loaded yet
+    if (!window.google || !window.google.translate) {
+      const script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      document.head.appendChild(script);
+    } else {
+      googleTranslateElementInit();
+    }
+  }
+
+  // Initialize Google Translate Element
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,hi,pa',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+
+  // Toggle the visibility of the Google Translate container when the icon is clicked
+  document.getElementById("translateToggleBtn").addEventListener("click", function () {
+    const translateContainer = document.getElementById("googleTranslateContainer");
+
+    // Toggle visibility
+    if (translateContainer.style.display === "none" || translateContainer.style.display === "") {
+      loadGoogleTranslate(); // Ensure Translate is loaded
+      translateContainer.style.display = "block";
+    } else {
+      translateContainer.style.display = "none";
+    }
+  });
+</script>
+</body>
+
+</html>
