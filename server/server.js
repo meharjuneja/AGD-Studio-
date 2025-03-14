@@ -2,51 +2,67 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require("cors");
+const nodemailer = require("nodemailer");
 
 dotenv.config();
 const app = express();
 
-// Middleware
-app.use(express.json()); // Parse JSON requests
-app.use(cors({ origin: "*" })); // Allow all origins
+app.use(express.json());
+app.use(cors());
 
 // MongoDB Connection
 mongoose
-  .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log("✅ Connected to MongoDB successfully"))
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("✅ Connected to MongoDB"))
   .catch((err) => console.error("❌ MongoDB Error:", err));
 
-// Contact Schema
-const contactSchema = new mongoose.Schema({
-  firstName: { type: String, required: true },
-  lastName: { type: String, required: true },
+// Newsletter Schema
+const subscriberSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
-  reason: { type: String, required: true },
-  message: { type: String },
 }, { timestamps: true });
 
-const Contact = mongoose.model("Contact", contactSchema);
+const Subscriber = mongoose.model("Subscriber", subscriberSchema);
 
-// API Route to Handle Contact Form Submission
-app.post("/addContact", async (req, res) => {
-  console.log("📩 Form Data Received:", req.body);
-
-  try {
-    const contact = new Contact(req.body);
-    await contact.save();
-    console.log("✅ Contact saved successfully:", contact);
-    res.status(201).json({ message: "Contact saved successfully!" });
-  } catch (error) {
-    console.error("❌ Error saving contact:", error);
-    res.status(400).json({ error: "Failed to save contact" });
-  }
+// Email Transporter (Brevo SMTP)
+const transporter = nodemailer.createTransport({
+  host: "smtp-relay.sendinblue.com",
+  port: 587,
+  auth: {
+    user: process.env.BREVO_USER,
+    pass: process.env.BREVO_PASS,
+  },
 });
 
-// Default Route to Prevent "Cannot GET /" Error
-app.get("/", (req, res) => {
-  res.send("🚀 API is running successfully!");
+// API to Handle Newsletter Subscriptions
+app.post("/subscribe", async (req, res) => {
+  const { email } = req.body;
+
+  if (!email) return res.status(400).json({ error: "Email is required" });
+
+  try {
+    // Save Email in Database
+    const subscriber = new Subscriber({ email });
+    await subscriber.save();
+
+    // Send Thank You Email
+    const mailOptions = {
+      from: `"Your Company" <${process.env.BREVO_USER}>`,
+      to: email,
+      subject: "Thank You for Subscribing!",
+      text: `Hi there,\n\nThank you for signing up for our newsletter! Stay tuned for updates.\n\nBest Regards,\nYour Company`,
+    };
+
+    await transporter.sendMail(mailOptions);
+
+    console.log("✅ Email sent to:", email);
+    res.status(201).json({ message: "Subscription successful. Email sent!" });
+
+  } catch (error) {
+    console.error("❌ Error subscribing:", error);
+    res.status(500).json({ error: "Subscription failed" });
+  }
 });
 
 // Start Server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
