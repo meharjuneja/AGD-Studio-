@@ -563,13 +563,16 @@
         <label>
           <input type="checkbox" required> I agree to the privacy policy *
         </label>
-        <div class="news-btn"><button onclick="subscribe()">Subscribe</button></div>
+        <div class="news-btn">
+          <button type="submit">Subscribe</button> <!-- ✅ Button type fixed -->
+        </div>
       </form>
 
       <!-- Thank you message -->
-      <p class="thank-you" id="thankYouMessage">Thank you for signing up!</p>
+      <p class="thank-you" id="thankYouMessage" style="display: none;">Thank you for signing up!</p> <!-- ✅ Hidden by default -->
     </div>
-  </section>
+</section>
+
 
   <!-- footer  -->
   <footer style="background-color: rgb(97, 82, 72)">
@@ -777,6 +780,7 @@
       }
     });
   </script>
+<script src="/newsletter.js"></script>
  
 </body>
 
