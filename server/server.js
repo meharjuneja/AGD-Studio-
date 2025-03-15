@@ -63,8 +63,8 @@ const transporter = nodemailer.createTransport({
   port: 587,
   secure: false,
   auth: {
-    user: "87fc7d006@smtp-brevo.com",  
-    pass: "UatFWg0f53vQXyrx" // Replace with your SMTP key
+    user: "87fc7d007@smtp-brevo.com",  
+    pass: "Z50vmtK3rSMkLpPN" // Replace with your SMTP key
   },
   tls: {
     ciphers: "SSLv3"
