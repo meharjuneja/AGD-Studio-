@@ -314,6 +314,9 @@ body {
     display: flex;
     flex-direction: column;
 }
+.form-group button {
+    margin-top:15px;
+}
 
 /* Label styling */
 label {
