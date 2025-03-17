@@ -1,6 +1,5 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const path = require("path");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
@@ -20,7 +19,7 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static("public"));
 
-// Rate limiting
+// Rate limiting for subscription endpoint
 app.use("/subscribe", rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 100,
@@ -38,7 +37,7 @@ mongoose.connect(process.env.MONGO_URI, {
 .catch(err => console.error("❌ MongoDB Error:", err));
 
 // ────────────────────────────────────────────────
-// ✅ Subscriber Model
+// ✅ Models
 // ────────────────────────────────────────────────
 const subscriberSchema = new mongoose.Schema({
   email: {
@@ -55,16 +54,27 @@ const subscriberSchema = new mongoose.Schema({
 
 const Subscriber = mongoose.model("Subscriber", subscriberSchema);
 
+const contactSchema = new mongoose.Schema({
+  firstName: String,
+  lastName: String,
+  email: String,
+  reason: String,  // ✅ Stored as submitted
+  message: String,
+  date: { type: Date, default: Date.now }
+});
+
+const Contact = mongoose.model("Contact", contactSchema);
+
 // ────────────────────────────────────────────────
-// ✅ Brevo Email Configuration (VERIFIED WORKING)
+// ✅ Brevo SMTP Configuration
 // ────────────────────────────────────────────────
 const transporter = nodemailer.createTransport({
   host: "smtp-relay.brevo.com",
   port: 587,
   secure: false,
   auth: {
-    user: "87fc7d007@smtp-brevo.com",  
-    pass: "Z50vmtK3rSMkLpPN" // Replace with your SMTP key
+    user: "87fc7d008@smtp-brevo.com",
+    pass: "ACPHrWytcxkj7TdV"
   },
   tls: {
     ciphers: "SSLv3"
@@ -84,18 +94,17 @@ transporter.verify((error) => {
 // ✅ Routes
 // ────────────────────────────────────────────────
 
-
 // Health check
 app.get("/", (req, res) => {
-  res.send("Newsletter API v1.0 - Operational");
+  res.send("API is running...");
 });
 
-// Test SMTP endpoint
+// ✅ Test Email Route
 app.post("/test-email", async (req, res) => {
   try {
     await transporter.sendMail({
-      from: '"Test Server" <studiosagd@gmail.com>',
-      to: "satyam.sk.026@gmail.com", // Change to your test email
+      from: '"Test Server" <your-email@example.com>',
+      to: "satyam.sk.026@gmail.com",
       subject: "SMTP Test Successful!",
       text: "Your Brevo SMTP configuration is working!"
     });
@@ -106,7 +115,7 @@ app.post("/test-email", async (req, res) => {
   }
 });
 
-// Subscription endpoint
+// ✅ Newsletter Subscription
 app.post("/subscribe", async (req, res) => {
   try {
     const { email } = req.body;
@@ -124,7 +133,6 @@ app.post("/subscribe", async (req, res) => {
       from: '"Newsletter" <studiosagd@gmail.com>',
       to: email,
       subject: "Subscription Confirmed!",
-      text: `Thank you for subscribing!`,
       html: `<div style="font-family: Arial; padding: 20px;">
               <h2 style="color: #2563eb;">Welcome!</h2>
               <p>You're now subscribed to our newsletter.</p>
@@ -146,11 +154,47 @@ app.post("/subscribe", async (req, res) => {
   }
 });
 
+// ✅ Contact Form Submission Route
+app.post("/addContact", async (req, res) => {
+  try {
+    const { firstName, lastName, email, reason, message } = req.body;
+
+    if (!firstName || !lastName || !email || !reason) {
+      return res.status(400).json({ error: "All required fields must be filled." });
+    }
+
+    // ✅ Log form submission in terminal
+    console.log("\n📩 New Contact Form Submission:");
+    console.log(`🔹 Name: ${firstName} ${lastName}`);
+    console.log(`🔹 Email: ${email}`);
+    console.log(`🔹 Reason: ${reason}`);  // ✅ Logs exact reason in terminal
+    console.log(`🔹 Message: ${message}`);
+    console.log("───────────────────────────────");
+
+    // ✅ Store in MongoDB
+    const newContact = new Contact({ firstName, lastName, email, reason, message });
+    await newContact.save();
+
+    // ✅ Send Email Notification
+    await transporter.sendMail({
+      from: `"New Contact Form Submission" <your-email@example.com>`,
+      to: "your-email@example.com", // Replace with recipient email
+      subject: "New Contact Form Submission",
+      text: `You have received a new message from ${firstName} ${lastName}.\n\nReason: ${reason}\nMessage: ${message}\nEmail: ${email}`
+    });
+
+    res.status(201).json({ success: true, message: "Message sent successfully" });
+
+  } catch (error) {
+    console.error("Contact form submission error:", error);
+    res.status(500).json({ error: "Failed to send message" });
+  }
+});
+
 // ────────────────────────────────────────────────
 // ✅ Start Server
 // ────────────────────────────────────────────────
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`📧 Brevo SMTP: smtp-relay.brevo.com`);
 });
