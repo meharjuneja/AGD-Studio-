@@ -10,7 +10,7 @@ document.getElementById("signupForm").addEventListener("submit", async function 
   }
 
   try {
-    const response = await fetch("http://localhost:5000/subscribe", {
+    const response = await fetch("http://localhost:8000/subscribe", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email }),
@@ -32,7 +32,7 @@ async function subscribe() {
   const email = document.getElementById('email').value;
   
   try {
-    const response = await fetch('http://localhost:5000/subscribe', {
+    const response = await fetch('http://localhost:8000/subscribe', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email })
