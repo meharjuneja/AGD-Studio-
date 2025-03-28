@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCANDINAVIAN HOME DESIGNS</title>
+    <link rel="stylesheet" href="Design Style Page.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- lightbox css link -->
+    <link rel="stylesheet" href="./lightbox.css" />
+    <!-- <link rel="stylesheet" href="./lightbox2-dev/dist/css/lightbox.min.css"> -->
+
+    <!-- AOS cdn link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Grey+Qo&family=Italiana&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid align-items-center">
+          <div class="LOGO d-flex flex-column ms-5 me-auto">
+            <img
+              class="AGD-img"
+              class="Logo-img ms-5"
+              src="/images/AGDlogo.png"
+              alt=""
+              height="60px"
+              width="100px"
+            />
+            <p class="AGDname mb-0">Aditi Gupta Designs</p>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="Nlist navbar-nav pe-5 ps-5">
+              <li class="nav-item">
+                <a
+                  class="nav-link mt-3 me-5 active"
+                  aria-current="page"
+                  href="/index.html"
+                  >HOME</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mt-3 me-5" href="/servicesDH/design02.html"
+                  >SERVICES</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mt-3 me-5" href="/about/design03.html"
+                  >ABOUT US</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mt-3 me-5" href="/portfolio/design04.html"
+                  >PORTFOLIO</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mt-3 me-5" href="/blog/blog01.final.html"
+                  >BLOG</a
+                >
+              </li>
+              <li class="nav-item mt-3 me-0">
+                <a class="nav-link" href="/contactUS/contactUs.refined.html"
+                  >CONTACT US</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Make sure to include Font Awesome for the hamburger icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Google Translate Hamburger Icon positioned outside the header and navbar -->
+    <button id="translateToggleBtn" class="translate-icon">
+      <i class="fas fa-language"></i>
+      <!-- Font Awesome language icon -->
+    </button>
+
+    <!-- Hidden Google Translate Element -->
+    <div
+      id="googleTranslateContainer"
+      class="translate-dropdown"
+      style="display: none"
+    >
+      <div id="google_translate_element"></div>
+    </div>
+
+    <section>
+      <div class="lineHead">
+        <div class="line-container">
+          <div class="line"></div>
+          <div class="text">SCANDINAVIAN HOME DESIGNS</div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <div class="text-para">
+        <p>
+          Scandinavian design blends simplicity, functionality, and cozy warmth,
+          creating a bright, and airy space with timeless charm.
+        </p>
+      </div>
+    </section>
+
+    <!-- Visible Rows -->
+    <div class="gallery-container">
+      <div class="gallery">
+        <img
+          src="https://i.pinimg.com/736x/2b/39/0c/2b390c3fbe6fb6532e11d2fad2c25b9d.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/736x/a9/a9/f1/a9a9f13008e6378c03d076faa56e1e1f.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/736x/99/30/52/993052c467afd2658e970e3bbb09e3b8.jpg"
+          alt=""
+        />
+      </div>
+      <div class="gallery">
+        <img
+          src="https://i.pinimg.com/736x/db/1b/9f/db1b9fbb18a8394556d1446d3a58d55a.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/736x/04/b5/ab/04b5ab7a0adb530ce79906b29b40eb8d.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/736x/9f/39/7c/9f397ce248742e896cac1878876397df.jpg"
+          alt=""
+        />
+      </div>
+      <div class="gallery">
+        <img
+          src="https://i.pinimg.com/736x/0f/97/d3/0f97d33199e368782e53b6c456d1461f.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/736x/50/95/31/5095317c43f5ac3ff9f011ca8afcc00f.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/736x/63/9a/4a/639a4ad2b52a768edfaa4a9a52944870.jpg"
+          alt=""
+        />
+      </div>
+      <div class="gallery">
+        <img
+          src="https://i.pinimg.com/736x/0f/46/1b/0f461b09c6092872c9507eae55386e49.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/736x/c4/04/a8/c404a884345d5510dddfcf8f57d0d759.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/736x/18/fc/8d/18fc8dd5cee22e32042aba2d2536ac7c.jpg"
+          alt=""
+        />
+      </div>
+      <div class="gallery">
+        <img
+          src="https://i.pinimg.com/736x/eb/f2/d0/ebf2d0baef0a056fd154977160db7d7d.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/736x/58/51/cb/5851cb32f47fbab1715b60da545baad2.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/736x/ab/ce/c5/abcec5e43c041bfee627a07345fa81fb.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <!-- Hidden Rows -->
+    <div class="hidden-images" id="hiddenImages">
+      <div class="gallery">
+        <img
+          src="https://i.pinimg.com/736x/47/7a/1a/477a1a5544163da18788b4241deb503f.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/736x/bc/a5/5c/bca55c13b13e003251a71e8b24b39e83.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/736x/91/93/27/9193276176732ee4ba69e91c368c8fff.jpg"
+          alt=""
+        />
+      </div>
+      <div class="gallery">
+        <img
+          src="https://i.pinimg.com/736x/fe/e2/d5/fee2d577460f4eb78d8ea128a7ceadaa.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/736x/d3/ef/06/d3ef060ba8cf98b9b03d1e7ccd74004a.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/736x/36/c1/57/36c1575126d071f9c43f00945032693b.jpg"
+          alt=""
+        />
+      </div>
+      <div class="gallery">
+        <img
+          src="https://i.pinimg.com/736x/f5/34/93/f53493a2cf84c47ccfed1f0763551f2c.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/736x/b9/96/86/b996867f91c75419dc72830a64551096.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/736x/57/c4/57/57c4572658a7b8689db4d45b82867d5d.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <button class="button" id="loadMoreBtn">Load More Pictures</button>
+
+    <!-- newsletter  -->
+    <section class="newsletter">
+      <div class="signup-box">
+        <p class="news-head">SIGN UP TO OUR NEWSLETTER</p>
+        <p class="news-head02">
+          Stay updated with our latest design trends and updates
+        </p>
+
+        <!-- Form Content -->
+        <form id="signupForm">
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+
+          <label>
+            <input type="checkbox" required /> I agree to the privacy policy *
+          </label>
+          <div class="news-btn">
+            <button type="submit">Subscribe</button>
+            <!-- ✅ Button type fixed -->
+          </div>
+        </form>
+
+        <!-- Thank you message -->
+        <p class="thank-you" id="thankYouMessage" style="display: none">
+          Thank you for signing up!
+        </p>
+        <!-- ✅ Hidden by default -->
+      </div>
+    </section>
+
+    <!-- footer  -->
+    <footer style="background-color: rgb(97, 82, 72)">
+      <div class="fc container-fluid d-flex">
+        <div class="fc2 d-flex">
+          <ul>
+            <a
+              href="http://127.0.0.1:5500/servicesDH/design02.html"
+              target="_blank"
+            >
+              <li class="text-white">SERVICES</li>
+            </a>
+            <a href="http://127.0.0.1:5500/about/design03.html" target="_blank">
+              <li class="text-white">ABOUT</li>
+            </a>
+            <a
+              href="http://127.0.0.1:5500/portfolio/design04.html"
+              target="_blank"
+            >
+              <li class="text-white">PORTFOLIO</li>
+            </a>
+            <a
+              href="http://127.0.0.1:5500/contactUS/contactUs.refined.html"
+              target="_blank"
+            >
+              <li class="text-white">CONTACT US</li>
+            </a>
+          </ul>
+          <ul>
+            <a href="">
+              <li class="text-white">TERMS</li>
+            </a>
+            <a href="">
+              <li class="text-white">PRIVACY</li>
+            </a>
+            <li class="text-white">
+              <a href="https://www.facebook.com/" target="_blank"
+                ><i class="fa-brands fa-square-facebook"></i
+              ></a>
+              <a href="https://www.instagram.com/" target="_blank"
+                ><i class="fa-brands fa-square-instagram"></i
+              ></a>
+              <a href="https://x.com/" target="_blank"
+                ><i class="fa-brands fa-square-x-twitter"></i
+              ></a>
+            </li>
+          </ul>
+          <ul class="f3list">
+            <li>
+              <h4>CONTACT:</h4>
+            </li>
+            <li>
+              <p>+91 70489 24351</p>
+              <p>aditi@aditiguptadesigns.com</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div class="copyright">
+      <p>&copy 2024 Aditi Gupta Designs. All rights reserved.</p>
+    </div>
+
+    <!-- lightbox js link  -->
+    <script src="./lightbox-plus-jquery.js"></script>
+    <script src="./lightbox.js"></script>
+
+    <!-- bootstrap javascript cdn link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS javascript link -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script>
+      const button = document.getElementById("loadMoreBtn");
+      const hiddenImages = document.getElementById("hiddenImages");
+
+      button.addEventListener("click", function () {
+        hiddenImages.style.display = "block";
+        button.style.display = "none";
+      });
+    </script>
+
+    <!-- Google Translate Script -->
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+
+    <!-- newsletter  -->
+    <script>
+      // Form submission event listener
+      document
+        .getElementById("signupForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Hide form and show thank you message
+          document.getElementById("signupForm").style.display = "none";
+          document.getElementById("thankYouMessage").style.display = "block";
+        });
+    </script>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+      // Initialize Google Translate only when button is clicked and ensure script is loaded
+      function loadGoogleTranslate() {
+        // Load Google Translate script if it hasn't been loaded yet
+        if (!window.google || !window.google.translate) {
+          const script = document.createElement("script");
+          script.type = "text/javascript";
+          script.src =
+            "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+          document.head.appendChild(script);
+        } else {
+          googleTranslateElementInit();
+        }
+      }
+
+      // Initialize Google Translate Element
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,hi,pa",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          },
+          "google_translate_element"
+        );
+      }
+
+      // Toggle the visibility of the Google Translate container when the icon is clicked
+      document
+        .getElementById("translateToggleBtn")
+        .addEventListener("click", function () {
+          const translateContainer = document.getElementById(
+            "googleTranslateContainer"
+          );
+
+          // Toggle visibility
+          if (
+            translateContainer.style.display === "none" ||
+            translateContainer.style.display === ""
+          ) {
+            loadGoogleTranslate(); // Ensure Translate is loaded
+            translateContainer.style.display = "block";
+          } else {
+            translateContainer.style.display = "none";
+          }
+        });
+    </script>
+    <script src="/newsletter.js"></script>
+  </body>
+</html>

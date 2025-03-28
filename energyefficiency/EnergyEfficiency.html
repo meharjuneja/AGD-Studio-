@@ -16,7 +16,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
+            max-width: 750px;
             margin: auto;
             position: relative;
         }
@@ -28,7 +28,8 @@
         .message {
             padding: 10px;
             border-radius: 10px;
-            margin: 5px 0;
+            margin: 10px 0;
+            border: 1px solid #ddd;
         }
         .bot-message {
             background: #dfffd6;
@@ -36,6 +37,10 @@
         .user-message {
             background: #d6e0ff;
             text-align: right;
+        }
+        .tip-message, .final-score {
+            background: #fff4c2;
+            font-weight: bold;
         }
         button {
             background: green;
@@ -152,7 +157,7 @@
 
         function selectAnswer(option, points, suggestion) {
             addMessage(option, "user-message");
-            addMessage(`Tip: ${suggestion}`, "bot-message");
+            addMessage(`Tip: ${suggestion}`, "tip-message");
             score += points;
             updateTree();
             currentQuestion++;
@@ -169,7 +174,7 @@
             } else {
                 message = "You're an **Eco Newbie!** 🌍 Start making sustainable choices today!";
             }
-            addMessage(`Your Sustainable Home Score: ${score}/40 \n ${message}`, "bot-message");
+            addMessage(`Your Sustainable Home Score: ${score}/40 \n ${message}`, "final-score");
             updateTree();
             buttonsContainer.innerHTML = '<button onclick="restartQuiz()">Try Again</button>';
         }

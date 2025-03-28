@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page 2</title>
+    <link rel="stylesheet" href="Blog Page.css">
+</head>
+
+<body>
+    <!-- Main Section -->
+    <div class="image-container">
+        <h2>Subtle and Soft Thanksgiving Tablescape</h2>
+        <div class="half-line"></div>
+        <p>This year for my color scheme, I decided to create a very subtle and soft Thanksgiving tablescape with muted
+            colors like greys, creams and a touch of blush….hope you like it!</p>
+
+        <img src="http://www.designsbylaila.com/wp-content/uploads/2019/10/subtle-and-soft-thanksgiving-tablescape-1-1-683x1024.jpg"
+            alt="">
+        <img src="http://www.designsbylaila.com/wp-content/uploads/2019/10/subtle-and-soft-thanksgiving-tablescape-2.1jpg-683x1024.jpg"
+            alt="">
+        <img src="http://www.designsbylaila.com/wp-content/uploads/2019/10/subtle-and-soft-thanksgiving-tablescape-3-1024x694.jpg"
+            alt="">
+
+        <p>Although I admire all the colors of Fall for Thanksgiving, I tend to gravitate towards a more subtle and
+            softer color palette. For me, I find that you can always “add more” when you already have subtle colors
+            going in your decor. It could be anything from adding a pop of color or adding more decor pieces.</p>
+        <img src="http://www.designsbylaila.com/wp-content/uploads/2019/10/subtle-and-soft-thanksgiving-tablescape-4-716x1024.jpg"
+            alt="">
+        <p>One of the things I always enjoy incorporating in my designs is having beautiful throws and pillows! It just
+            ties everything together nicely and makes the space look even more cozier! In this photo, I decided to use a
+            soft and subtle grey throw and tie it with a gold, beaded pumpkin pillow. I've also linked similar sources
+            for you below!</p>
+
+        <img src="http://www.designsbylaila.com/wp-content/uploads/2019/10/subtle-and-soft-thanksgiving-tablescape-5-704x1024.jpg" alt="">
+        <p>Here are some closer photos of my tablescape.</p>
+
+        <img src="http://www.designsbylaila.com/wp-content/uploads/2019/10/subtle-and-soft-thanksgiving-tablescape-6-682x1024.jpg" alt="">
+        <img src="http://www.designsbylaila.com/wp-content/uploads/2019/10/subtle-and-soft-thanksgiving-tablescape-6-1-1-697x1024.jpg" alt="">
+    </div>
+
+    <!-- Comment Section -->
+    <div class="container" style="width: 800px;">
+        <h2>Leave a Reply</h2>
+
+        <div id="commentForm">
+            <div class="form-group">
+                <textarea id="comment" placeholder=" " required></textarea>
+                <label for="comment">Comment </label>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder=" " required>
+                    <label for="name">Name </label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder=" " required>
+                    <label for="email">Email </label>
+                </div>
+            </div>
+
+            <!-- Button Container for Left Alignment -->
+            <div class="button-container">
+                <button onclick="submitComment()">Post</button>
+            </div>
+        </div>
+
+        <p class="thank-you-message" id="thankYouMessage">Thank you for your comment!</p>
+    </div>
+
+    <script>
+        function submitComment() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let comment = document.getElementById("comment").value;
+
+            if (name.trim() === "" || email.trim() === "" || comment.trim() === "") {
+                alert("Please fill out all fields.");
+                return;
+            }
+
+            // Store user info in local storage (simulating login)
+            localStorage.setItem("userName", name);
+            localStorage.setItem("userEmail", email);
+
+            // Hide form and show thank you message
+            document.getElementById("commentForm").style.display = "none";
+            document.getElementById("thankYouMessage").style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>

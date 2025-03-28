@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MINIMALIST HOME DESIGNS</title>
+    <link rel="stylesheet" href="Design Style Page.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- lightbox css link -->
+    <link rel="stylesheet" href="./lightbox.css" />
+    <!-- <link rel="stylesheet" href="./lightbox2-dev/dist/css/lightbox.min.css"> -->
+
+    <!-- AOS cdn link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Grey+Qo&family=Italiana&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- header -->
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid align-items-center">
+          <div class="LOGO d-flex flex-column ms-5 me-auto">
+            <img
+              class="AGD-img"
+              class="Logo-img ms-5"
+              src="/images/AGDlogo.png"
+              alt=""
+              height="60px"
+              width="100px"
+            />
+            <p class="AGDname mb-0">Aditi Gupta Designs</p>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="Nlist navbar-nav pe-5 ps-5">
+              <li class="nav-item">
+                <a
+                  class="nav-link mt-3 me-5 active"
+                  aria-current="page"
+                  href="/index.html"
+                  >HOME</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mt-3 me-5" href="/servicesDH/design02.html"
+                  >SERVICES</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mt-3 me-5" href="/about/design03.html"
+                  >ABOUT US</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mt-3 me-5" href="/portfolio/design04.html"
+                  >PORTFOLIO</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mt-3 me-5" href="/blog/blog01.final.html"
+                  >BLOG</a
+                >
+              </li>
+              <li class="nav-item mt-3 me-0">
+                <a class="nav-link" href="/contactUS/contactUs.refined.html"
+                  >CONTACT US</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Make sure to include Font Awesome for the hamburger icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Google Translate Hamburger Icon positioned outside the header and navbar -->
+    <button id="translateToggleBtn" class="translate-icon">
+      <i class="fas fa-language"></i>
+      <!-- Font Awesome language icon -->
+    </button>
+
+    <!-- Hidden Google Translate Element -->
+    <div
+      id="googleTranslateContainer"
+      class="translate-dropdown"
+      style="display: none"
+    >
+      <div id="google_translate_element"></div>
+    </div>
+
+    <section>
+      <div class="lineHead">
+        <div class="line-container">
+          <div class="line"></div>
+          <div class="text">MINIMALIST HOME DESIGNS</div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <div class="text-para">
+        <p>
+          Minimalist design embraces simplicity, clean lines, and intentional
+          spaces, creatinga serene and clutter-free environment.
+        </p>
+      </div>
+    </section>
+
+    <!-- Visible Rows -->
+    <div class="gallery-container">
+      <div class="gallery">
+        <img
+          src="https://i.pinimg.com/736x/4a/4c/44/4a4c44c7be9d85a421dbdc4d1d117975.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/736x/b4/92/45/b49245495f82edb217470fdea3fec6f4.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/736x/d5/69/a9/d569a912d07e2b2dabc3460336988a4a.jpg"
+          alt=""
+        />
+      </div>
+      <div class="gallery">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzETsWQ81Ypnok5ZsKPbtDSPBFxdMCOL2LpA&s"
+          alt=""
+        />
+        <img
+          src="https://hips.hearstapps.com/hmg-prod/images/brookeholm-modern-minimalist-living-room-1554401526.jpg?crop=0.889xw:1.00xh;0.0731xw,0&resize=980:*"
+          alt=""
+        />
+        <img
+          src="https://static.asianpaints.com/content/dam/asianpaintsbeautifulhomes/gallery/living-room/open-minimalist-living-room-with-green-sectional-sofa-and-glass-center-table/living-room-with-3-seater-sofa.jpg.transform/bh-gallery-listing/image.webp"
+          alt=""
+        />
+      </div>
+      <div class="gallery">
+        <img
+          src="https://www.porcelanosa.com/trendbook/app/uploads/2023/09/Dark-grey-minimalist-living-room.jpg"
+          alt=""
+        />
+        <img
+          src="https://thathomebirdlife.com/content/images/2018/05/02_modern_minimalist_living_room_makeover_that_homebird_life_blog-1.jpg"
+          alt=""
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPy0B95HqcjxcdFjY_RpOUYD1350gMZgXQFg&s"
+          alt=""
+        />
+      </div>
+      <div class="gallery">
+        <img
+          src="https://www.thespruce.com/thmb/99u36a7_lbvT0QC9gav232NY584=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/what-is-minimalist-design-4796583-03-37f2ac0fcfd74c0c905ea31398c20494.jpg"
+          alt=""
+        />
+        <img
+          src="https://www.andacademy.com/resources/wp-content/uploads/2024/04/2-1.webp"
+          alt=""
+        />
+        <img
+          src="https://media.tarkett-image.com/medium/IN_41020001_41020002_002.jpg"
+          alt=""
+        />
+      </div>
+      <div class="gallery">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcyMRUvrToIicqrYp_OMSi9tThP_GASERKWg&s"
+          alt=""
+        />
+        <img
+          src="https://cdn.shopify.com/s/files/1/0394/2436/0493/products/acrylic-blue-42-55-264563_1024x1024.jpg?v=1706760044"
+          alt=""
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4LZbM4QWKzpoxWIxiKGTKyFe4RFMiUTzfkQ&s"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <!-- Hidden Rows -->
+    <div class="hidden-images" id="hiddenImages">
+      <div class="gallery">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVUnMdkyJYal7YOpNe-09zLnH2dNIuz-_XnA&s"
+          alt=""
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-i9ONprFlayMGpQnUrsUlMd6F8I_Q6Pf4Lg&s"
+          alt=""
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnzNe-sy8_v7nWQLa_GBqOuLUMRC5vJ0PeFw&s"
+          alt=""
+        />
+      </div>
+      <div class="gallery">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxgr1U6at4DPwinNGCfahN6CixCmCe7Qhd7A&s"
+          alt=""
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAbKqa1ZhZoK_8dXC8i1UmbbxUl2xwawcrrA&s"
+          alt=""
+        />
+        <img
+          src="https://www.logodesign.net/images/tutorials/guide-minimal-design-15.png"
+          alt=""
+        />
+      </div>
+      <div class="gallery">
+        <img
+          src="https://jalg.me/cdn/shop/articles/guide-to-minimalist-interior-design-459821.jpg?v=1715132692&width=1600"
+          alt=""
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6j-w5FUkpl1cFYl0CXotFmXCHEgNjygTk3Q&s"
+          alt=""
+        />
+        <img
+          src="https://media.tarkett-image.com/large/IN_35950027_001.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <button class="button" id="loadMoreBtn">Load More Pictures</button>
+
+    <!-- newsletter  -->
+    <section class="newsletter">
+      <div class="signup-box">
+        <p class="news-head">SIGN UP TO OUR NEWSLETTER</p>
+        <p class="news-head02">
+          Stay updated with our latest design trends and updates
+        </p>
+
+        <!-- Form Content -->
+        <form id="signupForm">
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+
+          <label>
+            <input type="checkbox" required /> I agree to the privacy policy *
+          </label>
+          <div class="news-btn">
+            <button type="submit">Subscribe</button>
+            <!-- ✅ Button type fixed -->
+          </div>
+        </form>
+
+        <!-- Thank you message -->
+        <p class="thank-you" id="thankYouMessage" style="display: none">
+          Thank you for signing up!
+        </p>
+        <!-- ✅ Hidden by default -->
+      </div>
+    </section>
+
+    <!-- footer  -->
+    <footer style="background-color: rgb(97, 82, 72)">
+      <div class="fc container-fluid d-flex">
+        <div class="fc2 d-flex">
+          <ul>
+            <a
+              href="http://127.0.0.1:5500/servicesDH/design02.html"
+              target="_blank"
+            >
+              <li class="text-white">SERVICES</li>
+            </a>
+            <a href="http://127.0.0.1:5500/about/design03.html" target="_blank">
+              <li class="text-white">ABOUT</li>
+            </a>
+            <a
+              href="http://127.0.0.1:5500/portfolio/design04.html"
+              target="_blank"
+            >
+              <li class="text-white">PORTFOLIO</li>
+            </a>
+            <a
+              href="http://127.0.0.1:5500/contactUS/contactUs.refined.html"
+              target="_blank"
+            >
+              <li class="text-white">CONTACT US</li>
+            </a>
+          </ul>
+          <ul>
+            <a href="">
+              <li class="text-white">TERMS</li>
+            </a>
+            <a href="">
+              <li class="text-white">PRIVACY</li>
+            </a>
+            <li class="text-white">
+              <a href="https://www.facebook.com/" target="_blank"
+                ><i class="fa-brands fa-square-facebook"></i
+              ></a>
+              <a href="https://www.instagram.com/" target="_blank"
+                ><i class="fa-brands fa-square-instagram"></i
+              ></a>
+              <a href="https://x.com/" target="_blank"
+                ><i class="fa-brands fa-square-x-twitter"></i
+              ></a>
+            </li>
+          </ul>
+          <ul class="f3list">
+            <li>
+              <h4>CONTACT:</h4>
+            </li>
+            <li>
+              <p>+91 70489 24351</p>
+              <p>aditi@aditiguptadesigns.com</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div class="copyright">
+      <p>&copy 2024 Aditi Gupta Designs. All rights reserved.</p>
+    </div>
+
+    <!-- lightbox js link  -->
+    <script src="./lightbox-plus-jquery.js"></script>
+    <script src="./lightbox.js"></script>
+
+    <!-- bootstrap javascript cdn link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS javascript link -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script>
+      const button = document.getElementById("loadMoreBtn");
+      const hiddenImages = document.getElementById("hiddenImages");
+
+      button.addEventListener("click", function () {
+        hiddenImages.style.display = "block";
+        button.style.display = "none";
+      });
+    </script>
+
+    <!-- Google Translate Script -->
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+
+    <!-- newsletter  -->
+    <script>
+      // Form submission event listener
+      document
+        .getElementById("signupForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Hide form and show thank you message
+          document.getElementById("signupForm").style.display = "none";
+          document.getElementById("thankYouMessage").style.display = "block";
+        });
+    </script>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+      // Initialize Google Translate only when button is clicked and ensure script is loaded
+      function loadGoogleTranslate() {
+        // Load Google Translate script if it hasn't been loaded yet
+        if (!window.google || !window.google.translate) {
+          const script = document.createElement("script");
+          script.type = "text/javascript";
+          script.src =
+            "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+          document.head.appendChild(script);
+        } else {
+          googleTranslateElementInit();
+        }
+      }
+
+      // Initialize Google Translate Element
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,hi,pa",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          },
+          "google_translate_element"
+        );
+      }
+
+      // Toggle the visibility of the Google Translate container when the icon is clicked
+      document
+        .getElementById("translateToggleBtn")
+        .addEventListener("click", function () {
+          const translateContainer = document.getElementById(
+            "googleTranslateContainer"
+          );
+
+          // Toggle visibility
+          if (
+            translateContainer.style.display === "none" ||
+            translateContainer.style.display === ""
+          ) {
+            loadGoogleTranslate(); // Ensure Translate is loaded
+            translateContainer.style.display = "block";
+          } else {
+            translateContainer.style.display = "none";
+          }
+        });
+    </script>
+    <script src="/newsletter.js"></script>
+  </body>
+</html>

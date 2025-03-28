@@ -1,0 +1,162 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(235, 230, 215);
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Section */
+.image-container, .container {
+    text-align: center;
+    background-color: rgb(235, 230, 215);
+    width: 700px;
+}
+
+.half-line {
+    height: 0.5px; 
+    background: rgb(97, 82, 72);
+    width: 700px;
+    margin: 10px auto;
+    display: block;
+}
+
+.image-container img {
+    height: 550px;
+    width: 700px;
+    margin-top: 20px;
+}
+
+.image-container p {
+    font-size: 16px;
+    margin: 15px auto;
+    line-height: 1.6;
+    padding: 0 0px 10px 0px;
+    text-align: justify;
+    width: 700px;
+    color: rgb(97, 82, 72);
+    align-items: center;
+}
+
+.image-container h2, h3 {
+    color: rgb(97, 82, 72);
+    text-align: center;
+    margin-right: 10px;
+}
+
+/* Comment Section */
+.container {
+    width: 1000px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.container h2 {
+    color: rgb(97, 82, 72);
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 15px;
+    text-align: left;
+    width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid rgb(97, 82, 72);
+    border-radius: 5px;
+    outline: none;
+    background: transparent;
+    transition: 0.3s;
+}
+
+.form-group label {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-size: 14px;
+    color: rgb(97, 82, 72);
+    transition: 0.3s;
+    pointer-events: none;
+    background: rgb(235, 230, 215);
+    padding: 0 5px;
+}
+
+.form-group textarea {
+    resize: none;
+    min-height: 90px;
+    max-height: 120px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: transparent;
+    transition: 0.3s;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+    top: -8px;
+    left: 10px;
+    font-size: 12px;
+    color: #333;
+}
+
+.form-group input:focus::placeholder,
+.form-group textarea:focus::placeholder {
+    color: #999;
+}
+
+/* Adjusted spacing for Name and Email */
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
+}
+
+.row .form-group {
+    width: 48%;
+}
+
+/* Button */
+.button-container {
+    text-align: left;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 120px;
+    padding: 6px;
+    font-size: 12px;
+    background-color: rgb(235, 230, 215);
+    color: rgb(97, 82, 72);
+    border: 1px solid rgb(97, 82, 72);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    color: rgb(235, 230, 215);
+    background-color: rgb(97, 82, 72);
+}
+
+.thank-you-message {
+    display: none;
+    font-size: 16px;
+    color: rgb(97, 82, 72);
+    margin-top: 15px;
+}

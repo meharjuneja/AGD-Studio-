@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page 4</title>
+    <link rel="stylesheet" href="Blog Page.css">
+</head>
+
+<body>
+    <!-- Main Section -->
+    <div class="image-container">
+        <h2>HomeGoods Fall Home Tour</h2>
+        <div class="half-line"></div>
+
+        <img src="http://www.designsbylaila.com/wp-content/uploads/2018/07/15%2B-%2B15.jpg" alt="">
+
+        <p>This year, I have really enjoyed changing things up & decorating for Fall. I don't know if I was ready for a
+            change of weather {because its was too warm for too long in California!} Or I was just ready for a new
+            look…regardless, I love changes!</p>
+        <p>Before I begin any further, I'm excited to share that The Bay Area Home ladies & I are doing a Fall Home Tour
+            sponsored by HomeGoods.</p>
+
+        <img src="https://2.bp.blogspot.com/-8HErN1EN-mM/VgtL8IrfCUI/AAAAAAAAJ5E/6NFUjx5yb9w/s1600/15%2B-%2B16" alt="">
+
+        <p>When I originally started shopping for Fall decorations, particularly gold pillows….I really didn't have any
+            luck at first because I was looking for a particular shade of gold. One day, I went to my local HomeGoods
+            with my mom…& it's always nice to go shopping with moms because sometimes they spot the best treasures for
+            you. Like when I was shopping for gold pillows!</p>
+        
+        <img src="http://www.designsbylaila.com/wp-content/uploads/2018/07/15%2B-%2B9.jpg" alt="">
+        <img src="http://www.designsbylaila.com/wp-content/uploads/2018/07/15%2B-%2B10.jpg" alt="" style="height: 500px;">
+        <img src="http://www.designsbylaila.com/wp-content/uploads/2018/07/15%2B-%2B4.jpg" alt="">
+
+        <p>Fall means creating an ambiance that is warm, cozy & inviting.  The thought of spending days where you just turn on the fireplace, cuddle and watch a movie with your family…with hot chocolate of coarse </p>
+    </div>
+
+    <!-- Comment Section -->
+    <div class="container" style="width: 800px;">
+        <h2>Leave a Reply</h2>
+
+        <div id="commentForm">
+            <div class="form-group">
+                <textarea id="comment" placeholder=" " required></textarea>
+                <label for="comment">Comment </label>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder=" " required>
+                    <label for="name">Name </label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder=" " required>
+                    <label for="email">Email </label>
+                </div>
+            </div>
+
+            <!-- Button Container for Left Alignment -->
+            <div class="button-container">
+                <button onclick="submitComment()">Post</button>
+            </div>
+        </div>
+
+        <p class="thank-you-message" id="thankYouMessage">Thank you for your comment!</p>
+    </div>
+
+    <script>
+        function submitComment() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let comment = document.getElementById("comment").value;
+
+            if (name.trim() === "" || email.trim() === "" || comment.trim() === "") {
+                alert("Please fill out all fields.");
+                return;
+            }
+
+            // Store user info in local storage (simulating login)
+            localStorage.setItem("userName", name);
+            localStorage.setItem("userEmail", email);
+
+            // Hide form and show thank you message
+            document.getElementById("commentForm").style.display = "none";
+            document.getElementById("thankYouMessage").style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>

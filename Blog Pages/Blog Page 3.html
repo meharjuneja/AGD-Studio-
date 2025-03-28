@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page 3</title>
+    <link rel="stylesheet" href="Blog Page.css">
+</head>
+
+<body>
+    <!-- Main Section -->
+    <div class="image-container">
+        <h2>Tis The Season to Decorate</h2>
+        <div class="half-line"></div>
+
+        <p>Tis the season to decorate! Hi Friends and welcome to my Christmas home tour where I'm joining some of my
+            wonderful blogger friends who are also sharing their homes for the holidays.</p>
+        <img src="http://www.designsbylaila.com/wp-content/uploads/2018/12/tis-the-season-to-be-festive-e1544067735252.png"
+            alt="">
+
+        <p>This year, I decided to add some gold and silver tones to my holiday decor. I actually decided to add the
+            plaid Christmas ribbon last minute and really love how it turned out…hope you like it too ♥</p>
+        <img src="http://www.designsbylaila.com/wp-content/uploads/2018/12/tis-the-season-to-decorate-4-1-640x960.jpg"
+            alt="">
+        <img src="http://www.designsbylaila.com/wp-content/uploads/2018/12/tis-the-season-to-decorate-6-e1543692178743.jpg"
+            alt="">
+
+        <p>The month of December is just so pretty! Nevertheless, December is also one of the busiest months for us. Not
+            only do we celebrate Christmas but we get to spend three birthdays, and a wedding anniversary together; five
+            occasions throughout the month!! It's so crazy yet SO much fun so when I start to decorate the house for
+            Christmas; it stays pretty festive for all the occasions we get to celebrate…it's a win win situation, cant
+            complain. Tis the season to decorate' everyone!!</p>
+
+        <img src="http://www.designsbylaila.com/wp-content/uploads/2018/12/tis-the-season-to-decorate-9-e1543694454186.jpg"
+            alt="">
+        <img src="http://www.designsbylaila.com/wp-content/uploads/2018/12/tis-the-season-to-decorate-christmas-7-e1543692666143.jpg"
+            alt="">
+        <img src="http://www.designsbylaila.com/wp-content/uploads/2018/12/tis-the-season-to-decorate-4-e1543656633244.jpg"
+            alt="">
+
+        <p>I love taking out our Christmas dishes every year. I remember all those little laughs and seeing joys in my
+            kids eyes whenever we shared delicious meals together. I would make them their favorite drink; hot coco with
+            marsh mellows. Gathering around the table, I remember the kids feeling extra special eating from these
+            dishes knowing we get to open Christmas gifts right after…it was so sweet! Ah those precious little
+            memories..I would do anything to go back in time and hold them tight when they were so little ♥ Oh and I
+            decided to make hearts tied with ribbons out of these candy canes</p>
+
+        <img src="http://www.designsbylaila.com/wp-content/uploads/2018/12/tis-the-season-to-decorate-8-e1543693685183.jpg" alt="">
+    </div>
+
+    <!-- Comment Section -->
+    <div class="container" style="width: 800px;">
+        <h2>Leave a Reply</h2>
+
+        <div id="commentForm">
+            <div class="form-group">
+                <textarea id="comment" placeholder=" " required></textarea>
+                <label for="comment">Comment </label>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder=" " required>
+                    <label for="name">Name </label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder=" " required>
+                    <label for="email">Email </label>
+                </div>
+            </div>
+
+            <!-- Button Container for Left Alignment -->
+            <div class="button-container">
+                <button onclick="submitComment()">Post</button>
+            </div>
+        </div>
+
+        <p class="thank-you-message" id="thankYouMessage">Thank you for your comment!</p>
+    </div>
+
+    <script>
+        function submitComment() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let comment = document.getElementById("comment").value;
+
+            if (name.trim() === "" || email.trim() === "" || comment.trim() === "") {
+                alert("Please fill out all fields.");
+                return;
+            }
+
+            // Store user info in local storage (simulating login)
+            localStorage.setItem("userName", name);
+            localStorage.setItem("userEmail", email);
+
+            // Hide form and show thank you message
+            document.getElementById("commentForm").style.display = "none";
+            document.getElementById("thankYouMessage").style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>

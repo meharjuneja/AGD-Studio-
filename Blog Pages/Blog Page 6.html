@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page 6</title>
+    <link rel="stylesheet" href="Blog Page.css">
+</head>
+
+<body>
+    <!-- Main Section -->
+    <div class="image-container">
+        <h2>Spring Decor</h2>
+        <div class="half-line"></div>
+
+        <p>I get so excited around this time of the year…Spring is my absolute favorite season ever! When I think of
+            Spring, I think of growth, rebirth, new life and new beginnings. If you see everything around you during
+            this time, you see flowers are blooming, leaves are sprouting from bare trees, and you see a lot more
+            sunnier days especially when living in California. Seeing all this just gives me a burst of energy and I
+            love it!</p>
+
+        <img src="https://www.designsbylaila.com/wp-content/uploads/2018/07/blogger-image-2038835010.jpg" alt="">
+
+        <p>When it comes to Spring, all I can think about are the different variety of colors you see on a rainbow.
+            They're all so beautiful in their own way! For this Spring, I decided to use the colors pink {of coarse}
+            with some of my blue and white colored vases.</p>
+
+        <img src="http://www.designsbylaila.com/wp-content/uploads/2018/07/blogger-image-690003631.jpg" alt="">
+        <img src="http://www.designsbylaila.com/wp-content/uploads/2018/07/blogger-image--1126427586.jpg" alt="">
+
+        <p>I really love blue, white and a pop of pink together because I believe these colors can go with any decor. I
+            consider these tones more of a neutral, if you will. I've used these color combination with my black and
+            white decor and it looked great all together!</p>
+
+        <img src="http://www.designsbylaila.com/wp-content/uploads/2018/07/blogger-image-1871735932.jpg" alt="">
+        <img src="http://www.designsbylaila.com/wp-content/uploads/2018/07/blogger-image-639259332.jpg" alt="">
+
+        <p>This adorable ginger jar my mom gave me since she knows how much I'm obsessed with blue and white! This along
+            with the gold spikes is from HobbyLobby and the coasters I got a while back from Pier 1.</p>
+
+        <img src="http://www.designsbylaila.com/wp-content/uploads/2018/07/blogger-image--1978655414.jpg" alt="">
+        <img src="https://www.designsbylaila.com/wp-content/uploads/2018/07/blogger-image--677764236.jpg" alt="">
+
+        <p>When I think of Spring, I also think of flowers, flowers and more flowers! For me, flowers are THE most
+            beautiful kind of plants ever, especially this time of year!</p>
+
+        <img src="http://www.designsbylaila.com/wp-content/uploads/2018/07/blogger-image-332424171.jpg" alt="">
+    </div>
+
+    <!-- Comment Section -->
+    <div class="container" style="width: 800px;">
+        <h2>Leave a Reply</h2>
+
+        <div id="commentForm">
+            <div class="form-group">
+                <textarea id="comment" placeholder=" " required></textarea>
+                <label for="comment">Comment </label>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder=" " required>
+                    <label for="name">Name </label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder=" " required>
+                    <label for="email">Email </label>
+                </div>
+            </div>
+
+            <!-- Button Container for Left Alignment -->
+            <div class="button-container">
+                <button onclick="submitComment()">Post</button>
+            </div>
+        </div>
+
+        <p class="thank-you-message" id="thankYouMessage">Thank you for your comment!</p>
+    </div>
+
+    <script>
+        function submitComment() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let comment = document.getElementById("comment").value;
+
+            if (name.trim() === "" || email.trim() === "" || comment.trim() === "") {
+                alert("Please fill out all fields.");
+                return;
+            }
+
+            // Store user info in local storage (simulating login)
+            localStorage.setItem("userName", name);
+            localStorage.setItem("userEmail", email);
+
+            // Hide form and show thank you message
+            document.getElementById("commentForm").style.display = "none";
+            document.getElementById("thankYouMessage").style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
