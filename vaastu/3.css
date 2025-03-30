@@ -1,0 +1,368 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+/* navbar css */
+header{
+    background-color: rgb(235, 230, 215);
+    opacity: 0.9;
+    height: 100px;
+    /* height: 100px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center; */
+    position: fixed;
+    top: 0;
+    width:100%;
+    z-index: 1;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+margin-left: 0px;
+margin-right: 0px;
+}
+.AGD-logo{
+    font-size: 40px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: italic;
+    color: rgb(170, 146, 146);
+    margin-left: 55px;
+}
+.AGDname{
+    font-size: 17px;
+    margin-left: 30px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.Nlist{
+    font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+/* footer */
+footer{
+  margin-top: 100px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    height: 300px;
+    color: white;
+}
+.fc{
+    align-items: center;
+}
+.fc2{
+   padding-left: 245px;
+   padding-top: 80px;
+   list-style-type: none;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.fc2 ul{
+    margin-right: 200px;
+}
+.fc2 ul a {
+    text-decoration: none;
+}
+.fc2 ul li {
+    margin-bottom: 20px;
+}
+.fi{
+    padding-top: 80px;
+}
+.fc2 ul li a {
+    margin-right: 18px; 
+    color: white;
+    font-size: 24px;
+}
+.copyright{
+    margin-left: 500px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: larger;
+    background-color: rgba(237, 235, 223, 0.51);
+}
+.alex-brush-regular {
+  font-family: "Alex Brush", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.image1{
+  width: 700px;
+  height:auto;
+  overflow: hidden;
+}
+
+.image1 img {
+    overflow: hidden;
+    position: relative;
+    transition-property: filter 6s ease,transform 5s ease-in-out;
+  
+}
+
+.image1 img:hover   {
+  transform: scale(1.2);
+}
+ /* footer */
+footer{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    height: 300px;
+    color: white;
+}
+.fc{
+    align-items: center;
+}
+.fc2{
+   padding-left: 245px;
+   padding-top: 80px;
+   list-style-type: none;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.fc2 ul{
+    margin-right: 200px;
+}
+.fc2 ul a {
+    text-decoration: none;
+}
+.fc2 ul li {
+    margin-bottom: 20px;
+}
+.fi{
+    padding-top: 80px;
+}
+.fc2 ul li a {
+    margin-right: 18px; 
+    color: white;
+    font-size: 24px;
+}
+.copyright{
+    margin-left: 500px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: larger;
+    background-color: rgba(237, 235, 223, 0.51);
+}
+.alex-brush-regular {
+  font-family: "Alex Brush", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.image1{
+  width: 700px;
+  height:auto;
+  overflow: hidden;
+}
+
+.image1 img {
+    overflow: hidden;
+    position: relative;
+    transition-property: filter 6s ease,transform 5s ease-in-out;
+  
+}
+
+.image1 img:hover   {
+  transform: scale(1.2);
+} 
+
+        /* title */
+        .title{
+          background-color:white;
+          font-size: 50px;
+          font-family: "Cormorant Garamond", serif;
+          color: rgb(136, 113, 97); 
+          margin-top: 150px;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          opacity: 0.6;
+        }
+        .sub-t{
+          font-size: 30px;
+          font-family: "Alex Brush", serif;
+          color:rgb(201, 171, 150); 
+          background-color:white;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          opacity: 0.6;
+        }
+/* form and timeline estimator */
+body {
+    font-family: "Cormorant Garamond", serif;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height:450px ;
+    background: url('/images/bg.jpeg') ;
+ 
+}
+
+/* Form container */
+.form-container {
+    background-color:rgb(230, 228, 217);
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 40px;
+    margin-left: 300px;
+    margin-bottom: 50px;
+    
+}
+.container1{
+    
+  
+    background-color: white;
+    margin-top: 50px;
+    border-radius: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+  padding: 20px;
+}
+
+
+/* Form row: Two columns */
+.form-row {
+    display: flex;
+    gap: 20px; /* Space between columns */
+}
+
+/* Column 1: Contains 3 fields */
+.column-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form fields */
+    flex: 1; /* Make column 1 flexible */
+}
+
+/* Column 2: Contains 2 fields */
+.column-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form fields */
+    flex: 1; /* Make column 2 flexible */
+}
+
+/* General form group styling */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styling */
+label {
+    margin-bottom: 8px;
+  
+    font-family:"Cormorant Garamond", serif ;
+    font-size: 20px;
+    color: rgb(136, 113, 97);
+}
+
+/* Input and Select field styling */
+input[type="homefacing"],
+input[type="number"],
+input[type="text"],
+select {
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-family: "Cormorant Garamond", serif;
+    opacity: 0.9;
+    color: rgb(194, 175, 160);
+    ;
+}
+.form-control{
+  padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-family: "Cormorant Garamond", serif;
+    opacity: 1;
+}
+.text-muted{
+  margin-top: 5px;
+  font-family:"Cormorant Garamond",serif ;
+}
+
+
+
+.btn1{
+  margin-left: 200px;
+  background-color:rgb(187, 186, 178) ;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 350px;
+    align-items: center;
+    font-family: "Cormorant Garamond", serif;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.btn1:hover {
+  background-color:rgb(146, 146, 144) ;
+  color: rgb(247, 247, 247); 
+}
+.results{
+    font-family: "Alex brush", serif; 
+    font-size: 36px; 
+    text-align: center;
+    justify-content: center;
+    color: rgb(194, 175, 160);
+    margin-top: 20px;
+}
+
+
+.submit {
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    font-family: "Cormorant Garamond", serif;
+    opacity: 0.9;
+    color: white;
+    align-items: center;
+    text-align: center;
+    background-color:rgb(187, 186, 178) ;
+    width : 300px ;
+    margin-left: 250px;
+margin-top: 20px ;
+}
+.submit:hover {
+    background-color:rgb(146, 146, 144) ;
+    color: rgb(247, 247, 247); 
+  }
+    
+#result {
+    font-family: "Cormorant Garamond", serif;
+    padding: 15px;
+}
+
+#result h3, #result h4 {
+    color: rgb(136, 113, 97); /* Heading color */
+}
+
+#result p {
+    color: rgb(201, 171, 150); /* Content color */
+    font-size: 18px;
+    line-height: 1.5;
+}

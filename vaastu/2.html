@@ -1,0 +1,418 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Numerology</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #D49140;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+        .result-container {
+            text-align: left;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .numerology-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .numerology-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #D49140;
+        }
+        .vaastu-section {
+            margin-top: 20px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="inputContainer">
+    <h2>Home Numerology</h2>
+    <label for="day">Date of Birth:</label>
+    <input type="number" id="day" placeholder="DD" min="1" max="31">
+    <input type="number" id="month" placeholder="MM" min="1" max="12">
+    <input type="number" id="year" placeholder="YYYY" min="1900" max="2100">
+    <button onclick="calculateNumerology()">Calculate</button>
+</div>
+
+<div id="resultContainer" class="hidden result-container">
+    <button onclick="goBack()">← Back</button>
+
+    <h3>Home Placement Analysis</h3>
+    <img src="https://i.pinimg.com/736x/68/8d/5f/688d5f6fe7dde804267c74ecf9303f2b.jpg" class="profile-img" alt="Numerology Image">
+    
+    <p class="numerology-title">Your Home Numerology</p>
+    <p class="numerology-number" id="numerologyNumber"></p>
+    
+    <p id="analysisText"></p>
+
+    <div class="vaastu-section">
+        <h3>Vaastu Recommendations</h3>
+        <ul id="vaastuRecommendations"></ul>
+    </div>
+
+    <button onclick="saveResults()">Save Results</button>
+</div>
+
+<script>
+    function calculateNumerology() {
+        let day = document.getElementById("day").value;
+        let month = document.getElementById("month").value;
+        let year = document.getElementById("year").value;
+
+        if (!day || !month || !year) {
+            alert("Please enter your full birth date.");
+            return;
+        }
+
+        let numerologyNumber = getLifePathNumber(day, month, year);
+        document.getElementById("numerologyNumber").innerText = "Number " + numerologyNumber;
+        document.getElementById("analysisText").innerText = getAnalysis(numerologyNumber);
+        document.getElementById("vaastuRecommendations").innerHTML = getVaastuRecommendations(numerologyNumber);
+
+        // Hide input form and show results
+        document.getElementById("inputContainer").classList.add("hidden");
+        document.getElementById("resultContainer").classList.remove("hidden");
+
+        // Call calculateVaastu
+        calculateVaastu(day);
+    }
+
+    function getLifePathNumber(day, month, year) {
+        let sum = [...(day + month + year)].reduce((acc, num) => acc + parseInt(num), 0);
+        while (![11, 22, 33].includes(sum) && sum > 9) {
+            sum = [...sum.toString()].reduce((acc, num) => acc + parseInt(num), 0);
+        }
+        return sum;
+    }
+
+    function getAnalysis(num) {
+        const descriptions = {
+            1: "Your home fosters leadership, independence, and personal growth.",
+            2: "A peaceful and harmonious space, perfect for partnerships and relationships.",
+            3: "Encourages creativity, communication, and self-expression.",
+            4: "Provides stability, discipline, and a strong foundation.",
+            5: "A dynamic, adventurous home promoting freedom and excitement.",
+            6: "Family-oriented, filled with love, care, and nurturing energy.",
+            7: "A spiritual and intellectual retreat, ideal for introspection.",
+            8: "Supports ambition, success, and financial prosperity.",
+            9: "Encourages humanitarianism, compassion, and universal love."
+        };
+        return descriptions[num] || "A unique energy that aligns with your life’s path.";
+    }
+
+    function getVaastuRecommendations(num) {
+        const recommendations = {
+            1: ["Use bright colors like red and orange in key areas.", "Keep the entrance well-lit to boost leadership energy."],
+            2: ["Soft blues and pastel colors enhance harmony.", "Place fresh flowers in the living area for peace."],
+            3: ["Incorporate yellow and artwork for creativity.", "Ensure good natural lighting to maintain positive energy."],
+            4: ["Use earthy tones and wooden furniture for stability.", "Avoid mirrors in the bedroom to promote calmness."],
+            5: ["Maintain an open layout for flexibility.", "Wind chimes bring good fortune and movement."],
+            6: ["Decorate with family portraits.", "Use green plants to create a nurturing space."],
+            7: ["Create a meditation space in the northeast.", "Water elements help enhance wisdom."],
+            8: ["Optimize the southeast corner for wealth.", "Keep a clutter-free entrance for success energy."],
+            9: ["Soft blues and greens maintain a peaceful vibe.", "Donate unused items regularly for positive energy."]
+        };
+        return recommendations[num]?.map(item => `<li>${item}</li>`).join("") || "<li>Follow general vaastu principles for balance.</li>";
+    }
+
+    function calculateVaastu(dob) {
+        if (dob < 1 || dob > 31 || isNaN(dob)) {
+            return;
+        }
+
+        let num = dob;
+        let steps = `${num}`;
+        while (num > 9) {
+            num = num.toString().split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
+            steps += ` → ${num}`;
+        }
+
+        const vaastuRecommendations = {
+            1: "Place a mirror on the East wall for leadership and clarity.",
+            2: "Keep fresh flowers in the North for harmony.",
+            3: "Use yellow decor in the East for creativity.",
+            4: "Place wooden furniture in the Southwest for stability.",
+            5: "Wind chimes in the entrance enhance positivity.",
+            6: "Family portraits should be placed in the living area.",
+            7: "Create a meditation space in the Northeast.",
+            8: "Keep your workspace in the West for ambition.",
+            9: "Soft blues and greens should be used for calmness."
+        };
+
+        let additionalVaastu = `<p><strong>Additional Vaastu Tip:</strong> ${vaastuRecommendations[num] || "Follow general Vaastu principles for balance."}</p>`;
+        document.getElementById("vaastuRecommendations").innerHTML += additionalVaastu;
+    }
+
+    function saveResults() {
+        alert("Results saved successfully!");
+    }
+
+    function goBack() {
+        document.getElementById("resultContainer").classList.add("hidden");
+        document.getElementById("inputContainer").classList.remove("hidden");
+    }
+</script>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Numerology</title>
+    
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 20px;
+      }
+      .container {
+        max-width: 400px;
+        margin: auto;
+        transition: opacity 0.5s ease-in-out;
+      }
+      input,
+      button {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      button {
+        background-color: #d49140;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .hidden {
+        display: none;
+      }
+      .fade-out {
+        opacity: 0;
+      }
+      .fade-in {
+        opacity: 1;
+      }
+      .result-container {
+        text-align: center;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        margin-top: 20px;
+        width: 100%; 
+        max-width: 450px;
+        min-height: 400px;
+        background-color: #fff;
+        transition: opacity 0.5s ease-in-out;
+      }
+      .profile-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+      .numerology-title {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .numerology-number {
+        font-size: 24px;
+        font-weight: bold;
+        color: #d49140;
+      }
+      .flex{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .vaastu-section {
+        margin-top: 20px;
+      }
+      ul {
+        padding-left: 20px;
+        text-align: left;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="mainContainer">
+      <div id="inputContainer">
+        <h2>Home Numerology</h2>
+        <label for="day">Date of Birth:</label>
+        <input type="number" id="day" placeholder="DD" min="1" max="31" />
+        <input type="number" id="month" placeholder="MM" min="1" max="12" />
+        <input type="number" id="year" placeholder="YYYY" min="1900" max="2100" />
+        <button onclick="calculateNumerology()">Calculate</button>
+      </div>
+
+      <div id="resultContainer" class="hidden result-container">
+        <button onclick="goBack()">← Back</button>
+
+        <h3>Home Placement Analysis</h3>
+        <div class="flex">
+          <img
+            src="https://i.pinimg.com/736x/68/8d/5f/688d5f6fe7dde804267c74ecf9303f2b.jpg"
+            class="profile-img"
+            alt="Numerology Image"
+          />
+
+          <div>
+            <p class="numerology-title">Your Home Numerology</p>
+            <p class="numerology-number" id="numerologyNumber"></p>
+          </div>
+        </div>
+
+        <p id="analysisText"></p>
+
+        <div class="vaastu-section">
+          <h3>Vaastu Recommendations</h3>
+          <ul id="vaastuRecommendations"></ul>
+        </div>
+
+        <button onclick="saveResults()">Save Results</button>
+      </div>
+    </div>
+
+    <script>
+      function calculateNumerology() {
+        let day = document.getElementById("day").value;
+        let month = document.getElementById("month").value;
+        let year = document.getElementById("year").value;
+
+        if (!day || !month || !year) {
+          alert("Please enter your full birth date.");
+          return;
+        }
+
+        let numerologyNumber = getLifePathNumber(day, month, year);
+        document.getElementById("numerologyNumber").innerText =
+          "Number " + numerologyNumber;
+        document.getElementById("analysisText").innerText =
+          getAnalysis(numerologyNumber);
+        document.getElementById("vaastuRecommendations").innerHTML =
+          getVaastuRecommendations(numerologyNumber);
+
+        // Fade out input container and show results smoothly
+        document.getElementById("inputContainer").classList.add("fade-out");
+        setTimeout(() => {
+          document.getElementById("inputContainer").style.display = "none";
+          document.getElementById("resultContainer").classList.remove("hidden");
+          document.getElementById("resultContainer").classList.add("fade-in");
+        }, 500); 
+      }
+
+      function getLifePathNumber(day, month, year) {
+        let sum = [...(day + month + year)].reduce(
+          (acc, num) => acc + parseInt(num),
+          0
+        );
+        while (sum > 9) {
+          sum = [...sum.toString()].reduce(
+            (acc, num) => acc + parseInt(num),
+            0
+          );
+        }
+        return sum;
+      }
+
+      function getAnalysis(num) {
+        const descriptions = {
+          1: "Your home fosters leadership, independence, and personal growth.",
+          2: "A peaceful and harmonious space, perfect for partnerships and relationships.",
+          3: "Encourages creativity, communication, and self-expression.",
+          4: "Provides stability, discipline, and a strong foundation.",
+          5: "A dynamic, adventurous home promoting freedom and excitement.",
+          6: "Family-oriented, filled with love, care, and nurturing energy.",
+          7: "A spiritual and intellectual retreat, ideal for introspection.",
+          8: "Supports ambition, success, and financial prosperity.",
+          9: "Encourages humanitarianism, compassion, and universal love.",
+        };
+        return descriptions[num] || "A unique energy that aligns with your life’s path.";
+      }
+
+      function getVaastuRecommendations(num) {
+        const recommendations = {
+          1: ["Use bright colors like red and orange.", "Keep the entrance well-lit."],
+          2: ["Soft blues and pastels enhance harmony.", "Place fresh flowers for peace."],
+          3: ["Incorporate yellow and artwork for creativity.", "Ensure good natural lighting."],
+          4: ["Use earthy tones and wooden furniture.", "Avoid mirrors in the bedroom."],
+          5: ["Maintain an open layout.", "Wind chimes bring good fortune."],
+          6: ["Decorate with family portraits.", "Use green plants for a nurturing space."],
+          7: ["Create a meditation space in the northeast.", "Water elements enhance wisdom."],
+          8: ["Optimize the southeast corner for wealth.", "Keep a clutter-free entrance."],
+          9: ["Soft blues and greens maintain peace.", "Donate unused items regularly."],
+        };
+        return (
+          recommendations[num]?.map((item) => `<li>${item}</li>`).join("") ||
+          "<li>Follow general vaastu principles for balance.</li>"
+        );
+      }
+
+      function saveResults() {
+        const resultContainer = document.getElementById("resultContainer");
+        html2canvas(resultContainer).then(canvas => {
+          let link = document.createElement("a");
+          link.href = canvas.toDataURL("image/png");
+          link.download = "numerology_result.png";
+          link.click();
+        });
+      }
+
+      function goBack() {
+        document.getElementById("resultContainer").classList.remove("fade-in");
+        document.getElementById("resultContainer").classList.add("fade-out");
+        setTimeout(() => {
+          document.getElementById("resultContainer").classList.add("hidden");
+          document.getElementById("inputContainer").style.display = "block";
+          document.getElementById("inputContainer").classList.remove("fade-out");
+          document.getElementById("inputContainer").classList.add("fade-in");
+        }, 500);
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  </body>
+</html>
+

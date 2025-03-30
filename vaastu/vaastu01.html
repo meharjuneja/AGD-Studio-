@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Numerology</title>
+    <link rel="stylesheet" href="v.css">
+</head>
+<body>
+    <!-- Page 1: Input Form -->
+    <div class="container">
+        <h2>Home Numerology</h2>
+        <label for="house-number">House Number</label>
+        <input type="text" id="house-number" placeholder="Enter house number">
+        
+        <label for="occupant1">Occupant 1</label>
+        <input type="text" id="occupant1" placeholder="Enter full name">
+        
+        <label for="occupant2">Occupant 2 (Optional)</label>
+        <input type="text" id="occupant2" placeholder="Enter full name">
+        
+        <button onclick="calculateNumerology()">Calculate</button>
+    </div>
+
+    <!-- Page 2: Result Display -->
+    <div class="result-container" style="display:none;">
+        <h2>Home Placement Analysis</h2>
+        <div class="numerology-result">
+            <h3>Your Home Numerology</h3>
+            <p>Number 8</p>
+            <p>Your home's numerological analysis suggests it promotes stability, focus, and a sense of calm...</p>
+        </div>
+        <h3>Vaastu Recommendations</h3>
+        <ul>
+            <li><strong>Optimize Southeast Corner</strong></li>
+            <li><strong>Enhance Creative Zones</strong><br>Place water features or vibrant art in the southeast sector...</li>
+            <li><strong>Maximize Natural Light</strong><br>Ensure adequate lighting in all areas...</li>
+            <li><strong>Declutter North Zones</strong></li>
+            <li><strong>Embrace Simplicity</strong><br>Keep the north side of the home free from heavy furniture...</li>
+        </ul>
+        <button>Save Results</button>
+    </div>
+</body>
+</html>
