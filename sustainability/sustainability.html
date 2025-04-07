@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sustainable Home Quiz</title>
+    <link rel="stylesheet" href="sustainability.css">
+    <link rel="stylesheet" href="/translate.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- lightbox css link -->
+    <link rel="stylesheet" href="./lightbox.css" />
+    <!-- <link rel="stylesheet" href="./lightbox2-dev/dist/css/lightbox.min.css"> -->
+
+    <!-- AOS cdn link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Grey+Qo&family=Italiana&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet" />
+
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Grey+Qo&family=Italiana&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+
+    <!-- google fonts link2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Grey+Qo&family=Italiana&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+
+    <!-- header -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid align-items-center">
+                <div class="LOGO d-flex flex-column ms-5 me-auto">
+                    <img class="AGD-img" class="Logo-img ms-5" src="/images/AGDlogo.png" alt="" height="60px"
+                        width="100px" />
+                    <p class="AGDname mb-0">Aditi Gupta Designs</p>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="Nlist navbar-nav pe-5 ps-5">
+                        <li class="nav-item">
+                            <a class="nav-link mt-3 me-5 active" aria-current="page" href="/index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mt-3 me-5" href="/servicesDH/design02.html">SERVICES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mt-3 me-5" href="/about/design03.html">ABOUT US</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mt-3 me-5" href="/portfolio/design04.html">PORTFOLIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mt-3 me-5" href="/blog/blog01.final.html">BLOG</a>
+                        </li>
+                        <li class="nav-item mt-3 me-0">
+                            <a class="nav-link" href="/contactUS/contactUs.refined.html">CONTACT US</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!-- Make sure to include Font Awesome for the hamburger icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Google Translate Hamburger Icon positioned outside the header and navbar -->
+    <button id="translateToggleBtn" class="translate-icon">
+        <i class="fas fa-language"></i> <!-- Font Awesome language icon -->
+    </button>
+
+    <!-- Hidden Google Translate Element -->
+    <div id="googleTranslateContainer" class="translate-dropdown" style="display: none;">
+        <div id="google_translate_element"></div>
+    </div>
+
+
+    <!-- container -->
+    <section class="susBG">
+    <div class="contain" id="intro">
+        <div class="container1">
+            <img src="/images/pic.jpeg" alt="Sample Image" />
+            <div>
+                <p class="text">Find Your Sustainable Living Score</p>
+                <p class="sub-txt">Discover how eco-friendly your home truly is with this quick and insightful quiz.
+                    From energy use to waste habits, every answer reflects your home's impact on the environment.
+                    Learn where you shine and where you can improve with easy, actionable tips.
+                    Because a greener home means a healthier future — for you and the planet.</p>
+                <br>
+                <button onclick="startQuiz()" id="btn1">Find Now</button>
+            </div>
+
+
+        </div>
+
+    </div>
+    <!-- hidden quiz -->
+    <div class="background">
+        <div class="container" id="quiz">
+            <h2 class="head">Sustainable Home Quiz </h2>
+            <div class="tree-growth" id="treeGrowth">
+                <img id="treeImage" src="/images/seed.png" alt="Plant stage" />
+            </div>
+            <div id="quiz1"></div>
+            <div id="scoreContainer" class="score"></div>
+            <div id="tagline" class="tagline"></div>
+            <button class="restart-btn" onclick="restartQuiz()"> Restart</button>
+        </div>
+    </div>
+
+    <!-- newsletter  -->
+    <section class="newsletter">
+        <div class="signup-box">
+            <p class="news-head">SIGN UP TO OUR NEWSLETTER</p>
+            <p class="news-head02">Stay updated with our latest design trends and updates</p>
+
+            <!-- Form Content -->
+            <form id="signupForm">
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <label>
+                    <input type="checkbox" required> I agree to the privacy policy *
+                </label>
+                <div class="news-btn">
+                    <button type="submit">Subscribe</button> <!-- ✅ Button type fixed -->
+                </div>
+            </form>
+
+            <!-- Thank you message -->
+            <p class="thank-you" id="thankYouMessage" style="display: none;">Thank you for signing up!</p>
+            <!-- ✅ Hidden by default -->
+        </div>
+    </section>
+    </section>
+
+
+    <!-- footer  -->
+    <footer style="background-color: rgb(97, 82, 72)">
+        <div class="fc container-fluid d-flex">
+            <div class="fc2 d-flex">
+                <ul>
+                    <a href="http://127.0.0.1:5500/servicesDH/design02.html" target="_blank">
+                        <li class="text-white">SERVICES</li>
+                    </a>
+                    <a href="http://127.0.0.1:5500/about/design03.html" target="_blank">
+                        <li class="text-white">ABOUT</li>
+                    </a>
+                    <a href="http://127.0.0.1:5500/portfolio/design04.html" target="_blank">
+                        <li class="text-white">PORTFOLIO</li>
+                    </a>
+                    <a href="http://127.0.0.1:5500/contactUS/contactUs.refined.html" target="_blank">
+                        <li class="text-white">CONTACT US</li>
+                    </a>
+                </ul>
+                <ul>
+                    <a href="">
+                        <li class="text-white">TERMS</li>
+                    </a>
+                    <a href="">
+                        <li class="text-white">PRIVACY</li>
+                    </a>
+                    <li class="text-white">
+                        <a href="https://www.facebook.com/" target="_blank"><i
+                                class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i
+                                class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://x.com/" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+                    </li>
+                </ul>
+                <ul class="f3list">
+                    <li>
+                        <h4>CONTACT:</h4>
+                    </li>
+                    <li>
+                        <p>+91 70489 24351</p>
+                        <p>aditi@aditiguptadesigns.com</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright">
+        <p>&copy 2024 Aditi Gupta Designs. All rights reserved.</p>
+    </div>
+
+
+
+
+
+    <!-- lightbox js link  -->
+    <script src="./lightbox-plus-jquery.js"></script>
+    <script src="./lightbox.js"></script>
+
+    <!-- bootstrap javascript cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- AOS javascript link -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- instagram posts  -->
+    <script async src="//www.instagram.com/embed.js"></script>
+    <script async src="//www.instagram.com/embed.js"></script>
+
+    <!-- newsletter  -->
+    <script>
+        // Form submission event listener
+        document.getElementById("signupForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Hide form and show thank you message
+            document.getElementById("signupForm").style.display = "none";
+            document.getElementById("thankYouMessage").style.display = "block";
+        });
+    </script>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        // Initialize Google Translate only when button is clicked and ensure script is loaded
+        function loadGoogleTranslate() {
+            // Load Google Translate script if it hasn't been loaded yet
+            if (!window.google || !window.google.translate) {
+                const script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+                document.head.appendChild(script);
+            } else {
+                googleTranslateElementInit();
+            }
+        }
+
+        // Initialize Google Translate Element
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,hi,pa',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+
+        // Toggle the visibility of the Google Translate container when the icon is clicked
+        document.getElementById("translateToggleBtn").addEventListener("click", function () {
+            const translateContainer = document.getElementById("googleTranslateContainer");
+
+            // Toggle visibility
+            if (translateContainer.style.display === "none" || translateContainer.style.display === "") {
+                loadGoogleTranslate(); // Ensure Translate is loaded
+                translateContainer.style.display = "block";
+            } else {
+                translateContainer.style.display = "none";
+            }
+        });
+    </script>
+    <script src="/newsletter.js"></script>
+    <script async type='module'
+        src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
+    <zapier-interfaces-chatbot-embed is-popup='true'
+        chatbot-id='cm8vvwm23003pvlevkk0vbqpq'></zapier-interfaces-chatbot-embed>
+    </script>
+
+
+
+
+    <script>
+        let score = 0;
+        let currentQuestion = 0;
+
+        const quizData = [
+            {
+                question: "Q. What type of wall material is your home currently built with?",
+                options: ["Insulated panels", "Bricks", "Concrete blocks", "Mud or clay"],
+                // correct: 0,
+                scores: [10, 7, 6, 9],
+                tips: [
+                    "Excellent! Insulated panels help reduce energy use.",
+                    "Add external insulation for better energy efficiency.",
+                    "Consider using eco-friendly insulating paint.",
+                    "Great choice! Ensure proper waterproofing."
+                ]
+            },
+            {
+                question: "Q. How do you manage household waste?",
+                options: ["Throw it all together", "Separate recyclables", "Compost organic waste", "Recycle, compost, and reduce usage"],
+                // correct: 3,
+                scores: [2, 6, 8, 10],
+                tips: [
+                    "Start by separating dry and wet waste.",
+                    "Nice! Try composting your organic waste too.",
+                    "Awesome! Keep it up and spread awareness.",
+                    "Perfect! You're a waste management hero!"
+                ]
+            },
+            {
+                question: "Q. What kind of lighting do you mostly use at home?",
+                options: ["Incandescent bulbs", "CFLs", "LEDs", "Natural lighting mostly"],
+                // correct: 3,
+                scores: [2, 5, 8, 10],
+                tips: [
+                    "Switch to LED or natural light to save energy.",
+                    "CFLs are good, but LEDs are better.",
+                    "Great choice! LEDs are energy-efficient.",
+                    "Amazing! You're making full use of natural light."
+                ]
+            },
+            {
+                question: "Q. How do you cool your house during summer?",
+                options: ["Air conditioners all day", "Ceiling fans", "Insulated roofs and ventilation", "Cross ventilation"],
+                scores: [2, 6, 8, 10],
+                tips: [
+                    "Try using ACs less or combine with fans.",
+                    "Fans are better than ACs, but add ventilation.",
+                    "Good! Cross ventilation keeps air fresh.",
+                    "Perfect! This is the greenest method."
+                ]
+            },
+            {
+                question: "Q. What type of water usage habits do you follow?",
+                options: ["Leave taps running", "Use low-flow fixtures and reuse water", "Use buckets", "Reuse water when possible"],
+                // correct: 3,
+                scores: [1, 7, 6, 10],
+                tips: [
+                    "Turn off taps to conserve water!",
+                    "Using buckets is better than showers.",
+                    "Reusing water is a great habit!",
+                    "Amazing! You're saving water like a pro."
+                ]
+            }
+        ];
+
+        const treeStages = [
+            "/images/seed.png",
+            "/images/sprout.png",
+            "/images/sapling.jpeg",
+            "/images/leaf.jpeg",
+            "/images/tree.jpeg",
+            "/images/tree_full.jpeg"
+        ];
+
+        const quizContainer = document.getElementById("quiz1");
+        const scoreContainer = document.getElementById("scoreContainer");
+        const treeImage = document.getElementById("treeImage");
+        const tagline = document.getElementById("tagline");
+
+        function startQuiz() {
+            document.getElementById("intro").style.display = "none";
+            document.getElementById("quiz").style.display = "block";
+            currentQuestion = 0;
+            score = 0;
+            treeImage.src = treeStages[0];
+            scoreContainer.classList.remove("active");
+            tagline.classList.remove("active");
+            document.querySelector(".restart-btn").classList.remove("active");
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            const q = quizData[currentQuestion];
+            quizContainer.innerHTML = `
+                    <div class="question">${q.question}</div>
+                    <div class="options" id="options">
+                        ${q.options.map((opt, idx) =>
+                `<button onclick='selectOption(${idx})'>${opt}</button>`
+            ).join("")}
+                    </div>
+                    <div class="tip" id="tipBox"></div>
+                `;
+        }
+
+        // function selectOption(index) {
+        //     const buttons = document.querySelectorAll(".options button");
+        //     buttons.forEach(btn => btn.disabled = true); // disable all options
+
+        //     const q = quizData[currentQuestion];
+        //     const isCorrect = index === q.correct;
+        //     const tipText = q.tips[index];
+        //     document.getElementById("tipBox").innerText = tipText;
+
+        //     if (isCorrect) {
+        //         score++;
+        //         treeImage.src = treeStages[Math.min(score, treeStages.length - 1)];
+        //     }
+
+        //     setTimeout(() => {
+        //         currentQuestion++;
+        //         if (currentQuestion < quizData.length) {
+        //             loadQuestion();
+        //         } else {
+        //             showScore();
+        //         }
+        //     }, 1200);
+        // }
+
+
+        function selectOption(index) {
+            const buttons = document.querySelectorAll(".options button");
+            buttons.forEach(btn => btn.disabled = true);
+
+            const q = quizData[currentQuestion];
+            const tipText = q.tips[index];
+            const gainedScore = q.scores[index];
+            document.getElementById("tipBox").innerText = tipText;
+
+            score += gainedScore;
+
+            // Update tree stage based on score thresholds (example)
+            if (score >= 0 && score < 10) {
+                treeImage.src = treeStages[0];
+            } else if (score < 20) {
+                treeImage.src = treeStages[1];
+            } else if (score < 30) {
+                treeImage.src = treeStages[2];
+            } else if (score < 40) {
+                treeImage.src = treeStages[3];
+            } else if (score < 50) {
+                treeImage.src = treeStages[4];
+            } else {
+                treeImage.src = treeStages[5];
+            }
+
+            setTimeout(() => {
+                currentQuestion++;
+                if (currentQuestion < quizData.length) {
+                    loadQuestion();
+                } else {
+                    showScore();
+                }
+            }, 2500);
+        }
+
+
+        // function showScore() {
+        //     quizContainer.innerHTML = "";
+        //     scoreContainer.innerText = `You scored ${score} out of ${quizData.length}`;
+        //     scoreContainer.classList.add("active");
+
+        //     tagline.innerText = score === quizData.length
+        //         ? "Excellent! You're a Sustainability Star! 🌟"
+        //         : score >= 3
+        //             ? "Great job! A few more tweaks and you're there!"
+        //             : "Keep learning and growing 🌿 Every step counts!";
+        //     tagline.classList.add("active");
+        //     document.querySelector(".restart-btn").classList.add("active");
+        // }
+
+        function showScore() {
+            quizContainer.innerHTML = "";
+            scoreContainer.innerText = `Your Sustainable Home Score: ${score} / 50`;
+            scoreContainer.classList.add("active");
+
+            let message;
+            if (score >= 40) {
+                message = "You're a 🌳 **Green Guru!** Keep up the great work!";
+            } else if (score >= 25) {
+                message = "You're an 🌿 **Eco Explorer!** Small changes can boost your impact!";
+            } else {
+                message = "You're a 🌱 **Eco Newbie!** Start making sustainable choices today!";
+            }
+
+            tagline.innerHTML = message;
+            tagline.classList.add("active");
+            document.querySelector(".restart-btn").classList.add("active");
+        }
+
+
+        function restartQuiz() {
+            startQuiz();
+        }
+    </script>
+
+</body>
+
+</html>

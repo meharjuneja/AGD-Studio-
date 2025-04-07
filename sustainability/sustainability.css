@@ -1,0 +1,506 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+} */
+
+/* header */
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+*::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
+
+btn::selection {
+    background-color: white;
+    color: rgb(97, 82, 72);
+}
+
+header {
+    background-color: rgb(235, 230, 215);
+    opacity: 0.9;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 5px -3px;
+}
+
+.nav-item:hover {
+    transform: scale(1.02);
+}
+
+.nav-item a::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
+
+.AGD-logo {
+    font-size: 40px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: italic;
+    color: rgb(170, 146, 146);
+    margin-left: 52px;
+}
+
+.AGD-img {
+    margin-left: 48px;
+}
+
+.AGDname {
+    font-size: 17px;
+    margin-left: 30px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.AGDname::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
+
+.Nlist {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+html,
+body {
+    background-color: rgba(237, 235, 223, 0.51) !important;
+}
+
+
+
+
+.alex-brush-regular {
+    font-family: "Alex Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* body {
+    font-family: "Cormorant Garamond", serif;
+    background: url('/images/quiz.jpeg');
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+} */
+
+.susBG{
+    background-image: url('/images/quiz.jpeg');
+    align-content: flex-start;
+    margin-top: 100px;
+    padding-bottom: 150px;
+}
+
+
+.container {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    width: 1000px;
+    text-align: center;
+    opacity: 0.9;
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+.background{
+    margin-top: 100px;
+}
+
+.question {
+    margin-bottom: 30px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    font-style: italic;
+    color: rgb(201, 171, 150);
+}
+
+.options button {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 17px;
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #d8e9d4;
+    cursor: pointer;
+    transition: 0.3s;
+    color: rgb(136, 113, 97);
+}
+
+.options button:hover {
+    background-color: #c1d6bc;
+}
+
+.tree-growth img {
+    margin-top: 0%;
+    width: 100px;
+    animation: bounce 0.6s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.score,
+.tagline,
+.restart-btn {
+    display: none;
+}
+
+.score.active,
+.tagline.active,
+.restart-btn.active {
+    display: block;
+}
+
+.score {
+    font-size: 30px;
+    color: rgb(136, 113, 97);
+    font-family: "Cormorant Garamond", serif;
+    ;
+}
+
+.restart-btn {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: #d8e9d4;
+    width: 100px;
+    /* margin-left: 430px;
+    margin-top: 15px; */
+    margin: auto;
+    color: rgb(136, 113, 97);
+    border-color: #d8e9d4;
+}
+
+.restart-btn:hover {
+    background-color: #c1d6bc;
+
+}
+
+.tagline {
+    font-style: italic;
+    color: rgb(136, 113, 97);
+    margin-top: 10px;
+    font-size: 20px;
+    font-family: "Cormorant Garamond", serif;
+    margin-bottom: 20px;
+}
+
+.head {
+    font-size: 60px;
+    font-family: "Alex Brush", cursive;
+    color: rgb(136, 113, 97);
+    margin-bottom: 0%;
+}
+
+/* container */
+
+.container1 {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 12px;
+    width: 1000px;
+    height: 450px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    opacity: 0.9;
+    margin: 20px auto;
+}
+
+.contain img {
+    width: 400px;
+    height: 400px;
+    border-radius: 8px;
+    margin-right: 18px;
+
+}
+
+.contain .text {
+    flex: 1;
+}
+
+/* body {
+
+    background: url('/images/quiz.jpeg');
+    margin-top: 100px;
+} */
+
+#intro {
+    margin-top: 150px;
+}
+
+/* .background {
+    background-image: url('/images/quiz.jpeg');
+    align-content: flex-start;
+    margin-top: 100px;
+} */
+
+#quiz {
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+}
+
+#btn1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: #d8e9d4;
+    width: 150px;
+
+    color: rgb(136, 113, 97);
+    border-color: #d8e9d4;
+}
+
+#btn1:hover {
+    background-color: #c1d6bc;
+
+}
+
+.text {
+    font-family: "Alex Brush", serif;
+    font-size: 42px;
+
+    color: rgb(136, 113, 97);
+}
+
+.sub-txt {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 19px;
+
+    color: rgb(201, 171, 150);
+}
+
+
+
+
+/* newsletter  */
+
+/* Signup box styling */
+.newsletter {
+    margin-top: 150px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.signup-box {
+    width: 1050px;
+    height: 300px;
+    padding: 30px 100px;
+    border-radius: 0px;
+    background-color: rgba(237, 235, 223, 1);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 1px solid #ddd;
+}
+
+.news-head {
+    font-size: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.news-head02 {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Input styling */
+.signup-box input[type="email"] {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    background-color: rgba(237, 235, 223, 0.51);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+}
+
+/* Checkbox and label styling */
+.signup-box label {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 0.9em;
+    color: #555;
+    display: inline-block;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: rgba(237, 235, 223, 1);
+}
+
+.signup-box input[type="checkbox"] {
+    margin-right: 5px;
+    background-color: rgba(237, 235, 223, 1);
+}
+
+/* newsletter button  */
+.news-btn {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px 0px;
+}
+
+.signup-box button {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    padding: 10px 50px;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+}
+
+.signup-box button:hover {
+    color: #ffffff;
+    background-color: rgb(97, 82, 72);
+}
+
+/* Thank you message styling */
+.thank-you {
+    margin-top: 70px;
+    display: none;
+    font-size: 2em;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: 400px;
+}
+
+/* footer */
+footer {
+    margin-top: 0px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    height: 300px;
+    color: white;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 5px -3px; */
+}
+
+fc {
+    align-items: center;
+}
+
+.fc2 {
+    padding-left: 242px;
+    padding-top: 80px;
+    list-style-type: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fc2 ul li::selection {
+    background-color: white;
+    color: rgb(97, 82, 72);
+}
+
+.fc2 ul {
+    margin-right: 200px;
+}
+
+.fc2 ul a {
+    text-decoration: none;
+}
+
+.fc2 ul li {
+    margin-bottom: 20px;
+}
+
+.fi {
+    padding-top: 80px;
+}
+
+.fc2 ul li a {
+    margin-right: 18px;
+    color: white;
+    font-size: 24px;
+}
+
+.f3list li h4::selection {
+    background-color: white;
+    color: rgb(97, 82, 72);
+}
+
+.f3list li p::selection {
+    background-color: white;
+    color: rgb(97, 82, 72);
+}
+
+.copyright {
+    margin-top: 4px;
+    margin-left: 500px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: larger;
+    background-color: rgba(237, 235, 223, 0.51);
+}
+
+.copyright p::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
