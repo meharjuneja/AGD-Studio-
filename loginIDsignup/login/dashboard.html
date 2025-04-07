@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background: red;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background: darkred;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to the Dashboard</h2>
+    <button class="btn" id="logoutBtn">Logout</button>
+
+    <script>
+        document.getElementById("logoutBtn").addEventListener("click", function() {
+            localStorage.removeItem("token"); // Clear the token
+            alert("Logged out successfully!");
+            window.location.href = "login.html"; // Redirect to login
+        });
+
+        // Protect the page from unauthorized access
+        if (!localStorage.getItem("token")) {
+            alert("Please log in first!");
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>
