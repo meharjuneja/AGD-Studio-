@@ -1,0 +1,50 @@
+/* Style for the Google Translate hamburger icon */
+.translate-icon {
+    position: fixed;
+    bottom: 80px;
+    /* Adjust position as needed */
+    right: 20px;
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  /* Style the icon itself */
+  .translate-icon i {
+    color: #333;
+    font-size: 24px;
+  }
+  
+  /* Style for the Google Translate dropdown */
+  .translate-dropdown {
+    position: fixed;
+    bottom: 140px;
+    /* Adjust position based on icon location */
+    right: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  #googleTranslateContainer {
+    display: none;
+    position: fixed;
+    /* top: 60px; */
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    /* padding: 30px 100px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
