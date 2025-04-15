@@ -78,12 +78,18 @@ app.post('/login', async (req, res) => {
         }
 
         const token = jwt.sign({ email: user.email }, SECRET_KEY, { expiresIn: '1h' });
-        res.json({ message: "Login successful", token });
+
+        // Send username along with token
+        res.json({
+            message: "Login successful",
+            token,
+            username: user.username // <-- added this line
+        });
     } catch (err) {
         res.status(500).json({ message: "Internal server error" });
     }
 });
 
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-});
+console.log(`Server is running on ${PORT}`);
+})

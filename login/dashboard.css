@@ -85,103 +85,85 @@ body {
     background-color: rgba(237, 235, 223, 0.51) !important;
 }
 
-/* SignUp Page */
-.container {
-    margin-top: 180px;
-    background-color: rgb(235, 230, 215);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 400px !important;
-    padding: 100px auto 100px auto;
+/* Dashboard */
+body {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: rgba(237, 235, 223, 0.51);
+    color: #5e544f;
   }
   
-  h2 {
+  .dashboard-container {
+    margin-top: 100px;
+    display: flex;
+    height: 100vh;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+  .dashboard-box {
+    flex: 1;
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    border-right: 1px solid #ddd;
+    background-color: rgb(235, 230, 215);
+  }
+  
+  /* .dashboard-box {
+    flex: 1;
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid #ddd;
+    background-color: rgb(235, 230, 215);
+  } */
+  
+  .dashboard-box h1 {
+    font-size: 28px;
     margin-bottom: 20px;
-    font-weight: 600;
-    font-size: 24px;
-    text-align: center;
-    color: rgb(97, 82, 72) !important;
+    font-weight: normal;
+    color: rgb(97, 82, 72);
   }
   
-  .input-group {
-    position: relative;
-    background-color: rgb(235, 230, 215);
-    color: rgb(97, 82, 72);
+  .dashboard-box p {
+    font-size: 16px;
     margin-bottom: 25px;
-    margin-left: 10px !important;
-  }
-
-  .signup-link {
     color: rgb(97, 82, 72);
-    align-items: center !important;
-    justify-self: center !important;
-  }
-
-  .signup-link a {
-    color: rgb(97, 82, 72) !important;
-    align-items: center !important;
-    justify-self: center !important;
   }
   
-  .input-group input {
-    width: 350px !important;
-    padding: 12px 10px;
-    font-size: 16px;
-    border: 1px solid rgb(97, 82, 72) !important;
-    background-color: rgb(235, 230, 215);
-    align-items: center !important;
-    justify-content: center !important;
+  .logout-btn {
+    padding: 10px 24px;
+    font-size: 15px;
+    background-color: rgb(97, 82, 72);
+    color: rgb(235, 230, 215);
+    border: 1px solid rgb(97, 82, 72);
     border-radius: 5px;
-  }
-  
-  .input-group label {
-    position: absolute;
-    left: 12px;
-    top: 12px;
-    color: rgb(97, 82, 72);
-    font-size: 16px;
-    pointer-events: none;
-    transition: 0.2s ease all;
-    background-color: rgb(235, 230, 215);
-    padding: 0 4px;
-  }
-  
-  .input-group input:focus + label,
-  .input-group input:not(:placeholder-shown) + label {
-    top: -8px;
-    left: 10px;
-    font-size: 12px;
-    color: rgb(97, 82, 72);
-  }
-  
-  .btn {
-    width: 350px !important;
-    padding: 12px;
-    color: rgb(97, 82, 72) !important;
-    background-color: rgb(235, 230, 215) !important;
-    border: 1px solid rgb(97, 82, 72) !important;
-    border-radius: 5px;
-    font-size: 16px;
+    width: fit-content;
     cursor: pointer;
-    transition: background 0.3s ease;
-    margin-left: 10px !important;
+    transition: background-color 0.3s ease;
   }
   
-  .btn:hover {
-    background-color: rgb(97, 82, 72) !important;
-    color: rgb(235, 230, 215) !important;
-    border: 1px solid rgb(97, 82, 72);  
+  .logout-btn:hover {
+    background-color: rgb(235, 230, 215) !important;
+    color: rgb(97, 82, 72) !important;
   }
-
-/* Footer */
+  
+  .dashboard-container img {
+    flex: 1;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  /* Footer Section */
 footer {
     font-family: "Cormorant Garamond", serif;
     font-weight: 300;
     font-style: normal;
     height: 300px;
     color: white;
-    margin-top: 125px;
+    margin-top: 100px;
 }
 
 .fc {
@@ -229,4 +211,5 @@ ul {
     font-style: normal;
     font-size: larger;
     background-color: rgba(237, 235, 223, 0.51);
+    margin-bottom: 0px;
 }

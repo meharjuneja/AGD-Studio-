@@ -17,6 +17,12 @@ html {
     margin: 0px;
 }
 
+/* header */
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
 *::selection {
     background-color: rgb(97, 82, 72);
     color: white;
@@ -78,6 +84,19 @@ header {
     font-family: "Cormorant Garamond", serif;
     font-weight: 300;
     font-style: normal;
+}
+.fa-user-large{
+    font-size: 23px;
+    color: rgb(154, 134, 120);
+    border: 1px solid rgb(123, 105, 92);
+    padding: 7px;
+    border-radius: 50%;
+    margin-right: 0px;
+}
+.fa-user-large:hover {
+    transform: scale(1.02);
+    color: rgb(123, 105, 92);
+    
 }
 
 html,

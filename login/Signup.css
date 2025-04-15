@@ -2,7 +2,6 @@
 * {
     padding: 0px;
     margin: 0px;
-    font-family: "Cormorant Garamond", serif;
 }
 
 *::selection {
@@ -67,10 +66,23 @@ header {
     font-weight: 300;
     font-style: normal;
 }
+.fa-user-large{
+    font-size: 23px;
+    color: rgb(154, 134, 120);
+    border: 1px solid rgb(123, 105, 92);
+    padding: 7px;
+    border-radius: 50%;
+    margin-right: 0px;
+}
+.fa-user-large:hover {
+    transform: scale(1.02);
+    color: rgb(123, 105, 92);
+    
+}
 
-html, body {
+html,
+body {
     background-color: rgba(237, 235, 223, 0.51) !important;
-    padding-top: 100px;
 }
 
 /* SignUp Page */
