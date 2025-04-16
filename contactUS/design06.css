@@ -211,7 +211,7 @@ form textarea {
 
 .form-input:hover {
     background-color: #e0e0e0;
-    color: white;
+    color: rgb(109, 106, 106);
 }
 
 .form-input:focus {

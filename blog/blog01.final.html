@@ -147,7 +147,7 @@
   <section class="blog">
     <div class="container">
       <div class="card">
-        <a href="https://www.designsbylaila.com/patio-revamp-before-and-after" target="_blank"><img
+        <a href="/Blog Pages/Blog Page 1.html" target="_blank"><img
             src="https://www.designsbylaila.com/wp-content/uploads/2019/10/subtle-and-soft-thanksgiving-tablescape-2.1jpg-768x1152.jpg"
             class="card-img-top" alt="..."></a>
         <div class="card-body">
@@ -158,7 +158,7 @@
         </div>
       </div>
       <div class="card">
-        <a href="https://www.designsbylaila.com/subtle-and-soft-thanksgiving-tablescape/" target="_blank"><img
+        <a href="/Blog Pages/Blog Page 2.html" target="_blank"><img
             src="https://www.designsbylaila.com/wp-content/uploads/2020/08/IMG_7454-768x1152.png" class="card-img-top"
             alt="..."></a>
         <div class="card-body">
@@ -169,7 +169,7 @@
         </div>
       </div>
       <div class="card">
-        <a href="https://www.designsbylaila.com/tis-the-season-to-decorate/" target="_blank"> <img
+        <a href="/Blog Pages/Blog Page 3.html" target="_blank"> <img
             src="https://www.designsbylaila.com/wp-content/uploads/2018/12/tis-the-season-to-be-festive-768x906.png"
             class="card-img-top" alt="..."></a>
         <div class="card-body">
@@ -522,60 +522,79 @@
 </body>
 
 
+<!-- bootstrap javascript cdn link -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+crossorigin="anonymous"></script>
+
+<!-- AOS javascript link -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  // Form submission event listener
-  document.getElementById("signupForm").addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    // Hide form and show thank you message
-    document.getElementById("signupForm").style.display = "none";
-    document.getElementById("thankYouMessage").style.display = "block";
-  });
+AOS.init();
 </script>
-
-
-
 
 <!-- Google Translate Script -->
 <script type="text/javascript"
-  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- instagram posts  -->
+<script async src="//www.instagram.com/embed.js"></script>
+<script async src="//www.instagram.com/embed.js"></script>
+
+<!-- newsletter  -->
+<script>
+// Form submission event listener
+document.getElementById("signupForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  // Hide form and show thank you message
+  document.getElementById("signupForm").style.display = "none";
+  document.getElementById("thankYouMessage").style.display = "block";
+});
+</script>
 
 <!-- Google Translate Script -->
 <script type="text/javascript">
-  // Initialize Google Translate only when button is clicked and ensure script is loaded
-  function loadGoogleTranslate() {
-    // Load Google Translate script if it hasn't been loaded yet
-    if (!window.google || !window.google.translate) {
-      const script = document.createElement('script');
-      script.type = 'text/javascript';
-      script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-      document.head.appendChild(script);
-    } else {
-      googleTranslateElementInit();
+    // Initialize Google Translate only when button is clicked and ensure script is loaded
+    function loadGoogleTranslate() {
+      // Load Google Translate script if it hasn't been loaded yet
+      if (!window.google || !window.google.translate) {
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+        document.head.appendChild(script);
+      } else {
+        googleTranslateElementInit();
+      }
     }
-  }
 
-  // Initialize Google Translate Element
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      includedLanguages: 'en,hi,pa',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-  }
-
-  // Toggle the visibility of the Google Translate container when the icon is clicked
-  document.getElementById("translateToggleBtn").addEventListener("click", function () {
-    const translateContainer = document.getElementById("googleTranslateContainer");
-
-    // Toggle visibility
-    if (translateContainer.style.display === "none" || translateContainer.style.display === "") {
-      loadGoogleTranslate(); // Ensure Translate is loaded
-      translateContainer.style.display = "block";
-    } else {
-      translateContainer.style.display = "none";
+    // Initialize Google Translate Element
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,pa',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
     }
-  });
-</script>
+
+    // Toggle the visibility of the Google Translate container when the icon is clicked
+    document.getElementById("translateToggleBtn").addEventListener("click", function() {
+      const translateContainer = document.getElementById("googleTranslateContainer");
+      
+      // Toggle visibility
+      if (translateContainer.style.display === "none" || translateContainer.style.display === "") {
+        loadGoogleTranslate(); // Ensure Translate is loaded
+        translateContainer.style.display = "block";
+      } else {
+        translateContainer.style.display = "none";
+      }
+    });
+  </script>
+<script src="/newsletter.js"></script>
+<script async type='module'
+    src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
+  <zapier-interfaces-chatbot-embed is-popup='true'
+    chatbot-id='cm8vvwm23003pvlevkk0vbqpq'></zapier-interfaces-chatbot-embed>
+  </script>
 
 </html>

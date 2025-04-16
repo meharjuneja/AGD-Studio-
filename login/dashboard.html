@@ -85,6 +85,32 @@
     <img src="https://laurahammettliving.com/cdn/shop/files/2b4e4612619df023ae26036bc9da5396.jpg?v=1694730414&width=500" alt="">
   </div>
 
+
+  <!-- newsletter  -->
+  <section class="newsletter">
+    <div class="signup-box">
+      <p class="news-head">SIGN UP TO OUR NEWSLETTER</p>
+      <p class="news-head02">Stay updated with our latest design trends and updates</p>
+
+      <!-- Form Content -->
+      <form id="signupForm">
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label>
+          <input type="checkbox" required> I agree to the privacy policy *
+        </label>
+        <div class="news-btn">
+          <button type="submit">Subscribe</button> <!-- ✅ Button type fixed -->
+        </div>
+      </form>
+
+      <!-- Thank you message -->
+      <p class="thank-you" id="thankYouMessage" style="display: none;">Thank you for signing up!</p> <!-- ✅ Hidden by default -->
+    </div>
+</section>
+
+
+
   <!-- Footer Section -->
   <footer style="background-color: rgb(97, 82, 72)">
     <div class="fc container-fluid  d-flex">
@@ -149,5 +175,82 @@
       window.location.href = "login.html";
     }
   </script>
+
+  <!-- bootstrap javascript cdn link -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+crossorigin="anonymous"></script>
+
+<!-- AOS javascript link -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+
+<!-- Google Translate Script -->
+<script type="text/javascript"
+src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- instagram posts  -->
+<script async src="//www.instagram.com/embed.js"></script>
+<script async src="//www.instagram.com/embed.js"></script>
+
+<!-- newsletter  -->
+<script>
+// Form submission event listener
+document.getElementById("signupForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  // Hide form and show thank you message
+  document.getElementById("signupForm").style.display = "none";
+  document.getElementById("thankYouMessage").style.display = "block";
+});
+</script>
+
+<!-- Google Translate Script -->
+<script type="text/javascript">
+    // Initialize Google Translate only when button is clicked and ensure script is loaded
+    function loadGoogleTranslate() {
+      // Load Google Translate script if it hasn't been loaded yet
+      if (!window.google || !window.google.translate) {
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+        document.head.appendChild(script);
+      } else {
+        googleTranslateElementInit();
+      }
+    }
+
+    // Initialize Google Translate Element
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,pa',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+
+    // Toggle the visibility of the Google Translate container when the icon is clicked
+    document.getElementById("translateToggleBtn").addEventListener("click", function() {
+      const translateContainer = document.getElementById("googleTranslateContainer");
+      
+      // Toggle visibility
+      if (translateContainer.style.display === "none" || translateContainer.style.display === "") {
+        loadGoogleTranslate(); // Ensure Translate is loaded
+        translateContainer.style.display = "block";
+      } else {
+        translateContainer.style.display = "none";
+      }
+    });
+  </script>
+<script src="/newsletter.js"></script>
+<script async type='module'
+    src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
+  <zapier-interfaces-chatbot-embed is-popup='true'
+    chatbot-id='cm8vvwm23003pvlevkk0vbqpq'></zapier-interfaces-chatbot-embed>
+  </script>
+
+
 </body>
 </html>

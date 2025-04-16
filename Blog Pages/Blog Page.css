@@ -1,17 +1,106 @@
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(235, 230, 215);
-    margin: 0;
-    padding: 0;
+
+
+/* header */
+* {
+    padding: 0px;
+    margin: 0px;
 }
+
+*::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
+
+btn::selection {
+    background-color: white;
+    color: rgb(97, 82, 72);
+}
+
+header {
+    background-color: rgb(235, 230, 215);
+    opacity: 0.9;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 5px -3px;
+}
+
+.nav-item:hover {
+    transform: scale(1.02);
+}
+
+.nav-item a::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
+
+.AGD-logo {
+    font-size: 40px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: italic;
+    color: rgb(170, 146, 146);
+    margin-left: 52px;
+}
+
+.AGD-img {
+    margin-left: 48px;
+}
+
+.AGDname {
+    font-size: 17px;
+    margin-left: 30px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.AGDname::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
+
+.Nlist {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.fa-user-large{
+    font-size: 23px;
+    color: rgb(154, 134, 120);
+    border: 1px solid rgb(123, 105, 92);
+    padding: 7px;
+    border-radius: 50%;
+    margin-right: 0px;
+}
+.fa-user-large:hover {
+    transform: scale(1.02);
+    color: rgb(123, 105, 92);
+    
+}
+
+html,
+body {
+    background-color: rgba(237, 235, 223, 0.51) !important;
+}
+
 
 /* Main Section */
 .image-container, .container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 160px;
     text-align: center;
-    background-color: rgb(235, 230, 215);
+    /* background-color: rgb(235, 230, 215); */
     width: 700px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .half-line {
@@ -54,6 +143,9 @@ body {
     align-items: center;
     text-align: center;
     padding: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .container h2 {
@@ -138,7 +230,7 @@ body {
     margin-bottom: 20px;
 }
 
-button {
+.commentBTN{
     width: 120px;
     padding: 6px;
     font-size: 12px;
@@ -149,7 +241,7 @@ button {
     border-radius: 5px;
 }
 
-button:hover {
+.commentBTN:hover {
     color: rgb(235, 230, 215);
     background-color: rgb(97, 82, 72);
 }
@@ -160,3 +252,230 @@ button:hover {
     color: rgb(97, 82, 72);
     margin-top: 15px;
 }
+
+.comments-container {
+    width: 100%;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.comment-block {
+    background-color: #f9f7f2;
+    border: 1px solid rgb(97, 82, 72);
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
+
+.comment-text {
+    font-style: italic;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.comment-meta {
+    font-size: 13px;
+    color: #666;
+}
+
+.delete-btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.delete-btn:hover {
+    background-color: #c9302c;
+}
+
+
+
+/* newsletter  */
+
+/* Signup box styling */
+.newsletter {
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.signup-box {
+    width: 1050px;
+    height: 300px;
+    padding: 30px 100px;
+    border-radius: 0px;
+    background-color: rgba(237, 235, 223, 1);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 1px solid #ddd;
+}
+
+.news-head {
+    font-size: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.news-head02 {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Input styling */
+.signup-box input[type="email"] {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    background-color: rgba(237, 235, 223, 0.51);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+}
+
+/* Checkbox and label styling */
+.signup-box label {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 0.9em;
+    color: #555;
+    display: inline-block;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: rgba(237, 235, 223, 1);
+}
+
+.signup-box input[type="checkbox"] {
+    margin-right: 5px;
+    background-color: rgba(237, 235, 223, 1);
+}
+
+/* newsletter button  */
+.news-btn {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px 0px;
+}
+
+.signup-box button {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    padding: 10px 50px;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+}
+
+.signup-box button:hover {
+    color: #ffffff;
+    background-color: rgb(97, 82, 72);
+}
+
+/* Thank you message styling */
+.thank-you {
+    margin-top: 70px;
+    display: none;
+    font-size: 2em;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: 400px;
+}
+
+/* footer */
+footer {
+    margin-top: 100px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    height: 300px;
+    color: white;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 5px -3px; */
+}
+
+fc {
+    align-items: center;
+}
+
+.fc2 {
+    padding-left: 242px;
+    padding-top: 80px;
+    list-style-type: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fc2 ul li::selection {
+    background-color: white;
+    color: rgb(97, 82, 72);
+}
+
+.fc2 ul {
+    margin-right: 200px;
+}
+
+.fc2 ul a {
+    text-decoration: none;
+}
+
+.fc2 ul li {
+    margin-bottom: 20px;
+}
+
+.fi {
+    padding-top: 80px;
+}
+
+.fc2 ul li a {
+    margin-right: 18px;
+    color: white;
+    font-size: 24px;
+}
+
+.f3list li h4::selection {
+    background-color: white;
+    color: rgb(97, 82, 72);
+}
+
+.f3list li p::selection {
+    background-color: white;
+    color: rgb(97, 82, 72);
+}
+
+.copyright {
+    margin-top: 4px;
+    margin-left: 500px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: larger;
+    background-color: rgba(237, 235, 223, 0.51);
+}
+
+.copyright p::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
+

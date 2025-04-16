@@ -85,9 +85,16 @@ body {
     background-color: rgba(237, 235, 223, 0.51) !important;
 }
 
+
+.loginSec{
+    padding-top: 200px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+}
 /* SignUp Page */
 .container {
-    margin-top: 180px;
+    margin-top: 0px;
     background-color: rgb(235, 230, 215);
     padding: 40px;
     border-radius: 10px;
@@ -173,6 +180,104 @@ body {
     color: rgb(235, 230, 215) !important;
     border: 1px solid rgb(97, 82, 72);  
   }
+
+
+  /* newsletter  */
+
+/* Signup box styling */
+.newsletter {
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.signup-box {
+    width: 1050px;
+    height: 300px;
+    padding: 30px 100px;
+    border-radius: 0px;
+    background-color: rgba(237, 235, 223, 1);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 1px solid #ddd;
+}
+
+.news-head {
+    font-size: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.news-head02 {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Input styling */
+.signup-box input[type="email"] {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    background-color: rgba(237, 235, 223, 0.51);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+}
+
+/* Checkbox and label styling */
+.signup-box label {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 0.9em;
+    color: #555;
+    display: inline-block;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: rgba(237, 235, 223, 1);
+}
+
+.signup-box input[type="checkbox"] {
+    margin-right: 5px;
+    background-color: rgba(237, 235, 223, 1);
+}
+
+/* newsletter button  */
+.news-btn {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px 0px;
+}
+
+.signup-box button {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    padding: 10px 50px;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+}
+
+.signup-box button:hover {
+    color: #ffffff;
+    background-color: rgb(97, 82, 72);
+}
+
+
 
 /* Footer */
 footer {
