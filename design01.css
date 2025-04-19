@@ -1178,7 +1178,7 @@ ul {
 
 @media (min-width: 0px) and (max-width: 400px) {
 
-    /* header */
+    /* header
     * {
         padding: 0px;
         margin: 0px;
@@ -1255,7 +1255,7 @@ ul {
     html,
     body {
         background-color: rgba(237, 235, 223, 0.51) !important;
-    }
+    } */
 
     .hero-section {
         /* position: relative;
@@ -2011,114 +2011,9 @@ ul {
 
 
 
-    /* newsletter  */
+    
 
-    /* Signup box styling */
-    .newsletter {
-        margin-top: 80px;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-    }
-
-    .signup-box {
-        width: 300px;
-        height: 180px;
-        padding: 5px 10px;
-        border-radius: 0px;
-        background-color: rgba(237, 235, 223, 1);
-        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-        text-align: center;
-        transition: transform 0.3s ease;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        border: 1px solid #ddd;
-    }
-
-    .news-head {
-        font-size: 14px;
-        font-family: "Cormorant Garamond", serif;
-        font-style: normal;
-        font-weight: 300;
-        margin-bottom: 4px;
-        color: #333;
-    }
-
-    .news-head02 {
-        font-family: "Cormorant Garamond", serif;
-        font-style: normal;
-        font-size: 0.6em;
-        color: #666;
-        margin-bottom: 4px;
-    }
-
-    /* Input styling */
-    .signup-box input[type="email"] {
-        margin-top: 15px;
-        width: 100%;
-        padding: 5px;
-        font-size: 0.7em;
-        margin-bottom: 5px;
-        background-color: rgba(237, 235, 223, 0.51);
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        font-family: "Cormorant Garamond", serif;
-        font-style: normal;
-    }
-
-    /* Checkbox and label styling */
-    .signup-box label {
-        font-family: "Cormorant Garamond", serif;
-        font-style: normal;
-        font-size: 0.7em;
-        color: #555;
-        display: inline-block;
-        margin-bottom: 15px;
-        cursor: pointer;
-        background-color: rgba(237, 235, 223, 1);
-    }
-
-    .signup-box input[type="checkbox"] {
-        height: 10px;
-        margin-right: 5px;
-        background-color: rgba(237, 235, 223, 1);
-    }
-
-    /* newsletter button  */
-    .news-btn {
-        display: flex;
-        justify-content: center;
-        margin: 5px 0 10px 0px;
-    }
-
-    .signup-box button {
-        font-family: "Cormorant Garamond", serif;
-        font-style: normal;
-        padding: 5px 15px;
-        color: #b0b0b0;
-        border: 1px solid #b0b0b0;
-        cursor: pointer;
-        font-weight: normal;
-        letter-spacing: 1px;
-        background-color: rgba(237, 235, 223, 1);
-        font-size: small;
-    }
-
-    .signup-box button:hover {
-        color: #ffffff;
-        background-color: rgb(97, 82, 72);
-    }
-
-    /* Thank you message styling */
-    .thank-you {
-        margin-top: 40px;
-        display: none;
-        font-size: 1em;
-        font-family: "Cormorant Garamond", serif;
-        font-style: normal;
-        font-weight: 400px;
-    }
-
-    /* footer */
+    /* footer
     footer {
         font-family: "Cormorant Garamond", serif;
         font-weight: 300;
@@ -2174,7 +2069,7 @@ ul {
         font-style: normal;
         font-size: small;
         background-color: rgba(237, 235, 223, 0.51);
-    }
+    } */
 }
 
 
@@ -2198,7 +2093,7 @@ ul {
 
 @media (min-width:401px) and (max-width:1024px) {
 
-    * {
+    /* * {
         padding: 0px;
         margin: 0px;
     }
@@ -2274,7 +2169,7 @@ ul {
     html,
     body {
         background-color: rgba(237, 235, 223, 0.51) !important;
-    }
+    } */
 
 
 
@@ -3035,122 +2930,7 @@ ul {
 
 
 
-
-
-
-
-
-
-
-
-
-    /* newsletter  */
-
-    /* Signup box styling */
-    .newsletter {
-        margin-top: 100px;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-    }
-
-    .signup-box {
-        width: 700px;
-        height: 270px;
-        padding: 20px 100px;
-        border-radius: 0px;
-        background-color: rgba(237, 235, 223, 1);
-        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-        text-align: center;
-        transition: transform 0.3s ease;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        border: 1px solid #ddd;
-    }
-
-    .news-head {
-        font-size: 15px;
-        font-family: "Cormorant Garamond", serif;
-        font-style: normal;
-        font-weight: 300;
-        margin-bottom: 10px;
-        color: #333;
-    }
-
-    .news-head02 {
-        font-family: "Cormorant Garamond", serif;
-        font-style: normal;
-        font-size: 0.7em;
-        color: #666;
-        margin-bottom: 10px;
-    }
-
-    /* Input styling */
-    .signup-box input[type="email"] {
-        margin-top: 15px;
-        width: 100%;
-        padding: 10px;
-        font-size: 0.8em;
-        margin-bottom: 15px;
-        background-color: rgba(237, 235, 223, 0.51);
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        font-family: "Cormorant Garamond", serif;
-        font-style: normal;
-    }
-
-    /* Checkbox and label styling */
-    .signup-box label {
-        font-family: "Cormorant Garamond", serif;
-        font-style: normal;
-        font-size: 0.9em;
-        color: #555;
-        display: inline-block;
-        margin-bottom: 13px;
-        cursor: pointer;
-        background-color: rgba(237, 235, 223, 1);
-    }
-
-    .signup-box input[type="checkbox"] {
-        margin-right: 5px;
-        background-color: rgba(237, 235, 223, 1);
-    }
-
-    /* newsletter button  */
-    .news-btn {
-        display: flex;
-        justify-content: center;
-        margin: 10px 0 20px 0px;
-    }
-
-    .signup-box button {
-        font-family: "Cormorant Garamond", serif;
-        font-style: normal;
-        padding: 8px 45px;
-        color: #b0b0b0;
-        border: 1px solid #b0b0b0;
-        cursor: pointer;
-        font-weight: normal;
-        letter-spacing: 2px;
-        background-color: rgba(237, 235, 223, 1);
-    }
-
-    .signup-box button:hover {
-        color: #ffffff;
-        background-color: rgb(97, 82, 72);
-    }
-
-    /* Thank you message styling */
-    .thank-you {
-        margin-top: 70px;
-        display: none;
-        font-size: 2em;
-        font-family: "Cormorant Garamond", serif;
-        font-style: normal;
-        font-weight: 400px;
-    }
-
-
-    /* footer */
+    /* footer
     footer {
         font-family: "Cormorant Garamond", serif;
         font-weight: 300;
@@ -3205,5 +2985,5 @@ ul {
         font-style: normal;
         font-size: larger;
         background-color: rgba(237, 235, 223, 0.51);
-    }
+    } */
 }

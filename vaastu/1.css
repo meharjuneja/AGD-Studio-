@@ -23,7 +23,7 @@ header {
   width: 100%;
   z-index: 1;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-      rgba(0, 0, 0, 0.3) 0px 3px 5px -3px;
+    rgba(0, 0, 0, 0.3) 0px 3px 5px -3px;
 }
 
 .nav-item:hover {
@@ -66,7 +66,8 @@ header {
   font-weight: 300;
   font-style: normal;
 }
-.fa-user-large{
+
+.fa-user-large {
   font-size: 23px;
   color: rgb(154, 134, 120);
   border: 1px solid rgb(123, 105, 92);
@@ -74,10 +75,11 @@ header {
   border-radius: 50%;
   margin-right: 0px;
 }
+
 .fa-user-large:hover {
   transform: scale(1.02);
   color: rgb(123, 105, 92);
-  
+
 }
 
 html,
@@ -85,25 +87,8 @@ body {
   background-color: rgba(237, 235, 223, 0.51) !important;
 }
 
-/* body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin: 20px;
-} */
 
-
-
-/* vaastu tool  */
-
-/* .bg-container {
-  background-image: url(/images/bg.jpeg);
-} */
-
-
-/* #vaastu-container {
-  position: relative;
-  z-index: 2;
-} */
+/* main sec  */
 
 .vastuChildContainer {
   padding-top: 150px;
@@ -111,7 +96,7 @@ body {
   display: flex;
 }
 
-.toolIMG{
+.toolIMG {
   height: 630px;
   width: 900px;
 }
@@ -169,7 +154,8 @@ body {
   justify-content: center;
   align-items: center;
 }
-.resultBTN1:hover{
+
+.resultBTN1:hover {
   color: #ffffff;
   background-color: rgb(97, 82, 72);
 }
@@ -192,7 +178,8 @@ body {
   justify-content: center;
   align-items: center;
 }
-.resultBTN2:hover{
+
+.resultBTN2:hover {
   color: #ffffff;
   background-color: rgb(97, 82, 72);
 }
@@ -217,7 +204,8 @@ body {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   color: rgb(97, 82, 72);
 }
-.buttonContainers{
+
+.buttonContainers {
   display: flex;
 }
 
@@ -294,7 +282,8 @@ body {
   align-items: center;
   margin: 30px 10px 20px 140px;
 }
-.calculateBTN:hover{
+
+.calculateBTN:hover {
   color: #ffffff;
   background-color: rgb(97, 82, 72);
 }
@@ -384,7 +373,7 @@ body {
   justify-content: center;
   align-items: center;
   display: flex;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 .signup-box {
@@ -559,4 +548,2664 @@ ul {
 .copyright p::selection {
   background-color: rgb(97, 82, 72);
   color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
+@media (min-width: 1170px) and (max-width:1189px) {
+  /* main sec  */
+
+  .vastuChildContainer {
+    padding-top: 150px;
+    /* padding-bottom: 100px; */
+    display: flex;
+  }
+
+  .toolIMG {
+    height: 600px;
+    width: 700px;
+  }
+
+  .container1 {
+    margin: auto;
+    height: 600px;
+    width: 450px;
+    padding: 60px 20px;
+    background-color: rgb(230, 228, 217);
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .vaastuIPfield {
+    width: 400px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    height: 45px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+  }
+
+  .vaastuIPlabel {
+    display: block;
+    margin-top: 10px;
+    font-size: 20px;
+    color: rgb(97, 82, 72);
+    font-weight: bold;
+    text-align: left;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .resultBTN1 {
+    width: 220px;
+    height: 40px;
+    margin: 5px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 17px;
+    padding: auto;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .resultBTN1:hover {
+    color: #ffffff;
+    background-color: rgb(97, 82, 72);
+  }
+
+  .resultBTN2 {
+    width: 220px;
+    height: 40px;
+    margin: 5px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 17px;
+    padding: auto;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .resultBTN2:hover {
+    color: #ffffff;
+    background-color: rgb(97, 82, 72);
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .result-container {
+    text-align: left;
+    padding: 20px;
+    border: 1px solid rgb(246, 243, 231, 0.9);
+    border-radius: 10px;
+    height: 600px;
+    width: 450px;
+    margin: auto;
+    background-color: rgb(230, 228, 217);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    color: rgb(97, 82, 72);
+  }
+
+  .buttonContainers {
+    display: flex;
+  }
+
+  .profile-img {
+    width: 170px;
+    height: 127px;
+    border-radius: 50%;
+    margin-bottom: 0px;
+    /* margin-right: 10px; */
+  }
+
+
+  .numerology-title {
+    font-size: 14px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    margin-bottom: 0px;
+  }
+
+  .numerology-number {
+    font-size: 20px;
+    color: #d49140;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 0px;
+  }
+
+  #analysisText {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 16px;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .flex-within {
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
+
+  .vaastu-section {
+    margin-top: 0px;
+  }
+
+  #vaastuRecommendations {
+    padding-left: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-size: 15px;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    list-style: circle;
+  }
+
+  .calculateBTN {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: larger;
+    padding: 10px 50px;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 10px 20px 120px;
+  }
+
+  .calculateBTN:hover {
+    color: #ffffff;
+    background-color: rgb(97, 82, 72);
+  }
+
+  .loading-gif {
+    width: 80px;
+    /* Adjust the size */
+    display: block;
+    margin: 20px auto;
+  }
+
+  #loadingMessage {
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* z-index: 10;  */
+    height: 240px;
+    width: 300px;
+    text-align: center;
+    background: rgb(246, 243, 231, 0.9);
+    /* Light background to improve visibility */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    font-size: 22px;
+    font-weight: bolder;
+  }
+
+  .head {
+    font-size: 33px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    color: rgb(97, 82, 72);
+  }
+
+  .head2 {
+    font-size: 22px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: normal;
+    /* color: black; */
+  }
+
+  .head3 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+
+  .vaastuViewSwitcher {
+    position: relative;
+    width: 600px;
+    height: 850px;
+    margin-left: 15px;
+  }
+
+  /* #inputContainer, */
+  /* #loadingMessage, */
+  #resultContainer {
+    position: absolute;
+    /* top: 0;
+  left: 0;
+  width: 100%; */
+  }
+
+  #loadingMessage {
+    position: relative;
+  }
+}
+
+
+@media (min-width: 1100px) and (max-width:1169px) {
+  /* main sec  */
+
+  .vastuChildContainer {
+    padding-top: 150px;
+    /* padding-bottom: 100px; */
+    display: flex;
+  }
+
+  .toolIMG {
+    height: 550px;
+    width: 670px;
+  }
+
+  .container1 {
+    margin: auto;
+    height: 550px;
+    width: 420px;
+    padding: 60px 20px;
+    background-color: rgb(230, 228, 217);
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .vaastuIPfield {
+    width: 370px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    height: 45px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+  }
+
+  .vaastuIPlabel {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: rgb(97, 82, 72);
+    font-weight: bold;
+    text-align: left;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .resultBTN1 {
+    width: 180px;
+    height: 35px;
+    margin: 5px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 15px;
+    padding: auto;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .resultBTN1:hover {
+    color: #ffffff;
+    background-color: rgb(97, 82, 72);
+  }
+
+  .resultBTN2 {
+    width: 180px;
+    height: 35px;
+    margin: 5px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 17px;
+    padding: auto;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .resultBTN2:hover {
+    color: #ffffff;
+    background-color: rgb(97, 82, 72);
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .result-container {
+    text-align: left;
+    padding: 20px;
+    border: 1px solid rgb(246, 243, 231, 0.9);
+    border-radius: 10px;
+    height: 550px;
+    width: 420px;
+    margin: auto;
+    background-color: rgb(230, 228, 217);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    color: rgb(97, 82, 72);
+  }
+
+  .buttonContainers {
+    display: flex;
+  }
+
+  .profile-img {
+    width: 170px;
+    height: 127px;
+    border-radius: 50%;
+    margin-bottom: 0px;
+    /* margin-right: 10px; */
+  }
+
+
+  .numerology-title {
+    font-size: 14px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    margin-bottom: 0px;
+  }
+
+  .numerology-number {
+    font-size: 20px;
+    color: #d49140;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 0px;
+  }
+
+  #analysisText {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 16px;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .flex-within {
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
+
+  .vaastu-section {
+    margin-top: 0px;
+  }
+
+  #vaastuRecommendations {
+    padding-left: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    list-style: circle;
+  }
+
+  .calculateBTN {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: larger;
+    padding: 10px 40px;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px 20px 100px;
+  }
+
+  .calculateBTN:hover {
+    color: #ffffff;
+    background-color: rgb(97, 82, 72);
+  }
+
+  .loading-gif {
+    width: 80px;
+    /* Adjust the size */
+    display: block;
+    margin: 20px auto;
+  }
+
+  #loadingMessage {
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* z-index: 10;  */
+    height: 240px;
+    width: 300px;
+    text-align: center;
+    background: rgb(246, 243, 231, 0.9);
+    /* Light background to improve visibility */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    font-size: 22px;
+    font-weight: bolder;
+  }
+
+  .head {
+    font-size: 33px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    color: rgb(97, 82, 72);
+  }
+
+  .head2 {
+    font-size: 22px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: normal;
+    /* color: black; */
+  }
+
+  .head3 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+
+  .vaastuViewSwitcher {
+    position: relative;
+    width: 600px;
+    height: 850px;
+    margin-left: 15px;
+  }
+
+  /* #inputContainer, */
+  /* #loadingMessage, */
+  #resultContainer {
+    position: absolute;
+    /* top: 0;
+  left: 0;
+  width: 100%; */
+  }
+
+  #loadingMessage {
+    position: relative;
+  }
+}
+
+
+
+
+@media (min-width: 1050px) and (max-width:1099px) {
+  /* main sec  */
+
+  .vastuChildContainer {
+    padding-top: 150px;
+    /* padding-bottom: 100px; */
+    display: block;
+  }
+
+  .toolIMG {
+    height: 600px;
+    width: 1100px;
+    /* justify-content: center; */
+    margin: auto;
+  }
+
+  .container1 {
+    margin-top: 100px;
+    margin-left: 300px;
+    height: 600px;
+    width: 500px;
+    padding: 60px 20px;
+    background-color: rgb(230, 228, 217);
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .vaastuIPfield {
+    width: 460px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    height: 45px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+  }
+
+  .vaastuIPlabel {
+    display: block;
+    margin-top: 10px;
+    font-size: 20px;
+    color: rgb(97, 82, 72);
+    font-weight: bold;
+    text-align: left;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .resultBTN1 {
+    width: 220px;
+    height: 40px;
+    margin: 5px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 15px;
+    padding: auto;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .resultBTN1:hover {
+    color: #ffffff;
+    background-color: rgb(97, 82, 72);
+  }
+
+  .resultBTN2 {
+    width: 220px;
+    height: 40px;
+    margin: 5px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 17px;
+    padding: auto;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .resultBTN2:hover {
+    color: #ffffff;
+    background-color: rgb(97, 82, 72);
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .result-container {
+    text-align: left;
+    padding: 20px;
+    border: 1px solid rgb(246, 243, 231, 0.9);
+    border-radius: 10px;
+    height: 600px;
+    width: 500px;
+    /* margin: auto; */
+    margin-top: 100px;
+    margin-left: 300px;
+    background-color: rgb(230, 228, 217);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    color: rgb(97, 82, 72);
+  }
+
+  .buttonContainers {
+    display: flex;
+  }
+
+  .profile-img {
+    width: 170px;
+    height: 127px;
+    border-radius: 50%;
+    margin-bottom: 0px;
+    /* margin-right: 10px; */
+  }
+
+
+  .numerology-title {
+    font-size: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    margin-bottom: 0px;
+  }
+
+  .numerology-number {
+    font-size: 24px;
+    color: #d49140;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 0px;
+  }
+
+  #analysisText {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .flex-within {
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
+
+  .vaastu-section {
+    margin-top: 0px;
+  }
+
+  #vaastuRecommendations {
+    padding-left: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    list-style: circle;
+  }
+
+  .calculateBTN {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: larger;
+    padding: 10px 40px;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 10px 20px 145px;
+  }
+
+  .calculateBTN:hover {
+    color: #ffffff;
+    background-color: rgb(97, 82, 72);
+  }
+
+  .loading-gif {
+    width: 80px;
+    /* Adjust the size */
+    display: block;
+    margin: 20px auto;
+  }
+
+  #loadingMessage {
+    top: 43%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+    /* z-index: 10;  */
+    height: 240px;
+    width: 300px;
+    text-align: center;
+    background: rgb(246, 243, 231, 0.9);
+    /* Light background to improve visibility */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    font-size: 22px;
+    font-weight: bolder;
+  }
+
+  .head {
+    font-size: 33px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    color: rgb(97, 82, 72);
+  }
+
+  .head2 {
+    font-size: 22px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: normal;
+    /* color: black; */
+  }
+
+  .head3 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+
+  .vaastuViewSwitcher {
+    position: relative;
+    width: 600px;
+    height: 850px;
+    margin-left: 15px;
+  }
+
+  /* #inputContainer, */
+  /* #loadingMessage, */
+  #resultContainer {
+    position: absolute;
+    /* top: 0;
+left: 0;
+width: 100%; */
+  }
+
+  #loadingMessage {
+    position: relative;
+  }
+}
+
+
+
+
+@media (min-width: 1000px) and (max-width:1049px) {
+
+  .vastuChildContainer {
+    padding-top: 150px;
+    /* padding-bottom: 100px; */
+    display: block;
+  }
+
+  .toolIMG {
+    height: 600px;
+    width: 1100px;
+    /* justify-content: center; */
+    margin: auto;
+  }
+
+  .container1 {
+    margin-top: 100px;
+    margin-left: 250px;
+    height: 600px;
+    width: 500px;
+    padding: 60px 20px;
+    background-color: rgb(230, 228, 217);
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .result-container {
+    text-align: left;
+    padding: 20px;
+    border: 1px solid rgb(246, 243, 231, 0.9);
+    border-radius: 10px;
+    height: 610px;
+    width: 500px;
+    /* margin: auto; */
+    margin-top: 100px;
+    margin-left: 250px;
+    background-color: rgb(230, 228, 217);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    color: rgb(97, 82, 72);
+  }
+
+  .buttonContainers {
+    display: flex;
+  }
+
+  #loadingMessage {
+    top: 43%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    /* z-index: 10;  */
+    height: 240px;
+    width: 300px;
+    text-align: center;
+    background: rgb(246, 243, 231, 0.9);
+    /* Light background to improve visibility */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    font-size: 22px;
+    font-weight: bolder;
+  }
+}
+
+
+
+@media (min-width: 950px) and (max-width:999px) {
+
+  .vastuChildContainer {
+    padding-top: 150px;
+    /* padding-bottom: 100px; */
+    display: block;
+  }
+
+  .toolIMG {
+    height: 600px;
+    width: 999px;
+    /* justify-content: center; */
+    margin: auto;
+  }
+
+  .container1 {
+    margin-top: 100px;
+    margin-left: 220px;
+    height: 600px;
+    width: 500px;
+    padding: 60px 20px;
+    background-color: rgb(230, 228, 217);
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .result-container {
+    text-align: left;
+    padding: 20px;
+    border: 1px solid rgb(246, 243, 231, 0.9);
+    border-radius: 10px;
+    height: 610px;
+    width: 500px;
+    /* margin: auto; */
+    margin-top: 100px;
+    margin-left: 220px;
+    background-color: rgb(230, 228, 217);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    color: rgb(97, 82, 72);
+  }
+
+  .buttonContainers {
+    display: flex;
+  }
+
+  #loadingMessage {
+    top: 43%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    /* z-index: 10;  */
+    height: 240px;
+    width: 300px;
+    text-align: center;
+    background: rgb(246, 243, 231, 0.9);
+    /* Light background to improve visibility */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    font-size: 22px;
+    font-weight: bolder;
+  }
+}
+
+
+@media (min-width: 900px) and (max-width:949px) {
+
+  .vastuChildContainer {
+    padding-top: 150px;
+    /* padding-bottom: 100px; */
+    display: block;
+  }
+
+  .toolIMG {
+    height: 600px;
+    width: 930px;
+    /* justify-content: center; */
+    margin: auto;
+  }
+
+  .container1 {
+    margin-top: 100px;
+    margin-left: 200px;
+    height: 600px;
+    width: 500px;
+    padding: 60px 20px;
+    background-color: rgb(230, 228, 217);
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .result-container {
+    text-align: left;
+    padding: 20px;
+    border: 1px solid rgb(246, 243, 231, 0.9);
+    border-radius: 10px;
+    height: 610px;
+    width: 500px;
+    /* margin: auto; */
+    margin-top: 100px;
+    margin-left: 200px;
+    background-color: rgb(230, 228, 217);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    color: rgb(97, 82, 72);
+  }
+
+  .buttonContainers {
+    display: flex;
+  }
+
+  #loadingMessage {
+    top: 43%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    /* z-index: 10;  */
+    height: 240px;
+    width: 300px;
+    text-align: center;
+    background: rgb(246, 243, 231, 0.9);
+    /* Light background to improve visibility */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    font-size: 22px;
+    font-weight: bolder;
+  }
+}
+
+
+
+@media (min-width: 850px) and (max-width:899px) {
+
+  .vastuChildContainer {
+    padding-top: 150px;
+    /* padding-bottom: 100px; */
+    display: block;
+  }
+
+  .toolIMG {
+    height: 600px;
+    width: 900px;
+    /* justify-content: center; */
+    margin: auto;
+  }
+
+  .container1 {
+    margin-top: 100px;
+    margin-left: 180px;
+    height: 600px;
+    width: 500px;
+    padding: 60px 20px;
+    background-color: rgb(230, 228, 217);
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .result-container {
+    text-align: left;
+    padding: 20px;
+    border: 1px solid rgb(246, 243, 231, 0.9);
+    border-radius: 10px;
+    height: 610px;
+    width: 500px;
+    /* margin: auto; */
+    margin-top: 100px;
+    margin-left: 180px;
+    background-color: rgb(230, 228, 217);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    color: rgb(97, 82, 72);
+  }
+
+  .buttonContainers {
+    display: flex;
+  }
+
+  #loadingMessage {
+    top: 43%;
+    left: 68%;
+    transform: translate(-50%, -50%);
+    /* z-index: 10;  */
+    height: 240px;
+    width: 300px;
+    text-align: center;
+    background: rgb(246, 243, 231, 0.9);
+    /* Light background to improve visibility */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    font-size: 22px;
+    font-weight: bolder;
+  }
+}
+
+
+
+@media (min-width: 800px) and (max-width:849px) {
+
+  .vastuChildContainer {
+    padding-top: 150px;
+    /* padding-bottom: 100px; */
+    display: block;
+  }
+
+  .toolIMG {
+    height: 600px;
+    width: 850px;
+    /* justify-content: center; */
+    margin: auto;
+  }
+
+  .container1 {
+    margin-top: 100px;
+    margin-left: 160px;
+    height: 600px;
+    width: 500px;
+    padding: 60px 20px;
+    background-color: rgb(230, 228, 217);
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .result-container {
+    text-align: left;
+    padding: 20px;
+    border: 1px solid rgb(246, 243, 231, 0.9);
+    border-radius: 10px;
+    height: 610px;
+    width: 500px;
+    /* margin: auto; */
+    margin-top: 100px;
+    margin-left: 160px;
+    background-color: rgb(230, 228, 217);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    color: rgb(97, 82, 72);
+  }
+
+  .buttonContainers {
+    display: flex;
+  }
+
+  #loadingMessage {
+    top: 43%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+    /* z-index: 10;  */
+    height: 240px;
+    width: 300px;
+    text-align: center;
+    background: rgb(246, 243, 231, 0.9);
+    /* Light background to improve visibility */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    font-size: 22px;
+    font-weight: bolder;
+  }
+}
+
+
+
+
+@media (min-width: 750px) and (max-width:799px) {
+
+  .vastuChildContainer {
+    padding-top: 150px;
+    /* padding-bottom: 100px; */
+    display: block;
+  }
+
+  .toolIMG {
+    height: 600px;
+    width: 800px;
+    /* justify-content: center; */
+    margin: auto;
+  }
+
+  .container1 {
+    margin-top: 100px;
+    margin-left: 130px;
+    height: 600px;
+    width: 500px;
+    padding: 60px 20px;
+    background-color: rgb(230, 228, 217);
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .result-container {
+    text-align: left;
+    padding: 20px;
+    border: 1px solid rgb(246, 243, 231, 0.9);
+    border-radius: 10px;
+    height: 610px;
+    width: 500px;
+    /* margin: auto; */
+    margin-top: 100px;
+    margin-left: 130px;
+    background-color: rgb(230, 228, 217);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    color: rgb(97, 82, 72);
+  }
+
+  .buttonContainers {
+    display: flex;
+  }
+
+  #loadingMessage {
+    top: 43%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    /* z-index: 10;  */
+    height: 240px;
+    width: 300px;
+    text-align: center;
+    background: rgb(246, 243, 231, 0.9);
+    /* Light background to improve visibility */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    font-size: 22px;
+    font-weight: bolder;
+  }
+}
+
+
+
+@media (min-width: 700px) and (max-width:749px) {
+
+  .vastuChildContainer {
+    padding-top: 150px;
+    /* padding-bottom: 100px; */
+    display: block;
+  }
+
+  .toolIMG {
+    height: 600px;
+    width: 750px;
+    /* justify-content: center; */
+    margin: auto;
+  }
+
+  .container1 {
+    margin-top: 100px;
+    margin-left: 100px;
+    height: 600px;
+    width: 500px;
+    padding: 60px 20px;
+    background-color: rgb(230, 228, 217);
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .result-container {
+    text-align: left;
+    padding: 20px;
+    border: 1px solid rgb(246, 243, 231, 0.9);
+    border-radius: 10px;
+    height: 610px;
+    width: 500px;
+    /* margin: auto; */
+    margin-top: 100px;
+    margin-left: 100px;
+    background-color: rgb(230, 228, 217);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    color: rgb(97, 82, 72);
+  }
+
+  .buttonContainers {
+    display: flex;
+  }
+
+  #loadingMessage {
+    top: 43%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    /* z-index: 10;  */
+    height: 240px;
+    width: 300px;
+    text-align: center;
+    background: rgb(246, 243, 231, 0.9);
+    /* Light background to improve visibility */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    font-size: 22px;
+    font-weight: bolder;
+  }
+}
+
+
+@media (min-width: 650px) and (max-width:699px) {
+
+  .vastuChildContainer {
+    padding-top: 150px;
+    /* padding-bottom: 100px; */
+    display: block;
+  }
+
+  .toolIMG {
+    height: 600px;
+    width: 700px;
+    /* justify-content: center; */
+    margin: auto;
+  }
+
+  .container1 {
+    margin-top: 100px;
+    margin-left: 80px;
+    height: 600px;
+    width: 500px;
+    padding: 60px 20px;
+    background-color: rgb(230, 228, 217);
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .result-container {
+    text-align: left;
+    padding: 20px;
+    border: 1px solid rgb(246, 243, 231, 0.9);
+    border-radius: 10px;
+    height: 610px;
+    width: 500px;
+    /* margin: auto; */
+    margin-top: 100px;
+    margin-left: 80px;
+    background-color: rgb(230, 228, 217);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    color: rgb(97, 82, 72);
+  }
+
+  .buttonContainers {
+    display: flex;
+  }
+
+  #loadingMessage {
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* z-index: 10;  */
+    height: 240px;
+    width: 300px;
+    text-align: center;
+    background: rgb(246, 243, 231, 0.9);
+    /* Light background to improve visibility */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    font-size: 22px;
+    font-weight: bolder;
+  }
+}
+
+
+@media (min-width: 600px) and (max-width:649px) {
+
+  .vastuChildContainer {
+    padding-top: 150px;
+    /* padding-bottom: 100px; */
+    display: block;
+  }
+
+  .toolIMG {
+    height: 500px;
+    width: 650px;
+    /* justify-content: center; */
+    margin: auto;
+  }
+
+  .container1 {
+    margin-top: 100px;
+    margin-left: 50px;
+    height: 600px;
+    width: 500px;
+    padding: 60px 20px;
+    background-color: rgb(230, 228, 217);
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .result-container {
+    text-align: left;
+    padding: 20px;
+    border: 1px solid rgb(246, 243, 231, 0.9);
+    border-radius: 10px;
+    height: 610px;
+    width: 500px;
+    /* margin: auto; */
+    margin-top: 100px;
+    margin-left: 50px;
+    background-color: rgb(230, 228, 217);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    color: rgb(97, 82, 72);
+  }
+
+  .buttonContainers {
+    display: flex;
+  }
+
+  #loadingMessage {
+    top: 43%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    /* z-index: 10;  */
+    height: 240px;
+    width: 300px;
+    text-align: center;
+    background: rgb(246, 243, 231, 0.9);
+    /* Light background to improve visibility */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    font-size: 22px;
+    font-weight: bolder;
+  }
+}
+
+
+
+@media (min-width: 550px) and (max-width:599px) {
+
+
+  .vastuChildContainer {
+    padding-top: 120px;
+    /* padding-bottom: 100px; */
+    display: block;
+  }
+
+  .vastuChildContainer {
+    padding-top: 150px;
+    /* padding-bottom: 100px; */
+    display: block;
+  }
+
+  .toolIMG {
+    height: 450px;
+    width: 600px;
+    /* justify-content: center; */
+    margin: auto;
+  }
+
+  .container1 {
+    margin-top: 100px;
+    margin-left: 70px;
+    height: 565px;
+    width: 400px;
+    padding: 60px 20px;
+    background-color: rgb(230, 228, 217);
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .result-container {
+    text-align: left;
+    padding: 20px;
+    border: 1px solid rgb(246, 243, 231, 0.9);
+    border-radius: 10px;
+    height: 565px;
+    width: 400px;
+    /* margin: auto; */
+    margin-top: 100px;
+    margin-left: 70px;
+    background-color: rgb(230, 228, 217);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    color: rgb(97, 82, 72);
+  }
+
+  .buttonContainers {
+    display: flex;
+  }
+
+  #loadingMessage {
+    top: 43%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    /* z-index: 10;  */
+    height: 240px;
+    width: 300px;
+    text-align: center;
+    background: rgb(246, 243, 231, 0.9);
+    /* Light background to improve visibility */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    font-size: 22px;
+    font-weight: bolder;
+  }
+
+
+
+  /* new  */
+
+  #vaastuRecommendations {
+    padding-left: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    list-style: circle;
+  }
+
+  .calculateBTN {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: larger;
+    padding: 8px 40px;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 10px 20px 87px;
+  }
+
+
+  .head {
+    font-size: 22px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    color: rgb(97, 82, 72);
+  }
+
+  .head2 {
+    font-size: 18px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: normal;
+    /* color: black; */
+  }
+
+  .head3 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 22px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+
+
+  .profile-img {
+    width: 150px;
+    height: 107px;
+    border-radius: 50%;
+    margin-bottom: 0px;
+    /* margin-right: 10px; */
+  }
+
+
+  .numerology-title {
+    font-size: 17px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    margin-bottom: 0px;
+  }
+
+  .numerology-number {
+    font-size: 20px;
+    color: #d49140;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 0px;
+  }
+
+  #analysisText {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 17px;
+  }
+
+  .vaastuIPfield {
+    width: 350px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    height: 45px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+  }
+
+  .vaastuIPlabel {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: rgb(97, 82, 72);
+    font-weight: bold;
+    text-align: left;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .resultBTN1 {
+    width: 200px;
+    height: 35px;
+    margin: 5px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 15px;
+    padding: auto;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .resultBTN1:hover {
+    color: #ffffff;
+    background-color: rgb(97, 82, 72);
+  }
+
+  .resultBTN2 {
+    width: 200px;
+    height: 35px;
+    margin: 5px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 17px;
+    padding: auto;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+
+@media (min-width: 500px) and (max-width:549px) {
+
+
+  .vastuChildContainer {
+    padding-top: 120px;
+    /* padding-bottom: 100px; */
+    display: block;
+  }
+
+  .vastuChildContainer {
+    padding-top: 150px;
+    /* padding-bottom: 100px; */
+    display: block;
+  }
+
+  .toolIMG {
+    height: 450px;
+    width: 550px;
+    /* justify-content: center; */
+    margin: auto;
+  }
+
+  .container1 {
+    margin-top: 100px;
+    margin-left: 50px;
+    height: 565px;
+    width: 400px;
+    padding: 60px 20px;
+    background-color: rgb(230, 228, 217);
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .result-container {
+    text-align: left;
+    padding: 20px;
+    border: 1px solid rgb(246, 243, 231, 0.9);
+    border-radius: 10px;
+    height: 565px;
+    width: 400px;
+    /* margin: auto; */
+    margin-top: 100px;
+    margin-left: 50px;
+    background-color: rgb(230, 228, 217);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    color: rgb(97, 82, 72);
+  }
+
+  .buttonContainers {
+    display: flex;
+  }
+
+  #loadingMessage {
+    top: 43%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    /* z-index: 10;  */
+    height: 240px;
+    width: 300px;
+    text-align: center;
+    background: rgb(246, 243, 231, 0.9);
+    /* Light background to improve visibility */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    font-size: 22px;
+    font-weight: bolder;
+  }
+
+
+
+  /* new  */
+
+  #vaastuRecommendations {
+    padding-left: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    list-style: circle;
+  }
+
+  .calculateBTN {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: larger;
+    padding: 8px 40px;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 10px 20px 87px;
+  }
+
+
+  .head {
+    font-size: 22px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    color: rgb(97, 82, 72);
+  }
+
+  .head2 {
+    font-size: 18px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: normal;
+    /* color: black; */
+  }
+
+  .head3 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 22px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+
+
+  .profile-img {
+    width: 150px;
+    height: 107px;
+    border-radius: 50%;
+    margin-bottom: 0px;
+    /* margin-right: 10px; */
+  }
+
+
+  .numerology-title {
+    font-size: 17px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    margin-bottom: 0px;
+  }
+
+  .numerology-number {
+    font-size: 20px;
+    color: #d49140;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 0px;
+  }
+
+  #analysisText {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 17px;
+  }
+
+  .vaastuIPfield {
+    width: 350px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    height: 45px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+  }
+
+  .vaastuIPlabel {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: rgb(97, 82, 72);
+    font-weight: bold;
+    text-align: left;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .resultBTN1 {
+    width: 200px;
+    height: 35px;
+    margin: 5px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 15px;
+    padding: auto;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .resultBTN1:hover {
+    color: #ffffff;
+    background-color: rgb(97, 82, 72);
+  }
+
+  .resultBTN2 {
+    width: 200px;
+    height: 35px;
+    margin: 5px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 17px;
+    padding: auto;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+
+
+@media (min-width: 450px) and (max-width:499px) {
+
+
+  .vastuChildContainer {
+    padding-top: 120px;
+    /* padding-bottom: 100px; */
+    display: block;
+  }
+
+  .vastuChildContainer {
+    padding-top: 150px;
+    /* padding-bottom: 100px; */
+    display: block;
+  }
+
+  .toolIMG {
+    height: 420px;
+    width: 500px;
+    /* justify-content: center; */
+    margin: auto;
+  }
+
+  .container1 {
+    margin-top: 100px;
+    margin-left: 20px;
+    height: 565px;
+    width: 400px;
+    padding: 60px 20px;
+    background-color: rgb(230, 228, 217);
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .result-container {
+    text-align: left;
+    padding: 20px;
+    border: 1px solid rgb(246, 243, 231, 0.9);
+    border-radius: 10px;
+    height: 565px;
+    width: 400px;
+    /* margin: auto; */
+    margin-top: 100px;
+    margin-left: 20px;
+    background-color: rgb(230, 228, 217);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    color: rgb(97, 82, 72);
+  }
+
+  .buttonContainers {
+    display: flex;
+  }
+
+  #loadingMessage {
+    top: 43%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    /* z-index: 10;  */
+    height: 240px;
+    width: 300px;
+    text-align: center;
+    background: rgb(246, 243, 231, 0.9);
+    /* Light background to improve visibility */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    font-size: 22px;
+    font-weight: bolder;
+  }
+
+
+
+  /* new  */
+
+  #vaastuRecommendations {
+    padding-left: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    list-style: circle;
+  }
+
+  .calculateBTN {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: larger;
+    padding: 8px 40px;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 10px 20px 87px;
+  }
+
+
+  .head {
+    font-size: 22px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    color: rgb(97, 82, 72);
+  }
+
+  .head2 {
+    font-size: 18px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: normal;
+    /* color: black; */
+  }
+
+  .head3 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 22px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+
+
+  .profile-img {
+    width: 150px;
+    height: 107px;
+    border-radius: 50%;
+    margin-bottom: 0px;
+    /* margin-right: 10px; */
+  }
+
+
+  .numerology-title {
+    font-size: 17px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    margin-bottom: 0px;
+  }
+
+  .numerology-number {
+    font-size: 20px;
+    color: #d49140;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 0px;
+  }
+
+  #analysisText {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 17px;
+  }
+
+  .vaastuIPfield {
+    width: 350px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    height: 45px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+  }
+
+  .vaastuIPlabel {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: rgb(97, 82, 72);
+    font-weight: bold;
+    text-align: left;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .resultBTN1 {
+    width: 200px;
+    height: 35px;
+    margin: 5px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 15px;
+    padding: auto;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .resultBTN1:hover {
+    color: #ffffff;
+    background-color: rgb(97, 82, 72);
+  }
+
+  .resultBTN2 {
+    width: 200px;
+    height: 35px;
+    margin: 5px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 17px;
+    padding: auto;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+
+
+@media (min-width: 400px) and (max-width:459px) {
+
+
+  .vastuChildContainer {
+    padding-top: 120px;
+    /* padding-bottom: 100px; */
+    display: block;
+  }
+
+  .vastuChildContainer {
+    padding-top: 150px;
+    /* padding-bottom: 100px; */
+    display: block;
+  }
+
+  .toolIMG {
+    height: 400px;
+    width: 450px;
+    /* justify-content: center; */
+    margin: auto;
+  }
+
+  .container1 {
+    margin-top: 100px;
+    margin-left: 0px;
+    height: 565px;
+    width: 400px;
+    padding: 60px 20px;
+    background-color: rgb(230, 228, 217);
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .result-container {
+    text-align: left;
+    padding: 20px;
+    border: 1px solid rgb(246, 243, 231, 0.9);
+    border-radius: 10px;
+    height: 565px;
+    width: 400px;
+    /* margin: auto; */
+    margin-top: 100px;
+    margin-left: 0px;
+    background-color: rgb(230, 228, 217);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    color: rgb(97, 82, 72);
+  }
+
+  .buttonContainers {
+    display: flex;
+  }
+
+  #loadingMessage {
+    top: 43%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+    /* z-index: 10;  */
+    height: 240px;
+    width: 300px;
+    text-align: center;
+    background: rgb(246, 243, 231, 0.9);
+    /* Light background to improve visibility */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    font-size: 22px;
+    font-weight: bolder;
+  }
+
+
+
+  /* new  */
+
+  #vaastuRecommendations {
+    padding-left: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    list-style: circle;
+  }
+
+  .calculateBTN {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: larger;
+    padding: 8px 40px;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 10px 20px 87px;
+  }
+
+
+  .head {
+    font-size: 22px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    color: rgb(97, 82, 72);
+  }
+
+  .head2 {
+    font-size: 18px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: normal;
+    /* color: black; */
+  }
+
+  .head3 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 22px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+
+
+  .profile-img {
+    width: 150px;
+    height: 107px;
+    border-radius: 50%;
+    margin-bottom: 0px;
+    /* margin-right: 10px; */
+  }
+
+
+  .numerology-title {
+    font-size: 17px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    margin-bottom: 0px;
+  }
+
+  .numerology-number {
+    font-size: 20px;
+    color: #d49140;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 0px;
+  }
+
+  #analysisText {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 17px;
+  }
+
+  .vaastuIPfield {
+    width: 350px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    height: 45px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+  }
+
+  .vaastuIPlabel {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: rgb(97, 82, 72);
+    font-weight: bold;
+    text-align: left;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .resultBTN1 {
+    width: 200px;
+    height: 35px;
+    margin: 5px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 15px;
+    padding: auto;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .resultBTN1:hover {
+    color: #ffffff;
+    background-color: rgb(97, 82, 72);
+  }
+
+  .resultBTN2 {
+    width: 200px;
+    height: 35px;
+    margin: 5px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 17px;
+    padding: auto;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+
+@media (min-width: 0px) and (max-width:399px) {
+
+
+  .vastuChildContainer {
+    padding-top: 100px;
+    /* padding-bottom: 100px; */
+    display: block;
+  }
+
+  .vastuChildContainer {
+    padding-top: 150px;
+    /* padding-bottom: 100px; */
+    display: block;
+  }
+
+  .toolIMG {
+    height: 340px;
+    width: 400px;
+    /* justify-content: center; */
+    margin: auto;
+  }
+
+  .container1 {
+    margin-top: 100px;
+    margin-left: 10px;
+    height: 480px;
+    width: 300px;
+    padding: 60px 20px;
+    background-color: rgb(230, 228, 217);
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .result-container {
+    text-align: left;
+    padding: 20px;
+    border: 1px solid rgb(246, 243, 231, 0.9);
+    border-radius: 10px;
+    height: 480px;
+    width: 300px;
+    /* margin: auto; */
+    margin-top: 100px;
+    margin-left: 10px;
+    background-color: rgb(230, 228, 217);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    color: rgb(97, 82, 72);
+  }
+
+  .buttonContainers {
+    display: flex;
+  }
+
+  #loadingMessage {
+    top: 43%;
+    left: 27%;
+    transform: translate(-50%, -50%);
+    /* z-index: 10;  */
+    height: 220px;
+    width: 200px;
+    text-align: center;
+    background: rgb(246, 243, 231, 0.9);
+    /* Light background to improve visibility */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    font-size: 17px;
+    font-weight: bolder;
+  }
+
+
+
+  /* new  */
+
+  #vaastuRecommendations {
+    padding-left: 5px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-size: 11px;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    list-style: circle;
+  }
+
+  .calculateBTN {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: larger;
+    padding: 8px 40px;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px 20px 37px;
+  }
+
+
+  .head {
+    font-size: 18px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    color: rgb(97, 82, 72);
+  }
+
+  .head2 {
+    font-size: 15px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: normal;
+    /* color: black; */
+  }
+
+  .head3 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+
+
+  .profile-img {
+    width: 120px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 0px;
+    /* margin-right: 10px; */
+  }
+
+
+  .numerology-title {
+    font-size: 14px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+    margin-bottom: 0px;
+  }
+
+  .numerology-number {
+    font-size: 17px;
+    color: #d49140;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 0px;
+  }
+
+  #analysisText {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 13px;
+  }
+
+  .vaastuIPfield {
+    width: 250px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    height: 45px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(97, 82, 72);
+  }
+
+  .vaastuIPlabel {
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+    color: rgb(97, 82, 72);
+    font-weight: bold;
+    text-align: left;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .resultBTN1 {
+    width: 200px;
+    height: 35px;
+    margin: 5px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 15px;
+    padding: auto;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .resultBTN1:hover {
+    color: #ffffff;
+    background-color: rgb(97, 82, 72);
+  }
+
+  .resultBTN2 {
+    width: 200px;
+    height: 35px;
+    margin: 5px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-size: 17px;
+    padding: auto;
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: rgba(237, 235, 223, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
 }

@@ -1,0 +1,283 @@
+/* header */
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+*::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
+
+btn::selection {
+    background-color: white;
+    color: rgb(97, 82, 72);
+}
+
+header {
+    background-color: rgb(235, 230, 215);
+    opacity: 0.9;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 5px -3px;
+}
+
+.nav-item:hover {
+    transform: scale(1.02);
+}
+
+.nav-item a::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
+
+.AGD-logo {
+    font-size: 40px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: italic;
+    color: rgb(170, 146, 146);
+    margin-left: 52px;
+}
+
+.AGD-img {
+    margin-left: 48px;
+}
+
+.AGDname {
+    font-size: 17px;
+    margin-left: 30px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.AGDname::selection {
+    background-color: rgb(97, 82, 72);
+    color: white;
+}
+
+.Nlist {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.fa-user-large{
+    font-size: 23px;
+    color: rgb(154, 134, 120);
+    border: 1px solid rgb(123, 105, 92);
+    padding: 7px;
+    border-radius: 50%;
+    margin-right: 0px;
+}
+.fa-user-large:hover {
+    transform: scale(1.02);
+    color: rgb(123, 105, 92);
+    
+}
+
+html,
+body {
+    background-color: rgba(237, 235, 223, 0.51) !important;
+}
+
+
+
+
+
+
+/* media queries  */
+
+@media (min-width: 0px) and (max-width: 339px){
+    .AGD-logo {
+        font-size: 17px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        font-style: italic;
+        color: rgb(170, 146, 146);
+        margin-left: 0px;
+        height: 25px;
+    }
+    
+    .AGD-img {
+        margin-left: 0px;
+        padding-left: 0px;
+        height: 40px;
+        width: 90px;
+        margin-top: 10px;
+    }
+    
+    .AGDname {
+        font-size: 10px;
+        margin-left: 0px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+    
+    .Nlist {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: smaller;
+    }
+    .fa-user-large{
+        font-size: 20px;
+        color: rgb(154, 134, 120);
+        border: 1px solid rgb(123, 105, 92);
+        padding: 7px;
+        border-radius: 50%;
+        margin-right: 0px;
+    }
+    .fa-user-large:hover {
+        transform: scale(1.02);
+        color: rgb(123, 105, 92);
+        
+    }
+}
+
+
+@media (min-width: 340px) and (max-width: 991px){
+    
+    .AGD-logo {
+        font-size: 17px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        font-style: italic;
+        color: rgb(170, 146, 146);
+        margin-left: 0px;
+        height: 30px;
+    }
+    
+    .AGD-img {
+        margin-left: 0px;
+    }
+    
+    .AGDname {
+        font-size: 12px;
+        margin-left: 0px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+    
+    .Nlist {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: smaller;
+        background-color: rgb(235, 230, 215);
+    }
+    .fa-user-large{
+        font-size: 20px;
+        color: rgb(154, 134, 120);
+        border: 1px solid rgb(123, 105, 92);
+        padding: 7px;
+        border-radius: 50%;
+        margin-right: 0px;
+    }
+    .fa-user-large:hover {
+        transform: scale(1.02);
+        color: rgb(123, 105, 92);
+        
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1073px){
+    
+    .AGD-logo {
+        font-size: 17px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        font-style: italic;
+        color: rgb(170, 146, 146);
+        margin-left: 0px;
+        height: 30px;
+    }
+    
+    .AGD-img {
+        margin-left: 0px;
+    }
+    
+    .AGDname {
+        font-size: 12px;
+        margin-left: 0px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+    
+    .Nlist {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: smaller;
+    }
+    .fa-user-large{
+        font-size: 20px;
+        color: rgb(154, 134, 120);
+        border: 1px solid rgb(123, 105, 92);
+        padding: 7px;
+        border-radius: 50%;
+        margin-right: 0px;
+    }
+    .fa-user-large:hover {
+        transform: scale(1.02);
+        color: rgb(123, 105, 92);
+        
+    }
+}
+
+
+@media (min-width: 1074px) and (max-width: 1143px){
+    
+    .AGD-logo {
+        font-size: 28px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        font-style: italic;
+        color: rgb(170, 146, 146);
+        margin-left: 52px;
+    }
+    
+    .AGD-img {
+        margin-left: 48px;
+    }
+    
+    .AGDname {
+        font-size: 17px;
+        margin-left: 30px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+    
+    .Nlist {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: smaller;
+    }
+    .fa-user-large{
+        font-size: 23px;
+        color: rgb(154, 134, 120);
+        border: 1px solid rgb(123, 105, 92);
+        padding: 7px;
+        border-radius: 50%;
+        margin-right: 0px;
+    }
+    .fa-user-large:hover {
+        transform: scale(1.02);
+        color: rgb(123, 105, 92);
+        
+    }
+    
+    html,
+    body {
+        background-color: rgba(237, 235, 223, 0.51) !important;
+    }
+}
